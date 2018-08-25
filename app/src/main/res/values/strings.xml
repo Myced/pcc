@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">My PCC</string>
+    <string name="home">Home</string>
+    <string name="books">Books</string>
+    <string name="hymns">Hymns</string>
+    <string name="scriptures">Scriptures</string>
+    <string name="verse_of_the_day">Verse of the Day</string>
+
+</resources>
