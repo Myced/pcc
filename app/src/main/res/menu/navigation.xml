@@ -22,5 +22,10 @@
         android:icon="@drawable/book_icon"
         android:title="@string/books" />
 
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/info_icon"
+        android:title="@string/church_info" />
+
 
 </menu>

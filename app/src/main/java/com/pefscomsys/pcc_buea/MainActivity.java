@@ -16,18 +16,21 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            //get the menu item id.
             int id = item.getItemId();
+
+            //switch to each view for a different menu item
             if (id == R.id.navigation_home) {
-                mTextMessage.setText(R.string.home);
+                //start home fragment
                 return true;
             } else if (id == R.id.navigation_hymns) {
-                mTextMessage.setText(R.string.hymns);
+                //start hymn fragment
                 return true;
             } else if (id == R.id.navigation_books) {
-                mTextMessage.setText(R.string.books);
+                //start book fragment
                 return true;
             } else if (id == R.id.navigation_scriptures) {
-                mTextMessage.setText(R.string.scriptures);
+                //start scripture fragment
                 return true;
             }
             return false;
