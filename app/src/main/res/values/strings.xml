@@ -7,8 +7,36 @@
     <string name="scriptures">Scriptures</string>
     <string name="verse_of_the_day">Scripture of the Day</string>
     <string name="church_info">Church Info</string>
+    <string name="setting">Setting</string>
+    <string name="about">About</string>
+    <string name="cmf_books">CMF BOOKS</string>
+    <string name="cwf_books">CWF BOOKS</string>
+    <string name="cyf_books">CYF BOOKS</string>
+    <string name="messenger">MESSENGER</string>
+    <string name="type_hymn_number">Type Hymn Number…</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="hymns">
+        <item>Hymn 1</item>
+        <item>Hymn 2</item>
+        <item>Hymn 3</item>
+        <item>Hymn 4</item>
+        <item>Hymn 5</item>
+        <item>Hymn 6</item>
+        <item>Hymn 7</item>
+        <item>Hymn 8</item>
+        <item>Hymn 9</item>
+    </string-array>
+
+    <string-array name="hymns_excerpt">
+        <item>Hymn 1 this is aloremp ipsum text </item>
+        <item>Hymn 2 this is aloremp ipsum text</item>
+        <item>Hymn 3 this is aloremp ipsum text</item>
+        <item>Hymn 4 this is aloremp ipsum text</item>
+        <item>Hymn 5 this is aloremp ipsum text</item>
+        <item>Hymn 6 this is aloremp ipsum text</item>
+        <item>Hymn 7 this is aloremp ipsum text</item>
+        <item>Hymn 8 this is aloremp ipsum text</item>
+        <item>Hymn 9 this is aloremp ipsum text</item>
+    </string-array>
 </resources>

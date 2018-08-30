@@ -5,10 +5,37 @@
     android:layout_height="match_parent"
     tools:context=".HymesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <RelativeLayout
+        android:id="@+id/hymeListWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/hymnNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/type_hymn_number"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hymnListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/hymnNumberInput"
+            android:layout_alignParentLeft="true"
+            />
+    </RelativeLayout>
 </FrameLayout>
