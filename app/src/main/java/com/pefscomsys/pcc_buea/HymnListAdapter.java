@@ -30,7 +30,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
 
     @Override
     public void onBindViewHolder(HymnListHolder holder, int position) {
-        holder.hymenumber.setText(Numbers[position]);
+        holder.hymenumber.setText(Integer.toString(Numbers[position]));
         holder.hymetitle.setText(Hymns[position]);
         holder.hymnexcerpt.setText(Excerpt[position]);
     }
