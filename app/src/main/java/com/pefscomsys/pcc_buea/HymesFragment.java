@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.security.PrivateKey;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,10 +32,10 @@ public class HymesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hymes, container, false);
-        hymnListRecycler = view.findViewById(R.id.hymnListRecyclerView);
+        hymnListRecycler = (RecyclerView) view.findViewById(R.id.hymnListRecyclerView);
 
-        hymnTitles = getResources().getStringArray(R.array.hymns);
-        hymnExcerpts = getResources().getStringArray(R.array.hymns_excerpt);
+        hymnTitles = view.getResources().getStringArray(R.array.hymns);
+        hymnExcerpts = view.getResources().getStringArray(R.array.hymns_excerpt);
         hymnListAdapter = new HymnListAdapter(getContext(), hymnTitles, hymnExcerpts, hymnNumber);
         hymnListRecycler.setAdapter(hymnListAdapter);
         hymnListRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
