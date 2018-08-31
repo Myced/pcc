@@ -22,6 +22,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="36sp"
+        android:gravity="center"
         app:fontFamily="@font/bungee_color_regular"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
