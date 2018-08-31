@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnListHolder> {
-    Context context;
-    String Hymns[], Excerpt[];
-    int Numbers[];
+    private Context context;
+    private String Hymns[], Excerpt[];
+    private int Numbers[];
+    private OnItemClickListener hymeListListener;
 
     public HymnListAdapter(Context ctx, String hymns[], String excerpt[], int numbers[]){
 
@@ -20,6 +21,14 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
       Excerpt = excerpt;
       Numbers = numbers;
 
+    }
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        hymeListListener = listener;
     }
 
     @Override
@@ -49,6 +58,18 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
             hymnnumber =  (TextView) itemView.findViewById(R.id.hymnNumber);
             hymntitle =  (TextView) itemView.findViewById(R.id.hymnTitle);
             hymnexcerpt =  (TextView) itemView.findViewById(R.id.hymnExcerpt);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(hymeListListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            hymeListListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }
