@@ -41,8 +41,10 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(HymnListHolder holder, int position) {
-        holder.hymnnumber.setText(Integer.toString(Numbers[position]));
-        holder.hymntitle.setText(Hymns[position]);
+
+        holder.hymenumber.setText(Integer.toString(Numbers[position]));
+        holder.hymetitle.setText(Hymns[position]);
+
         holder.hymnexcerpt.setText(Excerpt[position]);
     }
 
