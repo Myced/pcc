@@ -48,8 +48,9 @@ public class HymesFragment extends Fragment implements HymnListAdapter.OnItemCli
 
     @Override
     public void onItemClick(int position) {
+        Toast.makeText(getContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
         Intent hymnViewIntent = new Intent(getActivity(), HymeView.class);
-        hymnViewIntent.putExtra(HYMN_NUMBER, position+1);
+        hymnViewIntent.putExtra(HYMN_NUMBER, position);
         startActivity(hymnViewIntent);
     }
 }
