@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
 
-    <TextView
-        android:id="@+id/hymnNumber"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="false"
-        android:gravity="center"
-        android:text="1"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="48sp"
-        android:textStyle="bold" />
+        <TextView
+            android:text="1"
+            android:textSize="28sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/hymnNumber"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="false"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="4dp"/>
 
-    <TextView
-        android:id="@+id/hymnTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
-        android:text="Hymn 1"
-        android:textColor="@color/colorAccent"
-        android:textSize="28sp"
-        android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/hymnTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/hymnNumber"
+            android:text="Hymn 1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:layout_toRightOf="@+id/hymnNumber" />
 
-    <TextView
-        android:id="@+id/hymnExcerpt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/hymnTitle"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
-        android:text="This is a lorem ipsum text..."
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/hymnExcerpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hymnTitle"
+            android:textColor="@color/subtitle"
+            android:text="@string/test_hymn"
+            android:maxLength="150"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/hymnNumber"
+            android:layout_toRightOf="@+id/hymnNumber" />
 </RelativeLayout>

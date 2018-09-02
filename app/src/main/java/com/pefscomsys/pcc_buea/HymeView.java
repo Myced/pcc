@@ -10,10 +10,11 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.pefscomsys.pcc_buea.HymesFragment.HYMN;
 import static com.pefscomsys.pcc_buea.HymesFragment.HYMN_NUMBER;
 
 public class HymeView extends AppCompatActivity {
-    TextView hymeTitle;
+    TextView hymeTitle, hymnText;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +23,13 @@ public class HymeView extends AppCompatActivity {
 
         Intent intent = getIntent();
         String number = Integer.toString(intent.getIntExtra(HYMN_NUMBER, 0));
+        String text = intent.getStringExtra(HYMN);
         Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
 
         hymeTitle = (TextView) findViewById(R.id.hymnViewTitle);
+        hymnText = (TextView) findViewById(R.id.hymnText);
         hymeTitle.setText("HYME " + number);
+        hymnText.setText(text);
 
     }
 
