@@ -34,16 +34,15 @@
             android:textStyle="bold|italic"
             android:layout_toRightOf="@+id/hymnNumber" />
 
-        <TextView
-            android:id="@+id/hymnExcerpt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/hymnTitle"
-            android:textColor="@color/subtitle"
-            android:text="@string/test_hymn"
-            android:maxLength="150"
-            android:maxLines="1"
-            android:textSize="12sp"
-            android:layout_toEndOf="@+id/hymnNumber"
-            android:layout_toRightOf="@+id/hymnNumber" />
+    <TextView
+        android:id="@+id/hymnExcerpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hymnTitle"
+        android:textColor="@color/subtitle"
+        android:maxLength="150"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/hymnNumber"
+        android:layout_toRightOf="@+id/hymnNumber" />
 </RelativeLayout>

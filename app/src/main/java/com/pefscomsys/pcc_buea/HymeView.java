@@ -36,7 +36,7 @@ public class HymeView extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.toolbar_menu, menu);
+        menuInflater.inflate(R.menu.hyme_view_toolbar, menu);
         return true;
     }
 
@@ -51,6 +51,8 @@ public class HymeView extends AppCompatActivity {
             case  R.id.about:
                 Toast.makeText(getApplicationContext(), R.string.about, Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.favorite:
+                Toast.makeText(getApplicationContext(), "Favorite Added", Toast.LENGTH_SHORT).show();
             default:
                 return super.onOptionsItemSelected(item);
 
