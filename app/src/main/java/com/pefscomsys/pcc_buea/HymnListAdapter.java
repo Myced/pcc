@@ -8,18 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnListHolder> {
     private Context context;
-    private String Hymns[], Excerpt[];
-    private int Numbers[];
+    private ArrayList<Hymn> hymnList = new ArrayList<>();
+    private int Number;
     private OnItemClickListener hymeListListener;
 
-    public HymnListAdapter(Context ctx, String hymns[], String excerpt[], int numbers[]){
+    public HymnListAdapter(Context ctx, ArrayList<Hymn> hymns){
 
       context = ctx;
-      Hymns = hymns;
-      Excerpt = excerpt;
-      Numbers = numbers;
+      this.hymnList = hymns;
 
     }
 
@@ -41,16 +41,16 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(HymnListHolder holder, int position) {
+        Number = position + 1;
+        holder.hymnnumber.setText(Integer.toString(Number));
+        holder.hymntitle.setText("HYME " + Number);
 
-        holder.hymnnumber.setText(Integer.toString(Numbers[position]));
-        holder.hymntitle.setText(Hymns[position]);
-
-        holder.hymnexcerpt.setText(Excerpt[position]);
+        holder.hymnexcerpt.setText(hymnList.get(position).getHymn());
     }
 
     @Override
     public int getItemCount() {
-        return Numbers.length;
+        return hymnList.size();
     }
 
     public class HymnListHolder extends RecyclerView.ViewHolder{
@@ -73,5 +73,11 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
                 }
             });
         }
+    }
+
+    public void setFilter(ArrayList<Hymn> newHymnList){
+        hymnList = new ArrayList<>();
+        hymnList.addAll(newHymnList);
+        notifyDataSetChanged();
     }
 }

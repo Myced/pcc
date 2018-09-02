@@ -5,7 +5,8 @@
     <color name="colorAccent">#651fff</color>
     <color name="error">#C51162</color>
     <color name="success">#69f0ae</color>
-    <color name="text_black">#000000</color>
+    <color name="text_black">#060606</color>
+    <color name="subtitle">#262626</color>
     <color name="white">#ffffff</color>
 
 </resources>
