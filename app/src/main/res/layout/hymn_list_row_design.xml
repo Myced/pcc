@@ -40,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/hymnTitle"
         android:textColor="@color/subtitle"
-        android:text="@string/test_hymn"
         android:maxLength="150"
         android:maxLines="1"
         android:textSize="12sp"

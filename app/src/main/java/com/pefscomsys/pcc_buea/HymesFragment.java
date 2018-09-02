@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -68,7 +69,8 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
     public void onItemClick(int position) {
         Toast.makeText(getContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
         Intent hymnViewIntent = new Intent(getActivity(), HymeView.class);
-        hymnViewIntent.putExtra(HYMN_NUMBER, position);;
+        int hymnNum = position + 1;
+        hymnViewIntent.putExtra(HYMN_NUMBER, hymnNum);;
         hymnViewIntent.putExtra(HYMN, hymns[position]);
         startActivity(hymnViewIntent);
     }
@@ -111,8 +113,13 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
         ArrayList<Hymn> newHymnList = new ArrayList<>();
         for(Hymn hymn : hymnArrayList){
             String number = Integer.toString(hymn.getHymnNumber());
+            if(number.contains(newText)){
+                newHymnList.add(hymn);
+            }
 
         }
-        return false;
+
+        hymnListAdapter.updateList(newHymnList);
+        return true;
     }
 }

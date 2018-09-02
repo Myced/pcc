@@ -41,9 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="@string/test_hymn"
                 android:textColor="@color/text_black"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"/>
         </LinearLayout>
