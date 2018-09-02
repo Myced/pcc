@@ -10,6 +10,7 @@
     <string name="church_information">Church Information</string>
     <string name="setting">Setting</string>
     <string name="about">About</string>
+
     <string name="cmf_books">CMF STUDY BOOKS</string>
     <string name="cwf_books">CWF STUDY BOOKS</string>
     <string name="cyf_books">CYF STUDY BOOKS</string>
@@ -19,6 +20,7 @@
     <string name="education">Educational Info...</string>
     <string name="health">Health Information</string>
     <string name="church_address">Church Address</string>
+
     <string name="type_hymn_number">Type Hymn Number…</string>
     <string name="diary">Diary</string>
     <string name="day">Day</string>
@@ -49,4 +51,21 @@
         <item>Hymn 8 this is aloremp ipsum text</item>
         <item>Hymn 9 this is aloremp ipsum text</item>
     </string-array>
+
+    <string name="test_hymn">
+        Twinkle twinkle little start\n
+        how i wonder what you are \n
+        up above the world so high\n
+        like a diamond in the sky\n
+\n
+        when the blazing sun is gone\n
+        when he nothing shine upon\n
+        then you show your little light\n
+        twinkle twinkle all the night\n
+\n
+        then the travelers in the dark\n
+        thank you for your tiny spark\n
+        he did not see where to go\n
+        if you did not twinkle soo\n
+    </string>
 </resources>

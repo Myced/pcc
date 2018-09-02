@@ -8,34 +8,10 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.227">
-
-            <TextView
-                android:id="@+id/church_info_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/church_info"
-                android:textSize="30sp" />
-
-        </LinearLayout>
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline"
@@ -272,6 +248,39 @@
             </android.support.constraint.ConstraintLayout>
 
         </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/church_info" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>
