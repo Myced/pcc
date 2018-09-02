@@ -15,6 +15,10 @@
     <string name="cyf_books">CYF BOOKS</string>
     <string name="messenger">MESSENGER</string>
     <string name="more">More</string>
+    <string name="congregation">Presbytary \n and Congregation</string>
+    <string name="education">Educational Info...</string>
+    <string name="health">Health Information</string>
+    <string name="church_address">Church Address</string>
     <string name="type_hymn_number">Type Hymn Number…</string>
 
 
