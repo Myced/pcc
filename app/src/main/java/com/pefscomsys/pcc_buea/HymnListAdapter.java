@@ -75,7 +75,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
         }
     }
 
-    public void setFilter(ArrayList<Hymn> newHymnList){
+    public void updateList(ArrayList<Hymn> newHymnList){
         hymnList = new ArrayList<>();
         hymnList.addAll(newHymnList);
         notifyDataSetChanged();

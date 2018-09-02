@@ -28,6 +28,11 @@
     <string name="month">Month</string>
     <string name="year">Year</string>
 
+    <string name="find">find</string>
+
+    <string name="search">Enter hymn number…</string>
+    <string name="favorite">Favorite</string>
+
     <string-array name="days">
         <item>
             01
@@ -57,27 +62,27 @@ The air, the sky, the sea,\n
 Who gave the light its birth,\n
  Careth for me.\n
             \n
-2 God, who made the grass,\n
+God, who made the grass,\n
 The flower, the fruit, the tree,\n
 The day and night to pass,\n
  Careth for me.\n
             \n
-3 God, who made the sun,\n
- The moon, the stars, is He\n
+God, who made the sun,\n
+            The moon, the stars, is He\n
 Who, when life’s clouds come on,\n
  Careth for me.\n
             \n
-4 God, who made all things\n
+God, who made all things\n
  On earth, in air, in sea,\n
 Who changing seasons brings\n
  Careth for me.\n
             \n
-5 God, who sent His Son\n
+God, who sent His Son\n
  To die on Calvary,\n
 He, if I lean on Him,\n
  Will care for me.\n
             \n
-6 When in heaven’s bright land\n
+            When in heaven’s bright land\n
  I all His loved ones see,\n
 I’ll sing with that blest band,\n
  ‘God cared for me.’\n
@@ -85,48 +90,50 @@ I’ll sing with that blest band,\n
         <item>
         O TRINITY, O blessèd light,\n
 O unity, most principal,\n
-The fiery sun now leaves our sight:\n
- Cause in our hearts Thy beams\n
- to fall.\n
+The fiery sun now leaves our\n
+            sight: Cause in our hearts\n
+            Thy beams to fall.\n
             \n
-2 Let us with songs of praise divine\n
+Let us with songs of\n
+            praise divine\n
  At morn and evening Thee\n
  implore,\n
 And let our glory, bowed to Thine,\n
  Thee glorify for evermore.\n
             \n
-3 To God the Father, glory great,\n
- And glory to His only son,\n
+To God the Father, glory great,\n
+And glory to His only son,\n
 And to the Holy paraclete,\n
- Both now and still while ages\n
- run. Amen.\n
+Both now and still while ages\n
+run. Amen.\n
         </item>
         <item>
-        FATHER, we praise Thee, now the\n
-night is over;\n
-Active and watchful, stand we all\n
- before Thee;\n
+FATHER, we praise Thee, now\n
+the night is over;\n
+Active and watchful,\n
+stand we all before Thee;\n
 Singing, we offer prayer and\n
  meditation:\n
  Thus we adore Thee.\n
             \n
-2 Monarch of all things, fit us for\n
- Thy mansions;\n
+Monarch of all things,\n
+fit us for Thy mansions;\n
 Banish our weakness, health and\n
  wholeness sending;\n
-Bring us to heaven, where Thy\n
- saints United\n
+Bring us to heaven, where\n
+Thy saints United\n
  Joy without ending.\n
             \n
-3 All-holy Father, Son and equal\n
+All-holy Father, Son and equal\n
  Spirit,\n
-Trinity blessèd, send us Thy salvation;\n
+Trinity blessèd, send us\n
+Thy salvation;\n
 Thine is the glory, gleaming and\n
  resounding\n
  Through all creation.\n
         </item>
         <item>
-            HOLY, holy, holy, Lord God\n
+HOLY, holy, holy, Lord God\n
 Almighty!\n
 Early in the morning our song\n
  shall rise to Thee;\n
@@ -135,7 +142,7 @@ Holy, holy, holy, merciful and\n
 God in Three Persons blessèd\n
  Trinity!\n
             \n
-2 Holy, holy, holy! all the saints\n
+Holy, holy, holy! all the saints\n
  adore Thee,\n
 Casting down their golden crowns\n
  around the glassy sea,\n
@@ -144,7 +151,7 @@ Cherubim and seraphim falling\n
 Which wert, and art, and evermore\n
  shalt be.\n
             \n
-3 Holy, holy, holy! though the darkness\n
+Holy, holy, holy! though the darkness\n
  hide Thee,\n
 Though the eye of sinful man Thy\n
  glory may not see,\n
@@ -152,126 +159,49 @@ Only Thou art holy; there is none\n
  beside Thee,\n
 Perfect in power, in love, and purity.\n
             \n
-4 Holy, holy, holy, Lord God
+Holy, holy, holy, Lord God
  Almighty!\n
 All Thy works shall praise Thy name\n
 In earth and sky and sea;\n
  Holy, holy, holy, merciful and\n
  mighty,\n
 God in Three Persons, blessèd\n
- Trinity!\n</item>
+ Trinity!\n
+        </item>
         <item>
-        WE praise, we worship Thee, O\n
-God;\n
+WE praise, we worship Thee,\n
+O God;\n
 Thy sovereign power we sound\n
  abroad;\n
 All nations bow before Thy throne\n
  And Thee the great Jehovah own.\n
             \n
-2 Loud hallelujahs to Thy Name\n
+Loud hallelujahs to Thy Name\n
  Angels and seraphim proclaim;\n
 By all the powers and thrones in\n
  heaven\n
 Eternal praise to Thee is given.\n
             \n
-3 O holy, holy, holy Lord,\n
+O holy, holy, holy Lord,\n
  Thou God of hosts, by all\n
  adored,\n
 Earth and the heavens are full of\n
  Thee,\n
 Thy light, Thy power, Thy majesty.\n
             \n
-4 Apostles join the glorious throng\n,
+Apostles join the glorious throng\n,
  And swell the loud triumphant\n
  song;\n
 Prophets and martyrs hear the\n
  sound,\n
             \n
 And spread the hallelujah round.\n
-5 Glory to Thee, O God most high!\n
+Glory to Thee, O God most high!\n
  Father, we praise Thy majesty;\n
 The Son, the Spirit we adore–\n
  One Godhead, blest for ever-\n
  more.\n
         </item>
-        <item>
-        Twinkle twinkle little start\n
-        how i wonder what you are \n
-        up above the world so high\n
-        like a diamond in the sky\n
-\n
-        when the blazing sun is gone\n
-        when he nothing shine upon\n
-        then you show your little light\n
-        twinkle twinkle all the night\n
-\n
-        then the travelers in the dark\n
-        thank you for your tiny spark\n
-        he did not see where to go\n
-        if you did not twinkle soo\n</item>
-        <item>
-        Twinkle twinkle little start\n
-        how i wonder what you are \n
-        up above the world so high\n
-        like a diamond in the sky\n
-\n
-        when the blazing sun is gone\n
-        when he nothing shine upon\n
-        then you show your little light\n
-        twinkle twinkle all the night\n
-\n
-        then the travelers in the dark\n
-        thank you for your tiny spark\n
-        he did not see where to go\n
-        if you did not twinkle soo\n</item>
-        <item>
-        Twinkle twinkle little start\n
-        how i wonder what you are \n
-        up above the world so high\n
-        like a diamond in the sky\n
-\n
-        when the blazing sun is gone\n
-        when he nothing shine upon\n
-        then you show your little light\n
-        twinkle twinkle all the night\n
-\n
-        then the travelers in the dark\n
-        thank you for your tiny spark\n
-        he did not see where to go\n
-        if you did not twinkle soo\n</item>
-        <item>
-        Twinkle twinkle little start\n
-        how i wonder what you are \n
-        up above the world so high\n
-        like a diamond in the sky\n
-\n
-        when the blazing sun is gone\n
-        when he nothing shine upon\n
-        then you show your little light\n
-        twinkle twinkle all the night\n
-\n
-        then the travelers in the dark\n
-        thank you for your tiny spark\n
-        he did not see where to go\n
-        if you did not twinkle soo\n</item>
     </string-array>
 
-    <string name="test_hymn">
-        Twinkle twinkle little start\n
-        how i wonder what you are \n
-        up above the world so high\n
-        like a diamond in the sky\n
-\n
-        when the blazing sun is gone\n
-        when he nothing shine upon\n
-        then you show your little light\n
-        twinkle twinkle all the night\n
-\n
-        then the travelers in the dark\n
-        thank you for your tiny spark\n
-        he did not see where to go\n
-        if you did not twinkle soo\n
-    </string>
-    <string name="search">Search</string>
-    <string name="find">find</string>
 </resources>
