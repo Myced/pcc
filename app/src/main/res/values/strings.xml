@@ -21,6 +21,7 @@
     <string name="health">Health Information</string>
     <string name="church_address">Church Address &amp; Committee</string>
 
+
     <string name="type_hymn_number">Type Hymn Number…</string>
     <string name="diary">Diary</string>
     <string name="search">Enter hymn number…</string>
@@ -37,6 +38,32 @@
     <string name="books_and_magazines">BOOKS &amp; MAGAZINES</string>
     <string name="church_history">Church History</string>
     <string name="other_info">Other Info</string>
+
+    <string name="find">find</string>
+
+    <string name="search">Enter hymn number…</string>
+    <string name="favorite">Favorite</string>
+
+    <string-array name="days">
+        <item>
+            01
+        </item>
+    </string-array>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 
 
     <string-array name="hymns">
