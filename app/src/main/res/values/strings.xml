@@ -16,16 +16,27 @@
     <string name="cyf_books">CYF STUDY BOOKS</string>
     <string name="messenger">THE MESSENGER</string>
     <string name="more">More</string>
-    <string name="congregation">Presbytary \n and Congregation</string>
-    <string name="education">Educational Info...</string>
+    <string name="congregation">Presbytary &amp; Congregation</string>
+    <string name="education">Educational Info…</string>
     <string name="health">Health Information</string>
-    <string name="church_address">Church Address</string>
+    <string name="church_address">Church Address &amp; Committee</string>
 
     <string name="type_hymn_number">Type Hymn Number…</string>
     <string name="diary">Diary</string>
+    <string name="search">Enter hymn number…</string>
+    <string name="splash_subtitle">Church Hymnary &amp; Diary\nmobile application</string>
+    <string name="favorite">Favorite</string>
     <string name="day">Day</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
+    <string name="splash_heading">PRESBYTERIAN CHURCH\n
+        IN\n
+        CAMEROON</string>
+    <string name="church_diary">CHURCH DIARY</string>
+    <string name="church_hymn_book">CHURCH HYMN BOOK</string>
+    <string name="books_and_magazines">BOOKS &amp; MAGAZINES</string>
+    <string name="church_history">Church History</string>
+    <string name="other_info">Other Info</string>
 
 
     <string-array name="hymns">
@@ -176,7 +187,4 @@ The Son, the Spirit we adore–\n
  more.\n
         </item>
     </string-array>
-
-    <string name="search">Enter hymn number…</string>
-    <string name="favorite">Favorite</string>
 </resources>

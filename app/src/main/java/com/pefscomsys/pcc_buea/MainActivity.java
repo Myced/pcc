@@ -35,27 +35,22 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.navigation_home) {
                 //start home fragment
                 setFragment(homeFragment);
-                Toast.makeText(getApplicationContext(), R.string.home, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_hymns) {
                 //start hymn fragment
                 setFragment(hymesFragment);
-                Toast.makeText(getApplicationContext(), R.string.hymns, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_books) {
                 //start book fragment
                 setFragment(booksFragment);
-                Toast.makeText(getApplicationContext(), R.string.books, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_scriptures) {
                 //start scripture fragment
                 setFragment(scripturesFragment);
-                Toast.makeText(getApplicationContext(), R.string.scriptures, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_info) {
                 //start scripture fragment
                 setFragment(infoFragment);
-                Toast.makeText(getApplicationContext(), R.string.church_info, Toast.LENGTH_SHORT).show();
                 return true;
             }
             return false;
@@ -86,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.toolbar_menu, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

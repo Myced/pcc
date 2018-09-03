@@ -7,12 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnListHolder> {
     private Context context;
-    private ArrayList<Hymn> hymnList = new ArrayList<>();
+    private ArrayList<Hymn> hymnList;
     private int Number;
     private OnItemClickListener hymeListListener;
 
@@ -41,10 +42,10 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(HymnListHolder holder, int position) {
-        Number = position + 1;
+        Number = hymnList.get(position).getHymnNumber();
+
         holder.hymnnumber.setText(Integer.toString(Number));
         holder.hymntitle.setText("HYME " + Number);
-
         holder.hymnexcerpt.setText(hymnList.get(position).getHymn());
     }
 
@@ -57,7 +58,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
         public TextView hymnnumber, hymntitle, hymnexcerpt;
         public HymnListHolder(View itemView) {
             super(itemView);
-            hymnnumber =  (TextView) itemView.findViewById(R.id.hymnNumber);
+           hymnnumber =  (TextView) itemView.findViewById(R.id.hymnNumber);
             hymntitle =  (TextView) itemView.findViewById(R.id.hymnTitle);
             hymnexcerpt =  (TextView) itemView.findViewById(R.id.hymnExcerpt);
 
@@ -67,7 +68,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
                     if(hymeListListener != null){
                         int position = getAdapterPosition();
                         if(position != RecyclerView.NO_POSITION){
-                            hymeListListener.onItemClick(position);
+                            hymeListListener.onItemClick(hymnList.get(position).getHymnNumber());
                         }
                     }
                 }
@@ -77,7 +78,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
 
     public void updateList(ArrayList<Hymn> newHymnList){
         hymnList = new ArrayList<>();
-        hymnList.addAll(newHymnList);
+        hymnList = newHymnList;
         notifyDataSetChanged();
     }
 }

@@ -19,7 +19,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -30,7 +29,7 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
 
     public static final String HYMN_NUMBER = "hymnNumber";
     public static final String HYMN = "hymn";
-
+    ArrayList<Hymn> hymnArrayList;
     public HymesFragment() {
         // Required empty public constructor
     }
@@ -38,8 +37,7 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
     RecyclerView hymnListRecycler;
     String hymns[];
     HymnListAdapter hymnListAdapter;
-    ArrayList<Hymn> hymnArrayList = new ArrayList<>();
-    int count = 0;
+    int count;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -47,16 +45,18 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hymes, container, false);
         hymnListRecycler = (RecyclerView) view.findViewById(R.id.hymnListRecyclerView);
-
+        hymnArrayList = new ArrayList<>();
         hymns = view.getResources().getStringArray(R.array.hymns);
         hymnListRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        hymnListRecycler.setHasFixedSize(true);
+
+        count = 0;
 
         for(String hymn :hymns ){
             int num = count + 1;
             hymnArrayList.add(new Hymn(hymn, num));
             count++;
         }
+
         hymnListAdapter = new HymnListAdapter(getContext(), hymnArrayList);
         hymnListRecycler.setAdapter(hymnListAdapter);
         hymnListAdapter.setOnItemClickListener(this);
@@ -67,11 +67,9 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
 
     @Override
     public void onItemClick(int position) {
-        Toast.makeText(getContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
         Intent hymnViewIntent = new Intent(getActivity(), HymeView.class);
-        int hymnNum = position + 1;
-        hymnViewIntent.putExtra(HYMN_NUMBER, hymnNum);;
-        hymnViewIntent.putExtra(HYMN, hymns[position]);
+        hymnViewIntent.putExtra(HYMN_NUMBER, position);
+        hymnViewIntent.putExtra(HYMN, hymns[position - 1]);
         startActivity(hymnViewIntent);
     }
 
@@ -114,11 +112,12 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
         for(Hymn hymn : hymnArrayList){
             String number = Integer.toString(hymn.getHymnNumber());
             if(number.contains(newText)){
-                newHymnList.add(hymn);
+                newHymnList.add(new Hymn(hymn.getHymn(), hymn.getHymnNumber()));
             }
 
         }
 
+        //hymnArrayList = newHymnList;
         hymnListAdapter.updateList(newHymnList);
         return true;
     }

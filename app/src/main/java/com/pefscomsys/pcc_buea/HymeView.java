@@ -24,7 +24,6 @@ public class HymeView extends AppCompatActivity {
         Intent intent = getIntent();
         String number = Integer.toString(intent.getIntExtra(HYMN_NUMBER, 0));
         String text = intent.getStringExtra(HYMN);
-        Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
 
         hymeTitle = (TextView) findViewById(R.id.hymnViewTitle);
         hymnText = (TextView) findViewById(R.id.hymnText);
