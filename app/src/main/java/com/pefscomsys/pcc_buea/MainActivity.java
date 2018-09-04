@@ -2,15 +2,18 @@ package com.pefscomsys.pcc_buea;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,27 +38,22 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.navigation_home) {
                 //start home fragment
                 setFragment(homeFragment);
-                Toast.makeText(getApplicationContext(), R.string.home, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_hymns) {
                 //start hymn fragment
                 setFragment(hymesFragment);
-                Toast.makeText(getApplicationContext(), R.string.hymns, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_books) {
                 //start book fragment
                 setFragment(booksFragment);
-                Toast.makeText(getApplicationContext(), R.string.books, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_scriptures) {
                 //start scripture fragment
                 setFragment(scripturesFragment);
-                Toast.makeText(getApplicationContext(), R.string.scriptures, Toast.LENGTH_SHORT).show();
                 return true;
             } else if (id == R.id.navigation_info) {
                 //start scripture fragment
                 setFragment(infoFragment);
-                Toast.makeText(getApplicationContext(), R.string.church_info, Toast.LENGTH_SHORT).show();
                 return true;
             }
             return false;
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.toolbar_menu, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -116,4 +114,11 @@ public class MainActivity extends AppCompatActivity {
 //        return Jsoup.parse(html).text();
 //    }
 
+
+    @Override
+    public void setActionBar(@Nullable Toolbar toolbar) {
+        super.setActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(R.string.app_name);
+    }
 }

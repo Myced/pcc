@@ -16,23 +16,33 @@
     <string name="cyf_books">CYF STUDY BOOKS</string>
     <string name="messenger">THE MESSENGER</string>
     <string name="more">More</string>
-    <string name="congregation">Presbytary \n and Congregation</string>
-    <string name="education">Educational Info...</string>
+    <string name="congregation">Presbytary &amp; Congregation</string>
+    <string name="education">Educational Info…</string>
     <string name="health">Health Information</string>
-    <string name="church_address">Church Address</string>
-    <string name="splash_heading">Church \n Hymn Book and \n Diary</string>
-
+    <string name="church_address">Church Address &amp; Committee</string>
     <string name="type_hymn_number">Type Hymn Number…</string>
     <string name="diary">Diary</string>
+    <string name="search">Enter hymn number…</string>
+    <string name="splash_subtitle">Church Hymnary &amp; Diary\nmobile application</string>
+    <string name="favorite">Favorite</string>
     <string name="day">Day</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
+    <string name="splash_heading">PRESBYTERIAN CHURCH\n
+        IN\n
+        CAMEROON</string>
+    <string name="church_diary">CHURCH DIARY</string>
+    <string name="church_hymn_book">CHURCH HYMN BOOK</string>
+    <string name="books_and_magazines">BOOKS &amp; MAGAZINES</string>
+    <string name="church_history">Church History</string>
+    <string name="other_info">Other Info</string>
+    <string name="hymn">Hymn</string>
+    <string name="sound">Sound</string>
+    <string name="share">Share</string>
 
     <string name="find">find</string>
     <string name="spinner_item">Spinner Item</string>
 
-    <string name="search">Enter hymn number…</string>
-    <string name="favorite">Favorite</string>
 
     <string-array name="days">
         <item>01</item>
@@ -237,6 +247,517 @@ The Son, the Spirit we adore–\n
  One Godhead, blest for ever-\n
  more.\n
         </item>
+        <item>
+            ROUND the Lord in glory seated,\n
+Cherubim and seraphim\n
+Filled His temple, and repeated\n
+ Each to each the alternate hymn:\n
+‘Lord, Thy glory fills the heaven;\n
+ Earth is with its fulness stored;\n
+Unto Thee be glory given,\n
+ Holy, holy, holy Lord.’\n\n
+Heaven is still with glory ringing,\n
+ Earth takes up the angels’ cry,\n
+‘Holy, holy, holy,’ singing,\n
+ ‘Lord of hosts, the Lord most\n
+ high.\n
+Lord, Thy glory fills the heaven;\n
+ Earth is with its fulness stored;\n
+Unto Thee be glory given,\n
+ Holy, holy, holy Lord.’\n\n
+With His seraph train before Him,\n
+ With His holy Church below,\n
+Thus conspire we to adore Him,\n
+Bid we thus our anthem flow;\n
+‘Lord, Thy glory fills the heaven;\n
+ Earth is with its fulness stored;\n
+Unto Thee be glory given,\n
+ Holy, holy, holy Lord.’\n
+</item>
+        <item>
+FATHER of heaven, whose love\n
+profound\n
+A ransom for our souls hath found,\n
+ Before Thy throne we sinners\n
+ bend;\n
+To us Thy pardoning love extend.\n\n
+2 Almighty Son, Incarnate Word,\n
+ Our Prophet, Priest, Redeemer,\n
+ Lord,\n
+Before Thy throne we sinner bend;\n
+ To us Thy saving grace extend.\n\n
+3 Eternal Spirit, by whose breath\n
+ The soul is raised from sin and\n
+ death,\n
+Before Thy throne we sinners\n
+ bend;\n
+ To us Thy quickening power\n
+ extend.\n\n
+4 Jehovah – Father, Spirit, Son –\n
+ Mysterious Godhead, Three in\n
+ One,\n
+Before Thy throne we sinners bend;\n
+ Grace, pardon, life to us extend.\n
+        </item>
+        <item>
+GLORY be to God the Father,\n
+Glory be to God the Son,\n
+Glory be to God the Spirit, –\n
+ Great Jehovah, Three in One!\n
+Glory, glory\n
+ While eternal ages run!\n\n
+2 Glory be to Him who loved us,\n
+ Washed us from each spot and\n
+ stain!\n
+Glory be to Him who bought us,\n
+ Made us kings with Him to\n
+ reign!\n
+ Glory, glory\n
+To the Lamb that once was slain!\n
+\n
+3 Glory to the King of angels,\n
+ Glory to the Church’s king,\n
+Glory to the King of nations!\n
+ Heaven and earth, your praises\n
+ bring;\n
+ Glory, glory\n
+To the King of glory bring!\n\n
+4 ‘Glory, blessing, praise eternal!’\n
+ Thus the choir of angels sings;\n
+‘Honour, riches, power, dominion!’\n
+ Thus its praise creation brings;\n
+ Glory, glory\n
+ Glory to the King of kings!\n
+        </item>
+        <item>
+A GLADSOME hymn of praise\n
+we sing\n
+ And thankfully we gather\n
+To bless the love of God above,\n
+ Our everlasting Father.\n\n
+In Him rejoice with heart and voice,\n
+ Whose glory fadeth never,\n
+Whose providence is our defence,\n
+ Who lives and loves for ever.\n\n
+Full in His sight His children stand,\n
+ By His strong arm defended,\n
+ And He whose wisdom guides the\n
+ World\n
+ Our footsteps hath attended.\n\n
+For nothing falls unknown to Him,\n
+ Or care or joy or sorrow,\n
+And He whose mercy ruled the past\n
+ Will be our stay to-morrow.\n\n
+Then praise the Lord with one\n
+ accord,\n
+ To His great Name give glory,\n
+ And of His never-changing love\n
+ Repeat the wondrous story.\n
+        </item>
+        <item>
+ALL creatures of our God and\n
+King,\n
+Lift up your voice and with us sing\n
+ Alleluia, Alleluia!\n
+Thou burning sun with golden\n
+ beam,\n
+ Thou silver moon with softer\n
+ gleam,\n
+O praise Him, O praise Him\n
+ Alleluia, Alleluia, Alleluia!\n\n
+Thou rushing wind that art so\n
+ strong,\n
+Ye clouds that sail in heaven along,\n
+ O praise Him, Alleluia!\n
+Thou rising morn, in praise rejoice,\n
+Ye lights of evening, find a\n
+ voice.\n
+\n
+Thou flowing water, pure and\n
+ clear,\n
+ Make music for thy Lord to\n
+ hear,\n
+Alleluia, Alleluia!\n
+Thou fire so masterful and\n
+ bright,\n
+That givest man both warmth and\n
+ light.\n\n
+Dear mother earth, who day by\n
+ day\n
+ Unfoldest blessings on our way,\n
+O praise Him, Alleluia!\n
+The flowers and fruits that in\n
+ thee grow,\n
+ Let them His glory also show.\n\n
+And all ye men of tender heart,\n
+ Forgiving others, take your part,\n
+O sing ye, Alleluia!\n
+ Ye who long pain and sorrow\n
+ bear,\n
+Praise God and on Him cast your\n
+ care.\n\n
+And thou, most kind and gentle\n
+ death,\n
+ Waiting to hush our latest\n
+ breath,\n
+O praise Him, Alleluia!\n
+ Thou leadest home the child of\n
+ God,\n
+And Christ our Lord the way hath\n
+ trod.\n\n
+Let all things their Creator bless,\n
+ And worship Him in humbleness,\n
+O praise Him, Alleluia!\n
+ Praise, praise the Father, praise\n
+ the Son,\n
+And praise the Spirit, Three in One.\n
+</item>
+        <item>
+ANGEL voices, ever singing\n
+Round Thy throne of light,\n
+Angel harps, forever ringing,\n
+ Rest not day nor night;\n
+Thousands only live to bless Thee,\n
+ And confess Thee\n
+Lord of might.\n\n
+Yea, we know that Thou rejoicest\n
+ O’er each work of Thine;\n
+Thou didst ears and hands and\n
+ voices\n
+ For Thy praise design;\n
+Craftsman’s art and music’s measure\n
+ For Thy pleasure\n
+All combine.\n\n
+In Thy house, great God, we offer\n
+ Of Thine own to Thee,\n
+And for Thine acceptance proffer,\n
+ All unworthily,\n
+Hearts and minds and hands and\n
+ voices,\n
+ In our choicest Psalmody.\n\n
+Honour, glory, might, and merit\n
+ Thine shall ever be,\n
+Father, Son, and Holy Spirit\n
+ Blessèd Trinity.\n
+Of the best that thou hast given,\n
+ Earth and heaven\n
+Render Thee.\n
+        </item>
+        <item>
+BEAUTIFUL the fields beyond the\n
+river!\n
+Glorious the thousands gathered\n
+ there!\n
+ But who in heav’n, so full of\n
+grace and glory Who with \n
+Him, our Saviour, can compare? …\n
+ Oh, He is the chief among ten\n
+thousand! . . .\n
+ Roll His praise in joyful waves\n
+ along! . . .\n
+For “altogether, altogether lovely!”\n
+ Shall for ever be our happy song! . . .\n\n
+Altogether, altogether lovely!\n
+ He is calling tenderly to thee;\n
+My soul, why not accept His great\n
+ salvation,\n
+ Offered now so rich, so full, so\n
+ free?\n\n
+Altogether, altogether lovely!\n
+ Hear His voice – how tender\n
+ still the call:\n
+ “Come, come, ye weary ones and\n
+ heavy-laden,\n
+ Come to Me, and let your\n
+ burdens fall!” . . .\n
+</item>
+        <item>
+GOD moves in a mysterious way,\n
+ His wonders to perform ;\n
+He plants His footsteps in the sea,\n
+ And rides upon the storm.\n\n
+Deep in unfathomable mines\n
+ Of never-failing skill\n
+He treasures up His bright designs,\n
+ And works His sovereign will.\n\n
+Ye fearful saints, fresh courage\n
+ take;\n
+ The clouds ye so much dread\n
+Are big with mercy, and shall break\n
+ In blessings on your head.\n\n
+Judge not the Lord by feeble sense,\n
+ But trust Him for His grace ;\n
+Behind a frowning providence\n
+ He hides a smiling face.\n\n
+His purposes will ripen fast,\n
+ Unfolding every hour;\n
+The bud may have a bitter taste,\n
+ But sweet will be the flower.\n
+Blind unbelief is sure to err,\n
+ And scan His work in vain ;\n
+God is His own interpreter,\n
+ And He will make it plain.\n
+</item>
+        <item>
+“GREAT is Thy faithfulness,” O\n
+God my Father,\n
+ There is no shadow of turning\n
+ with Thee;\n
+\n
+ Thou changest not, Thy compas-\n
+ sions, they fail not;\n
+ As Thou hast been Thou for ever\n
+ wilt be:\n
+“Great is Thy faithfulness! Great is Thy\n
+ faithfulness!”\n
+ Morning by morning new mercies I see;\n
+All I have needed Thy hand has provided.-\n
+“Great is Thy faithfulness,” Lord, unto me.\n\n
+ Summer and winter, and spring-\n
+ time and harvest,\n
+ Sun, moon and stars in their\n
+ courses above,\n
+Join with all nature in manifold\n
+ witness\n
+ To Thy great faithfulness,\n
+ mercy and love:\n\n
+Pardon for sin and a peace that\n
+ endureth,\n
+ Thy own dear presence to cheer\n
+ and to guide;\n
+Strength for today and bright hope\n
+ for tomorrow,\n
+ Blessings all mine, with ten\n
+ thousand beside!\n
+</item>
+        <item>
+IMMORTAL, invisible, God only\n
+ wise,\n
+In light inaccessible hid from our eyes\n
+ Most blessèd, most glorious,\n
+ the Ancient of Days,\n
+Almighty, victorious, Thy great\n
+ Name we praise.\n\n
+Unresting, unhasting, and silent as\n
+ light,\n
+ Nor wanting, nor wasting,\n
+ Thou rulest in might;\n
+Thy justice like mountains high\n
+ soaring above\n
+ Thy clouds which are fountains\n
+ of goodness and love.\n\n
+To all, life Thou givest – to both\n
+ great and small;\n
+ In all life Thou livest, the true\n
+ life of all;\n
+We blossom and flourish as leaves\n
+ on the tree,\n
+ And wither and perish – but\n
+ nought changeth Thee.\n\n
+Great Father of Glory, pure Father\n
+ of Light,\n
+ Thine angels adore Thee, all\n
+ veiling their sight;\n
+All laud we would render: O help\n
+ us to see\n
+ ’Tis only the spendour of light\n
+ hideth Thee.\n
+</item>
+        <item>
+LORD of all being, throned afar,\n
+Thy glory flames from sun and\n
+ star;\n
+Centre and soul of every sphere,\n
+ Yet to each loving heart how\n
+ near!\n\n
+Sun of our life, Thy quickening ray\n
+ Sheds on our path the glow of\n
+ day;\n
+Star of our hope, Thy softened\n
+ light\n
+ Cheers the long watches of the\n
+ night.\n\n
+Our midnight is Thy smile with-\n
+ drawn,\n
+ Our noontide is Thy gracious\n
+ dawn,\n
+Our rainbow arch Thy mercy’s\n
+ sign;\n
+ All, save the clouds of sin, are\n
+ Thine.\n\n
+Lord of all life, below, above,\n
+ Whose light is truth, whose\n
+ warmth is love,\n
+Before Thy ever-blazing throne\n
+ We ask no lustre of our own.\n\n
+Grant us Thy truth to make us free,\n
+ And kindling hearts that burn\n
+ for Thee,\n
+Till all Thy living altars claim\n
+ One holy light, one heavenly\n
+flame.\n
+</item>
+        <item>
+LET us with a gladsome mind\n
+Praise the Lord, for He is kind;\n
+For His mercies aye endure,\n
+ Ever faithful, ever sure.\n\n
+Let us blaze His Name abroad,\n
+ For of gods He is the God;\n
+For His mercies aye endure,\n
+ Ever faithful, ever sure.\n\n
+He, with all-commanding might,\n
+ Filled the new-made world with\n
+ light;\n
+For His mercies aye endure,\n
+ Ever faithful, ever sure.\n\n
+All things living He doth feed;\n
+ His full hand supplies their\n
+ need;\n
+For mercies aye endure,\n
+ Ever faithful, ever sure.\n\n
+He His chosen race did bless\n
+ In the wasteful wilderness:\n
+For His mercies aye endure,\n
+ Ever faithful, ever sure.\n\n
+He hath with a piteous eye\n
+ Looked upon our misery:\n
+For His mercies aye endure,\n
+ Ever faithful, ever sure.\n\n
+Let us then with gladsome mind\n
+ Praise the Lord, for He is kind:\n
+For His mercies aye endure,\n
+ Ever faithful, ever sure.\n
+</item>
+        <item>
+LET praises fill the sky;\n
+Our voices raise on high\n
+ Let shouts of joy be Thine;\n
+Proclaim His love Divine.\n
+ Proclaim His love Divine.\n\n
+Exalt His name on high;\n
+ Let praises multiply\n
+In perfect harmony\n
+Affirming His glory\n
+Affirming His glory.\n
+</item>
+        <item>
+My God, how wonderful Thou art,\n
+Thy majesty how bright!\n
+How beautiful Thy mercy-seat,\n
+ In depths of burning light!\n\n
+ How dread are Thine eternal years,\n
+ 0 everlasting Lord,\n
+By prostrate spirits day and night\n
+ Incessantly adored !\n\n
+ 0 how I fear Thee, living God,\n
+ With deepest, tenderest fears,\n
+And worship Thee with trembling\n
+ hope\n
+ And penitential tears !\n\n
+ Yet I may love Thee too, 0 Lord,
+ Almighty as Thou art,\n
+ For Thou hast stooped to ask of me\n
+ The love of my poor heart.\n\n
+No earthly father loves like Thee;\n
+ No mother, e’er so mild,\n
+Bears and forbears as Thou hast\n
+ done\n
+ With me, Thy sinful child.\n\n
+ How beautiful, how beautiful\n
+ The sight of Thee must be,\n
+Thine endless wisdom, boundless\n
+ power,\n
+And awful purity !\n
+</item>
+        <item>
+O WORSHIP the King all-glorious\n
+ above,\n
+ O gratefully sing His power and\n
+ His love,\n
+Our Shield and Defender,\n
+ the Ancient of Days,\n
+ Pavilioned in splendour, and\n
+ girded with praise.\n
+O tell of His might, O sing of His\n
+ grace,\n
+ Whose robe is the light, whose\n
+ canopy space.\n
+His chariots of wrath the deep\n
+ thunder-clouds form,\n
+ And dark is His path on the\n
+ wings of the storm.\n\n
+The earth with its store\n
+of wonders untold,\n
+ Almighty, Thy power hath\n
+ founded of old,\n
+Hath stablished it fast \n
+by a changeless decree,\n
+ And round it hath cast, like a\n
+ mantle, the sea.\n\n
+Thy bountiful care what tongue\n
+ can recite?\n
+ It breathes in the air; it shines in\n
+ the light;\n
+It streams from the hills; it descends\n
+ to the plain,\n
+And sweetly distils in the dew and\n
+ the rain.\n\n
+Frail children of dust, and feeble\n
+ as frail,\n
+In Thee do we trust, nor find\n
+ Thee to fail;\n
+Thy mercies how tender, how firm\n
+ to the end,\n
+ Our Maker, Defender, Redeemer, \n
+and Friend!\n\n
+O measureless Might! ineffable\n
+ Love!\n
+ While angels delight to hymn\n
+ Thee above,\n
+The humbler creation, though\n
+ feeble their lays,\n
+ With true adoration shall lisp to\n
+ Thy praise.\n
+</item>
+        <item>
+O LORD of heaven and earth and\n
+ sea,\n
+To Thee all praise and glory be;\n
+ How shall we show our love to\n
+ Thee,\n
+ Who givest all?\n\n
+The golden sunshine, vernal air,\n
+Sweet flowers and fruits Thy\n
+ love declare;\n
+Where harvests ripen, Thou art\n
+ there,\n
+ Who givest all.\n\n
+For peaceful homes and healthful\n
+ days,\n
+ For all the blessings earth displays\n
+We owe Thee thankfulness and\n
+ praise,\n
+ Who givest all.\n\n
+Thou didst not spare Thine only\n
+ Son,\n
+ But gav’st Him for a world\n
+ undone,\n
+And freely with that blessèd One\n
+ Thou givest all.\n\n
+Thou giv’st the Spirit’s blessèd\n
+ dower,\n
+ Spirit of life and love and\n
+ power,
+And dost His sevenfold graces\n
+ shower\n
+ Upon us all.\n\n
+For souls redeemed, for sins\n
+ forgiven,\n
+ For means of grace and hopes\n
+ of heaven,\n
+Father, all praise to Thee be given,\n
+ Who givest all.\n
+</item>
     </string-array>
-
 </resources>
