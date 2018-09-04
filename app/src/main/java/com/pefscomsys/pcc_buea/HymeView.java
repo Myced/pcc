@@ -2,6 +2,8 @@ package com.pefscomsys.pcc_buea;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,12 +11,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import static com.pefscomsys.pcc_buea.HymesFragment.HYMN;
 import static com.pefscomsys.pcc_buea.HymesFragment.HYMN_NUMBER;
 
 public class HymeView extends AppCompatActivity {
     TextView hymeTitle, hymnText;
+    String number;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +26,8 @@ public class HymeView extends AppCompatActivity {
         setContentView(R.layout.activity_hyme_view);
 
         Intent intent = getIntent();
-        String number = Integer.toString(intent.getIntExtra(HYMN_NUMBER, 0));
+        number = Integer.toString(intent.getIntExtra(HYMN_NUMBER, 0));
         String text = intent.getStringExtra(HYMN);
-        Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
 
         hymeTitle = (TextView) findViewById(R.id.hymnViewTitle);
         hymnText = (TextView) findViewById(R.id.hymnText);
@@ -53,9 +56,24 @@ public class HymeView extends AppCompatActivity {
                 return true;
             case R.id.favorite:
                 Toast.makeText(getApplicationContext(), "Favorite Added", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.sound:
+                Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.share:
+                Toast.makeText(getApplicationContext(), "Share", Toast.LENGTH_SHORT).show();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    @Override
+    public void setActionBar(@Nullable Toolbar toolbar) {
+        super.setActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("HYMN " + number);
     }
 }

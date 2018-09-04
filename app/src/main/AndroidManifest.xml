@@ -28,14 +28,7 @@
 
         <activity
             android:name=".HymeView"
-            android:label="@string/hymns"
-            android:parentActivityName="com.pefscomsys.pcc_buea.MainActivity"
-            tools:targetApi="jelly_bean">
-            <!-- The meta-data element is needed for versions lower than 4.1 -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.pefscomsys.pcc_buea.MainActivity" />
-
+            android:label="@string/hymn">
         </activity>
     </application>
 
