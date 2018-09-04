@@ -2,7 +2,16 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <devices>
+          <device id="Nexus 5" />
+          <device id="Nexus 6" />
+          <device id="Nexus 5X" />
+          <device id="Nexus 4" />
+          <device id="Nexus One" />
+          <device id="Nexus S" />
+        </devices>
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
@@ -11,18 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1b5acb-d46c-4a26-8b22-89df58e256c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymnListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymnListAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/InfoFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/InfoFragment.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml" afterPath="$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_info.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_info.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml" afterPath="$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -47,27 +52,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fragment_home.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="52" lean-forward="false" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+            <state relative-caret-position="187">
+              <caret line="681" column="10" lean-forward="false" selection-start-line="681" selection-start-column="10" selection-end-line="681" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java">
+      <file leaf-file-name="activity_hyme_view.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+            <state relative-caret-position="391">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hyme_view_toolbar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#522#537#0" expanded="true" />
+                <element signature="e#730#745#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,29 +107,11 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hymn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Hymn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HymnListAdapter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymnListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
-              <folding />
+            <state relative-caret-position="381">
+              <caret line="117" column="3" lean-forward="false" selection-start-line="117" selection-start-column="3" selection-end-line="122" selection-end-column="5" />
+              <folding>
+                <element signature="e#4179#4196#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,19 +122,39 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InfoFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/InfoFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-2794">
+              <caret line="65" column="50" lean-forward="false" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+              <folding>
+                <element signature="e#799#820#0" expanded="true" />
+                <element signature="e#2232#2256#0" expanded="true" />
+                <element signature="e#3180#3204#0" expanded="true" />
+                <element signature="e#3643#3657#0" expanded="true" />
+                <element signature="e#4209#4228#0" expanded="true" />
+                <element signature="e#4271#4291#0" expanded="true" />
+                <element signature="e#4770#4792#0" expanded="true" />
+                <element signature="e#5613#5635#0" expanded="true" />
+                <element signature="e#6396#6410#0" expanded="true" />
+                <element signature="e#6794#6813#0" expanded="true" />
+                <element signature="e#6856#6876#0" expanded="true" />
+                <element signature="e#7238#7257#0" expanded="true" />
+                <element signature="e#8185#8204#0" expanded="true" />
+                <element signature="e#8588#8602#0" expanded="true" />
+                <element signature="e#9100#9119#0" expanded="true" />
+                <element signature="e#9162#9182#0" expanded="true" />
+                <element signature="e#9544#9560#0" expanded="true" />
+                <element signature="e#10170#10186#0" expanded="true" />
+                <element signature="e#10873#10887#0" expanded="true" />
+                <element signature="e#11414#11433#0" expanded="true" />
+                <element signature="e#11472#11492#0" expanded="true" />
+                <element signature="e#11826#11850#0" expanded="true" />
+                <element signature="e#12695#12719#0" expanded="true" />
+                <element signature="e#13122#13136#0" expanded="true" />
+                <element signature="e#13660#13679#0" expanded="true" />
+                <element signature="e#13722#13742#0" expanded="true" />
+                <element signature="e#14104#14124#0" expanded="true" />
+                <element signature="e#15028#15048#0" expanded="true" />
+                <element signature="e#15485#15499#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,22 +166,28 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+              <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="22" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HymesFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="71" column="56" lean-forward="false" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
-              <folding>
-                <element signature="e#3145#3160#0" expanded="true" />
-                <element signature="e#3380#3381#0" expanded="true" />
-                <element signature="e#3408#3409#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite_icon.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,9 +195,12 @@
       <file leaf-file-name="HymeView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="352">
+              <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+              <folding>
+                <element signature="e#1654#1670#0" expanded="true" />
+                <element signature="e#1815#1829#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2134,25 +2177,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragmentImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Hymn.java" />
         <option value="$PROJECT_DIR$/src/main/res/drawable/search_icon.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_hymes.xml" />
         <option value="$PROJECT_DIR$/src/main/res/menu/hymn_fragment_toolbar.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/hymn_list_row_design.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_info.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/InfoFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_splash.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymnListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_info.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml" />
       </list>
     </option>
   </component>
@@ -2216,7 +2259,19 @@
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
@@ -2432,7 +2487,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34" sideWeight="0.50583655" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299611" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299611" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2558,7 +2613,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="e#4179#4196#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2684,28 +2741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/hymn_list_row_design.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2739,17 +2774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="56" lean-forward="false" selection-start-line="2" selection-start-column="56" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -2808,27 +2832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-          <folding>
-            <element signature="e#789#794#0" expanded="false" />
-            <element signature="e#976#981#0" expanded="false" />
-            <element signature="e#1209#1214#0" expanded="false" />
-            <element signature="e#1666#1671#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2845,19 +2848,8 @@
         <state relative-caret-position="969">
           <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_info.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2865,28 +2857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_splash.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -2899,30 +2869,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="83" column="47" lean-forward="false" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="71" column="56" lean-forward="false" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
           <folding>
-            <element signature="e#3145#3160#0" expanded="true" />
-            <element signature="e#3380#3381#0" expanded="true" />
-            <element signature="e#3408#3409#0" expanded="true" />
+            <element signature="e#3145#3160#0" expanded="false" />
+            <element signature="e#3380#3381#0" expanded="false" />
+            <element signature="e#3408#3409#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2931,6 +2885,142 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="69" column="65" lean-forward="false" selection-start-line="69" selection-start-column="65" selection-end-line="69" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_info.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2794">
+          <caret line="65" column="50" lean-forward="false" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+          <folding>
+            <element signature="e#799#820#0" expanded="true" />
+            <element signature="e#2232#2256#0" expanded="true" />
+            <element signature="e#3180#3204#0" expanded="true" />
+            <element signature="e#3643#3657#0" expanded="true" />
+            <element signature="e#4209#4228#0" expanded="true" />
+            <element signature="e#4271#4291#0" expanded="true" />
+            <element signature="e#4770#4792#0" expanded="true" />
+            <element signature="e#5613#5635#0" expanded="true" />
+            <element signature="e#6396#6410#0" expanded="true" />
+            <element signature="e#6794#6813#0" expanded="true" />
+            <element signature="e#6856#6876#0" expanded="true" />
+            <element signature="e#7238#7257#0" expanded="true" />
+            <element signature="e#8185#8204#0" expanded="true" />
+            <element signature="e#8588#8602#0" expanded="true" />
+            <element signature="e#9100#9119#0" expanded="true" />
+            <element signature="e#9162#9182#0" expanded="true" />
+            <element signature="e#9544#9560#0" expanded="true" />
+            <element signature="e#10170#10186#0" expanded="true" />
+            <element signature="e#10873#10887#0" expanded="true" />
+            <element signature="e#11414#11433#0" expanded="true" />
+            <element signature="e#11472#11492#0" expanded="true" />
+            <element signature="e#11826#11850#0" expanded="true" />
+            <element signature="e#12695#12719#0" expanded="true" />
+            <element signature="e#13122#13136#0" expanded="true" />
+            <element signature="e#13660#13679#0" expanded="true" />
+            <element signature="e#13722#13742#0" expanded="true" />
+            <element signature="e#14104#14124#0" expanded="true" />
+            <element signature="e#15028#15048#0" expanded="true" />
+            <element signature="e#15485#15499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="117" column="3" lean-forward="false" selection-start-line="117" selection-start-column="3" selection-end-line="122" selection-end-column="5" />
+          <folding>
+            <element signature="e#4179#4196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="681" column="10" lean-forward="false" selection-start-line="681" selection-start-column="10" selection-end-line="681" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/menu/hyme_view_toolbar.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="e#522#537#0" expanded="true" />
+            <element signature="e#730#745#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable/favorite_icon.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding>
+            <element signature="e#1654#1670#0" expanded="true" />
+            <element signature="e#1815#1829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_splash.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="22" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_hyme_view.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding />
         </state>
       </provider>

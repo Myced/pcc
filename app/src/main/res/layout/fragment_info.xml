@@ -11,15 +11,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
+            android:id="@+id/church_info_heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/church_info"
-            android:textSize="36sp"
-            android:id="@+id/church_info_heading"
             android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="@string/church_info"
             android:textColor="@color/colorPrimary"
-            />
+            android:textSize="36sp" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
