@@ -30,18 +30,16 @@
             android:id="@+id/church_info_layer"
             android:layout_below="@id/church_info_heading"
             android:layout_alignParentStart="true">
-            <LinearLayout
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/guideline">
+                android:padding="0dp"
+                android:background="@color/light_grey">
 
                     <ImageView
                         android:id="@+id/church_history"
