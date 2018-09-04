@@ -41,6 +41,30 @@
     <string name="sound">Sound</string>
     <string name="share">Share</string>
 
+    <string name="find">find</string>
+
+
+    <string-array name="days">
+        <item>
+            01
+        </item>
+    </string-array>
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
 
     <string-array name="hymns">
         <item>

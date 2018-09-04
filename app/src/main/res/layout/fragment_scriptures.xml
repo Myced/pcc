@@ -39,12 +39,15 @@
                         android:id="@+id/day"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
                             android:text="@string/day" />
 
                         <Spinner
@@ -54,14 +57,18 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/month"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/textView4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
                             android:text="@string/month" />
 
                         <Spinner
@@ -71,14 +78,18 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/year"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/textView5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
                             android:text="@string/year" />
 
                         <Spinner
@@ -87,12 +98,36 @@
                             android:layout_height="wrap_content" />
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/find"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/find_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:text="@string/find" />
+
+                    </LinearLayout>
+
+
+
+
+
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
+                    android:background="@drawable/border"
                     android:orientation="vertical">
 
                     <TextView
