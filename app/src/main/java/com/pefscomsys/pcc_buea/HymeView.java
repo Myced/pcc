@@ -18,7 +18,7 @@ import static com.pefscomsys.pcc_buea.HymesFragment.HYMN_NUMBER;
 
 public class HymeView extends AppCompatActivity {
     TextView hymeTitle, hymnText;
-    String number;
+    String number, text;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class HymeView extends AppCompatActivity {
 
         Intent intent = getIntent();
         number = Integer.toString(intent.getIntExtra(HYMN_NUMBER, 0));
-        String text = intent.getStringExtra(HYMN);
+        text = intent.getStringExtra(HYMN);
 
         hymeTitle = (TextView) findViewById(R.id.hymnViewTitle);
         hymnText = (TextView) findViewById(R.id.hymnText);
@@ -61,13 +61,19 @@ public class HymeView extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.share:
-                Toast.makeText(getApplicationContext(), "Share", Toast.LENGTH_SHORT).show();
+                shareIt(text);
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    private void shareIt(String text) {
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, text);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
     }
 
     @Override
