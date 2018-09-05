@@ -138,6 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
+                    android:padding="@dimen/margin20"
                     android:orientation="vertical">
 
                     <TextView
@@ -145,7 +146,122 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/scriptures"
-                        android:textSize="18sp" />
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin20"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin20"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:background="@color/light_grey"
+                        >
+
+                        <TextView
+                            android:id="@+id/psalms"
+                            android:layout_width="wrap_content"
+                            android:textSize="@dimen/fontsize"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_black"
+                            android:text="@string/introit_psalms"
+                            android:paddingRight="8dp"/>
+
+                        <TextView
+                            android:id="@+id/psalms_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@id/psalms"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="@string/psalms"
+                            android:layout_toRightOf="@id/psalms" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+
+                        <TextView
+                            android:id="@+id/first_lesson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="@string/first_lesson" />
+
+                        <TextView
+                            android:id="@+id/reading_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="Mt 7:7" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:background="@color/light_grey">
+
+                        <TextView
+                            android:id="@+id/second_lesson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="@string/second_lesson" />
+
+                        <TextView
+                            android:id="@+id/reading_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="Ez 7:7" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/text_quote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="@string/text" />
+
+                        <TextView
+                            android:id="@+id/reading_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="@dimen/fontsize"
+                            android:textColor="@color/text_black"
+                            android:text="Mt 7:7" />
+                    </RelativeLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

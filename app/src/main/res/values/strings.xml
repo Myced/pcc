@@ -43,6 +43,12 @@
     <string name="find">find</string>
     <string name="spinner_item">Spinner Item</string>
 
+    <string name="first_lesson"> 1st Lesson</string>
+    <string name="second_lesson">2nd Lesson</string>
+    <string name="text">Text</string>
+    <string name="introit_psalms">Introit Psalms:</string>
+    <string name="psalms">Psalms 34</string>
+
 
     <string-array name="days">
         <item>01</item>
