@@ -37,6 +37,7 @@ public class ScripturesFragment extends Fragment {
     String currentYear;
     String currentMonth;
     String currentDay;
+    String currentMonthName;
 
 
     GregorianCalendar calender;
@@ -82,14 +83,15 @@ public class ScripturesFragment extends Fragment {
         currentDay = dayFormat.format(today);
         currentMonth = monthFormat.format(today);
         currentYear = yearFormat.format(today);
+        currentMonthName = getMonthName(currentMonth);
 
-        Log.d("Date", currentDay);
-        Log.d("Date", currentMonth);
-        Log.d("Date", currentYear);
+//        Log.d("Date", currentDay);
+//        Log.d("Date", currentMonth);
+//        Log.d("Date", currentYear);
 
-        String res = "Day:" + currentDay + " Month:" + currentMonth + " Year:" + currentYear;
-
-        Toast.makeText(getContext(), res, Toast.LENGTH_SHORT).show();
+//        String res = "Day:" + currentDay + " Month:" + currentMonth + " Year:" + currentYear;
+//
+//        Toast.makeText(getContext(), res, Toast.LENGTH_SHORT).show();
 
 
 
@@ -115,6 +117,7 @@ public class ScripturesFragment extends Fragment {
 
         month.setAdapter(monthsAdapter);
 
+        
         //year resources id
 
         ArrayAdapter<CharSequence> yearsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
@@ -213,6 +216,66 @@ public class ScripturesFragment extends Fragment {
         else if(month.equals("December"))
         {
             result = "12";
+        }
+        else
+        {
+            result = "-00";
+        }
+
+        return result;
+    }
+
+    private String getMonthName(String monthId)
+    {
+        String result = "";
+
+        if(monthId.equals("01"))
+        {
+            result = "January";
+        }
+        else if(monthId.equals("02"))
+        {
+            result = "February";
+        }
+        else if(monthId.equals("03"))
+        {
+            result = "March";
+        }
+        else if(monthId.equals("04"))
+        {
+            result = "April";
+        }
+        else if(monthId.equals("05"))
+        {
+            result = "May";
+        }
+        else if(monthId.equals("06"))
+        {
+            result = "June";
+        }
+        else if(monthId.equals("07"))
+        {
+            result = "July";
+        }
+        else if(monthId.equals("08"))
+        {
+            result = "August";
+        }
+        else if(monthId.equals("09"))
+        {
+            result = "September";
+        }
+        else if(monthId.equals("10"))
+        {
+            result = "October";
+        }
+        else if(monthId.equals("11"))
+        {
+            result = "November";
+        }
+        else if(monthId.equals("12"))
+        {
+            result = "December";
         }
         else
         {
