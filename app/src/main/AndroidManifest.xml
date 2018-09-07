@@ -19,17 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".HymeView"
-            android:label="@string/hymn">
-        </activity>
+            android:label="@string/hymn" />
+        <activity android:name=".ReadingOneActivity" />
+        <activity android:name=".ReadingTwoActivity" />
+        <activity android:name=".PsalmsReadingActivity" />
+        <activity android:name=".ReadingTextActivity"></activity>
     </application>
 
 </manifest>

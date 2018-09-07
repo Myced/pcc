@@ -1,7 +1,15 @@
 package com.pefscomsys.pcc_buea;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +17,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 import java.util.Calendar;
@@ -39,6 +49,11 @@ public class ScripturesFragment extends Fragment {
     String currentDay;
     String currentMonthName;
 
+    TextView readingPsalms, readingOne, readingTwo, readingText;
+
+    //scripture variable
+
+    Scripture reading;
 
     GregorianCalendar calender;
 
@@ -54,13 +69,20 @@ public class ScripturesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_scriptures, container, false);
 
         //we have to set the selected dates to represent the date of today
+        //get the view components to update them as required
+         readingPsalms = view.findViewById(R.id.psalms_content);
+         readingOne = view.findViewById(R.id.reading_one);
+         readingTwo = view.findViewById(R.id.reading_two);
+         readingText = view.findViewById(R.id.reading_text);
+
+        //set them
 
         //start by initialising the timezone ids
         String[] ids = TimeZone.getAvailableIDs(+1 * 60 * 60 * 1000);
 
         if(ids.length == 0)
         {
-            Toast.makeText(getContext(), "Could not get the time", Toast.LENGTH_SHORT);
+            Toast.makeText(getContext(), "Could not get the time", Toast.LENGTH_SHORT).show();
         }
 
         //prepare the timezone
@@ -85,13 +107,132 @@ public class ScripturesFragment extends Fragment {
         currentYear = yearFormat.format(today);
         currentMonthName = getMonthName(currentMonth);
 
-//        Log.d("Date", currentDay);
-//        Log.d("Date", currentMonth);
-//        Log.d("Date", currentYear);
+        reading = new Scripture("", "", "", "", "");
 
-//        String res = "Day:" + currentDay + " Month:" + currentMonth + " Year:" + currentYear;
-//
-//        Toast.makeText(getContext(), res, Toast.LENGTH_SHORT).show();
+        reading.setPsalms("Psalms 40: 1-45");
+        reading.setReadingText("Mt 5: 1-3");
+        reading.setReadingTwo("John 3:3");
+        reading.setReadingOne("Luke 4: 5");
+
+        //prepare our date and get readings for this date
+        String dbDate = currentDay + '/' + currentMonth + '/' + currentYear;
+
+        //now get it from the db with the Scripture DB Helper
+        ScriptureDBHandler scriptureDb = new ScriptureDBHandler(getContext(), null, dbDate);
+
+        //now get the reading array list for that day
+        List<Scripture> ourScripture = scriptureDb.getScriptures();
+
+        Log.d("RESULT", Integer.toString(ourScripture.size()));
+
+        for(int i = 0; i < ourScripture.size(); i++)
+        {
+            Scripture currentReading = ourScripture.get(i);
+
+            //now set the reading to those from currentReading
+            reading.setPsalms(currentReading.getPsalms());
+            reading.setReadingText(currentReading.getReadingText());
+            reading.setReadingTwo(currentReading.getReadingTwo());
+            reading.setReadingOne(currentReading.getReadingOne());
+        }
+
+
+
+        //before setting the reading. make them clickable
+        final String oneString = reading.getReadingOne();
+        SpannableString oneSpan = new SpannableString(oneString);
+        ClickableSpan clickOne = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                Toast.makeText(getContext(), "Reading one clicked", Toast.LENGTH_SHORT).show();
+                Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
+                readingOneIntent.putExtra("READING_ONE", oneString);
+                startActivity(readingOneIntent);
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.BLUE);
+            }
+        };
+        oneSpan.setSpan(clickOne, 0, oneString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //now set the text for the reading
+        readingOne.setText(oneSpan);
+        readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+        //do the same for reading two
+        final String twoString = reading.getReadingTwo();
+        SpannableString twoSpan = new SpannableString(twoString);
+        ClickableSpan clickTwo = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                Toast.makeText(getContext(), "Reading tow clicked", Toast.LENGTH_SHORT).show();
+                Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
+                readingTwoIntent.putExtra("READING_TWO", twoString);
+                startActivity(readingTwoIntent);
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.BLUE);
+            }
+        };
+        twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        readingTwo.setText(twoSpan);
+        readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+
+        //reading text
+        final String textString = reading.getReadingText();
+        SpannableString textSpan = new SpannableString(textString);
+        ClickableSpan clickText = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                Toast.makeText(getContext(), "Reading text clicked", Toast.LENGTH_SHORT).show();
+                Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
+                readingTextIntent.putExtra("READING_TEXT", textString);
+                startActivity(readingTextIntent);
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.BLUE);
+            }
+        };
+        textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        readingText.setText(textSpan);
+        readingText.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+        //psalms introit
+        final String psalmsString = reading.getPsalms();
+        SpannableString psalmsSpan = new SpannableString(psalmsString);
+        ClickableSpan psalmsText = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                Toast.makeText(getContext(), "Reading Psalms clicked", Toast.LENGTH_SHORT).show();
+                Intent readingPsalmIntent = new Intent(getContext(), PsalmsReadingActivity.class);
+                readingPsalmIntent.putExtra("READING_PSALM", psalmsString);
+                startActivity(readingPsalmIntent);
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.BLUE);
+            }
+        };
+        textSpan.setSpan(clickText, 0, psalmsString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        readingPsalms.setText(psalmsSpan);
+        readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+
+
 
 
 
@@ -117,7 +258,6 @@ public class ScripturesFragment extends Fragment {
 
         month.setAdapter(monthsAdapter);
 
-        
         //year resources id
 
         ArrayAdapter<CharSequence> yearsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
@@ -127,17 +267,62 @@ public class ScripturesFragment extends Fragment {
 
         year.setAdapter(yearsAdapter);
 
+        //set the default selected items
+        day.setSelection(daysAdapter.getPosition(currentDay));
+        month.setSelection(monthsAdapter.getPosition(currentMonthName));
+        year.setSelection(yearsAdapter.getPosition(currentYear));
+
         //set and onclick listener to the button
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Filter Date string", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "Filter Date string", Toast.LENGTH_SHORT).show();
                 Log.d("Scripture:", "filter the scriptures");
+
+                //we have to set the selected dates to represent the date of today
+//                //get the view components to update them as required
+//                = v.findViewById(R.id.psalms_content);
+//                TextView readingOne = v.findViewById(R.id.reading_one);
+//                TextView readingTwo = v.findViewById(R.id.reading_two);
+//                TextView readingText = v.findViewById(R.id.reading_text);
 
                 //now get the dates selected
                 selectedMonth = (String) month.getSelectedItem();
+                String selectedMonthId = getMonthId(selectedMonth);
                 selectedDay = (String) day.getSelectedItem();
                 selectedYear = (String) year.getSelectedItem();
+
+                String prepareDate = selectedDay + "/" + selectedMonthId + "/" + selectedYear;
+
+                Scripture reading = new Scripture("", "", "", "", "");
+
+                //now get it from the db with the Scripture DB Helper
+                ScriptureDBHandler scriptureDb = new ScriptureDBHandler(getContext(), null, prepareDate);
+
+                //now get the reading array list for that day
+                List<Scripture> ourScripture = scriptureDb.getScriptures();
+
+                Log.d("RESULT", Integer.toString(ourScripture.size()));
+
+                for(int i = 0; i < ourScripture.size(); i++)
+                {
+                    Scripture currentReading = ourScripture.get(i);
+
+                    //now set the reading to those from currentReading
+                    reading.setPsalms(currentReading.getPsalms());
+                    reading.setReadingText(currentReading.getReadingText());
+                    reading.setReadingTwo(currentReading.getReadingTwo());
+                    reading.setReadingOne(currentReading.getReadingOne());
+                }
+
+                //now set the text for the reading
+                readingPsalms.setText(reading.getPsalms());
+                readingOne.setText(reading.getReadingOne());
+                readingTwo.setText(reading.getReadingTwo());
+                readingText.setText(reading.getReadingText());
+
+
+
 
                 //get the month code
                 String monthID = getMonthId(selectedMonth);
@@ -145,8 +330,6 @@ public class ScripturesFragment extends Fragment {
                 String toast = "Month: " + selectedMonth + " Day: " + selectedDay + " Year: " + selectedYear + " MonthId: " + monthID;
 
                 Log.d("Scripture", toast);
-
-                Toast.makeText(getContext(), toast, Toast.LENGTH_SHORT).show();
 
                 //now get the scriptures for this particular day
 
