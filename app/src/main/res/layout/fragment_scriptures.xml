@@ -138,17 +138,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
-                    android:padding="@dimen/margin20"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/scripture"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/scriptures"
-                        android:textAlignment="center"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/margin20"
+                        android:text="@string/scriptures"
+                        android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:textSize="24sp" />
 
@@ -156,48 +155,47 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/margin20"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
                         android:background="@color/light_grey"
-                        >
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
 
                         <TextView
                             android:id="@+id/psalms"
                             android:layout_width="wrap_content"
-                            android:textSize="@dimen/fontsize"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text_black"
+                            android:paddingRight="8dp"
                             android:text="@string/introit_psalms"
-                            android:paddingRight="8dp"/>
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/fontsize" />
 
                         <TextView
                             android:id="@+id/psalms_content"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_toEndOf="@id/psalms"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:textSize="@dimen/fontsize"
-                            android:textColor="@color/text_black"
+                            android:layout_toEndOf="@id/psalms"
+                            android:layout_toRightOf="@id/psalms"
                             android:text="@string/psalms"
-                            android:layout_toRightOf="@id/psalms" />
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/fontsize" />
 
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp">
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
 
 
                         <TextView
                             android:id="@+id/first_lesson"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fontsize"
+                            android:text="@string/first_lesson"
                             android:textColor="@color/text_black"
-                            android:text="@string/first_lesson" />
+                            android:textSize="@dimen/fontsize" />
 
                         <TextView
                             android:id="@+id/reading_one"
@@ -205,25 +203,25 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:textSize="@dimen/fontsize"
+                            android:text="Mt 7:7"
                             android:textColor="@color/text_black"
-                            android:text="Mt 7:7" />
+                            android:textSize="@dimen/fontsize" />
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="8dp"
+                        android:background="@color/light_grey"
                         android:paddingBottom="8dp"
-                        android:background="@color/light_grey">
+                        android:paddingTop="8dp">
 
                         <TextView
                             android:id="@+id/second_lesson"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fontsize"
+                            android:text="@string/second_lesson"
                             android:textColor="@color/text_black"
-                            android:text="@string/second_lesson" />
+                            android:textSize="@dimen/fontsize" />
 
                         <TextView
                             android:id="@+id/reading_two"
@@ -231,25 +229,25 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:textSize="@dimen/fontsize"
+                            android:text="Ez 7:7"
                             android:textColor="@color/text_black"
-                            android:text="Ez 7:7" />
+                            android:textSize="@dimen/fontsize" />
 
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp">
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
 
                         <TextView
                             android:id="@+id/text_quote"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/fontsize"
+                            android:text="@string/text"
                             android:textColor="@color/text_black"
-                            android:text="@string/text" />
+                            android:textSize="@dimen/fontsize" />
 
                         <TextView
                             android:id="@+id/reading_text"
@@ -257,9 +255,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:textSize="@dimen/fontsize"
+                            android:text="Mt 7:7"
                             android:textColor="@color/text_black"
-                            android:text="Mt 7:7" />
+                            android:textSize="@dimen/fontsize" />
                     </RelativeLayout>
 
                 </LinearLayout>

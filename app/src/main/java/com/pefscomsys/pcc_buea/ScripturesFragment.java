@@ -163,93 +163,121 @@ public class ScripturesFragment extends Fragment {
 
 
         //before setting the reading. make them clickable
-        final String oneString = reading.getReadingOne();
-        SpannableString oneSpan = new SpannableString(oneString);
-        ClickableSpan clickOne = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
-                readingOneIntent.putExtra("READING_ONE", oneString);
-                startActivity(readingOneIntent);
-            }
+        if(reading.getReadingOne() != null)
+        {
+            final String oneString = reading.getReadingOne();
+            SpannableString oneSpan = new SpannableString(oneString);
+            ClickableSpan clickOne = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
+                    readingOneIntent.putExtra("READING_ONE", oneString);
+                    startActivity(readingOneIntent);
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        oneSpan.setSpan(clickOne, 0, oneString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        //now set the text for the reading
-        readingOne.setText(oneSpan);
-        readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            oneSpan.setSpan(clickOne, 0, oneString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            //now set the text for the reading
+            readingOne.setText(oneSpan);
+            readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingOne.setText("");
+        }
 
 
         //do the same for reading two
-        final String twoString = reading.getReadingTwo();
-        SpannableString twoSpan = new SpannableString(twoString);
-        ClickableSpan clickTwo = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
+        if(reading.getReadingTwo() != null)
+        {
+            final String twoString = reading.getReadingTwo();
+            SpannableString twoSpan = new SpannableString(twoString);
+            ClickableSpan clickTwo = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
 
-                Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
-                readingTwoIntent.putExtra("READING_TWO", twoString);
-                startActivity(readingTwoIntent);
-            }
+                    Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
+                    readingTwoIntent.putExtra("READING_TWO", twoString);
+                    startActivity(readingTwoIntent);
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        readingTwo.setText(twoSpan);
-        readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            readingTwo.setText(twoSpan);
+            readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingTwo.setText("");
+        }
 
         //reading text
-        final String textString = reading.getReadingText();
-        SpannableString textSpan = new SpannableString(textString);
-        ClickableSpan clickText = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
-                readingTextIntent.putExtra("READING_TEXT", textString);
-                startActivity(readingTextIntent);
-            }
+        if(reading.getReadingText() != null)
+        {
+            final String textString = reading.getReadingText();
+            SpannableString textSpan = new SpannableString(textString);
+            ClickableSpan clickText = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
+                    readingTextIntent.putExtra("READING_TEXT", textString);
+                    startActivity(readingTextIntent);
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        readingText.setText(textSpan);
-        readingText.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            readingText.setText(textSpan);
+            readingText.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingText.setText("");
+        }
 
 
         //psalms introit
-        final String psalmsString = reading.getPsalms();
-        SpannableString psalmsSpan = new SpannableString(psalmsString);
-        ClickableSpan psalmsText = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Intent readingPsalmIntent = new Intent(getContext(), PsalmsReadingActivity.class);
-                readingPsalmIntent.putExtra("READING_PSALM", psalmsString);
-                startActivity(readingPsalmIntent);
+        if(reading.getPsalms() != null)
+        {
+            final String psalmsString = reading.getPsalms();
+            SpannableString psalmsSpan = new SpannableString(psalmsString);
+            ClickableSpan psalmsText = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    Intent readingPsalmIntent = new Intent(getContext(), PsalmsReadingActivity.class);
+                    readingPsalmIntent.putExtra("READING_PSALM", psalmsString);
+                    startActivity(readingPsalmIntent);
 
-            }
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        psalmsSpan.setSpan(psalmsText, 0, psalmsString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        readingPsalms.setText(psalmsSpan);
-        readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            psalmsSpan.setSpan(psalmsText, 0, psalmsString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            readingPsalms.setText(psalmsSpan);
+            readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingPsalms.setText("");
+        }
 
 
 
