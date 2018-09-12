@@ -99,10 +99,6 @@ public class ScripturesFragment extends Fragment {
 
         Log.d("Calendar", "Printing Date and Time");
 
-        //try scripture text handler
-        ScriptureTextHandler ced = new ScriptureTextHandler("Matt.12:1-9", getContext());
-        ced.getReading();
-
         //get the date of today.
         // the day, month and year
         Date today = Calendar.getInstance().getTime();
@@ -147,7 +143,6 @@ public class ScripturesFragment extends Fragment {
         //now get the reading array list for that day
         List<Scripture> ourScripture = scriptureDb.getReadings(dbDate);
 
-        Log.d("RESULT", Integer.toString(ourScripture.size()));
 
         for(int i = 0; i < ourScripture.size(); i++)
         {
@@ -293,7 +288,7 @@ public class ScripturesFragment extends Fragment {
 
             //initialising the days adapter
         ArrayAdapter<CharSequence> daysAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.days, android.R.layout.simple_spinner_item);
+                R.array.days, R.layout.date_spinner_row);
 
         daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -301,7 +296,7 @@ public class ScripturesFragment extends Fragment {
 
         //prepare the months adapter too.
         ArrayAdapter<CharSequence> monthsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.months, android.R.layout.simple_spinner_item);
+                R.array.months, R.layout.date_spinner_row);
 
         daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -310,7 +305,7 @@ public class ScripturesFragment extends Fragment {
         //year resources id
 
         ArrayAdapter<CharSequence> yearsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.years, android.R.layout.simple_spinner_item);
+                R.array.years, R.layout.date_spinner_row);
 
         daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 

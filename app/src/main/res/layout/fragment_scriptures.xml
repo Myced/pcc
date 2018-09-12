@@ -39,26 +39,27 @@
                         android:id="@+id/day"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
                         android:layout_gravity="center"
-                        android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:textAlignment="center">
 
                         <TextView
                             android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
                             android:layout_gravity="center"
-                            android:text="@string/day" />
+                            android:text="@string/day"
+                            android:textColor="@color/text_black"
+                            android:textAlignment="center" />
 
                         <Spinner
                             android:id="@+id/day_spinner"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
                             android:layout_gravity="center"
-                            android:persistentDrawingCache="scrolling" />
+                            android:persistentDrawingCache="scrolling"
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -73,15 +74,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textAlignment="center"
-                            android:text="@string/month" />
+                            android:text="@string/month"
+                            android:textColor="@color/text_black"
+                            android:textAlignment="center" />
 
                         <Spinner
                             android:id="@+id/month_spinner"
                             android:layout_width="match_parent"
-                            android:textAlignment="center"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content" />
+                            android:textAlignment="center" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -96,15 +98,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:textAlignment="center"
-                            android:text="@string/year" />
+                            android:text="@string/year"
+                            android:textColor="@color/text_black"
+                            android:textAlignment="center" />
 
                         <Spinner
                             android:id="@+id/year_spinner"
                             android:layout_width="match_parent"
-                            android:textAlignment="center"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content" />
+                            android:textAlignment="center" />
 
                     </LinearLayout>
 
@@ -112,23 +115,20 @@
                         android:id="@+id/find"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
                         android:layout_gravity="center"
-                        android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:textAlignment="center">
 
                         <Button
                             android:id="@+id/find_btn"
+                            style="@style/Widget.AppCompat.Button.Colored"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            style="@style/Widget.AppCompat.Button.Colored"
                             android:text="@string/find" />
 
                     </LinearLayout>
-
-
-
 
 
                 </LinearLayout>

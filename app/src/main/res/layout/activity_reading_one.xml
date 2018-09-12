@@ -25,7 +25,6 @@
             android:padding="@dimen/margin20"
             android:id="@+id/reading_one_content"
 
-            android:text="@string/r1"
             android:textSize="20sp"
             />
     </ScrollView>
