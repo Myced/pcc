@@ -11,7 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public class MyMessengerBookAdapter extends RecyclerView.Adapter<MyMessengerBook
     private RecyclerView recyclerView;
     private ArrayList<String> booksNames;
     private ArrayList<String> storageUrls;
+    Button Delete;
 
 
 
@@ -56,6 +59,7 @@ public class MyMessengerBookAdapter extends RecyclerView.Adapter<MyMessengerBook
         return booksNames.size();
     }
 
+
     public class MyBookHolder extends RecyclerView.ViewHolder {
         TextView nameOfFile;
         public MyBookHolder(View itemView) {
@@ -72,6 +76,7 @@ public class MyMessengerBookAdapter extends RecyclerView.Adapter<MyMessengerBook
             });
         }
     }
+
     private void viewPdf(Uri file) {
         Intent intent;
         intent = new Intent(Intent.ACTION_VIEW);

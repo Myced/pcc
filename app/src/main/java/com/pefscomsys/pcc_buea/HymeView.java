@@ -31,7 +31,7 @@ public class HymeView extends AppCompatActivity {
 
         hymeTitle = (TextView) findViewById(R.id.hymnViewTitle);
         hymnText = (TextView) findViewById(R.id.hymnText);
-        hymeTitle.setText("HYME " + number);
+        hymeTitle.setText("HYMN " + number);
         hymnText.setText(text);
 
     }

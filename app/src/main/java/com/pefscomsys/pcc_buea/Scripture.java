@@ -8,8 +8,15 @@ public class Scripture
     private String readingText;
     public String date;
 
+    public Scripture()
+    {
+
+    }
 
     public Scripture(String psalms, String readingOne, String readingTwo, String readingText, String date) {
+
+        this();
+
         this.psalms = psalms;
         this.readingOne = readingOne;
         this.readingTwo = readingTwo;
