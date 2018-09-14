@@ -100,38 +100,150 @@
         <item>2020</item>
     </string-array>
 
+    <string name="misson_statement">Mission Statement</string>
+
+    <string name="mission_content">
+        The Mission of the Presbyterian Church in Cameroon is to proclaim the Good News of
+        God through Jesus Christ, in word and action. The proclamation of this Good News includes,
+        the preaching of the word, teaching, healing and liberating the people of God
+        from sin (Luke 4: 18 - 19).
+
+        \n\n
+
+        In this wise, the Presbyterian Health Services shall strive to:
+
+        \n\n
+    </string>
+
+    <string name="past_directors">
+        <li>Nellis van der Stoep</li>\n
+        <li>Walter Zumbrennen</li>\n
+        <li>Jeremiah Ayangwe Ozimba</li>\n
+        <li>Ako-Egbe James Takor</li>\n
+        <li>NUBED Godlove Tanyi</li> \n
+        <li>Dr. Fogwe Boniface Mobit (from 2005 till date)</li> \n
+    </string>
+
+    <string name="mission_list">
+        1. Provide devoted, sustainable and affordable highest quality health care to all served,
+        at all times within available resources; \n\n
+
+        2. Provide such health care wherever and whenever possible, and under appropriate
+        conditions in a supplementary and complementary rather than competitive manner,
+        and in compliance with all statutes governing health care delivery in Cameroon; \n\n
+
+        3. Provide participatory health care which is community based; \n\n
+
+        4. Provide health education to patients, staff and the community at large; \n\n
+
+        5. Fulfill this mission with a deep commitment to human dignity and rights, and the
+        moral and ethical obligations of the health profession. \n\n
+    </string>
+
+
+
+
+    <string name="churchHistory">
+        The Basel Missionaries arrived the coast of Cameroon on Dec 23rd 1886
+        with faith and zeal to plant God’s word in the Cameroonian soil.
+        The first three who arrived were: Rev Gottlieb Munz, Rev Christian Dilger,
+        Rev Johannes Bizer and Rev Friederich Becher. Rev Becker unfortunately died
+        of malaria four days after their arrival. Writing back home about this,
+        Rev Christian Dilger had this to say “It is the Lord whom it has
+        pleased to introduce our band in such a way.
+        We therefore can and will not withdraw.” And they did not withdraw.
+
+        \n\n
+
+        From then on, through rough terrain, under difficult weather, threatened
+        by the deadly malaria fever, they strode over long distances, taking
+        the gospel of the resurrected Jesus Christ to Cameroonians. Their zeal
+        was daunted only by the First World War when Germany finally succumbed
+        to the military pressure of Britain and France and the territory was partitioned.
+        Britain was in control of 1/5 of the colonial territory and France had 4/5.
+        This had serious consequences on the missionary enterprise. The missionaries,
+        especially Germans, were forced to leave Cameroon since it was feared that the
+        Germans could use their nationals to achieve their wish of reclaiming Cameroon
+        (the last white missionaries to leave were the Australian R. Rhode, and the
+        American Bender) and missionary work of the Basel Mission was left in the
+        hands of the indigenes, championed by Johannes Litumbe Ekesse who directed the
+        affairs of the Basel mission with some native teachers/catechists. Basel
+        Missionary stations in the French Cameroon were left for some time unattended,
+        until 1917 when the French-Paris Mission came in on the invitation of the Basel Mission.
+
+        \n\n
+
+        After the world war, the Basel missionaries did not return to Cameroon until
+        1923 when the Home Board applied for the return of their missionaries.
+        The Home Board of the mission was permitted to send back to Cameroon only
+        three Swiss missionaries to serve under the French-Paris mission. In 1925,
+        full permission was granted for the return of Basel missionaries.
+        By December of that year Rev. Vielhauer returned to Bali. Others
+        followed him shortly after.
+
+        \n\n
+
+        By the early thirties the Basel mission had opened many new schools,
+        medical institutions and theological colleges. In 1939, the works of
+        the various missionary bodies in Cameroon were once more nearly grounded
+        as a result of the Second World War. White missionaries had to leave the
+        country. The works in the mission stations were carried out mostly by the
+        native Pastors, Catechists and Teachers. After the war, many white Basel
+        missionaries did not come back to Cameroon. This created the problem of
+        personnel for the work in the field. In order to combat the problem the
+        Home Board of the mission recommended the ordination and training of indigenous
+        teachers/catechists to take up the mission work in the country.
+
+        \n\n
+
+        As time went on, the Basel Mission thought the Church they had founded in
+        Cameroon needed to be independent. For this to happen the Church had to be
+        self-propagating (can evangelise on its own), self-governing (can govern itself),
+        and self-supporting (can finance its own activities). By 1957, both the Basel
+        mission and the indigenes thought the time was ripe for independence.
+        Consequently, on the 13th of November 1957, at 11am, the Presbyterian
+        Church in Cameroon was born when the final draft of the constitution was
+        unanimously adopted at Ntanfoang-Bali.
+        This was followed by prayer, hymns of praise and the ringing of the Ntanfoang Church bell.
+
+        \n\n
+
+        From then on the Presbyterian Church has grown in leaps and bounds
+        and now exists in all of the ten regions of Cameroon.
+    </string>
+
 
     <string-array name="hymns">
         <item>
         GOD, who made the earth,\n
-The air, the sky, the sea,\n
-Who gave the light its birth,\n
- Careth for me.\n
-            \n
-God, who made the grass,\n
-The flower, the fruit, the tree,\n
-The day and night to pass,\n
- Careth for me.\n
-            \n
-God, who made the sun,\n
-            The moon, the stars, is He\n
-Who, when life’s clouds come on,\n
- Careth for me.\n
-            \n
-God, who made all things\n
- On earth, in air, in sea,\n
-Who changing seasons brings\n
- Careth for me.\n
-            \n
-God, who sent His Son\n
- To die on Calvary,\n
-He, if I lean on Him,\n
- Will care for me.\n
-            \n
-            When in heaven’s bright land\n
- I all His loved ones see,\n
-I’ll sing with that blest band,\n
- ‘God cared for me.’\n
+        The air, the sky, the sea,\n
+        Who gave the light its birth,\n
+         Careth for me.\n
+                    \n
+        God, who made the grass,\n
+        The flower, the fruit, the tree,\n
+        The day and night to pass,\n
+         Careth for me.\n
+                    \n
+        God, who made the sun,\n
+                    The moon, the stars, is He\n
+        Who, when life’s clouds come on,\n
+         Careth for me.\n
+                    \n
+        God, who made all things\n
+         On earth, in air, in sea,\n
+        Who changing seasons brings\n
+         Careth for me.\n
+                    \n
+        God, who sent His Son\n
+         To die on Calvary,\n
+        He, if I lean on Him,\n
+         Will care for me.\n
+                    \n
+                    When in heaven’s bright land\n
+         I all His loved ones see,\n
+        I’ll sing with that blest band,\n
+         ‘God cared for me.’\n
         </item>
         <item>
         O TRINITY, O blessèd light,\n
@@ -1824,4 +1936,5 @@ it.
     <string name="enter_your_number">Enter your number</string>
     <string name="action_sign_up">CREATE ACCOUNT</string>
     <string name="messenger_s">Available Messenger\'s</string>
+    <string name="title_activity_church_history">church_history</string>
 </resources>
