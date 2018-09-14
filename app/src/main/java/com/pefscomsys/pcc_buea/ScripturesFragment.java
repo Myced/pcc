@@ -1,5 +1,6 @@
 package com.pefscomsys.pcc_buea;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -20,6 +21,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -55,7 +61,8 @@ public class ScripturesFragment extends Fragment {
 
     Scripture reading;
 
-    GregorianCalendar calender;
+    //GregorianCalendar calender;
+    ScriptureDBHandler scriptureDb;
 
     public ScripturesFragment() {
         // Required empty public constructor
@@ -117,13 +124,25 @@ public class ScripturesFragment extends Fragment {
         //prepare our date and get readings for this date
         String dbDate = currentDay + '/' + currentMonth + '/' + currentYear;
 
+
         //now get it from the db with the Scripture DB Helper
-        ScriptureDBHandler scriptureDb = new ScriptureDBHandler(getContext(), null, dbDate);
+         scriptureDb = new ScriptureDBHandler(getContext());
+
+
+         //create the database
+        try {
+            scriptureDb.createDataBase();
+        } catch (IOException e) {
+            Log.d("Database", "Cannot get database");
+            e.printStackTrace();
+        }
+
+        scriptureDb.openDataBase();
+
 
         //now get the reading array list for that day
-        List<Scripture> ourScripture = scriptureDb.getScriptures();
+        List<Scripture> ourScripture = scriptureDb.getReadings(dbDate);
 
-        Log.d("RESULT", Integer.toString(ourScripture.size()));
 
         for(int i = 0; i < ourScripture.size(); i++)
         {
@@ -139,96 +158,121 @@ public class ScripturesFragment extends Fragment {
 
 
         //before setting the reading. make them clickable
-        final String oneString = reading.getReadingOne();
-        SpannableString oneSpan = new SpannableString(oneString);
-        ClickableSpan clickOne = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Toast.makeText(getContext(), "Reading one clicked", Toast.LENGTH_SHORT).show();
-                Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
-                readingOneIntent.putExtra("READING_ONE", oneString);
-                startActivity(readingOneIntent);
-            }
+        if(reading.getReadingOne() != null)
+        {
+            final String oneString = reading.getReadingOne();
+            SpannableString oneSpan = new SpannableString(oneString);
+            ClickableSpan clickOne = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
+                    readingOneIntent.putExtra("READING_ONE", oneString);
+                    startActivity(readingOneIntent);
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        oneSpan.setSpan(clickOne, 0, oneString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        //now set the text for the reading
-        readingOne.setText(oneSpan);
-        readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            oneSpan.setSpan(clickOne, 0, oneString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            //now set the text for the reading
+            readingOne.setText(oneSpan);
+            readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingOne.setText("");
+        }
 
 
         //do the same for reading two
-        final String twoString = reading.getReadingTwo();
-        SpannableString twoSpan = new SpannableString(twoString);
-        ClickableSpan clickTwo = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Toast.makeText(getContext(), "Reading tow clicked", Toast.LENGTH_SHORT).show();
-                Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
-                readingTwoIntent.putExtra("READING_TWO", twoString);
-                startActivity(readingTwoIntent);
-            }
+        if(reading.getReadingTwo() != null)
+        {
+            final String twoString = reading.getReadingTwo();
+            SpannableString twoSpan = new SpannableString(twoString);
+            ClickableSpan clickTwo = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        readingTwo.setText(twoSpan);
-        readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+                    Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
+                    readingTwoIntent.putExtra("READING_TWO", twoString);
+                    startActivity(readingTwoIntent);
+                }
+
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            readingTwo.setText(twoSpan);
+            readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingTwo.setText("");
+        }
 
         //reading text
-        final String textString = reading.getReadingText();
-        SpannableString textSpan = new SpannableString(textString);
-        ClickableSpan clickText = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Toast.makeText(getContext(), "Reading text clicked", Toast.LENGTH_SHORT).show();
-                Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
-                readingTextIntent.putExtra("READING_TEXT", textString);
-                startActivity(readingTextIntent);
-            }
+        if(reading.getReadingText() != null)
+        {
+            final String textString = reading.getReadingText();
+            SpannableString textSpan = new SpannableString(textString);
+            ClickableSpan clickText = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
+                    readingTextIntent.putExtra("READING_TEXT", textString);
+                    startActivity(readingTextIntent);
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        readingText.setText(textSpan);
-        readingText.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            readingText.setText(textSpan);
+            readingText.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingText.setText("");
+        }
 
 
         //psalms introit
-        final String psalmsString = reading.getPsalms();
-        SpannableString psalmsSpan = new SpannableString(psalmsString);
-        ClickableSpan psalmsText = new ClickableSpan() {
-            @Override
-            public void onClick(View widget) {
-                Toast.makeText(getContext(), "Reading Psalms clicked", Toast.LENGTH_SHORT).show();
-                Intent readingPsalmIntent = new Intent(getContext(), PsalmsReadingActivity.class);
-                readingPsalmIntent.putExtra("READING_PSALM", psalmsString);
-                startActivity(readingPsalmIntent);
+        if(reading.getPsalms() != null)
+        {
+            final String psalmsString = reading.getPsalms();
+            SpannableString psalmsSpan = new SpannableString(psalmsString);
+            ClickableSpan psalmsText = new ClickableSpan() {
+                @Override
+                public void onClick(View widget) {
+                    Intent readingPsalmIntent = new Intent(getContext(), PsalmsReadingActivity.class);
+                    readingPsalmIntent.putExtra("READING_PSALM", psalmsString);
+                    startActivity(readingPsalmIntent);
 
-            }
+                }
 
-            @Override
-            public void updateDrawState(TextPaint ds) {
-                super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
-            }
-        };
-        textSpan.setSpan(clickText, 0, psalmsString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        readingPsalms.setText(psalmsSpan);
-        readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+                @Override
+                public void updateDrawState(TextPaint ds) {
+                    super.updateDrawState(ds);
+                    ds.setColor(Color.BLUE);
+                }
+            };
+            psalmsSpan.setSpan(psalmsText, 0, psalmsString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            readingPsalms.setText(psalmsSpan);
+            readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+            readingPsalms.setText("");
+        }
 
 
 
@@ -244,7 +288,7 @@ public class ScripturesFragment extends Fragment {
 
             //initialising the days adapter
         ArrayAdapter<CharSequence> daysAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.days, android.R.layout.simple_spinner_item);
+                R.array.days, R.layout.date_spinner_row);
 
         daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -252,7 +296,7 @@ public class ScripturesFragment extends Fragment {
 
         //prepare the months adapter too.
         ArrayAdapter<CharSequence> monthsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.months, android.R.layout.simple_spinner_item);
+                R.array.months, R.layout.date_spinner_row);
 
         daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -261,7 +305,7 @@ public class ScripturesFragment extends Fragment {
         //year resources id
 
         ArrayAdapter<CharSequence> yearsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.years, android.R.layout.simple_spinner_item);
+                R.array.years, R.layout.date_spinner_row);
 
         daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -279,13 +323,6 @@ public class ScripturesFragment extends Fragment {
                 //Toast.makeText(getActivity(), "Filter Date string", Toast.LENGTH_SHORT).show();
                 Log.d("Scripture:", "filter the scriptures");
 
-                //we have to set the selected dates to represent the date of today
-//                //get the view components to update them as required
-//                = v.findViewById(R.id.psalms_content);
-//                TextView readingOne = v.findViewById(R.id.reading_one);
-//                TextView readingTwo = v.findViewById(R.id.reading_two);
-//                TextView readingText = v.findViewById(R.id.reading_text);
-
                 //now get the dates selected
                 selectedMonth = (String) month.getSelectedItem();
                 String selectedMonthId = getMonthId(selectedMonth);
@@ -297,10 +334,18 @@ public class ScripturesFragment extends Fragment {
                 Scripture reading = new Scripture("", "", "", "", "");
 
                 //now get it from the db with the Scripture DB Helper
-                ScriptureDBHandler scriptureDb = new ScriptureDBHandler(getContext(), null, prepareDate);
+                    scriptureDb = new ScriptureDBHandler(getContext());
+
+                try {
+                    scriptureDb.createDataBase();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                scriptureDb.openDataBase();
 
                 //now get the reading array list for that day
-                List<Scripture> ourScripture = scriptureDb.getScriptures();
+                List<Scripture> ourScripture = scriptureDb.getReadings(prepareDate);
 
                 Log.d("RESULT", Integer.toString(ourScripture.size()));
 
@@ -315,11 +360,127 @@ public class ScripturesFragment extends Fragment {
                     reading.setReadingOne(currentReading.getReadingOne());
                 }
 
-                //now set the text for the reading
-                readingPsalms.setText(reading.getPsalms());
-                readingOne.setText(reading.getReadingOne());
-                readingTwo.setText(reading.getReadingTwo());
-                readingText.setText(reading.getReadingText());
+//                now set the text for the reading
+                //psalms introit
+                if(!(reading.getPsalms() == null))
+                {
+                    Log.d("Database", "pslams is null");
+                    final String psalmsStringFiltered = reading.getPsalms();
+                    SpannableString psalmsSpan = new SpannableString(psalmsStringFiltered);
+                    ClickableSpan psalmsText = new ClickableSpan() {
+                        @Override
+                        public void onClick(View widget) {
+                            Intent readingPsalmIntent = new Intent(getContext(), PsalmsReadingActivity.class);
+                            readingPsalmIntent.putExtra("READING_PSALM", psalmsStringFiltered);
+                            startActivity(readingPsalmIntent);
+
+                        }
+
+                        @Override
+                        public void updateDrawState(TextPaint ds) {
+                            super.updateDrawState(ds);
+                            ds.setColor(Color.BLUE);
+                        }
+                    };
+                    psalmsSpan.setSpan(psalmsText, 0, psalmsStringFiltered.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    readingPsalms.setText(psalmsSpan);
+                    readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+                }
+                else
+                {
+                    readingPsalms.setText("");
+                }
+
+
+
+                //make reading one clickable.
+                if(!(reading.getReadingOne() == null))
+                {
+                    final String oneStringFiltered = reading.getReadingOne();
+
+                    SpannableString oneSpan = new SpannableString(oneStringFiltered);
+                    ClickableSpan clickOne = new ClickableSpan() {
+                        @Override
+                        public void onClick(View widget) {
+                            Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
+                            readingOneIntent.putExtra("READING_ONE", oneStringFiltered);
+                            startActivity(readingOneIntent);
+                        }
+
+                        @Override
+                        public void updateDrawState(TextPaint ds) {
+                            super.updateDrawState(ds);
+                            ds.setColor(Color.BLUE);
+                        }
+                    };
+                    oneSpan.setSpan(clickOne, 0, oneStringFiltered.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    //now set the text for the reading
+                    readingOne.setText(oneSpan);
+                    readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+                }
+                else
+                {
+                    readingOne.setText("");
+                }
+
+
+                if(reading.getReadingTwo() != null)
+                {
+                    //do the same for reading two
+                    final String twoString = reading.getReadingTwo();
+                    SpannableString twoSpan = new SpannableString(twoString);
+                    ClickableSpan clickTwo = new ClickableSpan() {
+                        @Override
+                        public void onClick(View widget) {
+
+                            Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
+                            readingTwoIntent.putExtra("READING_TWO", twoString);
+                            startActivity(readingTwoIntent);
+                        }
+
+                        @Override
+                        public void updateDrawState(TextPaint ds) {
+                            super.updateDrawState(ds);
+                            ds.setColor(Color.BLUE);
+                        }
+                    };
+                    twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    readingTwo.setText(twoSpan);
+                    readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+                }
+                else
+                {
+                    readingTwo.setText("");
+                }
+
+
+                //reading text
+                if(reading.getReadingText() != null)
+                {
+                    final String textString = reading.getReadingText();
+                    SpannableString textSpan = new SpannableString(textString);
+                    ClickableSpan clickText = new ClickableSpan() {
+                        @Override
+                        public void onClick(View widget) {
+                            Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
+                            readingTextIntent.putExtra("READING_TEXT", textString);
+                            startActivity(readingTextIntent);
+                        }
+
+                        @Override
+                        public void updateDrawState(TextPaint ds) {
+                            super.updateDrawState(ds);
+                            ds.setColor(Color.BLUE);
+                        }
+                    };
+                    textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    readingText.setText(textSpan);
+                    readingText.setMovementMethod(LinkMovementMethod.getInstance());
+                }
+                else
+                {
+                    readingText.setText("");
+                }
 
 
 
@@ -467,5 +628,6 @@ public class ScripturesFragment extends Fragment {
 
         return result;
     }
+
 
 }
