@@ -5,22 +5,18 @@
     <string name="books">Books</string>
     <string name="hymns">Hymns</string>
     <string name="scriptures">Scriptures</string>
-    <string name="verse_of_the_day">Scripture of the Day</string>
     <string name="church_info">Church Info</string>
     <string name="church_information">Church Information</string>
     <string name="setting">Setting</string>
     <string name="about">About</string>
 
-    <string name="cmf_books">CMF STUDY BOOKS</string>
-    <string name="cwf_books">CWF STUDY BOOKS</string>
-    <string name="cyf_books">CYF STUDY BOOKS</string>
+    <string name="press_echo">PRESBYTERIAN ECHO</string>
     <string name="messenger">THE MESSENGER</string>
     <string name="more">More</string>
     <string name="congregation">Presbytary &amp; Congregation</string>
     <string name="education">Educational Info…</string>
     <string name="health">Health Information</string>
     <string name="church_address">Church Address &amp; Committee</string>
-    <string name="type_hymn_number">Type Hymn Number…</string>
     <string name="diary">Diary</string>
     <string name="search">Enter hymn number…</string>
     <string name="splash_subtitle">Church Hymnary &amp; Diary\nmobile application</string>
@@ -41,7 +37,6 @@
     <string name="share">Share</string>
 
     <string name="find">find</string>
-    <string name="spinner_item">Spinner Item</string>
 
     <string name="first_lesson"> 1st Lesson</string>
     <string name="second_lesson">2nd Lesson</string>
@@ -1911,5 +1906,35 @@ the Lord ? The Lord himself told me to
 march against this country and destroy
 it.
     </string>
+    <string name="title_activity_the_messenger">The Messenger</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="my_messengers">MY MESSENGER\'S</string>
+    <string name="messengers">MESSENGER\'S</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="sign_up_with_facebook">Sign up with Facebook</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="action_sign_up">CREATE ACCOUNT</string>
+    <string name="messenger_s">Available Messenger\'s</string>
     <string name="title_activity_church_history">church_history</string>
 </resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "559797494422",
+    "firebase_url": "https://pccapp-df84d.firebaseio.com",
+    "project_id": "pccapp-df84d",
+    "storage_bucket": "pccapp-df84d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559797494422:android:e8e48b91488b09ec",
+        "android_client_info": {
+          "package_name": "com.pefscomsys.pcc_buea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559797494422-6gvk2b0fdhrhu10n146pvt24f9ehko1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUhTWKNZuNrDlqZRMoo_HL7YzFZ_oBdhU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

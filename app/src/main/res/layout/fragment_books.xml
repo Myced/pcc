@@ -1,67 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".BooksFragment">
 
-    <LinearLayout
-        android:id="@+id/bookLinearLayout"
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/presEcho"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/margin20"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp"
+            android:layout_margin="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/press_echo"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    />
+        </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/messengerButton"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-
-        <Button
-            android:id="@+id/cmfButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cmf_books"
-            android:textSize="18sp"
-            android:background="@color/colorPrimary"
-            android:textColor="@color/white"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            />
-
-        <Button
-            android:id="@+id/cwfButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cwf_books"
-            android:textSize="18sp"
-            android:background="@color/colorPrimary"
-            android:textColor="@color/white"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:onClick="cwfBooks"
-            />
-
-        <Button
-            android:id="@+id/cyfButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cyf_books"
-            android:textSize="18sp"
-            android:background="@color/colorPrimary"
-            android:textColor="@color/white"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:onClick="cyfBooks"
-            />
-
-        <Button
-            android:id="@+id/messengerButton"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/margin20"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        android:layout_margin="12dp">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/messenger"
-            android:background="@color/colorPrimary"
             android:textColor="@color/white"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="18sp"
-            android:onClick="messengerBooks"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
             />
-    </LinearLayout>
-</FrameLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
