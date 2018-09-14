@@ -15,7 +15,7 @@ public class ScriptureDBHandler extends SQLiteOpenHelper
     //information of database
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "pcc.sqlite3";
-    public static final String DBLOCATION = "/data/data/com.pefscomsys.pcc_buea/assets/";
+    public static final String DBLOCATION = "/data/data/com.pefscomsys.pcc_buea/databases/";
     public static final String TABLE_NAME = "pcc";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NAME = "date";
@@ -43,7 +43,8 @@ public class ScriptureDBHandler extends SQLiteOpenHelper
     }
 
     public void openDatabase() {
-        String dbPath = mContext.getDatabasePath(DATABASE_NAME).getPath();
+       String dbPath = DBLOCATION + DATABASE_NAME; //mContext.getDatabasePath(DATABASE_NAME).getPath();
+
         Log.d("Path", dbPath);
 
         if(mDatabase != null && mDatabase.isOpen()) {
@@ -67,30 +68,30 @@ public class ScriptureDBHandler extends SQLiteOpenHelper
         String query = "SELECT * FROM pcc.sqlite_master WHERE type='table' ";
         Log.d("Query" , query);
 
-        //this.openDatabase();
+        this.openDatabase();
 
-        //iterate through the result
-//        Cursor cursor = mDatabase.rawQuery(query, null);
-//        Log.d("DB", mDatabase.toString());
-//
-//        while (cursor.moveToNext()) {
-//            int result_0 = cursor.getInt(0);
-//            Log.d("Table", cursor.getString(2));
-//
-//            reading.setPsalms(cursor.getString(5));
-//            reading.setReadingOne(cursor.getString(6));
-//            reading.setReadingTwo(cursor.getString(7));
-//            reading.setReadingText(cursor.getString(8));
-//
-//            //now add the reading to the list
-//            scriptures.add(reading);
-//
-//
-//        }
-//        cursor.close();
-//
-//        //close the database too
-//        this.closeDatabase();
+       // iterate through the result
+        Cursor cursor = mDatabase.rawQuery(query, null);
+        Log.d("DB", mDatabase.toString());
+
+        while (cursor.moveToNext()) {
+            int result_0 = cursor.getInt(0);
+            Log.d("Table", cursor.getString(2));
+
+            reading.setPsalms(cursor.getString(5));
+            reading.setReadingOne(cursor.getString(6));
+            reading.setReadingTwo(cursor.getString(7));
+            reading.setReadingText(cursor.getString(8));
+
+            //now add the reading to the list
+            scriptures.add(reading);
+
+
+        }
+        cursor.close();
+
+        //close the database too
+        this.closeDatabase();
 
 
         //due to time work this out

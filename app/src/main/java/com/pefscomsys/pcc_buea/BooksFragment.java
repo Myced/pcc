@@ -1,8 +1,10 @@
 package com.pefscomsys.pcc_buea;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +22,7 @@ public class BooksFragment extends Fragment implements View.OnClickListener {
         // Required empty public constructor
     }
 
-    Button cmfButton, cwfButton, cyfButton, messengerButton;
+    CardView pressEcho, messengerButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,15 +31,13 @@ public class BooksFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_books, container, false);
 
         //Getting button views by their id's in the layout file
-        cmfButton = (Button) view.findViewById(R.id.cmfButton);
-        cwfButton = (Button) view.findViewById(R.id.cwfButton);
-        cyfButton = (Button) view.findViewById(R.id.cyfButton);
-        messengerButton = (Button) view.findViewById(R.id.messengerButton);
+        //cmfButton = (Button) view.findViewById(R.id.cmfButton);
+        pressEcho = (CardView) view.findViewById(R.id.presEcho);
+        messengerButton = (CardView) view.findViewById(R.id.messengerButton);
 
         //Setting onClick listeners to button
-        cmfButton.setOnClickListener(this);
-        cwfButton.setOnClickListener(this);
-        cyfButton.setOnClickListener(this);
+       // cmfButton.setOnClickListener(this);
+        pressEcho.setOnClickListener(this);
         messengerButton.setOnClickListener(this);
 
 
@@ -51,17 +51,18 @@ public class BooksFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
 
-            case R.id.cmfButton:
+            /*case R.id.cmfButton:
                 Toast.makeText(getActivity(), R.string.cmf_books, Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.cwfButton:
+                break;*/
+            /*case R.id.cwfButton:
                 Toast.makeText(getActivity(), R.string.cwf_books, Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.cyfButton:
-                Toast.makeText(getActivity(), R.string.cyf_books, Toast.LENGTH_SHORT).show();
+                break;*/
+            case R.id.presEcho:
+                startActivity(new Intent(getContext(), PresbyterianEcho.class));
                 break;
             case R.id.messengerButton:
-                Toast.makeText(getActivity(), R.string.messenger, Toast.LENGTH_SHORT).show();
+                Intent messengerIntent = new Intent(getContext(), TheMessenger.class);
+                startActivity(messengerIntent);
                 break;
 
         }
