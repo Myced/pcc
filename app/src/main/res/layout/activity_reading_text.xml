@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin20"
+            android:id="@+id/reading_text_content"
             android:text="@string/rt"
             android:textSize="20sp"
             />

@@ -64,7 +64,7 @@ public class MyMessengerFragment extends Fragment {
                 if(file != null){
                     Log.d("My Messenger Fragment", "File: " + file.getAbsolutePath());
                     Log.d("My Messenger Fragment", "File name: " + file.getName());
-                    ((MyMessengerBookAdapter)mMessengerDownloadRecyclerview.getAdapter()).update(file.getName(), file.getAbsolutePath());
+                    ((MyMessengerBookAdapter)mMessengerDownloadRecyclerview.getAdapter()).update(file.getName().replace(".enc", ""), file.getAbsolutePath());
                 }
             }
         }

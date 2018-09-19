@@ -109,12 +109,12 @@
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="8dp"
                         android:layout_toEndOf="@id/congregation_icon"
-                        android:layout_toLeftOf="@id/congregation_icon"
                         android:layout_toRightOf="@id/congregation_icon"
                         android:layout_toStartOf="@id/more_cong"
                         android:text="@string/congregation"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_toLeftOf="@id/more_cong" />
 
                     <Button
                         android:id="@+id/more_cong"
@@ -161,12 +161,12 @@
                         android:layout_marginTop="8dp"
                         android:layout_centerInParent="true"
                         android:layout_toEndOf="@id/education_icon"
-                        android:layout_toLeftOf="@id/education_icon"
                         android:layout_toRightOf="@id/education_icon"
                         android:layout_toStartOf="@id/more_education"
                         android:text="@string/education"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_toLeftOf="@id/more_education" />
 
                     <Button
                         android:id="@+id/more_education"
@@ -211,9 +211,9 @@
                         android:textStyle="bold"
                         android:layout_centerInParent="true"
                         android:layout_toEndOf="@id/health_icon"
-                        android:layout_toLeftOf="@id/health_icon"
                         android:layout_toRightOf="@id/health_icon"
-                        android:layout_toStartOf="@id/more_health" />
+                        android:layout_toStartOf="@id/more_health"
+                        android:layout_toLeftOf="@id/more_health" />
 
                     <Button
                         android:id="@+id/more_health"

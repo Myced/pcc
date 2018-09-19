@@ -66,7 +66,11 @@ public class EchoDownloadBookAdapter extends RecyclerView.Adapter<EchoDownloadBo
                 @Override
                 public void onClick(View view) {
                     int position = recyclerView.getChildLayoutPosition(view);
-                    viewPdf(Uri.fromFile(new File(storageUrls.get(position))));
+
+                    Intent newIntent = new Intent(context, PdfViewerActivity.class);
+                    newIntent.putExtra("FILE_LOCATION", storageUrls.get(position));
+                    context.startActivity(newIntent);
+                    //viewPdf(Uri.fromFile(new File(storageUrls.get(position))));
 
                 }
             });
