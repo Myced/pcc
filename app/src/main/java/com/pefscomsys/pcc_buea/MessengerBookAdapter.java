@@ -67,10 +67,7 @@ public class MessengerBookAdapter extends RecyclerView.Adapter <MessengerBookAda
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int position = recyclerView.getChildLayoutPosition(view);/*
-                    Intent newIntent = new Intent();
-                    newIntent.setType(Intent.ACTION_VIEW);
-                    newIntent.setData(Uri.parse(downloadUrls.get(position)));*/
+                    int position = recyclerView.getChildLayoutPosition(view);
 
                     final DownloadTask downloadTask = new DownloadTask(context, booksNames.get(position), mProgressDialog, "messenger");
                     downloadTask.execute(String.valueOf(Uri.parse(downloadUrls.get(position))));
