@@ -92,9 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
 
-            case R.id.settings:
-                Toast.makeText(getApplicationContext(), R.string.setting, Toast.LENGTH_SHORT).show();
-                return true;
             case  R.id.about:
                 Toast.makeText(getApplicationContext(), R.string.about, Toast.LENGTH_SHORT).show();
                 return true;

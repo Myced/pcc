@@ -116,10 +116,10 @@ public class ScripturesFragment extends Fragment {
 
         reading = new Scripture("", "", "", "", "");
 
-        reading.setPsalms("Psalms 40: 1-45");
-        reading.setReadingText("Mt 5: 1-3");
-        reading.setReadingTwo("John 3:3");
-        reading.setReadingOne("Luke 4: 5");
+        reading.setPsalms("Psalms.40:1-45");
+        reading.setReadingText("Mt.5:1-3");
+        reading.setReadingTwo("John.3:3-25");
+        reading.setReadingOne("Luke.4:5");
 
         //prepare our date and get readings for this date
         String dbDate = currentDay + '/' + currentMonth + '/' + currentYear;
