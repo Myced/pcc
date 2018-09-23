@@ -10,10 +10,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
+        android:textSize="32sp"
         android:gravity="center"
+        android:textColor="@color/colorAccent"
         android:id="@+id/reading_two_title"
-        android:layout_marginTop="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin16"
         />
     <ScrollView
         android:layout_width="match_parent"
@@ -22,10 +23,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin20"
+            android:padding="8dp"
+            android:textColor="@color/text_black"
             android:id="@+id/reading_two_content"
-            android:text="@string/r2"
-            android:textSize="20sp"
+            android:textSize="22sp"
             />
     </ScrollView>
 
