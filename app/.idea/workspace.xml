@@ -21,17 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1b5acb-d46c-4a26-8b22-89df58e256c6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/drawable/rounded_button.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/payment_layout.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HymesFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MessengerBookAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MessengerBookAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PresEchoBookAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PresEchoBookAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java" />
       <change beforePath="$PROJECT_DIR$/../build.gradle" afterPath="$PROJECT_DIR$/../build.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -105,8 +95,8 @@
       <file leaf-file-name="PaymentActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="714">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -3037,8 +3027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state relative-caret-position="714">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -44,6 +44,6 @@ public class PaymentActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        finish();0
+        finish();
     }
 }
