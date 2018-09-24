@@ -1,5 +1,8 @@
 package com.pefscomsys.pcc_buea;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +18,8 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import static com.pefscomsys.pcc_buea.Prices.HYMN_PRICE;
+
 public class MainActivity extends AppCompatActivity {
 
     private FrameLayout mainFrame;
@@ -24,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private BooksFragment booksFragment;
     private HymesFragment hymesFragment;
     private ScripturesFragment scripturesFragment;
-
+    public static final String PAYMENT_PREFS = "PaymentPref";
+    SharedPreferences mPaymentPref;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -41,7 +47,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             } else if (id == R.id.navigation_hymns) {
                 //start hymn fragment
-                setFragment(hymesFragment);
+
+                mPaymentPref = getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
+                if(!(mPaymentPref.getString(getString(R.string.HYMN_STATUS), "NOT_PAID").equals("NOT_PAID"))){
+                    setFragment(hymesFragment);
+                }
+                else{
+                    Intent paymentIntent = new Intent(getApplicationContext(), PaymentActivity.class);
+                    paymentIntent.putExtra("REASON", "HYMN BOOK");
+                    paymentIntent.putExtra("AMOUNT", HYMN_PRICE);
+                    startActivity(paymentIntent);
+                }
                 return true;
             } else if (id == R.id.navigation_books) {
                 //start book fragment
@@ -72,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         scripturesFragment = new ScripturesFragment();
 
         setFragment(homeFragment);
+        mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
+        if(mPaymentPref.getAll().size() == 0){
+            SharedPreferences.Editor editor = mPaymentPref.edit();
+            editor.putString(getString(R.string.HYMN_STATUS), "NOT_PAID");
+            editor.apply();
+        }
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         mainFrame = (FrameLayout) findViewById(R.id.main_frame);

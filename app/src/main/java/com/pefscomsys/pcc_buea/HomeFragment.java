@@ -1,6 +1,9 @@
 package com.pefscomsys.pcc_buea;
 
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,7 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+
+import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
+import static com.pefscomsys.pcc_buea.Prices.ECHO_PRICE;
+import static com.pefscomsys.pcc_buea.Prices.HYMN_PRICE;
 
 
 /**
@@ -53,16 +59,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             case R.id.diaryBtn:
                 scripturesFragment = new ScripturesFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navigation_scriptures);
+
                 setFragment(scripturesFragment);
                 break;
             case R.id.hymnBookBtn:
                 hymesFragment = new HymesFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navigation_hymns);
-                setFragment(hymesFragment);
+                SharedPreferences mPaymentPref = getActivity().getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
+                if(!(mPaymentPref.getString(getString(R.string.HYMN_STATUS), "NOT_PAID").equals("NOT_PAID"))){
+                    setFragment(hymesFragment);
+                }
+                else{
+                    Intent paymentIntent = new Intent(getContext(), PaymentActivity.class);
+                    paymentIntent.putExtra("REASON", "HYMN BOOK");
+                    paymentIntent.putExtra("AMOUNT", HYMN_PRICE);
+                    startActivity(paymentIntent);
+                }
                 break;
             case R.id.studyBookBtn:
                 booksFragment = new BooksFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navigation_books);
+
                 setFragment(booksFragment);
                 break;
             case R.id.infoBtn:

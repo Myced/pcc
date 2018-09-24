@@ -18339,4 +18339,5 @@
     <string name="action_sign_up">CREATE ACCOUNT</string>
     <string name="messenger_s">Available Messenger\'s</string>
     <string name="title_activity_church_history">church_history</string>
+    <string name="HYMN_STATUS">HYMN_STATUS</string>
 </resources>

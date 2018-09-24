@@ -58,6 +58,9 @@
             android:theme="@style/NoActionBar"
             android:name=".PdfViewerActivity"
             />
+        <activity
+            android:theme="@style/NoActionBar"
+            android:name=".PaymentActivity"/>
     </application>
 
 </manifest>

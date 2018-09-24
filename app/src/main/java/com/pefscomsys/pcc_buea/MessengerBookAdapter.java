@@ -3,6 +3,8 @@ package com.pefscomsys.pcc_buea;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -13,12 +15,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
+import static com.pefscomsys.pcc_buea.Prices.ECHO_PRICE;
+import static com.pefscomsys.pcc_buea.Prices.THE_MESSENGER;
+
 public class MessengerBookAdapter extends RecyclerView.Adapter <MessengerBookAdapter.MyBookHolder> {
     private Context context;
     private RecyclerView recyclerView;
     private ArrayList<String> booksNames;
     private ArrayList<String> downloadUrls;
     ProgressDialog mProgressDialog;
+    private SharedPreferences mPaymentPref;
 
 
 
@@ -68,9 +75,19 @@ public class MessengerBookAdapter extends RecyclerView.Adapter <MessengerBookAda
                 @Override
                 public void onClick(View view) {
                     int position = recyclerView.getChildLayoutPosition(view);
+                    String nameOfBook =  booksNames.get(position);
+                    final DownloadTask downloadTask = new DownloadTask(context,nameOfBook, mProgressDialog, "messenger");
+                    mPaymentPref = context.getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
+                    if(!(mPaymentPref.getString(nameOfBook.toUpperCase(), "NOT_PAID").equals("NOT_PAID"))){
+                        downloadTask.execute(String.valueOf(Uri.parse(downloadUrls.get(position))));
+                    }
+                    else{
+                        Intent paymentIntent = new Intent(context, PaymentActivity.class);
+                        paymentIntent.putExtra("REASON", ""+nameOfBook.toUpperCase());
+                        paymentIntent.putExtra("AMOUNT", THE_MESSENGER);
+                        context.startActivity(paymentIntent);
+                    }
 
-                    final DownloadTask downloadTask = new DownloadTask(context, booksNames.get(position), mProgressDialog, "messenger");
-                    downloadTask.execute(String.valueOf(Uri.parse(downloadUrls.get(position))));
                     //context.startActivity(newIntent);
 
                     mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
