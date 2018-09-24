@@ -24,6 +24,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="carViewStyle" parent="CardView">
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

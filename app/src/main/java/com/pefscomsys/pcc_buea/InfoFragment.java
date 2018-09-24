@@ -42,6 +42,13 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
 
         churchInfo = view.findViewById(R.id.church_info_layer);
 
+        //test payment
+        PaymentProcessor p = new PaymentProcessor(1000, "673901939");
+        p.processPayment();
+
+        //showing toast message for momo testing
+//        Toast.makeText(getContext(), p.errorMessage, Toast.LENGTH_SHORT).show();
+
         Animation animSlideUp = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),R.anim.slide_up);
         churchInfo.startAnimation(animSlideUp);
 
@@ -66,7 +73,6 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.more_history:
-                Toast.makeText(getActivity(), R.string.church_history, Toast.LENGTH_SHORT).show();
 
                 Intent mHistoryIntent = new Intent(getContext(), History.class);
 
@@ -76,13 +82,16 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), R.string.congregation, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.more_education:
-                Toast.makeText(getActivity(), R.string.education, Toast.LENGTH_SHORT).show();
+                Intent mEducationIntent = new Intent(getContext(), Education.class);
+                startActivity(mEducationIntent);
                 break;
             case  R.id.more_health:
-                Toast.makeText(getActivity(), R.string.health, Toast.LENGTH_SHORT).show();
+                Intent mHealthIntent = new Intent(getContext(), Health.class);
+                startActivity(mHealthIntent);
                 break;
             case  R.id.more_address:
-                Toast.makeText(getActivity(), R.string.church_address, Toast.LENGTH_SHORT).show();
+                Intent mChurchAddressesIntent = new Intent(getContext(), Address.class);
+                startActivity(mChurchAddressesIntent);
                 break;
             case R.id.more_other:
                 Toast.makeText(getActivity(), R.string.other_info, Toast.LENGTH_SHORT).show();

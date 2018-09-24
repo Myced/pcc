@@ -33,6 +33,7 @@
         android:layout_below="@id/reading_one_title"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/reading_one_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin20"

@@ -40,12 +40,14 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".PresbyterianEcho"></activity>
+        <activity android:name=".PresbyterianEcho" />
         <activity
             android:name=".History"
             android:icon="@drawable/church_icon" />
         <activity android:name=".Congregation" />
-        <activity android:name=".Health"></activity>
+        <activity android:name=".Health" />
+        <activity android:name=".Education" />
+        <activity android:name=".Address"></activity>
     </application>
 
 </manifest>

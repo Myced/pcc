@@ -20,10 +20,10 @@
         android:layout_below="@id/reading_two_title"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/reading_two_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin20"
-            android:text="@string/r2"
             android:textSize="20sp"
             />
     </ScrollView>
