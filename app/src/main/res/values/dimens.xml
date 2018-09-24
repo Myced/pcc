@@ -4,7 +4,10 @@
     <dimen name="icon_height">60dp</dimen>
     <dimen name="margin20">20dp</dimen>
     <dimen name="margin16">16dp</dimen>
+    <dimen name="margin5">5dp</dimen>
     <dimen name="fontsize">18sp</dimen>
+    <dimen name="h1">24sp</dimen>
+    <dimen name="h2">20sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

@@ -54,6 +54,8 @@
             android:icon="@drawable/church_icon" />
         <activity android:name=".Congregation" />
         <activity android:name=".Health" />
+        <activity android:name=".Education" />
+        <activity android:name=".Address"></activity>
         <activity
             android:theme="@style/NoActionBar"
             android:name=".PdfViewerActivity"
