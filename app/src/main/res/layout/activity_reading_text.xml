@@ -10,21 +10,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
+        android:textSize="32sp"
         android:gravity="center"
+        android:textColor="@color/colorAccent"
         android:id="@+id/reading_text_title"
-        android:layout_marginTop="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin16"
         />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_below="@id/reading_text_title"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/reading_text_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin20"
-            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/text_black"
+            android:id="@+id/reading_text_content"
+            android:textSize="22sp"
             />
     </ScrollView>
 

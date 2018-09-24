@@ -21,8 +21,9 @@ public class PsalmsReadingActivity extends AppCompatActivity {
         Intent intent = getIntent();
         reading_psalms = intent.getStringExtra("READING_PSALM");
 
-        reading_title = findViewById(R.id.reading_text_title);
+        reading_title = findViewById(R.id.reading_psalms_title);
         reading_title.setText(reading_psalms);
+        readingContent = findViewById(R.id.reading_psalms_content);
 
         //now get the scriptureal reading from our scripture class
         ScriptureTextHandler myText = new ScriptureTextHandler(reading_psalms, getApplicationContext());

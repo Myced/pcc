@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PsalmsReadingActivity">
+    tools:context=".ReadingTwoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/reading_psalms_title"
+        android:layout_marginTop="@dimen/margin20"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/reading_psalms_title"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/text_black"
+            android:id="@+id/reading_psalms_content"
+            android:textSize="22sp"
+            />
+    </ScrollView>
+
+</RelativeLayout>

@@ -17,6 +17,10 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import javax.crypto.Cipher;
+import javax.crypto.CipherOutputStream;
+import javax.crypto.spec.SecretKeySpec;
+
 // usually, subclasses of AsyncTask are declared inside the activity class.
 // that way, you can easily modify the UI thread from here
 class DownloadTask extends AsyncTask<String, Integer, String> {
@@ -42,6 +46,7 @@ class DownloadTask extends AsyncTask<String, Integer, String> {
         InputStream input = null;
         OutputStream output = null;
         HttpURLConnection connection = null;
+        CipherOutputStream cipherOutput = null;
 
 
         //Creating New file if it does not exist
@@ -61,9 +66,9 @@ class DownloadTask extends AsyncTask<String, Integer, String> {
 
             // expect HTTP 200 OK, so we don't mistakenly save error report
             // instead of the file
-            Log.d("Download: ", "Response Code: " +String.valueOf(connection.getResponseCode()));
+            //Log.d("Download: ", "Response Code: " +String.valueOf(connection.getResponseCode()));
             if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-                Log.d("Download: ", "Download failed: " +String.valueOf(connection.getResponseMessage()));
+               // Log.d("Download: ", "Download failed: " +String.valueOf(connection.getResponseMessage()));
                 return "Server returned HTTP " + connection.getResponseCode()
                         + " " + connection.getResponseMessage();
             }
@@ -73,8 +78,14 @@ class DownloadTask extends AsyncTask<String, Integer, String> {
             int fileLength = connection.getContentLength();
             // download the file
             input = connection.getInputStream();
-            output = new FileOutputStream(FILE_PATH + fileName+".pdf");
-            Log.d("Download: ", "Output: " + output.toString());
+            //output = new FileOutputStream(FILE_PATH + fileName+".pdf");
+
+            output = new FileOutputStream(FILE_PATH + fileName+ ".enc");
+            //Log.d("Download: ", "Output: " + output.toString());
+            SecretKeySpec sks = new SecretKeySpec("PCCAPP@Passw1234".getBytes(), "AES");
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.ENCRYPT_MODE, sks);
+            cipherOutput = new CipherOutputStream(output, cipher);
 
             byte data[] = new byte[4096];
             long total = 0;
@@ -89,14 +100,14 @@ class DownloadTask extends AsyncTask<String, Integer, String> {
                 // publishing the progress....
                 if (fileLength > 0) // only if total length is known
                     publishProgress((int) (total * 100 / fileLength));
-                output.write(data, 0, count);
+                cipherOutput.write(data, 0, count);
             }
         } catch (Exception e) {
             return e.toString();
         } finally {
             try {
-                if (output != null)
-                    output.close();
+                if (cipherOutput != null)
+                    cipherOutput.close();
                 if (input != null)
                     input.close();
             } catch (IOException ignored) {

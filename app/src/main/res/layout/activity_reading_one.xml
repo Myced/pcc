@@ -7,26 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".ReadingTwoActivity">
 
-    <TextView
-        android:id="@+id/fist_heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin10"
-        android:gravity="center"
-        android:text="@string/first_lesson"
-        android:textColor="@color/text_black"
-        style="@style/AppTheme.AppBarOverlay"
-        android:textAlignment="center"
-        android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
+        android:textSize="32sp"
         android:gravity="center"
         android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         android:id="@+id/reading_one_title"
-        android:layout_marginTop="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin16"
         />
     <ScrollView
         android:layout_width="match_parent"
@@ -36,9 +26,9 @@
             android:id="@+id/reading_one_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin20"
-
-            android:textSize="20sp"
+            android:padding="8dp"
+            android:textColor="@color/text_black"
+            android:textSize="22sp"
             />
     </ScrollView>
 

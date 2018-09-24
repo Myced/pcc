@@ -17,8 +17,8 @@
             android:layout_height="150dp"
             app:cardBackgroundColor="@color/colorPrimary"
             app:cardCornerRadius="@dimen/margin20"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="10dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="5dp"
             android:layout_margin="12dp">
                 <TextView
                     android:layout_width="match_parent"
@@ -37,8 +37,8 @@
         android:layout_height="150dp"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="@dimen/margin20"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="10dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="5dp"
         android:layout_margin="12dp">
         <TextView
             android:layout_width="match_parent"

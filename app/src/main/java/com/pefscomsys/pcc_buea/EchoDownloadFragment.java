@@ -65,7 +65,7 @@ public class EchoDownloadFragment extends Fragment {
         if(files != null){
             for(File file : files){
                 if(file != null){
-                    ((EchoDownloadBookAdapter)mEchoDownloadRecyclerview.getAdapter()).update(file.getName(), file.getAbsolutePath());
+                    ((EchoDownloadBookAdapter)mEchoDownloadRecyclerview.getAdapter()).update(file.getName().replace(".enc", ""), file.getAbsolutePath());
                 }
             }
         }

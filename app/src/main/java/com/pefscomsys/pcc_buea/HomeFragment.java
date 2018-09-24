@@ -2,6 +2,7 @@ package com.pefscomsys.pcc_buea;
 
 
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     HymesFragment hymesFragment;
     BooksFragment booksFragment;
     InfoFragment infoFragment;
+    BottomNavigationView bottomNavigationView;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -37,7 +39,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         magBtn = view.findViewById(R.id.studyBookBtn);
         infoBtn = view.findViewById(R.id.infoBtn);
 
-
+        bottomNavigationView = getActivity().findViewById(R.id.navigation);
         diaryBtn.setOnClickListener(this);
         hymnBtn.setOnClickListener(this);
         magBtn.setOnClickListener(this);
@@ -50,18 +52,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         switch (v.getId()){
             case R.id.diaryBtn:
                 scripturesFragment = new ScripturesFragment();
+                bottomNavigationView.setSelectedItemId(R.id.navigation_scriptures);
                 setFragment(scripturesFragment);
                 break;
             case R.id.hymnBookBtn:
                 hymesFragment = new HymesFragment();
+                bottomNavigationView.setSelectedItemId(R.id.navigation_hymns);
                 setFragment(hymesFragment);
                 break;
             case R.id.studyBookBtn:
                 booksFragment = new BooksFragment();
+                bottomNavigationView.setSelectedItemId(R.id.navigation_books);
                 setFragment(booksFragment);
                 break;
             case R.id.infoBtn:
                 infoFragment = new InfoFragment();
+                bottomNavigationView.setSelectedItemId(R.id.navigation_info);
                 setFragment(infoFragment);
                 break;
         }

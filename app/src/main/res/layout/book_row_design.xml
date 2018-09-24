@@ -9,14 +9,28 @@
     app:cardCornerRadius="10dp"
     app:cardPreventCornerOverlap="true"
     >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/text_black"
-        android:text="The messenger 2018"
-        android:textSize="20sp"
-        android:id="@+id/name_of_file"
-        android:gravity="center"
-        android:padding="4dp"
-        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_black"
+            android:text="The messenger 2018"
+            android:textSize="20sp"
+            android:id="@+id/name_of_file"
+            android:gravity="center" />
+
+        <!--<ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:src="@android:drawable/ic_delete"
+            android:id="@+id/bookDelete"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />-->
+
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
