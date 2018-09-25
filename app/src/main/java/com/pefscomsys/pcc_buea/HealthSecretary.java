@@ -75,37 +75,45 @@ public class HealthSecretary
 
         result.close();
 
-        //save the institutions too
-        institutions   = new ArrayList<HealthInstitution>();
-
-        //create an instaance of health insitution
-        HealthInstitution inst = new HealthInstitution();
-
-        query = "SELECT  * FROM `hospitals` ";
-
-
-        result = mDatabase.myDataBase.rawQuery(query, null);
-
-        while(result.moveToNext())
-        {
-            inst.setAddress(result.getString(INST_ADDRESS));
-            inst.setDoctor(result.getString(INST_DOCTOR));
-            inst.setName(result.getString(INST_NAME));
-            inst.setPobox(result.getString(INST_POBOX));
-            inst.setTel(result.getString(INST_TEL));
-
-            institutions.add(inst);
-        }
-
-        result.close();
-
         mDatabase.close();
 
     }
 
     public List<HealthInstitution> getHealthInstitutions()
     {
-         return this.institutions;
+        //save the institutions too
+        List<HealthInstitution> institutionss   = new ArrayList<HealthInstitution>();
+
+        //create an instaance of health insitution
+        HealthInstitution inst;
+
+        String query = "SELECT  * FROM `hospitals` ";
+
+        mDatabase.openDataBase();
+
+
+        Cursor result = mDatabase.myDataBase.rawQuery(query, null);
+
+        while(result.moveToNext())
+        {
+            inst = new HealthInstitution();
+
+            inst.setAddress(result.getString(INST_ADDRESS));
+            inst.setDoctor(result.getString(INST_DOCTOR));
+            inst.setName(result.getString(INST_NAME));
+            inst.setPobox(result.getString(INST_POBOX));
+            inst.setTel(result.getString(INST_TEL));
+
+            Log.d("PCCAPP", " Adding " + inst.toString());
+
+            institutionss.add(inst);
+        }
+
+        result.close();
+
+        mDatabase.close();
+
+        return institutionss;
     }
 
     public String getmName() {

@@ -52,4 +52,15 @@ public class HealthInstitution
     public void setTel(String tel) {
         this.tel = tel;
     }
+
+    @Override
+    public String toString() {
+        return "HealthInstitution{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", doctor='" + doctor + '\'' +
+                ", pobox='" + pobox + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
+    }
 }
