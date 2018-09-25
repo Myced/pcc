@@ -25,7 +25,7 @@ public class PaymentProcessor
     public boolean status;
     public String errorMessage;
 
-    public MomoResult paymentResult;
+    public static MomoResult paymentResult;
 
 
     public  PaymentProcessor(int amount, String number)
@@ -63,8 +63,10 @@ public class PaymentProcessor
                 status = momo.success;
                 errorMessage = momo.message;
 
+                Log.d("PCCAPP ", momo.toString());
+
                 //log results
-                Log.d("PCC", response.toString());
+                Log.d("PCCAPP", paymentResult.toString());
             }
 
             @Override
@@ -74,10 +76,15 @@ public class PaymentProcessor
                 errorMessage = "Could not make Payment. Please check your internet connection";
 
                 //print error message in the log cat
-                Log.d("PCC: ", e.toString());
+                Log.d("PCCAPP: ", e.toString());
+                Log.d("PCCAPP ", errorMessage);
             }
         });
+
+//        Log.d("PCCAPP NEW", paymentResult.toString());
+
     }
+
 
 
 }
