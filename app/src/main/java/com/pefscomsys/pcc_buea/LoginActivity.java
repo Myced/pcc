@@ -44,6 +44,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         signIn = findViewById(R.id.email_sign_in_button);
         signIn.setOnClickListener(this);
         progressDialog = new ProgressDialog(this);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(false);
         mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser() != null){
             finish();

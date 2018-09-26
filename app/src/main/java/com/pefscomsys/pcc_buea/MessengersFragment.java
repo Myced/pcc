@@ -48,6 +48,8 @@ public class MessengersFragment extends Fragment {
         MessengerBookAdapter messengerBookAdapter = new MessengerBookAdapter(getContext(), new ArrayList<String>(), new ArrayList<String>(), messengerRecyclerView);
         messengerRecyclerView.setAdapter(messengerBookAdapter);
         progressDialog.setMessage("Fetching files please wait...");
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(false);
         progressDialog.show();
         databaseReference.child("books/the_messenger").addValueEventListener(new ValueEventListener() {
             @Override

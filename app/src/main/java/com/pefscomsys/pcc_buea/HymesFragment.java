@@ -2,8 +2,6 @@ package com.pefscomsys.pcc_buea;
 
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,6 +21,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -40,6 +39,7 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
     String hymns[];
     HymnListAdapter hymnListAdapter;
     int count;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

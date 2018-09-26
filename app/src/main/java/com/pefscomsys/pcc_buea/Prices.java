@@ -3,11 +3,10 @@ package com.pefscomsys.pcc_buea;
 public class Prices
 {
     //class to contain all our prices
-    public final int ECHO = 100;
-    public final int THE_MESSENGER = 1000;
-    public final int SCRIPTURE = 500;
-    public final int HYMN = 1500;
+    public static final int ECHO_PRICE = 100;
+    public static final int THE_MESSENGER = 75;
+    public static final int SCRIPTURE = 50;
+    public static final int HYMN_PRICE = 25;
 
     //we will then add methods here if nessear
-
 }

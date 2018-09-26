@@ -45,9 +45,6 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
 
         churchInfo = view.findViewById(R.id.church_info_layer);
 
-        //test payment
-//        PaymentProcessor p = new PaymentProcessor(1000, "673901939");
-//        p.processPayment();
 
         //showing toast message for momo testing
 

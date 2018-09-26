@@ -1,7 +1,12 @@
 package com.pefscomsys.pcc_buea;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
 
 public class MomoResult
 {
@@ -19,7 +24,6 @@ public class MomoResult
     public MomoResult(JSONObject object)
     {
         this.response = object;
-
 
         try {
             receiverNumber = object.getString("ReceiverNumber");
@@ -64,7 +68,6 @@ public class MomoResult
         }
 
         this.saveLog();
-
     }
 
 
