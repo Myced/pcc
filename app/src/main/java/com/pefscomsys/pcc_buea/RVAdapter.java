@@ -23,7 +23,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.InstViewHolder>
     @NonNull
     @Override
     public InstViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_health, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_health_row, parent, false);
         InstViewHolder ivh = new InstViewHolder(v);
         return ivh;
     }
@@ -36,6 +36,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.InstViewHolder>
         holder.instPobox.setText(institutions.get(position).getPobox());
         holder.instAddress.setText(institutions.get(position).getAddress());
         holder.instTel.setText(institutions.get(position).getTel());
+
     }
 
     @Override

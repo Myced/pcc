@@ -24,7 +24,7 @@ public class ScriptureTextHandler
     final private int VERSE_INDEX = 3;
 
     //the result of the reading
-    private String result;
+    private String result = "";
 
     public ScriptureTextHandler(String text, Context context)
     {

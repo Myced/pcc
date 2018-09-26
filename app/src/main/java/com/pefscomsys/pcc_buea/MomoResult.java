@@ -79,4 +79,15 @@ public class MomoResult
         //then fire it up to firebase;
 
     }
+
+    @Override
+    public String toString() {
+        return "MomoResult{" +
+                "receiverNumber='" + receiverNumber + '\'' +
+                ", statusCode='" + statusCode + '\'' +
+                ", amount='" + amount + '\'' +
+                ", success=" + success +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

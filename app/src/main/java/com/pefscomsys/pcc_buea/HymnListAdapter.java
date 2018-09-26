@@ -60,6 +60,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
 
     public class HymnListHolder extends RecyclerView.ViewHolder{
         public TextView hymnnumber, hymntitle, hymnexcerpt;
+
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
         public HymnListHolder(View itemView) {
             super(itemView);

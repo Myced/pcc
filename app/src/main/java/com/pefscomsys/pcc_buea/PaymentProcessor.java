@@ -104,6 +104,8 @@ public class PaymentProcessor
                 status = momo.success;
                 message = momo.message;
 
+                Log.d("PCCAPP ", momo.toString());
+
                 //log results
 
                 SharedPreferences paymentPref = context.getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
@@ -122,6 +124,9 @@ public class PaymentProcessor
                 context.unregisterReceiver(broadcastReceiver);
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
+
+                Log.d("PCCAPP", paymentResult.toString());
+
             }
 
             @Override
@@ -136,10 +141,15 @@ public class PaymentProcessor
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
                 //print error message in the log cat
-                Log.d("PCC: ", e.toString());
+                Log.d("PCCAPP: ", e.toString());
+                Log.d("PCCAPP ", errorMessage);
             }
         });
+
+//        Log.d("PCCAPP NEW", paymentResult.toString());
+
     }
+
 
 
 }

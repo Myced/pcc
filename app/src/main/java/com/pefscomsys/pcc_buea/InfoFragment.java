@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
+
+import java.io.IOException;
 
 
 /**
@@ -44,7 +47,41 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
 
 
         //showing toast message for momo testing
-//        Toast.makeText(getContext(), p.errorMessage, Toast.LENGTH_SHORT).show();
+
+        //test the scripture saving.
+        //open the database;
+        ScriptureDBHandler connection = new ScriptureDBHandler(getContext());
+        Scripture myScripture;
+
+        try {
+            connection.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //then op the connection
+        connection.openDataBase();
+
+        //then loop through the scriptures and save them
+        //pass the connection to the scripture class
+        myScripture = new Scripture();
+        myScripture.db = connection;
+
+        myScripture.setDay("25");
+        myScripture.setMonth("09");
+        myScripture.setYear("2018");
+        myScripture.setDate("25/09/2018");
+        myScripture.setPsalms("Ps.23:1-16");
+        myScripture.setReadingOne("Mt.4:6-12");
+        myScripture.setReadingTwo("Job.3:4-12");
+        myScripture.setReadingText("Acts.3:4-15");
+
+        //now save the scripture
+        myScripture.saveScripture();
+
+
+        //then close the connection
+        connection.close();
 
         Animation animSlideUp = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),R.anim.slide_up);
         churchInfo.startAnimation(animSlideUp);
