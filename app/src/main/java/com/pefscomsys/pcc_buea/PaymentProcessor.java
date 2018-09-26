@@ -38,6 +38,9 @@ public class PaymentProcessor
     private Context context;
     private String reason;
 
+    public static boolean diary;
+    public static String diaryYear;
+
     public MomoResult paymentResult;
     private ProgressDialog progressDialog;
     private BroadcastReceiver broadcastReceiver;
@@ -97,6 +100,8 @@ public class PaymentProcessor
                 progressDialog.dismiss();
                 //request made. now check if the payment was successful
                 MomoResult momo = new MomoResult(response);
+                momo.context = context; //set the context before saving
+                momo.saveLog();
 
 
                 Log.d("PAYMENT PROCESSOR ", "STATUSCODE: " + momo.success + " HEADER: "+ Arrays.toString(headers) +" RESPONSE: " + response.toString());
@@ -104,10 +109,15 @@ public class PaymentProcessor
                 status = momo.success;
                 message = momo.message;
 
-                Log.d("PCCAPP ", momo.toString());
+                //process the dairy payment here
+                if(diary == true)
+                {
+                    //save the scripture in the database
+                    Log.d("PCCAPP", "updating the diary part");
+                    momo.updateDiary(diaryYear);
+                }
 
                 //log results
-
                 SharedPreferences paymentPref = context.getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = paymentPref.edit();
 
@@ -120,7 +130,15 @@ public class PaymentProcessor
 
                 editor.apply();
 
-                Toast.makeText(context, "PAYMENT SUCCESSFUL", Toast.LENGTH_LONG).show();
+                if(momo.success == true)
+                {
+                    Toast.makeText(context, "PAYMENT SUCCESSFUL", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Toast.makeText(context, "PAYMENT Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, momo.message, Toast.LENGTH_LONG).show();
+                }
                 context.unregisterReceiver(broadcastReceiver);
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
@@ -142,7 +160,6 @@ public class PaymentProcessor
                 context.startActivity(newIntent);
                 //print error message in the log cat
                 Log.d("PCCAPP: ", e.toString());
-                Log.d("PCCAPP ", errorMessage);
             }
         });
 
