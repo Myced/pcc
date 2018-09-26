@@ -20,44 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1b5acb-d46c-4a26-8b22-89df58e256c6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_loopj_android_android_async_http_1_4_9_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cz_msebera_android_httpclient_4_3_6_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Address.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Education.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HealthInstitution.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HealthSecretary.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MomoResult.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MyPhoneStateListener.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentProcessor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/RVAdapter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/SmsReceiver.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_address.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_education.xml" />
-      <change beforePath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/assets/pcc.db" afterPath="$PROJECT_DIR$/src/main/assets/pcc.db" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Health.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Health.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/InfoFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/InfoFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/LoginActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/LoginActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MessengersFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MessengersFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PresEchoBookAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PresEchoBookAdapter.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/TheMessenger.java" afterPath="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/TheMessenger.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_health.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_health.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_reading_one.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_reading_one.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_reading_two.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_reading_two.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/src/main/res/values/dimens.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" />
-      <change beforePath="$PROJECT_DIR$/../build.gradle" afterPath="$PROJECT_DIR$/../build.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PaymentProcessor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PaymentProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="118" column="31" lean-forward="false" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
+            <state relative-caret-position="367">
+              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,6 +110,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Prices.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2232,7 +2205,6 @@
         <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PresEchoBookAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MomoResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/HomeFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/TheMessenger.java" />
@@ -2241,6 +2213,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MyPhoneStateListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java" />
       </list>
     </option>
   </component>
@@ -2992,14 +2965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/MessengerBookAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
@@ -3095,11 +3060,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/PaymentProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="118" column="31" lean-forward="false" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
+        <state relative-caret-position="367">
+          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pefscomsys/pcc_buea/Prices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
