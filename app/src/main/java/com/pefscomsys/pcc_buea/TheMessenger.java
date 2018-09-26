@@ -40,6 +40,7 @@ public class TheMessenger extends AppCompatActivity {
         messengerTabAdapter = new TabAdapter(getSupportFragmentManager());
         messengerTabLayout = findViewById(R.id.messenger_tab_layout);
         viewPager = findViewById(R.id.viewPager);
+        viewPager.setOffscreenPageLimit(0);
 
 
         if(isNetworkAvailable()){

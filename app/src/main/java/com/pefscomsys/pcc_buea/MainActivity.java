@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     Intent paymentIntent = new Intent(getApplicationContext(), PaymentActivity.class);
-                    paymentIntent.putExtra("REASON", "HYMN BOOK");
+                    paymentIntent.putExtra("REASON", getString(R.string.HYMN_STATUS));
                     paymentIntent.putExtra("AMOUNT", HYMN_PRICE);
                     startActivity(paymentIntent);
                 }
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         setFragment(homeFragment);
         mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
+        Log.d("Preference", String.valueOf(mPaymentPref.getAll().values()));
         if(mPaymentPref.getAll().size() == 0){
             SharedPreferences.Editor editor = mPaymentPref.edit();
             editor.putString(getString(R.string.HYMN_STATUS), "NOT_PAID");

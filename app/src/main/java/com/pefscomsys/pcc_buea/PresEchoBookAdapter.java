@@ -86,7 +86,7 @@ public class PresEchoBookAdapter extends RecyclerView.Adapter <PresEchoBookAdapt
                     String nameOfBook =  booksNames.get(position);
                     final DownloadTask downloadTask = new DownloadTask(context, booksNames.get(position), mProgressDialog, "echos/"+year);
                     mPaymentPref = context.getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
-                    if(!(mPaymentPref.getString(nameOfBook.toUpperCase(), "NOT_PAID").equals("NOT_PAID"))){
+                    if((mPaymentPref.getString(nameOfBook.toUpperCase(), "NOT_PAID").equals("PAID"))){
                         downloadTask.execute(String.valueOf(Uri.parse(downloadUrls.get(position))));
                     }
                     else{

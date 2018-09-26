@@ -7,6 +7,9 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -33,16 +36,16 @@
             android:theme="@style/HymnTheme" />
         <activity
             android:name=".ReadingOneActivity"
-            android:theme="@style/HymnTheme"  />
+            android:theme="@style/HymnTheme" />
         <activity
             android:name=".ReadingTwoActivity"
-            android:theme="@style/HymnTheme"  />
+            android:theme="@style/HymnTheme" />
         <activity
             android:name=".PsalmsReadingActivity"
-            android:theme="@style/HymnTheme"  />
+            android:theme="@style/HymnTheme" />
         <activity
             android:name=".ReadingTextActivity"
-            android:theme="@style/HymnTheme"  />
+            android:theme="@style/HymnTheme" />
         <activity android:name=".TheMessenger" />
         <activity
             android:name=".LoginActivity"
@@ -54,13 +57,23 @@
             android:icon="@drawable/church_icon" />
         <activity android:name=".Congregation" />
         <activity android:name=".Health" />
+        <activity android:name=".Education" />
+        <activity android:name=".Address" />
         <activity
-            android:theme="@style/NoActionBar"
             android:name=".PdfViewerActivity"
-            />
+            android:theme="@style/NoActionBar" />
         <activity
-            android:theme="@style/NoActionBar"
-            android:name=".PaymentActivity"/>
+            android:name=".PaymentActivity"
+            android:theme="@style/NoActionBar" />
+
+        <receiver
+            android:name=".SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
