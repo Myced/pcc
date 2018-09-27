@@ -75,13 +75,14 @@ public class MomoResult
             this.message = "Unknown Error";
         }
 
+        this.saveLog();
+
     }
 
 
     public void saveLog()
     {
         //save it to the local database;
-
 
         //then fire it up to firebase;
 
