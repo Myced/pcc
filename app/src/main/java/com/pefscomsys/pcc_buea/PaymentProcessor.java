@@ -103,6 +103,8 @@ public class PaymentProcessor
                 momo.context = context; //set the context before saving
                 momo.saveLog();
 
+                Log.d("PCCAPP", response.toString());
+
 
                 Log.d("PAYMENT PROCESSOR ", "STATUSCODE: " + momo.success + " HEADER: "+ Arrays.toString(headers) +" RESPONSE: " + response.toString());
                 paymentResult = momo;
@@ -155,6 +157,8 @@ public class PaymentProcessor
                 status = false;
                 message = "Could not make Payment. Please check your internet connection";
 
+                Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+
                 context.unregisterReceiver(broadcastReceiver);
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
@@ -162,8 +166,6 @@ public class PaymentProcessor
                 Log.d("PCCAPP: ", e.toString());
             }
         });
-
-//        Log.d("PCCAPP NEW", paymentResult.toString());
 
     }
 

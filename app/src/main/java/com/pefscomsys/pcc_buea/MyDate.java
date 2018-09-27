@@ -1,6 +1,16 @@
 package com.pefscomsys.pcc_buea;
 
-public class Date
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.SimpleTimeZone;
+import java.util.TimeZone;
+
+public class MyDate
 {
     public String currentDate;
     public String day;
@@ -9,36 +19,104 @@ public class Date
     public String date;
     public String dayOfTheWeek;
     public String monthName;
+    public String currentDay;
+    public String currentMonth;
+    public String currentYear;
+    public String currentMonthName;
 
+    private Context context;
 
-    public Date ()
+    public MyDate(Context context)
     {
+        this.context = context;
+
         //in this constructor, we initialise the currentDate
+        //start by initialising the timezone ids
+        String[] ids = TimeZone.getAvailableIDs(+1 * 60 * 60 * 1000);
 
+        if(ids.length == 0)
+        {
+            Toast.makeText(this.context, "Could not get the time", Toast.LENGTH_SHORT).show();
+        }
+
+        //prepare the timezone
+        SimpleTimeZone timeZone = new SimpleTimeZone(+1 * 60 * 60 * 1000, ids[0]);
+
+        Calendar calendar = new GregorianCalendar(timeZone);
+
+        Log.d("Calendar", "Printing Date and Time");
+
+        //get the date of today.
+        // the day, month and year
+        java.util.Date today = Calendar.getInstance().getTime();
+
+        //now format the date
+        SimpleDateFormat dayFormat = new SimpleDateFormat("dd");
+        SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
+        SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+
+        //now get the current day, month and year
+        currentDay = dayFormat.format(today);
+        currentMonth = monthFormat.format(today);
+        currentYear = yearFormat.format(today);
+        currentMonthName = getMonthName(currentMonth);
     }
 
-    public Date(String date)
+    public MyDate(Context context, String day, String month, String year)
     {
-        this();
-    }
-
-    public Date (String day, String month, String year)
-    {
-        this();
+        this(context);
 
         this.day = day;
         this.month = month;
         this.year = year;
 
+        this.date = day + "/" + month + "/" + year;
+
+        this.monthName = getMonthName(month);
     }
 
-    public String getCurrentDate()
-    {
-        String currentDate = "";
-
-
-
+    public String getCurrentDate() {
         return currentDate;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getDayOfTheWeek() {
+        return dayOfTheWeek;
+    }
+
+    public String getMonthName() {
+        return monthName;
+    }
+
+    public String getCurrentDay() {
+        return currentDay;
+    }
+
+    public String getCurrentMonth() {
+        return currentMonth;
+    }
+
+    public String getCurrentYear() {
+        return currentYear;
+    }
+
+    public String getCurrentMonthName() {
+        return currentMonthName;
     }
 
     /**
@@ -164,4 +242,5 @@ public class Date
 
         return result;
     }
+
 }

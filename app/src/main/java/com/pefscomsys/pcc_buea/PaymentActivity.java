@@ -29,6 +29,9 @@ public class PaymentActivity extends AppCompatActivity {
     Button mPaymentButton;
     private String Reason;
     private int Amount;
+    private String year;
+    private String type;
+
     PaymentProcessor paymentProcessor;
 
     @SuppressLint("SetTextI18n")
@@ -39,6 +42,27 @@ public class PaymentActivity extends AppCompatActivity {
         Intent paymentIntent = getIntent();
         Reason = paymentIntent.getStringExtra("REASON");
         Amount = paymentIntent.getIntExtra("AMOUNT", 0);
+
+        try
+        {
+            this.type = paymentIntent.getStringExtra("TYPE");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        //now check if the payment is for diary
+        if(this.type != null )
+        {
+            if(this.type.equals("DIARY"))
+            {
+                //then get the year
+                this.year = paymentIntent.getStringExtra("YEAR");
+            }
+
+        }
+
         SharedPreferences sharedPreferences = getSharedPreferences(PAYMENT_PREFS,MODE_PRIVATE);
         Log.d("Payment", sharedPreferences.getString(Reason, "NOT_PAID"));
         if(sharedPreferences.getString(Reason, "NOT_PAID").equals("PAID")){
@@ -55,8 +79,6 @@ public class PaymentActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
-
-
                 //Request for sms permission if it not giving
 
                 if(!checkPermission(android.Manifest.permission.RECEIVE_SMS)) {
@@ -64,8 +86,25 @@ public class PaymentActivity extends AppCompatActivity {
                 }
 
                 String number = phonenumber.getText().toString();
-                paymentProcessor = new PaymentProcessor(Amount, number, ""+Reason, PaymentActivity.this);
-                paymentProcessor.processPayment();
+
+                //Special case for the diary payment
+                if(type != null)
+                {
+                    if(type.equals("DIARY"))
+                    {
+                        paymentProcessor = new PaymentProcessor(Amount, number, ""+Reason, PaymentActivity.this);
+                        paymentProcessor.diary = true;
+                        paymentProcessor.diaryYear = year;
+                        paymentProcessor.processPayment();
+                    }
+
+                }
+                else
+                {
+                    paymentProcessor = new PaymentProcessor(Amount, number, ""+Reason, PaymentActivity.this);
+                    paymentProcessor.processPayment();
+                }
+
 
                 Log.d("Payment", " MSG: "+ paymentProcessor.message);
 
