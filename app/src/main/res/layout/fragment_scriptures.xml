@@ -58,7 +58,8 @@
                             android:layout_gravity="center"
                             android:text="@string/day"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black" />
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
 
                         <Spinner
                             android:id="@+id/day_spinner"
@@ -81,7 +82,8 @@
                             android:layout_gravity="center"
                             android:text="@string/month"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black" />
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
 
                         <Spinner
                             android:id="@+id/month_spinner"
@@ -103,7 +105,8 @@
                             android:layout_gravity="center"
                             android:text="@string/year"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black" />
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
 
                         <Spinner
                             android:id="@+id/year_spinner"
