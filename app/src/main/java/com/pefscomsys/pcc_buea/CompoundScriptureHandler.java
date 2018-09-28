@@ -52,6 +52,8 @@ public class CompoundScriptureHandler
                 ScriptureTextHandler currentText = new ScriptureTextHandler(currentReading, this.context);
 
                 String theReading = currentText.getReading();
+                this.book = currentText.getBook();
+                this.chapter = currentText.getChapter();
 
                 //now append it to the final reading
                 this.appendFinal(currentReading, theReading);
