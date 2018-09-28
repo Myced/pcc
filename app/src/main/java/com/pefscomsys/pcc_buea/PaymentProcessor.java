@@ -142,7 +142,6 @@ public class PaymentProcessor
                 context.startActivity(newIntent);
                 //print error message in the log cat
                 Log.d("PCCAPP: ", e.toString());
-                Log.d("PCCAPP ", errorMessage);
             }
         });
 
