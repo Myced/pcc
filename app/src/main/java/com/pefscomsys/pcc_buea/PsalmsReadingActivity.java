@@ -27,16 +27,16 @@ public class PsalmsReadingActivity extends AppCompatActivity {
 
         if(reading_psalms.contains("&"))
         {
+            CompoundScriptureHandler myText = new CompoundScriptureHandler(reading_psalms, getApplicationContext());
+            readingContent.setText(myText.getFinalResult());
+        }
+        else
+        {
             //now get the scriptureal reading from our scripture class
             ScriptureTextHandler myText = new ScriptureTextHandler(reading_psalms, getApplicationContext());
 
             //now set the text content to what is returned from the database
             readingContent.setText(myText.getReading());
-        }
-        else
-        {
-            CompoundScriptureHandler myText = new CompoundScriptureHandler(reading_psalms, getApplicationContext());
-            readingContent.setText(myText.getFinalResult());
         }
 
 

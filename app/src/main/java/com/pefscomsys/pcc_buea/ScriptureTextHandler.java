@@ -35,7 +35,7 @@ public class ScriptureTextHandler
     public String getReading()
     {
         String text = this.text;
-        Log.d("Database", "Getting the scripture fragments");
+        Log.d("PCCAPP", this.text);
 
         //now split it up and start working
         String[] parts = text.split("\\.");
@@ -169,8 +169,6 @@ public class ScriptureTextHandler
         //just do a normal query and see
         String query = "SELECT * FROM `verses` WHERE `verse` >= '" + this.start +
                 "'  AND `verse` <= '" + this.end + "' AND `book` = '" + this.book + "' ";
-
-        Log.d("Database", query);
 
         //do the query
         Cursor scriptureResult = db.myDataBase.rawQuery(query, null);

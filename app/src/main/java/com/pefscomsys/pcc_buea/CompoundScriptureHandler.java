@@ -1,6 +1,7 @@
 package com.pefscomsys.pcc_buea;
 
 import android.content.Context;
+import android.util.Log;
 
 public class CompoundScriptureHandler
 {
@@ -30,12 +31,12 @@ public class CompoundScriptureHandler
         //now create an instance of the scripture text handler
         ScriptureTextHandler myScripture = new ScriptureTextHandler(firstPart, this.context);
 
+        //now add the result to our final result
+        this.finalResult += myScripture.getReading();
+
         //now I set my book and chapter
         this.book = myScripture.getBook();
         this.chapter = myScripture.getChapter();
-
-        //now add the result to our final result
-        this.finalResult += myScripture.getReading();
 
         //now for the rest of the parts.
         //prepare them accordingly
@@ -65,7 +66,7 @@ public class CompoundScriptureHandler
                     String text = this.prepareTextFromChapterAndVerse(currentReading);
 
                     //now create new scripture text handler
-                    ScriptureTextHandler currentText = new ScriptureTextHandler(currentReading, this.context);
+                    ScriptureTextHandler currentText = new ScriptureTextHandler(text, this.context);
 
                     String theReading = currentText.getReading();
 
@@ -79,7 +80,7 @@ public class CompoundScriptureHandler
                     String text = this.prepareTextFromVerse(currentReading);
 
                     //now create new scripture text handler
-                    ScriptureTextHandler currentText = new ScriptureTextHandler(currentReading, this.context);
+                    ScriptureTextHandler currentText = new ScriptureTextHandler(text, this.context);
 
                     String theReading = currentText.getReading();
 

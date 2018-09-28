@@ -125,15 +125,6 @@ public class ScripturesFragment extends Fragment {
             this.scriptureLayer.setVisibility(View.VISIBLE);
         }
 
-        boolean act2019 = activation.checkDiary("2019");
-        Log.d("PCCAPP", "2019 product activation " + act2019);
-
-        boolean act2011 = activation.checkDiary("2011");
-        Log.d("PCCAPP", "2019 product activation " + act2011);
-
-        boolean act2030 = activation.checkDiary("2030");
-        Log.d("PCCAPP", "2019 product activation " + act2030);
-
         //now get the current day, month and year
         currentDay = date.getCurrentDay();
         currentMonth = date.getCurrentMonth();
@@ -142,44 +133,44 @@ public class ScripturesFragment extends Fragment {
 
         reading = new Scripture("", "", "", "", "");
 
-        reading.setPsalms("Ps.40:1-45");
-        reading.setReadingText("Matt.5:1-3");
-        reading.setReadingTwo("John.3:3-25");
-        reading.setReadingOne("Luke.4:5");
+        reading.setPsalms("Ps.40:1-4&9");
+        reading.setReadingText("Matt.5:1-3&6:3-9");
+        reading.setReadingTwo("John.3:3-25&Luke.2:6-10&Matt.7:7");
+        reading.setReadingOne("Luke.4:5&12-16");
 
         //prepare our date and get readings for this date
         String dbDate = currentDay + '/' + currentMonth + '/' + currentYear;
 
 
         //now get it from the db with the Scripture DB Helper
-         scriptureDb = new ScriptureDBHandler(getContext());
-
-
-         //create the database
-        try {
-            scriptureDb.createDataBase();
-        } catch (IOException e) {
-            Log.d("Database", "Cannot get database");
-            e.printStackTrace();
-        }
-
-        scriptureDb.openDataBase();
-
-
-        //now get the reading array list for that day
-        List<Scripture> ourScripture = scriptureDb.getReadings(dbDate);
-
-
-        for(int i = 0; i < ourScripture.size(); i++)
-        {
-            Scripture currentReading = ourScripture.get(i);
-
-            //now set the reading to those from currentReading
-            reading.setPsalms(currentReading.getPsalms());
-            reading.setReadingText(currentReading.getReadingText());
-            reading.setReadingTwo(currentReading.getReadingTwo());
-            reading.setReadingOne(currentReading.getReadingOne());
-        }
+//         scriptureDb = new ScriptureDBHandler(getContext());
+//
+//
+//         //create the database
+//        try {
+//            scriptureDb.createDataBase();
+//        } catch (IOException e) {
+//            Log.d("Database", "Cannot get database");
+//            e.printStackTrace();
+//        }
+//
+//        scriptureDb.openDataBase();
+//
+//
+//        //now get the reading array list for that day
+//        List<Scripture> ourScripture = scriptureDb.getReadings(dbDate);
+//
+//
+//        for(int i = 0; i < ourScripture.size(); i++)
+//        {
+//            Scripture currentReading = ourScripture.get(i);
+//
+//            //now set the reading to those from currentReading
+//            reading.setPsalms(currentReading.getPsalms());
+//            reading.setReadingText(currentReading.getReadingText());
+//            reading.setReadingTwo(currentReading.getReadingTwo());
+//            reading.setReadingOne(currentReading.getReadingOne());
+//        }
 
 
 
