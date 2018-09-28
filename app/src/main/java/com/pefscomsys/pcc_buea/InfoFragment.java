@@ -47,6 +47,11 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
 
 
         //showing toast message for momo testing
+//        PaymentProcessor momoPay = new PaymentProcessor(100, "672723036", "DIARY", getContext());
+//        momoPay.diary = true;
+//        momoPay.diaryYear = "2019";
+//
+//        momoPay.processPayment();
 
         //test the scripture saving.
         //open the database;

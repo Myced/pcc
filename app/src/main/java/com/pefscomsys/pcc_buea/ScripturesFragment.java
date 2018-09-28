@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,18 +45,21 @@ public class ScripturesFragment extends Fragment {
     Spinner day;
     Spinner month;
     Spinner year;
-    Button findButton;
+    Button findButton, buyScripture;
 
     String selectedMonth;
     String selectedDay;
     String selectedYear;
+
+    String activationYear;
 
     String currentYear;
     String currentMonth;
     String currentDay;
     String currentMonthName;
 
-    TextView readingPsalms, readingOne, readingTwo, readingText;
+    TextView readingPsalms, readingOne, readingTwo, readingText, errorMessage;
+    LinearLayout errorLayout, scriptureLayer;
 
     //scripture variable
 
@@ -82,42 +86,64 @@ public class ScripturesFragment extends Fragment {
          readingTwo = view.findViewById(R.id.reading_two);
          readingText = view.findViewById(R.id.reading_text);
 
-        //set them
+         scriptureLayer = view.findViewById(R.id.scripture_layer);
+         errorLayout = view.findViewById(R.id.error_layer);
+         errorMessage = view.findViewById(R.id.error_message);
 
-        //start by initialising the timezone ids
-        String[] ids = TimeZone.getAvailableIDs(+1 * 60 * 60 * 1000);
+         buyScripture = view.findViewById(R.id.buy_scripture);
 
-        if(ids.length == 0)
+         //get the current date
+
+        //create an instance of MyDate
+        MyDate date = new MyDate(getContext());
+
+        //now check avtivation for this date
+        Activation activation = new Activation(getContext());
+
+        //check the activation this year
+        activationYear = date.getCurrentYear();
+        boolean activationResult = activation.checkDiary(this.activationYear);
+
+        //check the result and see if the product has been activated or not
+        if(activationResult == true)
         {
-            Toast.makeText(getContext(), "Could not get the time", Toast.LENGTH_SHORT).show();
+            //hide the error layout
+            //now lets hide the error layer
+            this.errorLayout.setVisibility(View.GONE);
+            this.scriptureLayer.setVisibility(View.VISIBLE);
+
+        }
+        else
+        {
+            String error = "You have not bought the " + activationYear + " Diary \n " +
+                    "Please click on the button below to buy it. \n\n" +
+                    "Price: " + Prices.SCRIPTURE + "XAF";
+
+            errorMessage.setText(error);
+
+            scriptureLayer.setVisibility(View.GONE);
+            this.scriptureLayer.setVisibility(View.VISIBLE);
         }
 
-        //prepare the timezone
-        SimpleTimeZone timeZone = new SimpleTimeZone(+1 * 60 * 60 * 1000, ids[0]);
+        boolean act2019 = activation.checkDiary("2019");
+        Log.d("PCCAPP", "2019 product activation " + act2019);
 
-        Calendar calendar = new GregorianCalendar(timeZone);
+        boolean act2011 = activation.checkDiary("2011");
+        Log.d("PCCAPP", "2019 product activation " + act2011);
 
-        Log.d("Calendar", "Printing Date and Time");
-
-        //get the date of today.
-        // the day, month and year
-        Date today = Calendar.getInstance().getTime();
-
-        //now format the date
-        SimpleDateFormat dayFormat = new SimpleDateFormat("dd");
-        SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
-        SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+        boolean act2030 = activation.checkDiary("2030");
+        Log.d("PCCAPP", "2019 product activation " + act2030);
 
         //now get the current day, month and year
-        currentDay = dayFormat.format(today);
-        currentMonth = monthFormat.format(today);
-        currentYear = yearFormat.format(today);
-        currentMonthName = getMonthName(currentMonth);
+        currentDay = date.getCurrentDay();
+        currentMonth = date.getCurrentMonth();
+        currentYear = date.getCurrentYear();
+        currentMonthName = date.getCurrentMonthName();
 
         reading = new Scripture("", "", "", "", "");
 
-        reading.setPsalms("Psalms.40:1-45");
-        reading.setReadingText("Mt.5:1-3");
+        reading.setPsalms("Ps.40:1-45");
+        reading.setReadingText("Matt.5:1-3");
         reading.setReadingTwo("John.3:3-25");
         reading.setReadingOne("Luke.4:5");
 
@@ -320,7 +346,6 @@ public class ScripturesFragment extends Fragment {
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getActivity(), "Filter Date string", Toast.LENGTH_SHORT).show();
                 Log.d("Scripture:", "filter the scriptures");
 
                 //now get the dates selected
@@ -328,6 +353,37 @@ public class ScripturesFragment extends Fragment {
                 String selectedMonthId = getMonthId(selectedMonth);
                 selectedDay = (String) day.getSelectedItem();
                 selectedYear = (String) year.getSelectedItem();
+
+                //set the activation year
+                activationYear = selectedYear;
+
+                //check activation for this year
+                //now check avtivation for this date
+                Activation activation = new Activation(getContext());
+
+                //check the activation this year
+                boolean activationResult2 = activation.checkDiary(activationYear);
+
+                //check the result and see if the product has been activated or not
+                if(activationResult2 == true)
+                {
+                    //hide the error layout
+                    //now lets hide the error layer
+                    errorLayout.setVisibility(View.GONE);
+                    scriptureLayer.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    String error = "You have not bought the " + activationYear + " Diary \n " +
+                            "Please click on the button below to buy it. \n\n" +
+                            "Price: " + Prices.SCRIPTURE + "XAF";
+
+                    errorMessage.setText(error);
+
+                    scriptureLayer.setVisibility(View.GONE);
+                    errorLayout.setVisibility(View.VISIBLE);
+
+                }
 
                 String prepareDate = selectedDay + "/" + selectedMonthId + "/" + selectedYear;
 
@@ -495,6 +551,33 @@ public class ScripturesFragment extends Fragment {
                 //now get the scriptures for this particular day
 
 
+
+            }
+        });
+
+        //set the onclick listener for the button to buy the diary
+        buyScripture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("PCCAPP", "Buy button pressed");
+                Log.d("PCCAPP", "Year is " + activationYear);
+
+                //prepare the payment for the diary
+                int diaryPrice = Prices.SCRIPTURE;
+                String diaryYear = activationYear;
+
+                String paymentString = "Diary " + diaryYear;
+
+                //put the data in an intent
+                Intent paymentIntent = new Intent(getContext(), PaymentActivity.class);
+
+                paymentIntent.putExtra("REASON", paymentString);
+                paymentIntent.putExtra("AMOUNT", diaryPrice);
+                paymentIntent.putExtra("YEAR", diaryYear);
+                paymentIntent.putExtra("TYPE", "DIARY");
+
+                //start payment activity;
+                startActivity(paymentIntent);
 
             }
         });
