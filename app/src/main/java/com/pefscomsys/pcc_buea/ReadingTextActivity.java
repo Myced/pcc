@@ -23,11 +23,19 @@ public class ReadingTextActivity extends AppCompatActivity {
 
         readingContent = findViewById(R.id.reading_text_content);
 
-        //now get the scriptureal reading from our scripture class
-        ScriptureTextHandler myText = new ScriptureTextHandler(reading_text, getApplicationContext());
+        if(reading_text.contains("&"))
+        {
+            //now get the scriptureal reading from our scripture class
+            ScriptureTextHandler myText = new ScriptureTextHandler(reading_text, getApplicationContext());
 
-        //now set the text content to what is returned from the database
-        readingContent.setText(myText.getReading());
+            //now set the text content to what is returned from the database
+            readingContent.setText(myText.getReading());
+        }
+        else
+        {
+            CompoundScriptureHandler myText = new CompoundScriptureHandler(reading_text, getApplicationContext());
+            readingContent.setText(myText.getFinalResult());
+        }
 
 
     }

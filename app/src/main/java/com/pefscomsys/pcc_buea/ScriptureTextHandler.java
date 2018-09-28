@@ -197,4 +197,14 @@ public class ScriptureTextHandler
         db.close();
 
     }
+
+    public String getBook()
+    {
+        return this.book;
+    }
+
+    public String getChapter()
+    {
+        return this.chapter;
+    }
 }

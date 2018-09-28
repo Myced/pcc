@@ -25,11 +25,19 @@ public class PsalmsReadingActivity extends AppCompatActivity {
         reading_title.setText(reading_psalms);
         readingContent = findViewById(R.id.reading_psalms_content);
 
-        //now get the scriptureal reading from our scripture class
-        ScriptureTextHandler myText = new ScriptureTextHandler(reading_psalms, getApplicationContext());
+        if(reading_psalms.contains("&"))
+        {
+            //now get the scriptureal reading from our scripture class
+            ScriptureTextHandler myText = new ScriptureTextHandler(reading_psalms, getApplicationContext());
 
-        //now set the text content to what is returned from the database
-        readingContent.setText(myText.getReading());
+            //now set the text content to what is returned from the database
+            readingContent.setText(myText.getReading());
+        }
+        else
+        {
+            CompoundScriptureHandler myText = new CompoundScriptureHandler(reading_psalms, getApplicationContext());
+            readingContent.setText(myText.getFinalResult());
+        }
 
 
     }
