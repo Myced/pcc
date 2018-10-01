@@ -190,15 +190,57 @@
                     android:layout_marginTop="@dimen/margin10"
                     android:orientation="vertical">
 
-                    <TextView
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       >
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:paddingBottom="8dp"
+                           android:paddingTop="8dp">
+
+
+                           <TextView
+                               android:id="@+id/day_date"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginEnd="8dp"
+                               android:layout_marginRight="8dp"
+                               android:text="Tuesday 17"
+                               android:textColor="@color/text_black"
+                               android:textStyle="bold"
+                               android:textSize="@dimen/fontsize" />
+
+                           <TextView
+                               android:id="@+id/month_year"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_alignParentTop="true"
+                               android:layout_centerHorizontal="true"
+                               android:layout_toEndOf="@id/day_date"
+                               android:layout_toRightOf="@id/day_date"
+                               android:gravity="center"
+                               android:text="September, 2018"
+                               android:textColor="@color/text_black"
+                               android:textSize="@dimen/fontsize"
+                               android:textStyle="bold" />
+                       </RelativeLayout>
+                   </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="4dp"
-                        android:text="Readings"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="28sp" />
+                        android:orientation="horizontal"
+                        android:background="@drawable/border_bottom">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cedric"
+                            android:background="@drawable/border_bottom"/>
+
+                    </LinearLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"

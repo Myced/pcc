@@ -3,14 +3,14 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/LibreBaskerville_Regular" />
+        android:font="@font/librebaskerville_regular" />
     <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@font/LibreBaskerville_Bold" />
+        android:font="@font/librebaskerville_bold" />
 
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/LibreBaskerville_Italic" />
+        android:font="@font/librebaskerville_italic" />
 </font-family>

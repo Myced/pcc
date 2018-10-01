@@ -16,9 +16,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import java.lang.reflect.Field;
 
 import static com.pefscomsys.pcc_buea.Prices.HYMN_PRICE;
 
@@ -94,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
         setFragment(homeFragment);
 
+        getOverflowMenu();
+
         //Initialise the application
 //        AppInitialiser init = new AppInitialiser(getApplicationContext());
 //        init.initialiseApp();
@@ -138,6 +143,20 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();
+    }
+
+    private void getOverflowMenu() {
+
+        try {
+            ViewConfiguration config = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+            if(menuKeyField != null) {
+                menuKeyField.setAccessible(true);
+                menuKeyField.setBoolean(config, false);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
