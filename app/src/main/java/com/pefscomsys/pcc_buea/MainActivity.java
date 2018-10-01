@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -92,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
         scripturesFragment = new ScripturesFragment();
 
         setFragment(homeFragment);
+
+        //Initialise the application
+//        AppInitialiser init = new AppInitialiser(getApplicationContext());
+//        init.initialiseApp();
+
         mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
         Log.d("Preference", String.valueOf(mPaymentPref.getAll().values()));
         if(mPaymentPref.getAll().size() == 0){
@@ -134,9 +140,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-//    public static String html2text(String html) {
-//        return Jsoup.parse(html).text();
-//    }
 
 
     @Override

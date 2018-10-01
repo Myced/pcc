@@ -94,7 +94,6 @@ public class History extends AppCompatActivity {
 
             //ADD THE CURRENT HISTORY TO THE LIST OF HISTORUIES
             histories.add(currentHistory);
-            Log.d("PCCAPP", "Adding " + currentHistory.toString());
         }
 
         //close the result

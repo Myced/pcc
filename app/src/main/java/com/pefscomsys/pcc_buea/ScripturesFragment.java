@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -289,7 +291,17 @@ public class ScripturesFragment extends Fragment {
 
 
 
+        //get the current year
+        int startYear = 2018;
+        int theCurrentYear = Integer.valueOf(this.currentYear);
 
+        //now lets prepare an arraylist of years
+        List<Integer> years = new ArrayList<>();
+
+        for(int i = startYear; i <= theCurrentYear+1; i++)
+        {
+            years.add(i);
+        }
 
 
         //initialise the spinners
@@ -302,15 +314,11 @@ public class ScripturesFragment extends Fragment {
         ArrayAdapter<CharSequence> daysAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
                 R.array.days, R.layout.date_spinner_row);
 
-        daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         day.setAdapter(daysAdapter);
 
         //prepare the months adapter too.
         ArrayAdapter<CharSequence> monthsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
                 R.array.months, R.layout.date_spinner_row);
-
-        daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         month.setAdapter(monthsAdapter);
 
@@ -318,8 +326,6 @@ public class ScripturesFragment extends Fragment {
 
         ArrayAdapter<CharSequence> yearsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
                 R.array.years, R.layout.date_spinner_row);
-
-        daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         year.setAdapter(yearsAdapter);
 
