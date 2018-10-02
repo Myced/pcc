@@ -1,19 +1,19 @@
 package com.pefscomsys.pcc_buea;
 
 public class Hymn {
-    private String Hymn;
+    private CharSequence Hymn;
     private int hymnNumber;
 
-    public Hymn(String hymn, int number) {
+    public Hymn(CharSequence hymn, int number) {
         this.setHymn(hymn);
         this.setHymnNumber(number);
     }
 
-    public String getHymn() {
+    public CharSequence getHymn() {
         return Hymn;
     }
 
-    public void setHymn(String hymn) {
+    public void setHymn(CharSequence hymn) {
         Hymn = hymn;
     }
 

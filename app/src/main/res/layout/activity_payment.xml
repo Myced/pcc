@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PaymentActivity"
+    android:padding="@dimen/margin16">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/church_hymn_book"
+        android:textColor="@color/text_black"
+        android:textSize="28sp"
+        android:id="@+id/paymentCaption"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/momo_pay"
+        android:text="Get your copy"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        android:layout_marginBottom="@dimen/margin20"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/momo_pay"
+        android:text="MOBILE MONEY"
+        android:textSize="18sp"
+        android:layout_above="@id/orange_pay"
+        android:layout_marginBottom="@dimen/margin5"
+        android:textColor="#ffc107"
+        android:background="@drawable/round_mtn_button"
+        android:drawableLeft="@drawable/momo_icon"
+        android:paddingLeft="35dp"
+        android:drawableStart="@drawable/momo_icon"
+        android:paddingStart="35dp"
+        android:onClick="MomoPay" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/orange_pay"
+        android:text="ORANGE MONEY"
+        android:textSize="18sp"
+        android:layout_marginBottom="@dimen/margin5"
+        android:textColor="#ff6f01"
+        android:background="@drawable/round_orange_button"
+        android:layout_above="@id/visa_pay"
+        android:drawableLeft="@drawable/orange"
+        android:paddingLeft="35dp"
+        android:drawableStart="@drawable/orange"
+        android:paddingStart="35dp"
+        android:onClick="OrangePay"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/visa_pay"
+        android:layout_marginBottom="@dimen/margin5"
+        android:text="VISA PAYMENT"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#075aff"
+        android:background="@drawable/round_visa_button"
+        android:drawableLeft="@drawable/visa"
+        android:paddingLeft="35dp"
+        android:drawableStart="@drawable/visa"
+        android:paddingStart="35dp"
+        android:onClick="VisaPay"/>
+
+</RelativeLayout>

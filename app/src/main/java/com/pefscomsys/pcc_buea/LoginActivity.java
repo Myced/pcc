@@ -85,12 +85,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d("Login Activity", "Login completed");
+                                    progressDialog.dismiss();
                                     finish();
                                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    Toast.makeText(getApplicationContext(), "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
+                                    progressDialog.dismiss();
+                                    Toast.makeText(getApplicationContext(), "Poor Internet Connection",
+                                            Toast.LENGTH_LONG).show();
                                 }
 
                             }

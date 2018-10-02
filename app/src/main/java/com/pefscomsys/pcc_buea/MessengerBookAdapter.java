@@ -16,7 +16,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
-import static com.pefscomsys.pcc_buea.Prices.ECHO_PRICE;
 import static com.pefscomsys.pcc_buea.Prices.THE_MESSENGER;
 
 public class MessengerBookAdapter extends RecyclerView.Adapter <MessengerBookAdapter.MyBookHolder> {

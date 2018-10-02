@@ -16,12 +16,12 @@
             android:id="@+id/diaryBtn"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="58dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/home_round_button"
             android:text="@string/church_diary"
             android:textSize="18sp" />
 
@@ -29,13 +29,13 @@
             android:id="@+id/hymnBookBtn"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="58dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@id/diaryBtn"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/home_round_button"
             android:text="@string/church_hymn_book"
             android:textSize="18sp" />
 
@@ -43,13 +43,13 @@
             android:id="@+id/studyBookBtn"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="58dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@id/hymnBookBtn"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/home_round_button"
             android:text="@string/books_and_magazines"
             android:textSize="18sp" />
 
@@ -57,13 +57,13 @@
             android:id="@+id/infoBtn"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="58dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@id/studyBookBtn"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/home_round_button"
             android:text="@string/church_information"
             android:textSize="18sp" />
     </RelativeLayout>

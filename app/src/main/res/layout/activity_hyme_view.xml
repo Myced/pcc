@@ -42,7 +42,8 @@
                 android:textColor="@color/text_black"
                 android:textSize="21sp"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"/>
+                android:paddingBottom="8dp"
+                app:fontFamily="@font/baskvl"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
