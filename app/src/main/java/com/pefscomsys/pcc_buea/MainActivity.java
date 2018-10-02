@@ -16,9 +16,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import java.lang.reflect.Field;
 
 import static com.pefscomsys.pcc_buea.Prices.HYMN_PRICE;
 
@@ -82,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -92,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
         scripturesFragment = new ScripturesFragment();
 
         setFragment(homeFragment);
+
+        getOverflowMenu();
+
+        //Initialise the application
+//        AppInitialiser init = new AppInitialiser(getApplicationContext());
+//        init.initialiseApp();
+
         mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
         Log.d("Preference", String.valueOf(mPaymentPref.getAll().values()));
         if(mPaymentPref.getAll().size() == 0){
@@ -134,9 +145,20 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-//    public static String html2text(String html) {
-//        return Jsoup.parse(html).text();
-//    }
+    private void getOverflowMenu() {
+
+        try {
+            ViewConfiguration config = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+            if(menuKeyField != null) {
+                menuKeyField.setAccessible(true);
+                menuKeyField.setBoolean(config, false);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     @Override

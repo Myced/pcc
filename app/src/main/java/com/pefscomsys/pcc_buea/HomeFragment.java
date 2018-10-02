@@ -28,8 +28,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     BooksFragment booksFragment;
     InfoFragment infoFragment;
     BottomNavigationView bottomNavigationView;
+
     public HomeFragment() {
         // Required empty public constructor
+
+        //if true then initialise the app
+
     }
 
 

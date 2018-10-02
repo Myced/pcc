@@ -104,8 +104,6 @@ public class HealthSecretary
             inst.setPobox(result.getString(INST_POBOX));
             inst.setTel(result.getString(INST_TEL));
 
-            Log.d("PCCAPP", " Adding " + inst.toString());
-
             institutionss.add(inst);
         }
 

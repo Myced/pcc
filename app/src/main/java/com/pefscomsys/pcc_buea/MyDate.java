@@ -7,6 +7,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 
@@ -43,6 +44,7 @@ public class MyDate
         SimpleTimeZone timeZone = new SimpleTimeZone(+1 * 60 * 60 * 1000, ids[0]);
 
         Calendar calendar = new GregorianCalendar(timeZone);
+        Calendar myCal = Calendar.getInstance();
 
         Log.d("Calendar", "Printing Date and Time");
 
@@ -55,11 +57,15 @@ public class MyDate
         SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
         SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
 
+        String dayName = myCal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
+        this.dayOfTheWeek = dayName;
+
         //now get the current day, month and year
         currentDay = dayFormat.format(today);
         currentMonth = monthFormat.format(today);
         currentYear = yearFormat.format(today);
         currentMonthName = getMonthName(currentMonth);
+        monthName = getMonthName(currentMonth);
     }
 
     public MyDate(Context context, String day, String month, String year)
@@ -70,9 +76,27 @@ public class MyDate
         this.month = month;
         this.year = year;
 
+        int dayInt = Integer.parseInt(day);
+        int monthInt = Integer.parseInt(month);
+        int yearInt = Integer.parseInt(year);
+
+        --monthInt;
+
         this.date = day + "/" + month + "/" + year;
 
         this.monthName = getMonthName(month);
+
+        //prepare other parameters
+        TimeZone timezone  = TimeZone.getDefault();
+
+        Calendar calendar = new GregorianCalendar(timezone);
+
+        calendar.set(yearInt, monthInt, dayInt,06, 00, 00);
+
+        String dayName = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG,
+                Locale.getDefault());
+
+        this.dayOfTheWeek = dayName;
     }
 
     public String getCurrentDate() {
@@ -117,6 +141,28 @@ public class MyDate
 
     public String getCurrentMonthName() {
         return currentMonthName;
+    }
+
+    public String getMonthYear ()
+    {
+        String monthYear = this.monthName + ", " + this.year;
+
+        return monthYear;
+    }
+
+    String getDayAndName()
+    {
+        return this.dayOfTheWeek + " " + this.day;
+    }
+
+    public String getCurrentMonthYear()
+    {
+        return this.currentMonthName + ", " + this.currentYear;
+    }
+
+    public String getCurrentDayAndName()
+    {
+        return  this.dayOfTheWeek + " " + this.currentDay;
     }
 
     /**

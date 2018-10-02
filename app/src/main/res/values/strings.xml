@@ -11,13 +11,21 @@
     <string name="about">About</string>
     <string name="error">Error!</string>
     <string name="buy_diary">Buy Diary</string>
+    <string name="church_calender">Church Calender</string>
+    <string name="church_admin">Church Admin and History</string>
+    <string name="communication">Communication</string>
+    <string name="facts">PCC Facts and Figures</string>
+    <string name="sunday_school">Sunday School</string>
+    <string name="retired_pastors">Retired Pastors</string>
+    <string name="public_holidays">Public Holidays</string>
+    <string name="other_important_days">Other Important Days</string>
 
     <string name="press_echo">PRESBYTERIAN ECHO</string>
     <string name="messenger">THE MESSENGER</string>
     <string name="more">More</string>
     <string name="congregation">Presbytary &amp; Congregation</string>
-    <string name="education">Educational Info…</string>
-    <string name="health">Health Information</string>
+    <string name="education">Education</string>
+    <string name="health">Health</string>
     <string name="church_address">Church Address &amp; Committee</string>
     <string name="diary">Diary</string>
     <string name="search">Enter hymn number…</string>

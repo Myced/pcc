@@ -48,7 +48,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="0.5"
                         android:orientation="vertical"
                         android:textAlignment="center">
 
@@ -56,9 +56,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:paddingLeft="@dimen/margin10"
                             android:text="@string/day"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black" />
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
 
                         <Spinner
                             android:id="@+id/day_spinner"
@@ -79,9 +81,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:paddingLeft="@dimen/margin10"
                             android:text="@string/month"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black" />
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
 
                         <Spinner
                             android:id="@+id/month_spinner"
@@ -101,9 +105,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:paddingLeft="@dimen/margin10"
                             android:text="@string/year"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black" />
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
 
                         <Spinner
                             android:id="@+id/year_spinner"
@@ -187,144 +193,289 @@
                     android:layout_marginTop="@dimen/margin10"
                     android:orientation="vertical">
 
-                    <TextView
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       >
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:paddingBottom="8dp"
+                           android:paddingTop="8dp">
+
+
+                           <TextView
+                               android:id="@+id/day_date"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginEnd="8dp"
+                               android:layout_marginRight="8dp"
+                               android:text="Tuesday 17"
+                               android:textColor="@color/text_black"
+                               android:textStyle="bold"
+                               android:textSize="@dimen/fontsize" />
+
+                           <TextView
+                               android:id="@+id/month_year"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_alignParentTop="true"
+                               android:layout_centerHorizontal="true"
+                               android:layout_toEndOf="@id/day_date"
+                               android:layout_toRightOf="@id/day_date"
+                               android:gravity="center"
+                               android:text="September, 2018"
+                               android:textColor="@color/text_black"
+                               android:textSize="@dimen/fontsize"
+                               android:textStyle="bold" />
+                       </RelativeLayout>
+                   </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="4dp"
-                        android:text="Readings"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="28sp" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/light_grey"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp">
-
+                        android:orientation="horizontal"
+                        android:background="@drawable/border_bottom">
                         <TextView
-                            android:id="@+id/psalms"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginRight="8dp"
-                            android:text="@string/introit_psalms"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize" />
+                            android:background="@drawable/border_bottom"/>
 
-                        <TextView
-                            android:id="@+id/psalms_content"
-                            android:layout_width="wrap_content"
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/with_spalms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_toEndOf="@id/psalms"
-                            android:layout_toRightOf="@id/psalms"
-                            android:text="@string/psalms"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize"
-                            android:textStyle="bold" />
+                            android:layout_marginTop="8dp"
+                            android:background="@color/light_grey"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
 
-                    </RelativeLayout>
+                            <TextView
+                                android:id="@+id/psalms"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:text="@string/introit_psalms"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
+                            <TextView
+                                android:id="@+id/psalms_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_toEndOf="@id/psalms"
+                                android:layout_toRightOf="@id/psalms"
+                                android:text="@string/psalms"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+
+                            <TextView
+                                android:id="@+id/first_lesson"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:text="@string/first_lesson"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize" />
+
+                            <TextView
+                                android:id="@+id/reading_one"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_toEndOf="@id/first_lesson"
+                                android:layout_toRightOf="@id/first_lesson"
+                                android:gravity="center"
+                                android:text="Mt 7:7"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/light_grey"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+                            <TextView
+                                android:id="@+id/second_lesson"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:text="@string/second_lesson"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize" />
+
+                            <TextView
+                                android:id="@+id/reading_two"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_toEndOf="@id/second_lesson"
+                                android:layout_toRightOf="@id/second_lesson"
+                                android:gravity="center"
+                                android:text="Ez 7:7"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+                            <TextView
+                                android:id="@+id/text_quote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/text"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize" />
+
+                            <TextView
+                                android:id="@+id/reading_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_toEndOf="@id/text_quote"
+                                android:layout_toRightOf="@id/text_quote"
+                                android:paddingLeft="@dimen/margin10"
+                                android:gravity="center"
+                                android:text="Ez 7:7"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/without_spalms"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp">
+                        android:orientation="vertical"
+                        >
+                        <RelativeLayout
+                            android:id="@+id/psalms_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/light_grey"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
 
 
-                        <TextView
-                            android:id="@+id/first_lesson"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginRight="8dp"
-                            android:text="@string/first_lesson"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize" />
 
-                        <TextView
-                            android:id="@+id/reading_one"
+                            <TextView
+                                android:id="@+id/psalms_content1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/psalms"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+
+                            <TextView
+                                android:id="@+id/reading_one1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="left"
+                                android:paddingLeft="@dimen/margin10"
+                                android:text="Mt 7:7"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/light_grey"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+
+                            <TextView
+                                android:id="@+id/reading_two1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:paddingLeft="@dimen/margin10"
+                                android:gravity="left"
+                                android:text="Ez 7:7"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_toEndOf="@id/first_lesson"
-                            android:layout_toRightOf="@id/first_lesson"
-                            android:gravity="center"
-                            android:text="Mt 7:7"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/light_grey"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp">
 
-                        <TextView
-                            android:id="@+id/second_lesson"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginRight="8dp"
-                            android:text="@string/second_lesson"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize" />
-
-                        <TextView
-                            android:id="@+id/reading_two"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_toEndOf="@id/second_lesson"
-                            android:layout_toRightOf="@id/second_lesson"
-                            android:gravity="center"
-                            android:text="Ez 7:7"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp">
-
-                        <TextView
-                            android:id="@+id/text_quote"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:text="@string/text"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize" />
-
-                        <TextView
-                            android:id="@+id/reading_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@id/text_quote"
-                            android:layout_toRightOf="@id/text_quote"
-                            android:gravity="center"
-                            android:text="Mt 7:7"
-                            android:textColor="@color/text_black"
-                            android:textSize="@dimen/fontsize"
-                            android:layout_marginBottom="@dimen/margin20"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+                            <TextView
+                                android:id="@+id/reading_text1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:paddingLeft="@dimen/margin10"
+                                android:gravity="left"
+                                android:text="Ez 7:7"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
 

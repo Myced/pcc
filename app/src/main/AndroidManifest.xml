@@ -73,6 +73,7 @@
         <activity android:name=".PaymentActivity"
             android:theme="@style/HymnTheme"
             android:label="Payment"/>
+        <activity android:name=".ChurchCalendar"></activity>
     </application>
 
 </manifest>

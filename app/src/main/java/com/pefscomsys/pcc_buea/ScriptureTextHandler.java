@@ -35,7 +35,7 @@ public class ScriptureTextHandler
     public String getReading()
     {
         String text = this.text;
-        Log.d("Database", "Getting the scripture fragments");
+        Log.d("PCCAPP", this.text);
 
         //now split it up and start working
         String[] parts = text.split("\\.");
@@ -44,6 +44,7 @@ public class ScriptureTextHandler
         String book = parts[0];
 
         this.book = book;
+        this.book.replace(" ", "");
 
         //now get the ret
         String content  = parts[1];
@@ -71,8 +72,8 @@ public class ScriptureTextHandler
         }
 
         //now set them globally
-        this.verseStart = Integer.valueOf(chapterStart);
-        this.verseEnd = Integer.valueOf(chapterEnd);
+        this.verseStart = Integer.valueOf(chapterStart.replace(" ", ""));
+        this.verseEnd = Integer.valueOf(chapterEnd.replace(" ", ""));
 
         //now that we have chapter start and end. lets prepare them as real for
         // database query
@@ -124,9 +125,9 @@ public class ScriptureTextHandler
     private void prepareStartEnd(String start, String end)
     {
         //preparet start and end to contain the chapter
-        String theStart = this.chapter + "." + formatVerse(start);
+        String theStart = this.chapter + "." + formatVerse(start.replace(" ", ""));
 
-        String theEnd  = this.chapter + "." + formatVerse(end);
+        String theEnd  = this.chapter + "." + formatVerse(end.replace(" ", ""));
 
         //we have to format the numbers to 3 decimall places
         DecimalFormat df = new DecimalFormat("#.000"); //not needed for now
@@ -170,8 +171,6 @@ public class ScriptureTextHandler
         String query = "SELECT * FROM `verses` WHERE `verse` >= '" + this.start +
                 "'  AND `verse` <= '" + this.end + "' AND `book` = '" + this.book + "' ";
 
-        Log.d("Database", query);
-
         //do the query
         Cursor scriptureResult = db.myDataBase.rawQuery(query, null);
 
@@ -196,5 +195,15 @@ public class ScriptureTextHandler
         //close the connection
         db.close();
 
+    }
+
+    public String getBook()
+    {
+        return this.book;
+    }
+
+    public String getChapter()
+    {
+        return this.chapter;
     }
 }
