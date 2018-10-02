@@ -29,6 +29,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
     ScrollView churchInfo;
 
     private Button historyBtn, congregationBtn, educationBtn, healthBtn, addressBtn, otherBtn;
+    private Button calendarBtn;
 
     public InfoFragment() {
         // Required empty public constructor
@@ -95,11 +96,13 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         congregationBtn = view.findViewById(R.id.more_cong);
         educationBtn = view.findViewById(R.id.more_education);
         healthBtn = view.findViewById(R.id.more_health);
+        calendarBtn = view.findViewById(R.id.more_calendar);
 
         historyBtn.setOnClickListener(this);
         congregationBtn.setOnClickListener(this);
         educationBtn.setOnClickListener(this);
         healthBtn.setOnClickListener(this);
+        calendarBtn.setOnClickListener(this);
 
         return view;
     }
@@ -108,9 +111,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.more_history:
-
                 Intent mHistoryIntent = new Intent(getContext(), History.class);
-
                 startActivity(mHistoryIntent);
                 break;
             case  R.id.more_cong:
@@ -123,6 +124,10 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
             case  R.id.more_health:
                 Intent mHealthIntent = new Intent(getContext(), Health.class);
                 startActivity(mHealthIntent);
+                break;
+            case  R.id.more_calendar:
+                Intent mCalendarIntent = new Intent(getContext(), ChurchCalendar.class);
+                startActivity(mCalendarIntent);
                 break;
 //            case  R.id.more_address:
 //                Intent mChurchAddressesIntent = new Intent(getContext(), Address.class);

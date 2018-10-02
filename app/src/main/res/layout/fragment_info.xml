@@ -45,8 +45,8 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="8dp"
-                        android:layout_toLeftOf="@id/more_history"
-                        android:layout_toStartOf="@id/more_history"
+                        android:layout_toLeftOf="@id/more_calendar"
+                        android:layout_toStartOf="@id/more_calendar"
                         android:textAlignment="inherit"
                         android:gravity="left"
                         android:text="@string/church_calender"
@@ -54,7 +54,7 @@
                         android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/more_history"
+                            android:id="@+id/more_calendar"
                             style="@style/Widget.AppCompat.Button.Colored"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -80,8 +80,8 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginRight="8dp"
                             android:layout_marginTop="8dp"
-                            android:layout_toLeftOf="@id/more_admin"
-                            android:layout_toStartOf="@id/more_admin"
+                            android:layout_toLeftOf="@id/more_history"
+                            android:layout_toStartOf="@id/more_history"
                             android:textAlignment="inherit"
                             android:gravity="left"
                             android:text="@string/church_admin"
@@ -89,7 +89,7 @@
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/more_admin"
+                            android:id="@+id/more_history"
                             style="@style/Widget.AppCompat.Button.Colored"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

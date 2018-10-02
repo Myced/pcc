@@ -74,6 +74,8 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".ChurchCalendar"></activity>
     </application>
 
 </manifest>
