@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
@@ -55,10 +56,20 @@ public class ScripturesFragment extends Fragment {
 
     String activationYear;
 
+    String dayOfWeek;
+
     String currentYear;
     String currentMonth;
     String currentDay;
     String currentMonthName;
+
+    TextView readingPsalms1, readingOne1, readingTwo1, readingText1;
+    LinearLayout withPsalms, withoutPsalms;
+
+    RelativeLayout psalmsLayer;
+
+    TextView dayDate, monthYear;
+    String dayDateString, monthYearString;
 
     TextView readingPsalms, readingOne, readingTwo, readingText, errorMessage;
     LinearLayout errorLayout, scriptureLayer;
@@ -84,18 +95,32 @@ public class ScripturesFragment extends Fragment {
         //we have to set the selected dates to represent the date of today
         //get the view components to update them as required
          readingPsalms = view.findViewById(R.id.psalms_content);
+         readingPsalms1 = view.findViewById(R.id.psalms_content1);
+
          readingOne = view.findViewById(R.id.reading_one);
+         readingOne1 = view.findViewById(R.id.reading_one1);
+
          readingTwo = view.findViewById(R.id.reading_two);
+         readingTwo1 = view.findViewById(R.id.reading_two1);
+
          readingText = view.findViewById(R.id.reading_text);
+         readingText1 = view.findViewById(R.id.reading_text1);
 
          scriptureLayer = view.findViewById(R.id.scripture_layer);
          errorLayout = view.findViewById(R.id.error_layer);
          errorMessage = view.findViewById(R.id.error_message);
 
+         withPsalms = view.findViewById(R.id.with_spalms);
+         withoutPsalms = view.findViewById(R.id.without_spalms);
+
+         psalmsLayer = view.findViewById(R.id.psalms_layout);
+
          buyScripture = view.findViewById(R.id.buy_scripture);
 
+         dayDate = view.findViewById(R.id.day_date);
+         monthYear = view.findViewById(R.id.month_year);
+         
          //get the current date
-
         //create an instance of MyDate
         MyDate date = new MyDate(getContext());
 
@@ -132,6 +157,15 @@ public class ScripturesFragment extends Fragment {
         currentMonth = date.getCurrentMonth();
         currentYear = date.getCurrentYear();
         currentMonthName = date.getCurrentMonthName();
+        dayOfWeek = date.getDayOfTheWeek();
+
+        //get the dyaname and monty year
+        dayDateString = date.getCurrentDayAndName();
+        monthYearString = date.getCurrentMonthYear();
+
+        //set the results on the text view.
+        dayDate.setText(dayDateString);
+        monthYear.setText(monthYearString);
 
         reading = new Scripture("", "", "", "", "");
 
@@ -194,10 +228,14 @@ public class ScripturesFragment extends Fragment {
             //now set the text for the reading
             readingOne.setText(oneSpan);
             readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+
+            readingOne1.setText(oneSpan);
+            readingOne1.setMovementMethod(LinkMovementMethod.getInstance());
         }
         else
         {
             readingOne.setText("");
+            readingOne1.setText("");
         }
 
 
@@ -224,10 +262,14 @@ public class ScripturesFragment extends Fragment {
             twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             readingTwo.setText(twoSpan);
             readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+
+            readingTwo1.setText(twoSpan);
+            readingTwo1.setMovementMethod(LinkMovementMethod.getInstance());
         }
         else
         {
             readingTwo.setText("");
+            readingTwo1.setText("");
         }
 
         //reading text
@@ -252,9 +294,13 @@ public class ScripturesFragment extends Fragment {
             textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             readingText.setText(textSpan);
             readingText.setMovementMethod(LinkMovementMethod.getInstance());
+
+            readingText1.setText(textSpan);
+            readingText1.setMovementMethod(LinkMovementMethod.getInstance());
         }
         else
         {
+            readingText.setText("");
             readingText.setText("");
         }
 
@@ -282,13 +328,46 @@ public class ScripturesFragment extends Fragment {
             psalmsSpan.setSpan(psalmsText, 0, psalmsString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             readingPsalms.setText(psalmsSpan);
             readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+
+            readingPsalms1.setText(psalmsSpan);
+            readingPsalms1.setMovementMethod(LinkMovementMethod.getInstance());
         }
         else
         {
             readingPsalms.setText("");
+            readingPsalms1.setText("");
         }
 
 
+        //now if the reading psalms is empty
+        //then don't show it and also don't show the reading lables
+        if(reading.getPsalms() == null)
+        {
+            //set the reading with psalms invicible
+            withPsalms.setVisibility(View.GONE);
+            withoutPsalms.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            if(reading.getPsalms().equals(""))
+            {
+                //set the reading with psalms invicible
+                withPsalms.setVisibility(View.GONE);
+                withoutPsalms.setVisibility(View.VISIBLE);
+            }
+            else if(reading.getPsalms().equals(" "))
+            {
+                //set the reading with psalms invicible
+                withPsalms.setVisibility(View.GONE);
+                withoutPsalms.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                //set the reading with psalms invicible
+                withPsalms.setVisibility(View.VISIBLE);
+                withoutPsalms.setVisibility(View.GONE);
+            }
+        }
 
 
         //get the current year
@@ -338,13 +417,23 @@ public class ScripturesFragment extends Fragment {
         findButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("Scripture:", "filter the scriptures");
 
                 //now get the dates selected
                 selectedMonth = (String) month.getSelectedItem();
                 String selectedMonthId = getMonthId(selectedMonth);
                 selectedDay = (String) day.getSelectedItem();
                 selectedYear = (String) year.getSelectedItem();
+
+                //prepare a date instance
+                MyDate date = new MyDate(getContext(), selectedDay, selectedMonthId, selectedYear);
+
+                //get the dyaname and monty year
+                dayDateString = date.getDayAndName();
+                monthYearString = date.getMonthYear();
+
+                //set the results on the text view.
+                dayDate.setText(dayDateString);
+                monthYear.setText(monthYearString);
 
                 //set the activation year
                 activationYear = selectedYear;
@@ -395,8 +484,6 @@ public class ScripturesFragment extends Fragment {
                 //now get the reading array list for that day
                 List<Scripture> ourScripture = scriptureDb.getReadings(prepareDate);
 
-                Log.d("RESULT", Integer.toString(ourScripture.size()));
-
                 for(int i = 0; i < ourScripture.size(); i++)
                 {
                     Scripture currentReading = ourScripture.get(i);
@@ -412,7 +499,6 @@ public class ScripturesFragment extends Fragment {
                 //psalms introit
                 if(!(reading.getPsalms() == null))
                 {
-                    Log.d("Database", "pslams is null");
                     final String psalmsStringFiltered = reading.getPsalms();
                     SpannableString psalmsSpan = new SpannableString(psalmsStringFiltered);
                     ClickableSpan psalmsText = new ClickableSpan() {
@@ -431,12 +517,17 @@ public class ScripturesFragment extends Fragment {
                         }
                     };
                     psalmsSpan.setSpan(psalmsText, 0, psalmsStringFiltered.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
                     readingPsalms.setText(psalmsSpan);
                     readingPsalms.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    readingPsalms1.setText(psalmsSpan);
+                    readingPsalms1.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 else
                 {
                     readingPsalms.setText("");
+                    readingPsalms1.setText("");
                 }
 
 
@@ -465,10 +556,14 @@ public class ScripturesFragment extends Fragment {
                     //now set the text for the reading
                     readingOne.setText(oneSpan);
                     readingOne.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    readingOne1.setText(oneSpan);
+                    readingOne1.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 else
                 {
                     readingOne.setText("");
+                    readingOne1.setText("");
                 }
 
 
@@ -495,10 +590,14 @@ public class ScripturesFragment extends Fragment {
                     twoSpan.setSpan(clickTwo, 0, twoString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     readingTwo.setText(twoSpan);
                     readingTwo.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    readingTwo1.setText(twoSpan);
+                    readingTwo1.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 else
                 {
                     readingTwo.setText("");
+                    readingTwo1.setText("");
                 }
 
 
@@ -506,6 +605,7 @@ public class ScripturesFragment extends Fragment {
                 if(reading.getReadingText() != null)
                 {
                     final String textString = reading.getReadingText();
+
                     SpannableString textSpan = new SpannableString(textString);
                     ClickableSpan clickText = new ClickableSpan() {
                         @Override
@@ -524,25 +624,52 @@ public class ScripturesFragment extends Fragment {
                     textSpan.setSpan(clickText, 0, textString.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     readingText.setText(textSpan);
                     readingText.setMovementMethod(LinkMovementMethod.getInstance());
+
+                    readingText1.setText(textSpan);
+                    readingText1.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 else
                 {
+
                     readingText.setText("");
+                    readingText1.setText("");
                 }
 
 
-
+                //now if the reading psalms is empty
+                //then don't show it and also don't show the reading lables
+                if(reading.getPsalms() == null)
+                {
+                    //set the reading with psalms invicible
+                    withPsalms.setVisibility(View.GONE);
+                    withoutPsalms.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    if(reading.getPsalms().equals(""))
+                    {
+                        //set the reading with psalms invicible
+                        withPsalms.setVisibility(View.GONE);
+                        withoutPsalms.setVisibility(View.VISIBLE);
+                    }
+                    else if(reading.getPsalms().equals(" "))
+                    {
+                        //set the reading with psalms invicible
+                        withPsalms.setVisibility(View.GONE);
+                        withoutPsalms.setVisibility(View.VISIBLE);
+                    }
+                    else
+                    {
+                        //set the reading with psalms invicible
+                        withPsalms.setVisibility(View.VISIBLE);
+                        withoutPsalms.setVisibility(View.GONE);
+                    }
+                }
 
                 //get the month code
                 String monthID = getMonthId(selectedMonth);
 
-                String toast = "Month: " + selectedMonth + " Day: " + selectedDay + " Year: " + selectedYear + " MonthId: " + monthID;
-
-                Log.d("Scripture", toast);
-
                 //now get the scriptures for this particular day
-
-
 
             }
         });
