@@ -53,6 +53,7 @@ public class PaymentProcessor
         reason = reson;
     }
 
+
     public void processPayment()
     {
         String url  = "https://developer.mtn.cm/OnlineMomoWeb/faces/transaction/transactionRequest.xhtml" +
@@ -72,7 +73,6 @@ public class PaymentProcessor
 
         request.setResponseTimeout(120000);
 
-
         broadcastReceiver = new SmsReceiver();
         final IntentFilter intentFilter = new IntentFilter();
         context.registerReceiver(broadcastReceiver, intentFilter, Manifest.permission.RECEIVE_SMS,null);
@@ -83,6 +83,7 @@ public class PaymentProcessor
             public void onStart() {
                 super.onStart();
                 Log.d("Payment", "Payment started");
+
                 progressDialog = new ProgressDialog(context);
                 progressDialog.setMessage("Making payment\n Dial *126# and confirm");
                 progressDialog.setCanceledOnTouchOutside(false);
@@ -112,7 +113,7 @@ public class PaymentProcessor
                 message = momo.message;
 
                 //process the dairy payment here
-                if(diary == true)
+                if(diary)
                 {
                     //save the scripture in the database
                     Log.d("PCCAPP", "updating the diary part");
@@ -132,7 +133,7 @@ public class PaymentProcessor
 
                 editor.apply();
 
-                if(momo.success == true)
+                if(momo.success)
                 {
                     Toast.makeText(context, "PAYMENT SUCCESSFUL", Toast.LENGTH_LONG).show();
                 }

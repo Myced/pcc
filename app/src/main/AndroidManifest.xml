@@ -62,15 +62,17 @@
             android:name=".PdfViewerActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".PaymentActivity"
+            android:name=".MomoPaymentActivity"
             android:theme="@style/NoActionBar" />
 
         <receiver
             android:name=".SmsReceiver"
             android:enabled="true"
-            android:exported="true"
-            android:permission="android.permission.RECEIVE_SMS">
-        </receiver>
+            android:exported="true"/>
+
+        <activity android:name=".PaymentActivity"
+            android:theme="@style/HymnTheme"
+            android:label="Payment"/>
     </application>
 
 </manifest>

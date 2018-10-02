@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
-import static com.pefscomsys.pcc_buea.Prices.ECHO_PRICE;
 import static com.pefscomsys.pcc_buea.Prices.HYMN_PRICE;
 
 

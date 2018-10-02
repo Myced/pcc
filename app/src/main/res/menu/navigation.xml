@@ -15,7 +15,7 @@
     <item
         android:id="@+id/navigation_hymns"
         android:icon="@drawable/hymn_icon"
-        android:title="@string/hymns" />
+        android:title="@string/chb" />
 
     <item
         android:id="@+id/navigation_books"

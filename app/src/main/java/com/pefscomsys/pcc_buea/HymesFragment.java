@@ -36,7 +36,7 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
     }
 
     RecyclerView hymnListRecycler;
-    String hymns[];
+    CharSequence[] hymns;
     HymnListAdapter hymnListAdapter;
     int count;
 
@@ -48,12 +48,13 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
         View view = inflater.inflate(R.layout.fragment_hymes, container, false);
         hymnListRecycler = (RecyclerView) view.findViewById(R.id.hymnListRecyclerView);
         hymnArrayList = new ArrayList<>();
-        hymns = view.getResources().getStringArray(R.array.hymns);
+        //hymns = view.getResources().getStringArray(R.array.hymns);
+        hymns = view.getResources().getTextArray(R.array.hymns);
         hymnListRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
 
         count = 0;
 
-        for(String hymn :hymns ){
+        for(CharSequence hymn :hymns ){
             int num = count + 1;
             hymnArrayList.add(new Hymn(hymn, num));
             count++;

@@ -27,6 +27,7 @@
             android:padding="8dp"
             android:textColor="@color/text_black"
             android:textSize="22sp"
+            app:fontFamily="@font/baskvl"
             />
     </ScrollView>
 

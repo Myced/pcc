@@ -66,7 +66,7 @@
         android:textSize="24sp"
         android:textStyle="italic|bold"
         android:id="@+id/momo_button"
-        android:background="@drawable/rounded_button"
+        android:background="@drawable/rounded_momo_button"
         android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

@@ -49,7 +49,7 @@ public class HymnListAdapter extends RecyclerView.Adapter<HymnListAdapter.HymnLi
         Number = hymnList.get(position).getHymnNumber();
 
         holder.hymnnumber.setText(Integer.toString(Number));
-        holder.hymntitle.setText("HYMN " + Number);
+        holder.hymntitle.setText(context.getString(R.string.chb).toUpperCase()+" " + Number);
         holder.hymnexcerpt.setText(hymnList.get(position).getHymn());
     }
 

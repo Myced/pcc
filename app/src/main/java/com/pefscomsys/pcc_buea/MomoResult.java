@@ -6,6 +6,11 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.util.Log;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,6 +23,13 @@ public class MomoResult
     public String receiverNumber;
     public String statusCode;
     public String amount;
+    public String transactionID;
+    public String processingNumber;
+
+    public String getProcessingNumber() {
+        return processingNumber;
+    }
+
     public String resultString;
 
     public Context context;
@@ -27,7 +39,12 @@ public class MomoResult
 
     public boolean success;
     public String message; // will contain the message for the result
+    DatabaseReference mDatabase;
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+    public MomoResult(){
+
+    }
 
     public MomoResult(JSONObject object)
     {
@@ -35,18 +52,10 @@ public class MomoResult
 
         try {
             receiverNumber = object.getString("ReceiverNumber");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            statusCode = object.getString("StatusCode");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        try {
             amount = object.getString("Amount");
+            statusCode = object.getString("StatusCode");
+            transactionID = object.getString("TransactionID");
+            processingNumber = object.getString("ProcessingNumber");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -79,12 +88,55 @@ public class MomoResult
 
     }
 
+    public String getReceiverNumber() {
+        return receiverNumber;
+    }
 
-    public void saveLog()
-    {
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public String getTransactionID() {
+        return transactionID;
+    }
+
+
+    public static MomoResult fromJson(JSONObject object){
+        MomoResult momoResult = new MomoResult();
+        try {
+            momoResult.receiverNumber = object.getString("ReceiverNumber");
+            momoResult.amount = object.getString("Amount");
+            momoResult.statusCode = object.getString("StatusCode");
+            momoResult.transactionID = object.getString("TransactionID");
+            momoResult.processingNumber = object.getString("ProcessingNumber");
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return momoResult;
+    }
+
+    public void saveLog(){
+        FirebaseUser mUser = mAuth.getCurrentUser();
+        String uid = null;
+        if (mUser != null) {
+            uid = mUser.getUid();
+            mDatabase = FirebaseDatabase.getInstance().getReference();
+            try {
+                Log.d("TransactionID", String.valueOf(fromJson(response)));
+                mDatabase.child("Transactions").child(""+response.getString("TransactionID")).setValue(fromJson(response));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
         //save it to the local database;
 
         //then fire it up to firebase;
+
 
     }
 
@@ -95,7 +147,7 @@ public class MomoResult
         //prepare the payment status
         String status = "";
 
-        if(this.success == true)
+        if(this.success)
         {
             status = "TRUE";
         }

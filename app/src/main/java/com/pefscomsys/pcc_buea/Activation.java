@@ -40,7 +40,7 @@ public class Activation
         Log.d("PCCAPP", query);
 
         Cursor result = this.db.myDataBase.rawQuery(query, null);
-
+        Log.d("Activation", String.valueOf(result.getCount()));
         if(result.getCount() == 0)
         {
             status = false;
@@ -69,24 +69,4 @@ public class Activation
         return status;
     }
 
-    public boolean checkHymn()
-    {
-        //TODo write code to check hymn activation
-
-        return true;
-    }
-
-    public boolean checkEcho(String name)
-    {
-        //TODO write code to check if a particular echo had been paid for
-
-        return true;
-    }
-
-    public boolean checkMessenger(String year)
-    {
-        //TODO write code to check messenger activation for a particular year
-
-        return true;
-    }
 }

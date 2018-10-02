@@ -18,7 +18,6 @@ import java.util.Calendar;
 
 import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
 import static com.pefscomsys.pcc_buea.Prices.ECHO_PRICE;
-import static com.pefscomsys.pcc_buea.Prices.THE_MESSENGER;
 
 public class PresEchoBookAdapter extends RecyclerView.Adapter <PresEchoBookAdapter.MyBookHolder> {
     private Context context;

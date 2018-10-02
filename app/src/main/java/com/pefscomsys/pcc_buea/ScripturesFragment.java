@@ -1,8 +1,6 @@
 package com.pefscomsys.pcc_buea;
 
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,20 +18,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.SimpleTimeZone;
-import java.util.TimeZone;
-import java.util.Calendar;
 
 
 /**
@@ -569,7 +556,7 @@ public class ScripturesFragment extends Fragment {
                 String paymentString = "Diary " + diaryYear;
 
                 //put the data in an intent
-                Intent paymentIntent = new Intent(getContext(), PaymentActivity.class);
+                Intent paymentIntent = new Intent(getContext(), MomoPaymentActivity.class);
 
                 paymentIntent.putExtra("REASON", paymentString);
                 paymentIntent.putExtra("AMOUNT", diaryPrice);
