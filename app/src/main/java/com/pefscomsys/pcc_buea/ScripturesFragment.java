@@ -3,6 +3,7 @@ package com.pefscomsys.pcc_buea;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -18,16 +19,19 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 
@@ -891,21 +895,54 @@ public class ScripturesFragment extends Fragment {
         return result;
     }
 
-    public boolean checkAvaialable(String year)
+    public void checkAvailable(@NonNull final SimpleFirebaseCallBack<Boolean> statusCallback, final String year)
     {
         //see if the year value is ther.
-        //if not internet. return flase
 
-        //if yes,
+        FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (mUser != null){
+            DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+            mDatabase.child("Available").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.hasChild(year)){
+                       statusCallback.isAvailable(true);
+                    }
+                    else{
+                        statusCallback.isAvailable(false);
+                    }
+                }
 
-        //then check that avaialable has node year
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-        // if yes. the return true.
-        //else return false..
-        //get this from firebase
+                }
+            });
+        }
+        else {
+            Toast.makeText(getContext(), "You are not Logged in", Toast.LENGTH_SHORT).show();
+            statusCallback.isAvailable(false);
+        }
 
-        return true;
     }
 
+        /*
+        Copy this an paste it where you want to check if the diary is available
+
+        checkAvailable(new SimpleFirebaseCallBack<Boolean>() {
+            @Override
+            public void isAvailable(Boolean status) {
+                if (status) {
+                    // true was returned
+                    //Perform the action you want to perform if its available inside year
+
+                } else {
+                    // false was returned
+                    //if its not available perform it inside here
+                }
+
+            }
+        }, String.valueOf(2018));
+        */
 
 }
