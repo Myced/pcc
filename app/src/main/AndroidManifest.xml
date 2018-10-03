@@ -68,12 +68,15 @@
         <receiver
             android:name=".SmsReceiver"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
 
-        <activity android:name=".PaymentActivity"
-            android:theme="@style/HymnTheme"
-            android:label="Payment"/>
-        <activity android:name=".ChurchCalendar"></activity>
+        <activity
+            android:name=".PaymentActivity"
+            android:label="Payment"
+            android:theme="@style/HymnTheme" />
+        <activity android:name=".ChurchCalendar" />
+        <activity android:name=".AboutActivity"
+            android:label="About"></activity>
     </application>
 
 </manifest>
