@@ -188,8 +188,8 @@ public class ScripturesFragment extends Fragment {
             }
             else
             {
-                String yYear = Integer.toString(theFollowingYear) + " Now Available. \n " +
-                        "Click on the button below to get it";
+                String yYear = Integer.toString(theFollowingYear) + " Diary Now Available. \n " +
+                        "Click below to get it";
                 this.getDiaryText.setText(yYear);
 
                 this.getDiaryLayout.setVisibility(View.VISIBLE);
