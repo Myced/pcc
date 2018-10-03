@@ -680,7 +680,9 @@ public class ScripturesFragment extends Fragment {
                 String paymentString = "Diary " + diaryYear;
 
                 //put the data in an intent
-                Intent paymentIntent = new Intent(getContext(), MomoPaymentActivity.class);
+//                Intent paymentIntent = new Intent(getContext(), MomoPaymentActivity.class);
+
+                Intent paymentIntent = new Intent(getContext(), PaymentActivity.class);
 
                 paymentIntent.putExtra("REASON", paymentString);
                 paymentIntent.putExtra("AMOUNT", diaryPrice);

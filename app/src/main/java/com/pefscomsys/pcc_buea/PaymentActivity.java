@@ -50,6 +50,19 @@ public class PaymentActivity extends AppCompatActivity {
         Intent newIntent = new Intent(this, MomoPaymentActivity.class);
         newIntent.putExtra("REASON", Reason);
         newIntent.putExtra("AMOUNT", Amount);
+
+        if(this.type != null)
+        {
+            if(this.type.equals("DIARY"))
+            {
+                newIntent.putExtra("YEAR", this.year);
+                newIntent.putExtra("TYPE", "DIARY");
+            }
+            else
+            {
+
+            }
+        }
         startActivity(newIntent);
 
     }

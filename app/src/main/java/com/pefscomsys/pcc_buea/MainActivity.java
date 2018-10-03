@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
         mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
         Log.d("Preference", String.valueOf(mPaymentPref.getAll().values()));
+
         if(mPaymentPref.getAll().size() == 0){
             SharedPreferences.Editor editor = mPaymentPref.edit();
             editor.putString(getString(R.string.HYMN_STATUS), "NOT_PAID");
