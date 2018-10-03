@@ -1,65 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ChurchCalendar">
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ChurchCalendar">
-
-    <ScrollView
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/public_holidays"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/h1"
-                    android:textColor="@color/colorPrimary"
-                    android:textAllCaps="true"
-                    android:contextClickable="true"
-                    android:layout_margin="@dimen/margin5"
-                    android:gravity="center"/>
-            </LinearLayout>
+            android:layout_height="wrap_content"
+            android:text="@string/public_holidays"
+            android:textStyle="bold"
+            android:textSize="@dimen/h1"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:contextClickable="true"
+            android:layout_margin="@dimen/margin5"
+            android:gravity="center"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/public_holidays_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/public_holidays_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/other_important_days"
+            android:textStyle="bold"
+            android:textSize="@dimen/h1"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:contextClickable="true"
+            android:layout_margin="@dimen/margin5"
+            android:gravity="center"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/other_important_days"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/h1"
-                    android:textColor="@color/colorPrimary"
-                    android:textAllCaps="true"
-                    android:contextClickable="true"
-                    android:layout_margin="@dimen/margin5"
-                    android:gravity="center"/>
-            </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/important_days_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
 
-        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/special_collections"
+            android:textStyle="bold"
+            android:textSize="@dimen/h1"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:contextClickable="true"
+            android:layout_margin="@dimen/margin5"
+            android:gravity="center"/>
 
-    </ScrollView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/special_collections_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>
 
 </RelativeLayout>
