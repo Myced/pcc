@@ -11,6 +11,8 @@ public class AppInitialiser
 {
     private Context context;
     private ProgressDialog dialog;
+    private SharedPreferences mStatusCheck = context.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE);
+    private SharedPreferences.Editor edit = mStatusCheck.edit();
 
     public AppInitialiser(Context context)
     {
@@ -19,14 +21,14 @@ public class AppInitialiser
 
     public void initialiseApp()
     {
-        if(this.isFirstRun() == true)
+        if(this.isFirstRun())
         {
             //then initilise the app
             this.startProgressBar();
 
             this.copyDatabase();
 
-            this.updateFirstRunStatus(false);
+            this.updateFirstRunStatus();
 
             this.endProgressBar();
         }
@@ -47,14 +49,14 @@ public class AppInitialiser
         //database has been created
     }
 
-    public void updateFirstRunStatus(boolean status)
+    public void updateFirstRunStatus()
     {
         Log.d("PCCAPP", "Updating shared pref status to false");
 
-        SharedPreferences mStatus = context.getSharedPreferences("FIRST_RUN", context.MODE_PRIVATE);
+        SharedPreferences mStatus = context.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE);
         SharedPreferences.Editor mStatusEditor = mStatus.edit();
 
-        mStatusEditor.putString("FIRST_RUN", "FALSE");
+        mStatusEditor.putString("FIRST_RUN", "TRUE");
 
         mStatusEditor.apply();
     }
@@ -62,21 +64,19 @@ public class AppInitialiser
     public boolean isFirstRun()
     {
         //check shared preferences for FIRST_RUN
-        SharedPreferences mStatusCheck = context.getSharedPreferences("FIRST_RUN", this.context.MODE_PRIVATE);
-        SharedPreferences.Editor edit = mStatusCheck.edit();
-        edit.apply();
 
-        if(mStatusCheck.getAll().size() == 0)
-        {
-            mStatusCheck.edit().putString("FIRST_RUN", "TRUE").apply();
-        }
-
-        if(mStatusCheck.getString("FIRST_RUN", "TRUE").equals("TRUE"))
+        if(!mStatusCheck.contains("FIRST_RUN"))
         {
             //this is the first run of the app/
             //initialise it
             Log.d("PCCAPP", "Fist run true");
             return true;
+            //mStatusCheck.edit().putString("FIRST_RUN", "TRUE").apply();
+        }
+
+        if(mStatusCheck.getString("FIRST_RUN", "TRUE").equals("FALSE"))
+        {
+            return false;
         }
         return false;
     }
