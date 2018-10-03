@@ -64,7 +64,7 @@ public class ScripturesFragment extends Fragment {
 
     RelativeLayout psalmsLayer;
 
-    TextView dayDate, monthYear;
+    TextView dayDate, monthYear, getDiaryText;
     String dayDateString, monthYearString;
 
     TextView readingPsalms, readingOne, readingTwo, readingText, errorMessage;
@@ -112,7 +112,10 @@ public class ScripturesFragment extends Fragment {
          psalmsLayer = view.findViewById(R.id.psalms_layout);
 
          buyScripture = view.findViewById(R.id.buy_scripture);
+
          getDiaryButton = view.findViewById(R.id.get_diary);
+         getDiaryLayout = view.findViewById(R.id.get_diary_layer);
+         getDiaryText = view.findViewById(R.id.get_diary_text);
 
          dayDate = view.findViewById(R.id.day_date);
          monthYear = view.findViewById(R.id.month_year);
@@ -169,6 +172,37 @@ public class ScripturesFragment extends Fragment {
         //prepare our date and get readings for this date
         String dbDate = currentDay + '/' + currentMonth + '/' + currentYear;
 
+        //now with the date already prepared.
+        int theCurrentYearInt = Integer.parseInt(currentYear);
+        int theFollowingYear = theCurrentYearInt + 1;
+
+        //checking if the diary for the following year is available.
+
+        Boolean availableStatus = this.checkAvaialable(Integer.toString(theFollowingYear));
+
+        //if this is true. then check if the year has been activated
+        if(availableStatus == true)
+        {
+            //then check if its available
+            boolean activationRes = activation.checkDiary(Integer.toString(theFollowingYear));
+
+            if(activationRes == true)
+            {
+                this.getDiaryLayout.setVisibility(View.GONE);
+            }
+            else
+            {
+                String yYear = Integer.toString(theFollowingYear) + " Now Available. \n " +
+                        "Click on the button below to get it";
+                this.getDiaryText.setText(yYear);
+
+                this.getDiaryLayout.setVisibility(View.VISIBLE);
+            }
+        }
+        else
+        {
+            this.getDiaryLayout.setVisibility(View.GONE);
+        }
 
         //now get it from the db with the Scripture DB Helper
          scriptureDb = new ScriptureDBHandler(getContext());
@@ -675,8 +709,6 @@ public class ScripturesFragment extends Fragment {
         buyScripture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("PCCAPP", "Buy button pressed");
-                Log.d("PCCAPP", "Year is " + activationYear);
 
                 //prepare the payment for the diary
                 int diaryPrice = Prices.SCRIPTURE;
@@ -700,6 +732,38 @@ public class ScripturesFragment extends Fragment {
             }
         });
 
+        getDiaryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //prepare the payment for the diary
+                int diaryPrice = Prices.SCRIPTURE;
+
+                String curYear = currentYear;
+                int curYearInt = Integer.parseInt(curYear);
+
+                int nYear = curYearInt + 1;
+
+
+                String diaryYear = Integer.toString(nYear);
+
+                String paymentString = "Diary " + diaryYear;
+
+                //put the data in an intent
+//                Intent paymentIntent = new Intent(getContext(), MomoPaymentActivity.class);
+
+                Intent paymentIntent = new Intent(getContext(), PaymentActivity.class);
+
+                paymentIntent.putExtra("REASON", paymentString);
+                paymentIntent.putExtra("AMOUNT", diaryPrice);
+                paymentIntent.putExtra("YEAR", diaryYear);
+                paymentIntent.putExtra("TYPE", "DIARY");
+
+                //start payment activity;
+                startActivity(paymentIntent);
+
+            }
+        });
 
 
 
@@ -834,6 +898,7 @@ public class ScripturesFragment extends Fragment {
     public void checkAvailable(@NonNull final SimpleFirebaseCallBack<Boolean> statusCallback, final String year)
     {
         //see if the year value is ther.
+
         FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
         if (mUser != null){
             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
