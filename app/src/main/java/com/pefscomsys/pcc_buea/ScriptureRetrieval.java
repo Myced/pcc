@@ -75,7 +75,7 @@ public class ScriptureRetrieval {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                
+
             }
         });
         return diary;
