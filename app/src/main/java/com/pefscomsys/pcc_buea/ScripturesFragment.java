@@ -40,7 +40,7 @@ public class ScripturesFragment extends Fragment {
     Spinner day;
     Spinner month;
     Spinner year;
-    Button findButton, buyScripture;
+    Button findButton, buyScripture, getDiaryButton;
 
     String selectedMonth;
     String selectedDay;
@@ -56,7 +56,7 @@ public class ScripturesFragment extends Fragment {
     String currentMonthName;
 
     TextView readingPsalms1, readingOne1, readingTwo1, readingText1;
-    LinearLayout withPsalms, withoutPsalms;
+    LinearLayout withPsalms, withoutPsalms, getDiaryLayout;
 
     RelativeLayout psalmsLayer;
 
@@ -108,6 +108,7 @@ public class ScripturesFragment extends Fragment {
          psalmsLayer = view.findViewById(R.id.psalms_layout);
 
          buyScripture = view.findViewById(R.id.buy_scripture);
+         getDiaryButton = view.findViewById(R.id.get_diary);
 
          dayDate = view.findViewById(R.id.day_date);
          monthYear = view.findViewById(R.id.month_year);
@@ -695,6 +696,8 @@ public class ScripturesFragment extends Fragment {
             }
         });
 
+        getButton.
+
 
 
         return view;
@@ -823,6 +826,13 @@ public class ScripturesFragment extends Fragment {
         }
 
         return result;
+    }
+
+    public boolean checkAvaialable(String year)
+    {
+        //see if the year value is ther.
+
+        return true;
     }
 
 

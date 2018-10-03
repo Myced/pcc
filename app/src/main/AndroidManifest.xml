@@ -75,8 +75,10 @@
             android:label="Payment"
             android:theme="@style/HymnTheme" />
         <activity android:name=".ChurchCalendar" />
-        <activity android:name=".AboutActivity"
-            android:label="About"></activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="About" />
+        <activity android:name=".RetiredPastors"></activity>
     </application>
 
 </manifest>
