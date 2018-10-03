@@ -831,6 +831,15 @@ public class ScripturesFragment extends Fragment {
     public boolean checkAvaialable(String year)
     {
         //see if the year value is ther.
+        //if not internet. return flase
+
+        //if yes,
+
+        //then check that avaialable has node year
+
+        // if yes. the return true.
+        //else return false..
+        //get this from firebase 
 
         return true;
     }
