@@ -12,9 +12,9 @@
     <string name="error">Error!</string>
     <string name="buy_diary">Buy Diary</string>
     <string name="church_calender">Church Calender</string>
-    <string name="church_admin">Church Admin and History</string>
+    <string name="church_admin">Church Admin &amp; History</string>
     <string name="communication">Communication</string>
-    <string name="facts">PCC Facts and Figures</string>
+    <string name="facts">PCC Facts &amp; Figures</string>
     <string name="sunday_school">Sunday School</string>
     <string name="retired_pastors">Retired Pastors</string>
     <string name="public_holidays">Public Holidays</string>
@@ -251,7 +251,7 @@
     ‘God cared for me.’\n\n
     Sarah Betts Rhodes, 1829-1904.
     </item>
-    <item>
+        <item>
     2 CH 4 LM\n\n
     O TRINITY, O blessèd light,
     O unity, most principal,
@@ -271,7 +271,7 @@
     St Ambrose,340-97:
     Tr. by Wm. Drummond Of Hawthornden
     </item>
-    <item>
+        <item>
     3 CH 263 11 11. 11 5.\n\n
     FATHER, we praise Thee, now the
     night is over;
@@ -298,7 +298,7 @@
     540-604; Tr. by Percy Dearmeb,
     1867-1936.
     </item>
-    <item>
+        <item>
     4 CH 1 11 12, 12 10.\n\n
     HOLY, holy, holy, Lord God
     Almighty!
@@ -336,7 +336,7 @@
     Reginald Heber, 1783-1826.
     </item>
 
-    <item>
+        <item>
     5 CH 3 L. M.\n\n
     WE praise, we worship Thee, O
     God;
@@ -370,7 +370,7 @@
     and Hymn, 1815.
     </item>
 
-    <item>
+        <item>
     6 CH 2 87.87. and refrain.\n\n
     ROUND the Lord in glory seated,\n
     Cherubim and seraphim\n
@@ -399,7 +399,7 @@
     Holy, holy, holy Lord.’\n\n
     Richard Mant, 1776-1848.
     </item>
-    <item>
+        <item>
     7 CH 5 L. M.\n\n
     FATHER of heaven, whose love\n
     profound\n
@@ -426,7 +426,7 @@
     Grace, pardon, life to us extend.\n\n
     Edward Cooper, 1770-1833.
     </item>
-    <item>
+        <item>
     8 CH 7 87. 87. 87.\n\n
     GLORY be to God the Father,\n
     Glory be to God the Son,\n
@@ -458,7 +458,7 @@
     Glory to the King of kings!\n\n
     Horratius Bonar, 1808-89.
     </item>
-    <item>
+        <item>
     9 CH 28 87. 87.\n\n
     A GLADSOME hymn of praise\n
     we sing\n
@@ -486,7 +486,7 @@
     Ambrose Nichols Elatchford,\n
     1842-1924.
     </item>
-    <item>
+        <item>
     10 CH 13 88. 44. 88. and refrain\n\n
     ALL creatures of our God and\n
     King,\n
@@ -549,7 +549,7 @@
     Tr. by William Henry
     Draper, 1855-1933.
     </item>
-    <item>
+        <item>
     11 CH 252 85. 85. 84. 3.\n\n
     ANGEL voices, ever singing\n
     Round Thy throne of light,\n
@@ -583,7 +583,7 @@
     Francis Pott, 1832-1909.
     </item>
 
-    <item>
+        <item>
     12 SS&amp;S 93 .\n\n
     BEAUTIFUL the fields beyond the\n
     river!\n
@@ -616,7 +616,7 @@
     burdens fall!” . . .\n\n\n
     G.F Root,
     </item>
-    <item>
+        <item>
     13 CH 31 C.M.\n\n
     GOD moves in a mysterious way,\n
     His wonders to perform ;\n
@@ -646,7 +646,7 @@
     William Cowper
     1731-1800.
     </item>
-    <item>
+        <item>
     14 FHP 148\n\n
     “GREAT is Thy faithfulness,” O\n
     God my Father,\n
@@ -682,7 +682,7 @@
     thousand beside!\n\n\n
     Thomas O. Chisholm (1866-1960)
     </item>
-    <item>
+        <item>
     15 CH 12 11 11. 11 11.\n\n
     IMMORTAL, invisible, God only\n
     wise,\n
@@ -718,7 +718,7 @@
     Walter Chalmers Smith,
     1824-1908
     </item>
-    <item>
+        <item>
     16 CH 24 L. M.\n\n
     LORD of all being, throned afar,\n
     Thy glory flames from sun and\n
@@ -754,7 +754,7 @@
     flame.\n\n\n
     oliver wendell holmes, 1809-94
     </item>
-    <item>
+        <item>
     17 CH 11 From Psalm 136 77. 77.\n\n
     LET us with a gladsome mind\n
     Praise the Lord, for He is kind;\n
@@ -788,7 +788,7 @@
     Ever faithful, ever sure.\n\n\n
     John Milton, 1608-74
     </item>
-    <item>
+        <item>
     18
     LET praises fill the sky;\n
     Our voices raise on high\n
@@ -802,7 +802,7 @@
     Affirming His glory.\n\n\n
     Muluh Edward
     </item>
-    <item>
+        <item>
     19 CH 27 C. M.\n\n
     My God, how wonderful Thou art,\n
     Thy majesty how bright!\n
@@ -834,7 +834,7 @@
     Frederick William Faber,
     1814-63,
     </item>
-    <item>
+        <item>
     20 CH 9 From Psalm 104 10 10. 11 11.
     O WORSHIP the King all-glorious\n
     above,\n
@@ -886,7 +886,7 @@
     Thy praise.\n\n\n
     Robert Grant, 1779-1838.
     </item>
-    <item>
+        <item>
     21 CH 19 88. 84.\n\n
     O LORD of heaven and earth and\n
     sea,\n
@@ -927,7 +927,7 @@
     Who givest all.\n\n\n
     Christopher Wordsworth, 1807-85.
     </item>
-    <item>
+        <item>
     22 CH 22 Psalms 103 14 14 .478\n\n
     PRAISE to the Lord, the Almighty,
     The King of creation;
@@ -961,7 +961,7 @@
     Tr. by Caherine Winkworth
     1827-78, And Others.
     </item>
-    <item>
+        <item>
     23 CH 620 77.77\n\n
     PRAISE, O praise our God and
     King;
@@ -1000,7 +1000,7 @@
     Henry Williams Baker,
     1821-77.
     </item>
-    <item>
+        <item>
     24 CH 21 From Psalm 103 87. 87. 87.\n\n
     PRAISE, my soul, the King of
     heaven;
@@ -1045,7 +1045,7 @@
     Praise with us the God of grace.\n\n
     Henry Francis Lyte, 1793-1847.
     </item>
-    <item>
+        <item>
     25 CH 32 C.M.\n\n
     PRAISE to the Holiest in the
     height,
@@ -1081,7 +1081,7 @@
     John Henry Newman,
     1801-90\n\n
     </item>
-    <item>
+        <item>
     26 CH 16 From Psalm 150 77. 77. &amp; Hallelujas\n\n
     PRAISE the Lord, His glories show,
     Hallelujah!
@@ -1111,7 +1111,7 @@
     Henry Francis Lyte,
     1793-1847.
     </item>
-    <item>
+        <item>
     27 CH 38 77. 77.\n\n
     SONGS of praise the angels sang,
     Heaven with hallelujahs rang,
@@ -1149,7 +1149,7 @@
     employ.\n\n
     James Montgomery, 1771-1854
     </item>
-    <item>
+        <item>
     28 SS&amp;S 23 11.11.11.11.\n\n
     TO God be the glory! great things
     He hath done:
@@ -1188,7 +1188,7 @@
     when Jesus we see.\n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     29 CH 30 10. 10. 11. 11.\n\n
     THOUGH troubles assail and
     dangers affright,
@@ -1224,7 +1224,7 @@
     will provide.\n\n
     John Newton, 1725-1807.
     </item>
-    <item>
+        <item>
     30 CH 26 C. M.\n\n
     WHEN all Thy mercies, O my
     God!
@@ -1266,7 +1266,7 @@
     The glorious theme renew.\n\n
     Joseph Addison, 1672-1719.
     </item>
-    <item>
+        <item>
     31 CH 29 67. 67. 66. 66.\n\n
     NOW thank we all our God,
     With heart and hands and
@@ -1296,7 +1296,7 @@
     Martin Rinkart, 1586-1649;
     Tr. by Catherine Winkworth, 1827-78.
     </item>
-    <item>
+        <item>
     32 CH 168 10 10. 11 11.\n\n
     YE servants of God, your master
     proclaim,
@@ -1333,7 +1333,7 @@
     infinite love.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     33 CH 236 66. 66.\n\n
     WE love the place, O God,
     Wherein Thine honour dwells;
@@ -1358,7 +1358,7 @@
     William Bullock, 1798-1874,
     and Henry Williams Baker,1821-77.
     </item>
-    <item>
+        <item>
     34 CH 232 12 10. 12 10.\n\n
     WORSHIP the Lord in the beauty
     of holiness;
@@ -1403,7 +1403,7 @@
     John Samuel Bewley Monsell,
     1811-75.
     </item>
-    <item>
+        <item>
     35 CH 233 S. M.\n\n
     STAND up, and bless the Lord,
     Ye people of His choice ;
@@ -1432,7 +1432,7 @@
     Henceforth for evermore.\n\n
     James Montgomery, 1771-1854.
     </item>
-    <item>
+        <item>
     36 CH 170 77.77.\n\n
     SWEETER sounds than music
     knows
@@ -1461,7 +1461,7 @@
     I will love Thee without end.\n\n
     John Newton, 1725-1807.
     </item>
-    <item>
+        <item>
     37 CH 235 From Psalm 134 77. 77. D.\n\n
     PLEASANT are Thy courts above,
     In the land of light and love;
@@ -1506,7 +1506,7 @@
     Henry Francis Lyte,
     1793-1847.
     </item>
-    <item>
+        <item>
     38\n\n
     O SING a new song unto the Lord,
     O Christian folks rejoice
@@ -1532,7 +1532,7 @@
     To endless years the same.\n\n
     Fru Nkwenti
     </item>
-    <item>
+        <item>
     39 Based on Ps 30\n\n
     O LORD we praise you for goodness
     In time of sickness you heal us
@@ -1564,7 +1564,7 @@
     So we render our hearts to you.\n\n
     Rev. Dr. J. N. Dah
     </item>
-    <item>
+        <item>
     40 CH 166 C.M\n\n
     O FOR a thousand tongues, to
     Sing
@@ -1608,7 +1608,7 @@
     heaven.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     41 CH 35 From Psalm 148 87. 87\n\n
     PRAISE the Lord! Ye heavens,
     adore Him;
@@ -1633,7 +1633,7 @@
     Laud and magnify His Name.\n\n
     Foundling Hospital Hymns 1809.
     </item>
-    <item>
+        <item>
     42 CH 176 76. 76. D.\n\n
     O JESUS, ever present,
     O Shepherd, ever kind,
@@ -1661,7 +1661,7 @@
     To Thine eternal fold.\n\n
     Lawrence Tuttiett, 1825-97.
     </item>
-    <item>
+        <item>
     43 CH 172 88.88.88.\n\n
     O LIGHT, whose beams illumine
     all
@@ -1716,7 +1716,7 @@
     Lord of the living and the dead.\n\n
     Edward Hayes Plumptre, 1821-91.
     </item>
-    <item>
+        <item>
     44 Psalm 150 Praise The Lord (JAG Anthem)\n\n
     <i>
         Let everything that breathes praise the
@@ -1754,7 +1754,7 @@
     Praise the Lord.\n\n
     Peter Kwo
     </item>
-    <item>
+        <item>
     45 CH 238 77.77.\n\n
     LORD, this day Thy children meet
     In Thy courts with willing feet;
@@ -1779,7 +1779,7 @@
     We shall live in heaven with Thee.\n\n
     William Walsham How, 1823-97.
     </item>
-    <item>
+        <item>
     46 MHB 23\n\n
     KING of glory, King of peace,
     I will love Thee;
@@ -1808,7 +1808,7 @@
     To extol Thee.\n\n
     George Herbert, 1593-1632
     </item>
-    <item>
+        <item>
     47\n\n
     I WILL sing and praise my Lord all
     day,
@@ -1828,7 +1828,7 @@
     day. ...\n\n
     Latche Elsie
     </item>
-    <item>
+        <item>
     48 SS&amp;S 874 7.7.7.7. and refrain\n\n
     WHAT can wash away my stain?
     Nothing but the blood of Jesus!
@@ -1854,7 +1854,7 @@
     Nothing but the blood of Jesus!\n\n
     Rev.R. Lowry
     </item>
-    <item>
+        <item>
     49\n\n
     IT’S time that we must sing,
     We came here to praise the Lord
@@ -1867,7 +1867,7 @@
     We will sing His glory round.\n\n
     Emmanuel Ngou
     </item>
-    <item>
+        <item>
     50\n\n
     I WORSHIP you, I worship you
     I worship you my Lord and God
@@ -1889,7 +1889,7 @@
     God.\n\n
     Buma-Kor Claudia Fokam
     </item>
-    <item>
+        <item>
     51 SS&amp;S 223\n\n
     HOLY, holy, holy is the Lord!
     Sing, O ye people, gladly adore
@@ -1929,7 +1929,7 @@
     we shall sing!\n\n
     F.J. Crosby
     </item>
-    <item>
+        <item>
     52\n\n
     HIS blessings are wonders
     To sinners and the righteous,
@@ -1958,7 +1958,7 @@
     Together let’s praise His name.\n\n
     Kenneth Awah
     </item>
-    <item>
+        <item>
     53 Opening Hymn\n\n
     HERE we stand before the throne
     With Christ seated there on high
@@ -1986,7 +1986,7 @@
     Running to Christ in glory.\n\n
     Rev. Dr. J. N. Dah
     </item>
-    <item>
+        <item>
     54\n\n
     GLORY and power to you God
     Almighty,
@@ -2012,7 +2012,7 @@
     (the Spirit of God).
     Buma-Kor Claudia Fokam
     </item>
-    <item>
+        <item>
     55 CH 234 668. 668. 33. 66.\n\n
     GOD reveals His presence:
     Let us now adore Him,
@@ -2049,7 +2049,7 @@
     Tr. by Frederick William Foster, 1760-1835; John Miller, 1756-
     90; William Mercer, 1811-73.
     </item>
-    <item>
+        <item>
     56 CH 240 77.75.\n\n
     GOD of pity, God of grace,
     When we humbly seek Thy face,
@@ -2079,7 +2079,7 @@
     Hear, forgive, and save.\n\n
     Eliza Fanny Morris, 1821-74.
     </item>
-    <item>
+        <item>
     57 MHB 730 88.8. D.\n\n
     FATHER of everlasting grace,
     Thy goodness and Thy truth we
@@ -2118,7 +2118,7 @@
     Thy everlasting love to man.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     58 CH 245 86. 886.\n\n
     DEAR Lord and Father of mankind,
     Forgive our foolish ways;
@@ -2158,7 +2158,7 @@
     O still small voice of calm!\n\n
     John Greenleaf Whittieb, 1807-92.
     </item>
-    <item>
+        <item>
     59 SS&amp;S 349 8.6. 8.6.D.\n\n
     COME, oh come, with thy broken
     heart,
@@ -2190,7 +2190,7 @@
     Close in His dear embrace.\n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     60 CH 175 C. M.\n\n
     COME, let us join our cheerful
     songs
@@ -2215,7 +2215,7 @@
     And to adore the Lamb.\n\n
     Isaac Watts, 1674-1748.
     </item>
-    <item>
+        <item>
     61 SS&amp;S 207 8.8.8.8.and refrain\n\n
     BE glad in the Lord, and rejoice,
     All ye that are upright in heart;
@@ -2252,7 +2252,7 @@
     The loud hallelujahs prolong!\n\n
     M.E.Crosby
     </item>
-    <item>
+        <item>
     62 CH 177 66. 66. D.\n\n
     COME, children, join to sing—
     Hallelujah! Amen!—
@@ -2281,7 +2281,7 @@
     Christian Henry Bateman,
     1813-89
     </item>
-    <item>
+        <item>
     63 CH 249 S. M.\n\n
     LIGHT of the anxious heart,
     Jesus, Thou dost appear,
@@ -2298,7 +2298,7 @@
     Attributed To St. Bernard Of Clair- Vaux, 1091-1133; Tr. By John
     Henry Newman, 1801-90
     </item>
-    <item>
+        <item>
     64 CH 248 65.65.\n\n
     JESUS, stand among us
     In Thy risen power;
@@ -2314,7 +2314,7 @@
     Of eternal day.\n\n
     William Pennefather, 1816-73.
     </item>
-    <item>
+        <item>
     65 SS&amp;S 208\n\n
     PRAISE Him! praise Him! Jesus,
     our blessèd Redeemer!
@@ -2359,7 +2359,7 @@
     Power and glory unto the Lord belong; \n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     66 CH 162 898.898.664.88.\n\n
     ‘WAKE, awake! For night is
     flying,’
@@ -2410,7 +2410,7 @@
     Philipp Nicolai, 1556-1608; Tr. by
     Catherine Winkworth, 1827-78.
     </item>
-    <item>
+        <item>
     67 CH 57 Isaiah 9:2-7 C.M.\n\n
     THE race that long in darkness
     pined
@@ -2443,7 +2443,7 @@
     John Morison, 1750-98,
     As in Scottish Paraphrases, 1781.
     </item>
-    <item>
+        <item>
     68 CH 149 88. 88. and refrain.\n\n
     O COME, O come, Immanuel,
     And ransom captive Israel,
@@ -2478,7 +2478,7 @@
     12th Centurv:
     Tr. by John Mason Neale, 1818-66.
     </item>
-    <item>
+        <item>
     69 CH 40 C.M.\n\n
     HARK, the glad sound! The
     Saviour comes,
@@ -2515,7 +2515,7 @@
     Philip Doddridge, 1702-51,
     As in Scottish Paraphrases,1781.
     </item>
-    <item>
+        <item>
     70 CH 163 87.87.87\n\n
     CHRIST is coming! Let creation
     From her groans and travail
@@ -2547,7 +2547,7 @@
     Come, Lord Jesus, quickly come!’\n\n
     John Ross Macduff, 1818-95.
     </item>
-    <item>
+        <item>
     71 CH 150 87.87.\n\n
     COME, Thou long-expected Jesus,
     Born to set Thy people free;
@@ -2568,7 +2568,7 @@
     Raise us to Thy glorious throne.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     72 CH. 42 words from SS&amp;S 33 C.M.\n\n
     WHILE shepherds watched their
     flocks by night,
@@ -2601,7 +2601,7 @@
     Begin, and never cease!”\n\n
     N. Tate
     </item>
-    <item>
+        <item>
     73 CH 54 10 10. 10 10. 10. 10\n\n
     CHRISTIANS, awake, salute the
     happy morn,
@@ -2675,7 +2675,7 @@
     King.\n\n
     John Byrom, 1691-1763.
     </item>
-    <item>
+        <item>
     74 CH 45 Irr.\n\n
     THE first Nowell the angel did say
     Was to certain poor shepherds in
@@ -2725,7 +2725,7 @@
     hath brought.\n\n
     Traditional Carol.
     </item>
-    <item>
+        <item>
     75\n\n
     SHEPHERDS watched their lambs
     and sheep
@@ -2758,7 +2758,7 @@
     Czech Carol. The rest by N.M
     Ndumbe Mosaso
     </item>
-    <item>
+        <item>
     76 CH 49 Irr.\n\n
     Still the night, holy the night;
     Sleeps the world; hid from sight,
@@ -2779,7 +2779,7 @@
     Saviour, since Thou art born!\n\n
     Joseph Mohr, 1792-1848.
     </item>
-    <item>
+        <item>
     77 CH 51 77.77. and refrain.\n\n
     SEE! in yonder manger low,
     Born for us on earth below,
@@ -2813,7 +2813,7 @@
     In Thy sweet humility.\n\n
     Edward Caswall, 1814-78
     </item>
-    <item>
+        <item>
     78 FHP 34\n\n
     O Lord my God! When I in awesome
     wonder
@@ -2856,7 +2856,7 @@
     how great Thou art!.\n\n
     Carl Boberg.
     </item>
-    <item>
+        <item>
     79 CH 69 87. 87. 77.\n\n
     ONCE in royal David’s city
     Stood a lowly cattle-shed,
@@ -2900,7 +2900,7 @@
     All in white shall wait around.\n\n
     Cecil Frances Alexander, 1818-95.
     </item>
-    <item>
+        <item>
     80 CH 48 C. M.\n\n
     O LITTLE town of Bethlehem,
     How still we see thee lie!
@@ -2940,7 +2940,7 @@
     Our Lord Immanuel.\n\n
     Philips Brooks, 1835-93.
     </item>
-    <item>
+        <item>
     81 CH 55 Irr\n\n
     O COME, all ye faithful,
     Joyful and triumphant,
@@ -2974,7 +2974,7 @@
     </i>\n\n
     18th Century; Tr. by Frederick Oakeley, 1802-80
     </item>
-    <item>
+        <item>
     82 CH 52 67. 67.\n\n
     LOVE came down at Christmas,
     Love all lovely, Love Divine ;
@@ -2991,7 +2991,7 @@
     Christina Georgina Rossetti,
     1830-94.
     </item>
-    <item>
+        <item>
     83 SS&amp;S 111\n\n
     Joy to the world; the Lord is come!
     Let earth receive her King;
@@ -3008,7 +3008,7 @@
     The glories of His righteousness,
     And wonders of His love.
     </item>
-    <item>
+        <item>
     84\n\n
     INFANT Jesus, Child Divine
     From Thy kingly mansions
@@ -3033,7 +3033,7 @@
     Salvation’s plan to begin.\n\n
     Clara Yondo
     </item>
-    <item>
+        <item>
     85\n\n
     It is Christmas time again,
     Hail the King Immanuel
@@ -3062,7 +3062,7 @@
     Hail the King Immanuel!\n\n
     Emmanuel Nyambod
     </item>
-    <item>
+        <item>
     86 CH 47 D.C.M.\n\n
     IT came upon the midnight clear,
     That glorious song of old,
@@ -3109,7 +3109,7 @@
     Which now the angels sing.\n\n
     Edmund Hamilton Sears, 1810-76.
     </item>
-    <item>
+        <item>
     87 SS&amp;S 24\n\n
     HARK! What mean those holy
     voices
@@ -3144,7 +3144,7 @@
     Till it cover all the earth.\n\n
     John Cawood
     </item>
-    <item>
+        <item>
     88 CH 46 77. 77. D. and refrain\n\n
     HARK! the herald angels sing,
     ‘Glory to the new-born King,
@@ -3178,7 +3178,7 @@
     Born to give them second birth.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     89 CH 58 Irr.\n\n
     GOOD Christian men, rejoice
     With heart and soul and voice!
@@ -3206,7 +3206,7 @@
     Christ was born to save.\n\n
     John Mason Neale, 1818 66.
     </item>
-    <item>
+        <item>
     90 CH 59 87. 87.\n\n
     GOD and Father, we adore Thee
     For the Son, Thine image bright,
@@ -3242,7 +3242,7 @@
     Adaptation of verse 6, Hugh FalConer,
     1859-1931.
     </item>
-    <item>
+        <item>
     91 CH 56 L.M.\n\n
     ‘FROM heaven above to earth I
     come,
@@ -3289,7 +3289,7 @@
     Martin Luther, 1483-1546;
     Tr. by Catherine Winkworth, 1827-78.
     </item>
-    <item>
+        <item>
     92 CH 53 55. 53. D.\n\n
     CHILD in the manger,
     Infant of Mary ;
@@ -3318,7 +3318,7 @@
     Mary Macdonald, I8i7-c. 1890;
     Tr. by Lachlan Macbean, 1853-1931.
     </item>
-    <item>
+        <item>
     93 CH 64 11 10. 11 10. Dactylic.\n\n
     BRIGHTEST and best of the sons
     of the morning,
@@ -3362,7 +3362,7 @@
     is laid.\n\n
     Reginald Heber, 1783-1826.
     </item>
-    <item>
+        <item>
     94 CH 657 11 11. 11 11.\n\n
     AWAY in a manger, no crib for a
     bed
@@ -3390,7 +3390,7 @@
     Thee there.\n\n
     Anon.
     </item>
-    <item>
+        <item>
     95 CH 41 8336.8336.\n\n
     ALL my heart this night rejoices,
     As I hear, far and near,
@@ -3423,7 +3423,7 @@
     Tr. by Catherine Winkworth,
     1827-78.
     </item>
-    <item>
+        <item>
     96 CH 65 87. 87. 47.\n\n
     ANGELS from the realms of glory,
     Wing your flight o’er all the earth
@@ -3455,7 +3455,7 @@
     James Montgomery, 1771-1854.
     His Life and Ministry
     </item>
-    <item>
+        <item>
     97 CH 85 775. 775.\n\n
     WHEN the Lord of Love was
     here,
@@ -3498,7 +3498,7 @@
     Stopford Augustus Brooke,
     1832-1916.
     </item>
-    <item>
+        <item>
     98 CH 140 From Heb. 4:14 -16. L.M.\n\n
     WHERE high the heavenly temple
     stands,
@@ -3535,7 +3535,7 @@
     Micheal Bruce 1746-67; as in
     Scottish Paraphrases, 1781.
     </item>
-    <item>
+        <item>
     99 CH 77 77. and refrain\n\n
     WHO is He, in yonder stall,
     At whose feet the shepherds
@@ -3564,7 +3564,7 @@
     Rules the world of light alone?\n\n
     Benjamin Russell Handby, 1833-67.
     </item>
-    <item>
+        <item>
     100 CH 86 D. C. M.\n\n
     THINE arm, O Lord. in days of
     old,
@@ -3601,7 +3601,7 @@
     Edward Hayes Plumptre,
     1821-91
     </item>
-    <item>
+        <item>
     101 CH 148 C. M.
     THERE is no sorrow, Lord, too
     light
@@ -3624,7 +3624,7 @@
     That love which wept with woe.\n\n
     Jane Crewdson, 1809-63.
     </item>
-    <item>
+        <item>
     102 CH 333 Ordination L. M.\n\n
     POUR out Thy Spirit from on
     high;
@@ -3659,7 +3659,7 @@
     James Montgomery,
     1771-185
     </item>
-    <item>
+        <item>
     103 SS&amp;S 61\n\n
     MASTER, the tempest is raging!
     The billows are tossing high!
@@ -3706,7 +3706,7 @@
     And rest on the blissful shore.\n\n
     Mary A. Baker
     </item>
-    <item>
+        <item>
     104\n\n
     JESUS, Master, meek and lowly,
     Preached the Sermon on the Mount
@@ -3744,7 +3744,7 @@
     For they shall see their God.\n\n
     Chambi Julie Andam
     </item>
-    <item>
+        <item>
     105 CH 80 88. 86.\n\n
     IT fell upon a summer day,
     When Jesus walked in Galilee,
@@ -3787,7 +3787,7 @@
     Stopford Augustus Brooke,
     1832-1916.
     </item>
-    <item>
+        <item>
     106 SS&amp;S 46 7.6. 76 D\n\n
     I LOVE to tell the Story
     Of unseen things above,
@@ -3830,7 +3830,7 @@
     That I have loved so long.\n\n
     Miss Hankey
     </item>
-    <item>
+        <item>
     107 CH 394 words from SS&amp;S 35 (with refrain)\n\n
     THOU didst leave thy throne and
     Thy Kingly crown,
@@ -3885,7 +3885,7 @@
     \n\n
     E.S. Elliott
     </item>
-    <item>
+        <item>
     108 CH 87 CM\n\n
     'I AM the vine', said Jesus
     'You are the branches of mine
@@ -3913,7 +3913,7 @@
     Your mind will be at peace'.\n\n
     Edward Muluh
     </item>
-    <item>
+        <item>
     109 CH 87 CM\n\n
     What grace, O Lord, and beauty
     shone
@@ -3939,7 +3939,7 @@
     From union, Lord, with Thee.\n\n
     Edward Denny, 1796-1889
     </item>
-    <item>
+        <item>
     110 CH 141 C. M.\n\n
     IMMORTAL Love, for ever full,
     For ever flowing free,
@@ -3976,7 +3976,7 @@
     John Greenleaf Whittier,
     1807-92.
     </item>
-    <item>
+        <item>
     111 FHP 5\n\n
     FAIREST Lord Jesus!
     Ruler of all nature!
@@ -4009,7 +4009,7 @@
     From the German, 17th Century
     4th Verse Tr. Joseph A. Seiss
     </item>
-    <item>
+        <item>
     112 FHP 188\n\n
     DOWN at the cross where my
     Saviour died,
@@ -4044,7 +4044,7 @@
     Glory to His name.\n\n
     Elisha A. Hoffman.
     </item>
-    <item>
+        <item>
     113 CH 76 66.66.88.\n\n
     BEHOLD a little Child,
     Laid in a manger bed;
@@ -4082,7 +4082,7 @@
     May draw us evermore to Thee.\n\n
     William Walsham How, 1823-97.
     </item>
-    <item>
+        <item>
     114 CH 305 L. M.\n\n
     A LITTLE child the Saviour came,
     The Mighty God was still His
@@ -4117,7 +4117,7 @@
     Ghost.\n\n
     William Robertson, 1820-64.
     </item>
-    <item>
+        <item>
     115 CH 63 77. 77. 77.\n\n
     AS with gladness men of old
     Did the guiding star behold,
@@ -4158,7 +4158,7 @@
     61
     His Names and Titles
     </item>
-    <item>
+        <item>
     116 SS&amp;S 92\n\n
     IN the hour when guilt assails me,
     On His gracious name I call,
@@ -4183,7 +4183,7 @@
     Shall be-“Christ, my all in all!”\n\n
     H. Bonar. D.D.
     </item>
-    <item>
+        <item>
     117 CH 62 77. 77.\n\n
     ‘JESUS!’ Name of wondrous love;
     Name all other names above,
@@ -4207,7 +4207,7 @@
     Helpless, 0 our God, to Thee.\n\n
     William Walsham How, 1823-97.
     </item>
-    <item>
+        <item>
     118 CH 174 54.54.D.\n\n
     REST of the weary,
     Joy of the sad,
@@ -4243,7 +4243,7 @@
     Saviour and Friend.\n\n
     John Samuel Bewley Monsell, 1811-75.
     </item>
-    <item>
+        <item>
     119 CH 693 77.78.\n\n
     MAN of Sorrows! Wondrous Name
     For the Son of God, who came
@@ -4267,7 +4267,7 @@
     ‘Hallelujah! What a Saviour!’\n\n
     Philipp Bliss, 1838-76.
     </item>
-    <item>
+        <item>
     120 SS&amp;S 91 MB 213 NM 77 8.78.7&amp; refrain\n\n
     TAKE the name of Jesus with you,
     Child of sorrow and of woe;
@@ -4296,7 +4296,7 @@
     When our journey is complete.\n\n
     Mrs.L Baxter.
     </item>
-    <item>
+        <item>
     121 SS&amp;S 38 10.10.10.10.\n\n
     I AM so glad that our Father in
     heaven;
@@ -5598,7 +5598,7 @@
     Father, Son, and Holy Ghost.\n\n
     Lyra Davidica, 1708.
     </item>
-    <item>
+        <item>
     160 AM 125 CM\n\n
     <i>“O death, where is thy sting?
         O grave, where is thy victory?”</i>
@@ -5631,7 +5631,7 @@
     While endless ages run.\n\n
     From St. Fulbert Of Chartres.
     </item>
-    <item>
+        <item>
     161 CH 126 87.87.D\n\n
     Hallelujah! hallelujah!
     Hearts to heaven and voices
@@ -5660,7 +5660,7 @@
     To the triune Majesty ! \n\n
     christopher wordsworth, 1807-85
     </item>
-    <item>
+        <item>
     162 SS&amp;S 149 MB 76 8.7. 8.7. and refrain\n\n
     HARK! Ten thousand harps and
     voices
@@ -5697,7 +5697,7 @@
     \n\n
     T Kelly
     </item>
-    <item>
+        <item>
     163 H&amp;P 212\n\n
     THINE be the glory, risen, conquering
     Son,
@@ -5731,7 +5731,7 @@
     Thy home above:\n\n
     Edmond L. Budry (1854-1932)
     </item>
-    <item>
+        <item>
     164 CH 131 C.M.\n\n
     THE Head that once was crowned
     with thorns
@@ -5761,7 +5761,7 @@
     Their everlasting theme.\n\n
     Thomas Kelly, 1769-1854.
     </item>
-    <item>
+        <item>
     165 CH 135 66. 66. 88.\n\n
     REJOICE, the Lord is King;
     Your Lord and King adore;
@@ -5797,7 +5797,7 @@
     ‘Rejoice.’\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     166 CH 134 87.87.87\n\n
     Look, ye saints! The sight is glorious;
     See the Man of sorrows now;
@@ -5828,7 +5828,7 @@
     King of kings, and Lord of lords!\n\n
     Thomas Kelly, 1769-1854
     </item>
-    <item>
+        <item>
     167 CH 385 C.M.\n\n
     LIFT up your heads, ye gates of
     brass,
@@ -5858,7 +5858,7 @@
     The Cross hath won the field.’\n\n
     James Montgomery, 1771-1854.
     </item>
-    <item>
+        <item>
     168 CH 133 65.65.D. and refrain.\n\n
     GOLDEN harps are sounding,
     Angel voices ring,
@@ -5893,7 +5893,7 @@
     Frances Ridley Havergal,
     1836-79.
     </item>
-    <item>
+        <item>
     169 CH 136 D. S. M.\n\n
     CROWN Him with many crowns,
     The Lamb upon His throne:
@@ -5932,7 +5932,7 @@
     Matthew Bridges, 1800-94; and
     Godfrey Thring, 1823-1903.
     </item>
-    <item>
+        <item>
     170 CH 137 From 1 Peter 1:3-5 C.M.\n\n
     BLEST be the everlasting God,
     The Father of our Lord!
@@ -5955,7 +5955,7 @@
     William Cameron, 1751-1811,
     As in Scottish Paraphrases, 1781
     </item>
-    <item>
+        <item>
     171 CH 139 C.M.\n\n
     ALL hail, the power of Jesus’ Name!
     Let angels prostrate fall;
@@ -5984,7 +5984,7 @@
     And crown Him Lord of all!\n\n
     Edward Perronet, 1726-92.
     </item>
-    <item>
+        <item>
     172 CH 179 76.76.D.\n\n
     CHRIST is the world’s Redeemer,
     The lover of the pure,
@@ -6021,7 +6021,7 @@
     St. Collumba, 521-97; Tr. by
     Duncan Macgregor, 1854-1923.
     </item>
-    <item>
+        <item>
     173 CH 683 87.87.and refrain.\n\n
     I WILL sing the wondrous story
     Of the Christ who died for me, –
@@ -6056,7 +6056,7 @@
     Francis Harold Rowley, 1854-1952
     88
     </item>
-    <item>
+        <item>
     174 CH 357 MB 142 76. 75. D.\n\n
     WORK, for the night is coming!
     Work through the morning hours;
@@ -6084,7 +6084,7 @@
     When man’s work is o’er.\n\n
     Adapted from Anna Louisa Coghill, 1836-1907.
     </item>
-    <item>
+        <item>
     175 SS&amp;S 791 10.7.\n\n
     WHEN Jesus comes to reward
     His servants,
@@ -6121,7 +6121,7 @@
     Will He find us watching there?\n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     176 CH 158 86.85. and refrain.\n\n
     WHEN He cometh, when He
     cometh
@@ -6145,7 +6145,7 @@
     His loved and His own.\n\n
     William Orcutt Cushing, 1823-1903.
     </item>
-    <item>
+        <item>
     177 CH 152 66. 66.\n\n
     THY Kingdom come, 0 God;
     Thy rule, 0 Christ, begin;
@@ -6173,7 +6173,7 @@
     Arise, and never set.\n\n
     Hensley, Lewis 1824-1905
     </item>
-    <item>
+        <item>
     178 CH 160 87.87. 47.\n\n
     LO! He comes, with clouds descending,
     Once for favoured sinners slain;
@@ -6207,7 +6207,7 @@
     Charles Wesley, 1707-88;
     Martin Madan, 1726-90.
     </item>
-    <item>
+        <item>
     179\n\n
     JESUS our Saviour, has been raised
     from death,
@@ -6243,7 +6243,7 @@
     more.\n\n
     Tam Philip Ndombeh
     </item>
-    <item>
+        <item>
     180 CH 178 65. 65. D.\n\n
     IN the Name of Jesus
     Every knee shall bow,
@@ -6288,7 +6288,7 @@
     Noel, Caroline Maria
     1817-77.
     </item>
-    <item>
+        <item>
     181 CH 154 From Psalm 72 76. 76. D.\n\n
     HAIL to the Lord’s Anointed,
     Great David’s greater Son!
@@ -6334,7 +6334,7 @@
     That Name to us is Love.\n\n
     James Montgomery, 1771-1854.
     </item>
-    <item>
+        <item>
     182 SS&amp;S 169 7.6.8.6. D and refrain\n\n
     A BETTER day is coming,
     A morning promised long,
@@ -6372,7 +6372,7 @@
     And praise Him by and by. \n\n
     Rev. R.Lowry,
     </item>
-    <item>
+        <item>
     183 CH 365 Is. 2:2-6 C.M.\n\n
     BEHOLD! the mountain of the
     Lord
@@ -6409,7 +6409,7 @@
     Michael Bruce, 1746-67;
     As in Scottish Paraphrases.
     </item>
-    <item>
+        <item>
     184 CH 190 S.M.\n\n
     COME, Holy Spirit, come;
     Let Thy bright beams arise;
@@ -6438,7 +6438,7 @@
     The Father, Son, and Thee.\n\n
     Joseph Hart, 1712-68
     </item>
-    <item>
+        <item>
     185 CH 196 C.M\n\n
     COME, Holy Ghost, our hearts
     inspire;
@@ -6462,7 +6462,7 @@
     The depths of love divine.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     186 CH l82 L. M.\n\n
     COME, Holy Ghost, our souls
     inspire
@@ -6488,7 +6488,7 @@
     9th Century, Tr by
     John Cosin, 1594-1672
     </item>
-    <item>.
+        <item>.
     187 CH 194 S.M.\n\n
     BREATHE on me, Breath of God;
     Fill me with life anew,
@@ -6509,7 +6509,7 @@
     Of Thine eternity.\n\n
     Edwin Hatch, 1835-89
     </item>
-    <item>
+        <item>
     188 CH 195 10.10.10.10.\n\n
     SPIRIT of God, descend upon my
     heart;
@@ -6551,7 +6551,7 @@
     flame.\n\n
     George Croly, 1780-1860.
     </item>
-    <item>
+        <item>
     189 CH 183 C. M.\n\n
     SPIRIT Divine, attend our prayers,
     And make this house Thy home;
@@ -6586,7 +6586,7 @@
     0 come, great Spirit, come!\n\n
     Andrew Reed, 1787-1862
     </item>
-    <item>
+        <item>
     190 CH 180 86. 84\n\n
     OUR blest Redeemer, ere He
     breathed
@@ -6617,7 +6617,7 @@
     And worthier Thee.\n\n
     Harriet Auber, 1773-1862.
     </item>
-    <item>
+        <item>
     191 SS&amp;S 198\n\n
     OH, spread the tidings round,
     wherever man is found,\n
@@ -6666,7 +6666,7 @@
     The Comforter has come!\n\n
     Rev. F. Bottome
     </item>
-    <item>
+        <item>
     192 SS&amp;S 194 MB 87\n\n
     HOLY Spirit, faithful Guide!
     Ever near the Christian’s side,
@@ -6695,7 +6695,7 @@
     Follow Me, I’ll guide thee home!”\n\n
     M. M Wells
     </item>
-    <item>
+        <item>
     193 CH l89 65. 65\n\n
     HOLY Spirit, hear us;
     Help us while we sing;
@@ -6724,7 +6724,7 @@
     William Henry Parker,
     1845-1929
     </item>
-    <item>
+        <item>
     194 CH 193 77. 77.\n\n
     HOLY Spirit, Truth Divine,
     Dawn upon this soul of mine ;
@@ -6752,7 +6752,7 @@
     ‘Spring, 0 Well, for ever spring!’\n\n
     Samuel Longfellow, 1819-92.
     </item>
-    <item>
+        <item>
     195 CH 484 From I Cor. 13 77.75.\n\n
     GRACIOUS Spirit, Holy Ghost,
     Taught by Thee, we covet most,
@@ -6782,7 +6782,7 @@
     And the best is love.\n\n
     Christopher Wordsworth
     </item>
-    <item>
+        <item>
     196 CH 187 77. 77. 77.\n\n
     Gracious Spirit, dwell with me!
     I myself would gracious be;
@@ -6824,7 +6824,7 @@
     Thomas Toke Lynch,
     1818-71.
     </item>
-    <item>
+        <item>
     197 CH 191 66. 11. D.\n\n
     COME down, O Love Divine,
     Seek Thou this soul of mine,
@@ -6863,7 +6863,7 @@
     Richard Frederick Littledale,
     1833-90
     </item>
-    <item>
+        <item>
     198 CH 204 77.77.77.\n\n
     Holy Father, Thou hast given
     Holy truth from highest heaven;
@@ -6892,7 +6892,7 @@
     Back to life, and love, and God.\n\n
     William Bruce, 1812-82
     </item>
-    <item>
+        <item>
     199 SS&amp;S 404 8.7.8.7 and refrain\n\n
     WEARY wanderer, stop and listen,
     Happy news we bring to thee;
@@ -6921,7 +6921,7 @@
     Enter in! why waitest thou?\n\n
     Grace J. Frances
     </item>
-    <item>
+        <item>
     200 SS&amp;S 363 MB 112\n\n
     THERE’S a Stranger at the door:
     Let . . . Him in! . . .
@@ -6957,7 +6957,7 @@
     Let . . . Him in! . . . \n\n
     J.B. Atchinson
     </item>
-    <item>
+        <item>
     201 SS&amp;S 449 10,10,10,10 and refrain\n\n
     TURN thee, O lost one, careworn
     and weary,
@@ -6998,7 +6998,7 @@
     der no more.\n\n
     F.J Crosy
     </item>
-    <item>
+        <item>
     202 CH 8 C. M\n\n
     THERE is a book, who runs may
     read,
@@ -7033,7 +7033,7 @@
     And read Thee everywhere.\n\n
     John Keble, 1792-1866.
     </item>
-    <item>
+        <item>
     203 SS&amp;S 372 MB 123 8.78.7 and refrain\n\n
     THERE is a gate that stands ajar,
     And through its portals gleaming
@@ -7062,7 +7062,7 @@
     And love Him more in heaven.\n\n
     Mrs.L. Baxter,
     </item>
-    <item>
+        <item>
     204\n\n
     SEND Thy blessèd Word, Lord
     To rest in our hearts:
@@ -7074,7 +7074,7 @@
     Purify us. .\n\n
     Muluh Edward
     </item>
-    <item>
+        <item>
     205 SS&amp;S 357 MB 298\n\n
     SING them over again to me,
     Wonderful words of Life!
@@ -7101,7 +7101,7 @@
     Sanctify for ever!\n\n
     P.P Bliss
     </item>
-    <item>
+        <item>
     206 CH 198 76. 76. D.\n\n
     O WORD of God Incarnate,
     O Wisdom from on high,
@@ -7138,7 +7138,7 @@
     William Walsham How,
     1823-97.
     </item>
-    <item>
+        <item>
     207 SS&amp;S 359 MB 10.6.10.6 and refrain\n\n
     OH, what a Saviour–that He died
     for me!
@@ -7178,7 +7178,7 @@
     “Hath everlasting life!”\n\n
     P.P Bliss
     </item>
-    <item>
+        <item>
     208 CH 203 78.78.88\n\n
     Look upon us, blessèd Lord,
     Take our wandering thoughts
@@ -7208,7 +7208,7 @@
     Tr. by Robert Alexander Stewart
     Macalister, 1870-1950
     </item>
-    <item>
+        <item>
     209 SS&amp;S 427\n\n
     Look to the Saviour on Calvary’s
     tree
@@ -7239,7 +7239,7 @@
     Surely thy footsteps He will lead
     Look, and thou shalt live!
     </item>
-    <item>
+        <item>
     210 CH 199 66.66. Trochaic.\n\n
     LORD, Thy word abideth,
     And our footsteps guideth
@@ -7268,7 +7268,7 @@
     Henry Williams Baker,
     1821-77.
     </item>
-    <item>
+        <item>
     211 SS &amp; S 396 MB 94\n\n
     JESUS is tenderly calling thee
     home–
@@ -7302,7 +7302,7 @@
     Quickly arise and away!\n\n
     F. J. Crosby
     </item>
-    <item>
+        <item>
     212 MB 51 SS&amp;S 621(Tune SS&amp;S 78)6.6.6.6.6.6.\n\n
     “I GAVE My life for thee;
     My precious blood I shed,
@@ -7342,7 +7342,7 @@
     Follow thy Saviour’s call.\n\n
     E.E Havergal
     </item>
-    <item>
+        <item>
     213 CH 71 76.76. D.\n\n
     I LOVE to hear the story
     Which angel voices tell,
@@ -7370,7 +7370,7 @@
     Because He loves me so.\n\n
     Emily Huntington Miller, 1833-1913.
     </item>
-    <item>
+        <item>
     214 NCH 122\n\n
     GOD sent His son, they called
     him Jesus;
@@ -7403,7 +7403,7 @@
     I’ll know He lives.\n\n
     Gloria &amp; William J.Gaither.
     </item>
-    <item>
+        <item>
     215 SS&amp;S 75 MB 54\n\n
     WHO came down from heaven to
     earth?
@@ -7435,7 +7435,7 @@
     Jesus Christ our Savour!\n\n
     El Nathan
     </item>
-    <item>
+        <item>
     216 SS&amp;S 40 MB 55\n\n
     JESUS, my Saviour, to Bethlehem
     came,
@@ -7493,7 +7493,7 @@
     </i>\n\n
     Anon
     </item>
-    <item>
+        <item>
     217 CH 66 65. 65. D.\n\n
     FROM the eastern mountains,
     Pressing on, they come,
@@ -7537,7 +7537,7 @@
     By Thy guiding star\n\n
     Godfrey Thring, 1823-1903.
     </item>
-    <item>
+        <item>
     218 SS&amp;S 530\n\n
     WITH my Saviour ever near to
     guide me,
@@ -7568,7 +7568,7 @@
     In the hollow of His hand!\n\n
     Anon
     </item>
-    <item>
+        <item>
     219 SS&amp;S 547 MB 147 8.7.8.7 and refrain\n\n
     WHEN the storms of life are
     raging,
@@ -7598,7 +7598,7 @@
     child.\n\n
     M.E Servoss
     </item>
-    <item>
+        <item>
     220 SS&amp;S 574 MB 168 8.7.8.7 and refrain\n\n
     THOU my everlasting Portion,
     More than friend or life to me,
@@ -7633,7 +7633,7 @@
     \n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     221 SS&amp;S 505\n\n
     PRAISE the Saviour, ye who know
     Him;
@@ -7661,7 +7661,7 @@
     Then shall be our own.\n\n
     T. Kelly
     </item>
-    <item>
+        <item>
     222 SS&amp;S 542 MB 133 L.M.\n\n
     HE leadeth me! O blessèd thought!
     O words with heavenly comfort
@@ -7696,7 +7696,7 @@
     leadest me.\n\n
     J.H.Gilmore
     </item>
-    <item>
+        <item>
     223\n\n
     GOD’s word is eternal truth
     Unshaken and undefiled
@@ -7717,7 +7717,7 @@
     To all who yield their lives to Him\n\n
     Nyindem Nancy
     </item>
-    <item>
+        <item>
     224 SS&amp;S 1190 (Choir)\n\n
     GOD is love! His mercy brightens
     All the path in which we rove;
@@ -7740,7 +7740,7 @@
     God is light, and God is love!\n\n
     Sir John Bowring
     </item>
-    <item>
+        <item>
     225 SS&amp;S 540\n\n
     A WONDERFUL Saviour is Jesus,
     my Lord,
@@ -7775,7 +7775,7 @@
     I’ll shout with the millions on high.\n\n
     Wm, Kirk Patrick
     </item>
-    <item>
+        <item>
     226 CH 346 S.M\n\n
     We give Thee but Thine own,
     Whate’er the gift may be;
@@ -7805,7 +7805,7 @@
     William Walsham How,
     1823-97.
     </item>
-    <item>
+        <item>
     227 CH 341 77.77.\n\n
     SOLDIERS of the Cross, arise!
     Gird you with your amour bright;
@@ -7838,7 +7838,7 @@
     Are the Kingdom of the Lord.\n\n
     William Walsham How, 1823-97.
     </item>
-    <item>
+        <item>
     228 SS&amp;S 390 7. 7. 7. 7.\n\n
     SINNERS Jesus will receive;
     Sound this word of grace to all
@@ -7865,7 +7865,7 @@
     Heaven with Him I enter in.\n\n
     Mrs. Bevan
     </item>
-    <item>
+        <item>
     229 CH 395 87.87.\n\n
     SOULS of men! why will ye scatter
     Like a crowd of frightened sheep?
@@ -7905,7 +7905,7 @@
     Frederick William Faber,
     1814-63.
     </item>
-    <item>
+        <item>
     230 CH 344 S.M.\n\n
     RISE up, O men of God!
     Have done with lesser things;
@@ -7927,7 +7927,7 @@
     William Plerson Merrill,
     186.7-1954.
     </item>
-    <item>
+        <item>
     231 CH 397 76.76.D\n\n
     O JESUS, Thou art standing
     Outside the fast-closed door,
@@ -7956,7 +7956,7 @@
     William Walsham How,
     1823-97
     </item>
-    <item>
+        <item>
     232 CH 566 10.10.10.10\n\n
     Lead us, O father, in the paths of
     peace:
@@ -7993,7 +7993,7 @@
     William Henry Burleigh
     1812-71
     </item>
-    <item>
+        <item>
     233 CH 569 76. 76.\n\n
     LEAD, holy shepherd, lead us,
     Thy feeble flock, we pray;
@@ -8023,7 +8023,7 @@
     Tr. by Hamilton Montgomerie
     Macgill, 1807-80.
     </item>
-    <item>
+        <item>
     234 SS&amp;S 556 7.7.7.7.7.7.\n\n
     JESUS, Saviour, pilot me,
     Over life’s tempestuous sea;
@@ -8047,7 +8047,7 @@
     “Fear not! I will pilot thee!”\n\n
     Gould. J.E.
     </item>
-    <item>
+        <item>
     235 CH 442 76.76.D.\n\n
     IN heavenly love abiding,
     No change my heart shall fear;
@@ -8076,7 +8076,7 @@
     Anna Laetitia Waring,
     1823-1910.
     </item>
-    <item>
+        <item>
     236 CH 440 C.M.\n\n
     Happy are they, they that love God,
     Whose hearts have Christ con-
@@ -8108,7 +8108,7 @@
     Yattendon Hymnal, No. 34, 1899; Based
     on Charles Coffin, 1676-17-49.
     </item>
-    <item>
+        <item>
     237\n\n
     Get a four-wheel drive and journey
     on
@@ -8136,7 +8136,7 @@
     Ebai Victor Arrey Tabi,
     1946-2007
     </item>
-    <item>
+        <item>
     238 SS &amp; S 798 MB 146\n\n
     FADING away like the stars of the
     morning,
@@ -8180,7 +8180,7 @@
     they have done.\n\n
     H. Donald, D.D
     </item>
-    <item>
+        <item>
     239 CH 345 C.M\n\n
     FOUNTAIN of good, to own Thy
     love
@@ -8205,7 +8205,7 @@
     Philip Doddridge,
     1702-51.
     </item>
-    <item>
+        <item>
     240 CH 349 88. 87.\n\n
     FATHER, who on man dost shower
     Gifts of plenty from Thy dower,
@@ -8235,7 +8235,7 @@
     Hear us, Godhead infinite.\n\n
     Percy Dearmer, 1867-1936
     </item>
-    <item>
+        <item>
     241 CH 393 87. 87.47.\n\n
     COME, ye sinners, poor and
     wretched,
@@ -8270,7 +8270,7 @@
     Can do helpless sinners good.\n\n
     Joseph Hart, 1712-68
     </item>
-    <item>
+        <item>
     242 CH 390 76. 76. D.\n\n
     ‘COME unto Me, ye weary,
     And I will give you rest.’ \n
@@ -8307,7 +8307,7 @@
     William Chatterton Dix,
     1837-98.
     </item>
-    <item>
+        <item>
     243 CH 391 85.83.\n\n
     ART thou weary, art thou languid,
     Art thou sore distressed?
@@ -8341,7 +8341,7 @@
     Answer, Yes!\n\n
     John Mason Neale, 1818-66; Based on St. Stephen of Mar Saba, 8th Cent
     </item>
-    <item>
+        <item>
     244 CH 237 76.76. D and refrain.\n\n
     AGAIN the morn of gladness,
     The morn of light, is here,
@@ -8399,7 +8399,7 @@
     </i>\n\n
     John Ellerton, 1826-93.
     </item>
-    <item>
+        <item>
     245 CH 229 From Psalm 50. L. M.\n\n
     ALL people that on earth do dwell,
     Sing to the Lord with cheerful
@@ -8424,7 +8424,7 @@
     William Kethe, C. 1593, As in
     Scottish Psalter, 1650.
     </item>
-    <item>
+        <item>
     246 CH167 666.666\n\n
     WHEN morning gilds the skies,
     My heart awaking cries,
@@ -8465,7 +8465,7 @@
     Tr. by Edward Caswall,
     1814-78.
     </item>
-    <item>
+        <item>
     247 CH 259 L. M.\n\n
     O TIMELY happy, timely wise,
     Hearts that with rising morn
@@ -8511,7 +8511,7 @@
     To live more nearly as we pray.\n\n
     John Keble, 1792-1866.
     </item>
-    <item>
+        <item>
     248 CH 268 76. 76.D\n\n
     O DAY of rest and gladness,
     O day of joy and light,
@@ -8548,7 +8548,7 @@
     Christopher Wordswort
     1807-85
     </item>
-    <item>
+        <item>
     249 CH 264 C. M.\n\n
     O LORD of life, Thy quickening
     voice
@@ -8576,7 +8576,7 @@
     In Thee I fall asleep.\n\n
     George Macdonald, 1824-1905.
     </item>
-    <item>
+        <item>
     250 CH 260 C.M\n\n
     NOW that the daystar glimmers
     bright,
@@ -8599,7 +8599,7 @@
     8th Century; Tr. by
     John Henry Newman, 1801-90.
     </item>
-    <item>
+        <item>
     251 CH 272 64.66.\n\n
     THE sun is sinking fast,
     The daylight dies;
@@ -8632,7 +8632,7 @@
     Tr. by Edward Caswall,
     1814-78
     </item>
-    <item>
+        <item>
     252 CH 301 10 10. 10 10.\n\n
     SAVIOUR, again to Thy dear Name
     we raise
@@ -8668,7 +8668,7 @@
     peace.\n\n
     John Ellerton, 1826-93.
     </item>
-    <item>
+        <item>
     253 CH 292 L.M.\n\n
     SUN of my soul, Thou Saviour dear,
     It is not night if Thou be near;
@@ -8704,7 +8704,7 @@
     above.\n\n
     John Keble, 1792-1866.
     </item>
-    <item>
+        <item>
     254 CH 288 65. 65,\n\n
     NOW the day is over,
     Night is drawing nigh,
@@ -8740,7 +8740,7 @@
     Whilst all ages run.\n\n
     Sabine Baring-Gould, 1834-192
     </item>
-    <item>
+        <item>
     255 CH 251 66.66.88.\n\n
     HUSHED was the evening hymn,
     The temple courts were dark,
@@ -8778,7 +8778,7 @@
     wise.\n\n
     James Drummond Burns, 1823-64.
     </item>
-    <item>
+        <item>
     256 CH 283 887. 887.\n\n
     FATHER, in high heaven dwelling,
     May our evening song be telling
@@ -8808,7 +8808,7 @@
     Ever-blessèd Trinity,\n\n
     George Rawson, 1807-89.
     </item>
-    <item>
+        <item>
     257 CH 294 8. 33. 6.\n\n
     ERE I sleep, for every favour
     This day showed
@@ -8840,7 +8840,7 @@
     Counted in their number.\n\n
     John Cennick, 1718-55.
     </item>
-    <item>
+        <item>
     258 CH 286 10 l0. 10 10.\n\n
     ABIDE with me: fast falls the
     eventide;
@@ -8883,7 +8883,7 @@
     with me.\n\n
     Henry Francis Lyte, 1793-1847.
     </item>
-    <item>
+        <item>
     259\n\n
     We thank Thee for Thy blessèd
     word;
@@ -8900,7 +8900,7 @@
     Ebai Victor Arrey Tabi,
     1946-2007
     </item>
-    <item>
+        <item>
     260 SS&amp;S 533 MB 174 NM 205\n\n
     TENDERLY guide us, O Shepherd
     of love,
@@ -8931,7 +8931,7 @@
     Never from Thee would we stray.\n\n
     Mrs.W.R. Grisworld.
     </item>
-    <item>
+        <item>
     261 CH 289 98.98\n\n
     THE day Thou gavest, Lord, is
     ended;
@@ -8964,7 +8964,7 @@
     Till all Thy creatures own Thy sway.\n\n
     John Ellerton, 1826-93.
     </item>
-    <item>
+        <item>
     262 CH 303 77. 77.\n\n
     PART in peace: Christ’s life was
     peace;
@@ -8978,7 +8978,7 @@
     Brethren, sisters, part in peace.\n\n
     Sarah Flower Adams, 1805-48
     </item>
-    <item>
+        <item>
     263 CH 299 87. 87. 87.\n\n
     LORD, dismiss us with Thy blessing;
     Fill our hearts with joy and peace;
@@ -8994,7 +8994,7 @@
     With us evermore be found.\n\n
     John Fawcett, 1740-1817
     </item>
-    <item>
+        <item>
     264 CH 295 C.M.\n\n
     ALMIGHTY God, Thy word is
     cast
@@ -9016,7 +9016,7 @@
     Its saving power may know.\n\n
     John Cawood, 1775-1852.
     </item>
-    <item>
+        <item>
     265 CH 437 77.77.\n\n
     SAVIOUR, teach me, day by day,
     Love’s sweet lesson to obey;
@@ -9041,7 +9041,7 @@
     Jane Eliza Leeson,
     1807-82.
     </item>
-    <item>
+        <item>
     266 CH 429 10 10. 10 10,\n\n
     NOT what I am, O Lord, but
     what Thou art!
@@ -9085,7 +9085,7 @@
     Incarnate Word!\n\n
     Horatius Bonar, 1808-89.
     </item>
-    <item>
+        <item>
     267 CH 433 C.M.\n\n
     MY God, I love Thee; not because
     I hope for heaven thereby,
@@ -9116,7 +9116,7 @@
     1506-52, Tr. by Edward Caswall,
     1814-78
     </item>
-    <item>
+        <item>
     268 CH 420 L.M.\n\n
     JESUS, Thou Joy of loving hearts,
     Thou Fount of life, Thou Light of
@@ -9152,7 +9152,7 @@
     Vaux, 1091-1153; Tr. by Ray
     Palmer, 1808-87.
     </item>
-    <item>
+        <item>
     269 CH 422 C.M.\n\n
     JESUS, the very thought of Thee
     With sweetness fills my breast,
@@ -9179,7 +9179,7 @@
     Attributed to St. Berbard of Clairvaux, 1091-1153; Tr. by Edward
     Caswall, 1814-78.
     </item>
-    <item>
+        <item>
     270 CH 421 L.M.\n\n
     JESUS! The very thought is sweet,
     In that dear Name all heart-joys
@@ -9222,7 +9222,7 @@
     1091-1153; Tr. by John Mason Neale,
     1818-66.
     </item>
-    <item>
+        <item>
     271 CH 430 MHB 438 88.88.88.\n\n
     JESUS*, my Lord, my God, my all,
     Hear me, blest Saviour, when I call;
@@ -9250,7 +9250,7 @@
     alternate tune from MHB is used.)\n\n
     Henry Collins, 1827-1919.
     </item>
-    <item>
+        <item>
     272 CH 419 C.M.\n\n
     HOW sweet the Name of Jesus
     sounds
@@ -9282,7 +9282,7 @@
     Refresh my soul in death.\n\n
     John Newton, 1725-1807.
     </item>
-    <item>
+        <item>
     273 CH 417 77.77.\n\n
     HARK, my soul! It is the Lord;
     ’Tis Thy Saviour, hear His word;
@@ -9312,7 +9312,7 @@
     O for grace to love Thee more!\n\n
     William Cowper, 1731-1800.
     </item>
-    <item>
+        <item>
     274 CH 435 87.87.\n\n\n\n
     COME, Thou Fount of every
     blessing,
@@ -9333,7 +9333,7 @@
     Seal it from Thy courts above.\n\n
     Robert Robinson, 1735-90.
     </item>
-    <item>
+        <item>
     275 CH 498 C.M.\n\n
     LORD, in the fulness of my might,
     I would for Thee be strong:
@@ -9359,7 +9359,7 @@
     Thomas Hornblower Gill,
     1819-1906.
     </item>
-    <item>
+        <item>
     276 CH 424 88.88.6.\n\n
     O LOVE that wilt not let me go,
     I rest my weary soul in Thee:
@@ -9385,7 +9385,7 @@
     Life that shall endless be.\n\n
     George Matheson, 1842-1906.
     </item>
-    <item>
+        <item>
     277 CH 562 From Gen. 28: 20-22. C.M.\n\n
     O GOD of Bethel! by whose hand
     Thy people still are fed;
@@ -9414,7 +9414,7 @@
     and John Logan, 1748-88; as in
     Scotish Paraphrases, 1781.
     </item>
-    <item>
+        <item>
     278 SS&amp;S 901\n\n
     WHEN peace, like a river, attendeth
     my way,
@@ -9457,7 +9457,7 @@
     my soul! \n\n
     H.G. Spaford
     </item>
-    <item>
+        <item>
     279 SS&amp;S 642\n\n
     WHEN we walk with the Lord
     In the light of His Word,
@@ -9500,7 +9500,7 @@
     Never fear, only trust and obey.\n\n
     Rev. J. H. Sammis
     </item>
-    <item>
+        <item>
     280 SS&amp;S 879\n\n
     WILL your anchor hold in the
     storms of life?
@@ -9542,7 +9542,7 @@
     evermore?\n\n
     Priscilla J. Owens
     </item>
-    <item>
+        <item>
     281 SS&amp;S 745\n\n
     WHEN upon life’s billows you are
     tempest tossed,
@@ -9589,7 +9589,7 @@
     journey’s end.\n\n
     Rev. J Datman Jr
     </item>
-    <item>
+        <item>
     282 CH 578 87. 87. 887.\n\n
     WHITHER, pilgrims, are you
     going,
@@ -9623,7 +9623,7 @@
     In that bright and better land’.\n\n
     Golden Chain, 1861.
     </item>
-    <item>
+        <item>
     283\n\n
     TAKE me Lord Take me just as I
     am
@@ -9635,7 +9635,7 @@
     am.\n\n
     Buma-Kor Claudia Fokam,
     </item>
-    <item>
+        <item>
     284 SS&amp;S 648 8.8.8.6. and refrain\n\n
     THE love that Jesus had for me,
     To suffer on the cruel tree,
@@ -9665,7 +9665,7 @@
     Is more than tongue can tell!\n\n
     J.E Hall
     </item>
-    <item>
+        <item>
     285 CH 553 66. 66.\n\n
     THY way, not mine, O Lord,
     However dark it be!
@@ -9697,7 +9697,7 @@
     My Wisdom, and my All.\n\n
     Horatius Bonar, 1808 – 89.
     </item>
-    <item>
+        <item>
     286 CH 581 76. 76. 76. 75.\n\n
     THE sands of time are sinking;
     The dawn of heaven breaks;
@@ -9733,7 +9733,7 @@
     In Immanuel’s land.\n\n
     Anne Ross Cousin, 1824 – 1906.
     </item>
-    <item>
+        <item>
     287 SS&amp;S 836 MB 165 7.7.7.7.and refrian\n\n
     SIMPLY trusting every day,
     Trusting through a stormy way;
@@ -9760,7 +9760,7 @@
     Trusting Jesus, that is all. \n\n
     E. Page
     </item>
-    <item>
+        <item>
     288 SS&amp;S 877\n\n
     STANDING on the promises of
     Christ my King,
@@ -9807,7 +9807,7 @@
     Standing on the promises of God.\n\n
     R. Kelso Carter,
     </item>
-    <item>
+        <item>
     289 SS&amp;S 650 MB 126\n\n
     RING the bells of heaven! There is
     joy to-day,
@@ -9839,7 +9839,7 @@
     For a precious soul is born again.\n\n
     Rev. W. D. Cusing,.
     </item>
-    <item>
+        <item>
     290 CH 547 S. M.\n\n
     PUT thou thy trust in God,
     In duty’s path go on;
@@ -9874,7 +9874,7 @@
     Paul Gerhard, 1607 – 76;
     Tr. by John Wesley, 1703 – 91
     </item>
-    <item>
+        <item>
     291 CH 339 L.M\n\n
     O MASTER, let me walk with
     Thee
@@ -9902,7 +9902,7 @@
     Washington Gladden,
     1836-1918.
     </item>
-    <item>
+        <item>
     292 CH 535 65. 65. D. and refrain.\n\n
     ONWARD! Christian soldiers,
     Marching as to war,
@@ -9954,7 +9954,7 @@
     Sabine Baring-Gould,
     1834 – 1924.
     </item>
-    <item>
+        <item>
     293 CH 508 77. 77. 77.\n\n
     O JESUS, I have promised
     To serve Thee to the end;
@@ -9990,7 +9990,7 @@
     My Master and my Friend.\n\n
     John Ernest Bode, 1816-74
     </item>
-    <item>
+        <item>
     294 CH 499 SS&amp;S 866 MB 136 L.M.\n\n
     O HAPPY day, that fixed my choice
     On Thee, my Saviour and my
@@ -10031,7 +10031,7 @@
     And bless in death a bond so dear.\n\n
     P. Doddrioge.
     </item>
-    <item>
+        <item>
     295 SS&amp;S 789 MB 265 8.7. 8.7. and refrain\n\n
     “MUST I go–and empty-handed?”
     Thus my dear Redeemer
@@ -10060,7 +10060,7 @@
     Strive for souls while yet you may.\n\n
     C. C. Luther
     </item>
-    <item>
+        <item>
     296 CH 563 87. 87. 87.\n\n
     LEAD us, heavenly Father, lead us
     O’er the world’s tempestuous
@@ -10086,7 +10086,7 @@
     Nothing can our peace destroy.\n\n
     James Edmeston, 1791 – 1867.
     </item>
-    <item>
+        <item>
     297 CH 568 104. 104. 10 10.\n\n
     LEAD, kindly light, amid the
     encircling gloom,
@@ -10121,7 +10121,7 @@
     John Henry Newman,
     1801 – 90.
     </item>
-    <item>
+        <item>
     298 CH 567 55. 88. 55.\n\n
     JESUS, still lead on,
     Till our rest be won,
@@ -10151,7 +10151,7 @@
     Nicolaus Ludwig Von Zinzendorf, 1700 – 60; Tr. by Jane Laurie
     Borthwick, 1813 – 97.
     </item>
-    <item>
+        <item>
     299 CH 497 88.86\n\n
     JUST as I am, Thine own to be,
     Friend of the young, who lovest me,
@@ -10172,7 +10172,7 @@
     Lord of my life, I come.\n\n
     Marianne Farningham, 1834-1909
     </item>
-    <item>
+        <item>
     300 SS&amp;S 659 MB 211 11.11.11.11.\n\n
     MY Jesus, I love thee, I know
     Thou art mine!
@@ -10208,7 +10208,7 @@
     now!”\n\n
     Rev. A. J. Gordon,D.D.
     </item>
-    <item>
+        <item>
     301 FHP 193\n\n
     MY faith has found a resting place,
     Not in device nor creed;
@@ -10234,7 +10234,7 @@
     For me His life He gave.\n\n
     Lidie H. Edmunds
     </item>
-    <item>
+        <item>
     302 CH 539 SS&amp;S 718 MB 201 8.8.8.4. and refrain\n\n
     MY God, and Father, while I stray
     Far from my home, on life’s
@@ -10281,7 +10281,7 @@
     ‘Thy will be done.’\n\n
     Charlotte Elliott, 1789-1871
     </item>
-    <item>
+        <item>
     303 SS&amp;S 826 MB 251\n\n
     I’M a pilgrim and a stranger,
     Rough and thorny is the road;
@@ -10318,7 +10318,7 @@
     This my Father knows.\n\n
     Mrs Maxwell
     </item>
-    <item>
+        <item>
     304 SS&amp;S 607 10.7 10.7. and refrain\n\n
     I AM Thine, O Lord, I have heard
     Thy voice,
@@ -10351,7 +10351,7 @@
     Till I rest in peace with Thee.\n\n
     F. J. Crosby
     </item>
-    <item>
+        <item>
     305 CH 507 From 2 Tim.1.12. SS&amp;S 883 C.M.\n\n
     I’M not ashamed to own my Lord,
     Or to defend His cause,
@@ -10382,7 +10382,7 @@
     Isaac Watts, 1674-1748, As in
     Scottish Paraphrases, 1781.
     </item>
-    <item>
+        <item>
     306 CH 705 SS&amp;S 871 87. 87. D\n\n
     I’VE found a Friend; O such a Friend!
     He loved me ere I knew Him;
@@ -10424,7 +10424,7 @@
     James Grindlay Small,
     1817-88.
     </item>
-    <item>
+        <item>
     307 SS&amp;S 700 MB 105 8.7. 8.7. and refrain\n\n
     HARK! The temperance bells are
     ringing,
@@ -10451,7 +10451,7 @@
     Dawning of a better day.\n\n
     Wm, Stevenson
     </item>
-    <item>
+        <item>
     308 SS&amp;S 669 MB 155 and refrain\n\n
     HO, my comrades! See the signal
     Waving in the sky!
@@ -10479,7 +10479,7 @@
     Cheer, my comrades, cheer!\n\n
     P. P. Bliss.
     </item>
-    <item>
+        <item>
     309 CH 580 11 10. 11 10. 9 11.\n\n
     HARK, hark, my soul! Angelic
     Songs are swelling
@@ -10529,7 +10529,7 @@
     cloudless love.\n\n
     Frederick William Faber, 1814 – 63.
     </item>
-    <item>
+        <item>
     310 SS&amp;S 752 L.M.\n\n
     HARK! ’tis the shepherd’s voice I
     hear,
@@ -10559,7 +10559,7 @@
     they be.”\n\n
     Alexcenah Thomas
     </item>
-    <item>
+        <item>
     311 CH 557 C. M.\n\n
     HE that is down needs fear no fall,
     He that is low, no pride;
@@ -10575,7 +10575,7 @@
     Is best from age to age.\n\n
     John Bunyan, 1628 – 88.
     </item>
-    <item>
+        <item>
     312\n\n
     GAINFUL the lot that I learn
     from the Lord;
@@ -10604,7 +10604,7 @@
     full.\n\n
     Muluh Edward
     </item>
-    <item>
+        <item>
     313 CH 356 L.M\n\n
     GO, labour on: spend and be
     spent,
@@ -10636,7 +10636,7 @@
     The midnight peal, ‘Behold, I come!’\n\n
     Horatius Bonar, 1808-89.
     </item>
-    <item>
+        <item>
     314 CH 527 From Ps. 27 76. 76.\n\n
     GOD is my strong salvation;
     What foe have I to fear?
@@ -10656,7 +10656,7 @@
     The Lord will give thee peace.\n\n
     James Montgomery, 1771–1854.
     </item>
-    <item>
+        <item>
     315 CH 564 87. 87. 87.\n\n
     GUIDE me, O Thou great Jehovah,
     Pilgrim through this barren
@@ -10681,7 +10681,7 @@
     William Williams, 1717 – 91;
     Tr. by Peter Williams, 1727 – 96.
     </item>
-    <item>
+        <item>
     316 CH 550 L. M.\n\n
     GREAT God! And wilt Thou
     condescend
@@ -10709,7 +10709,7 @@
     To be Thy better child above.\n\n
     Ann Gilbert, 1782 – 1866.
     </item>
-    <item>
+        <item>
     317\n\n
     FOLLOWING in the footsteps of
     Christ
@@ -10735,7 +10735,7 @@
     Let us together bring them to God.\n\n
     Buma-Kor Claudia Fokam
     </item>
-    <item>
+        <item>
     318 CH 548 86. 86. 86.\n\n
     FATHER, I know that all my life
     Is portioned out for me;
@@ -10772,7 +10772,7 @@
     Anna Laetitia Waring.
     1820 – 1910.
     </item>
-    <item>
+        <item>
     319 CH 574 words from SS&amp;S 838. MB 359
     7.7.7.7. with refrain\n\n
     CHILDREN of the heavenly King,
@@ -10802,7 +10802,7 @@
     And we still will follow Thee.\n\n
     J. Cennick
     </item>
-    <item>
+        <item>
     320 CH 447 S. M.\n\n
     Come, we that love the Lord
     And let our joys be known
@@ -10831,7 +10831,7 @@
     To fairer worlds on high\n\n
     Isaac Watts, 1674-1748.
     </item>
-    <item>
+        <item>
     321 CH 556 10. 10. 10. 10. 10. 10.\n\n
     BE still, my soul: the Lord is on
     thy side;
@@ -10885,7 +10885,7 @@
     Tr. by Jane Laurie Borthwick,
     1813 – 97.
     </item>
-    <item>
+        <item>
     322 CH 519 65. 65. 65. D.\n\n
     WHO is on the Lord’s side?
     Who will serve the King?
@@ -10937,7 +10937,7 @@
     Saviour, always Thine.\n\n
     Frances Ridley Havergal, 1836-79.
     </item>
-    <item>
+        <item>
     323 CH 532 MB 190 76. 76. D.\n\n
     STAND up! Stand up for Jesus,
     Ye soldiers of the Cross!
@@ -10974,7 +10974,7 @@
     George Duffield,
     1818 – 88.
     </item>
-    <item>
+        <item>
     324 CH 504 77. 77.\n\n
     THINE for ever! God of Love
     Hear us from Thy throne above;
@@ -11002,7 +11002,7 @@
     Mary Fawler Maude
     1819-1913.
     </item>
-    <item>
+        <item>
     325 CH 501 L.M.\n\n
     ‘TAKE up thy cross,’ the Saviour
     said,
@@ -11035,7 +11035,7 @@
     Charles William Everest,
     1814-77.
     </item>
-    <item>
+        <item>
     326 CH 511 S.M.\n\n
     TEACH me, my God and King,
     In all things Thee to see;
@@ -11062,7 +11062,7 @@
     Cannot for less be told.\n\n
     George Herbert, 1593-1632.
     </item>
-    <item>
+        <item>
     327 SS&amp;S 608 MB 164 11.11.11.11.\n\n
     TAKE time to be holy, speak oft
     with thy Lord;
@@ -11098,7 +11098,7 @@
     service above.\n\n
     W.D. Longstaff
     </item>
-    <item>
+        <item>
     328 CH 512 77. 77.\n\n
     TAKE my life, and let it be
     Consecrated, Lord, to Thee.
@@ -11127,7 +11127,7 @@
     Frances Ridley Havergal,
     1836-79.
     </item>
-    <item>
+        <item>
     329 SS&amp;S 634 6.4.6.4.6.6.6.4.\n\n
     SAVIOUR! Thy dying love
     Thou gavest me,
@@ -11163,7 +11163,7 @@
     Something for Thee.\n\n
     Rev. S. D. Phelps
     </item>
-    <item>
+        <item>
     330 CH 495 87.87.\n\n
     SAVIOUIR, while my heart is tender,
     I would yield that heart to Thee,
@@ -11190,7 +11190,7 @@
     Seal Thine image on my heart.\n\n
     John Burton, 1803-77
     </item>
-    <item>
+        <item>
     331 SS&amp;S 632 MB 222 6.4.6.4.6.6.4.\n\n
     MORE love to Thee, O Christ,
     More love to Thee;
@@ -11223,7 +11223,7 @@
     More love to Thee!\n\n
     E. Prentiss
     </item>
-    <item>
+        <item>
     332 CH 502 87.87.D.\n\n
     JESUS, I my cross have taken,
     All to leave, and follow Thee;
@@ -11265,7 +11265,7 @@
     Henry Francis Lyte,
     1793-1847.
     </item>
-    <item>
+        <item>
     333 SS&amp;S 635\n\n
     JESUS! I am resting, resting
     In the joy of what Thou art;
@@ -11311,7 +11311,7 @@
     Fill me with Thy grace!\n\n
     Jean Sophia Pigott
     </item>
-    <item>
+        <item>
     334 CH 517 L. M.\n\n
     FIGHT the good fight
     With all thy might;
@@ -11338,7 +11338,7 @@
     John Samuel Bewley Monsell,
     1811-75
     </item>
-    <item>
+        <item>
     335 CH 565 77. 77.\n\n
     FATHER, lead me, day by day,
     Ever in Thine own sweet way;
@@ -11364,7 +11364,7 @@
     Evermore Thy child to be.\n\n
     John Page Hopps, 1834 – 1912.
     </item>
-    <item>
+        <item>
     336 CH 518 S.M.\n\n
     A CHARGE to keep I have,
     A God to glorify,
@@ -11384,7 +11384,7 @@
     But press to realms on high.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     337 CH 526 From Ps. 96 87. 87. 66. 667.\n\n
     A SAFE stronghold our God is
     still,
@@ -11429,7 +11429,7 @@
     Martin Luther, 1483 – 1546;
     Tr. by Thomas Carlyle, 1795 – 1881.
     </item>
-    <item>
+        <item>
     338 CH 253 L. M.\n\n
     <i>Laying foundation stone of a Church</i>\n
     THIS stone to Thee in faith we lay;
@@ -11466,7 +11466,7 @@
     James Montgomery,
     1771-1854,
     </item>
-    <item>
+        <item>
     339 MHB 983 L.M.\n\n
     <i>Dedication of a Church</i>\n
     BE with us, glorious Lord, to-day;
@@ -11506,7 +11506,7 @@
     heaven.\n\n
     Charles Dent Bell, 1818-98
     </item>
-    <item>
+        <item>
     340 CH 254 L.M.\n\n
     <i>Dedication of a Church</i>\n
     All things are Thine; no gift have we,
@@ -11529,7 +11529,7 @@
     To lead us from ourselves to Thee.\n\n
     John Greenleaf Whittier, 1807-92.
     </item>
-    <item>
+        <item>
     341 CH 534 S. M.\n\n
     SOLDIERS of Christ! arise,
     And put your armour on,
@@ -11560,7 +11560,7 @@
     And stand complete at last.\n\n
     Charles Wesley, 1707 – 88.
     </item>
-    <item>
+        <item>
     342 FHP 16\n\n
     All praise to Him who reigns above
     In majesty supreme,
@@ -11588,7 +11588,7 @@
     W.H.Clark,
     Refrain, Ralph E. Hudson
     </item>
-    <item>
+        <item>
     343 SS&amp;S 389\n\n
     “WHOSOEVER heareth! ”
     Shout, shout the sound!
@@ -11619,7 +11619,7 @@
     “Whosoever will may come.”\n\n
     P.P Bliss
     </item>
-    <item>
+        <item>
     344 SS&amp;S 441\n\n
     IN the silent, midnight watches,
     List- thy bosom’s door!
@@ -11649,7 +11649,7 @@
     Now He knows thee not!\n\n
     Dr. A. C. Coxe
     </item>
-    <item>
+        <item>
     345 SS&amp;S 411
     I’ve a message from the Lord, Hallelujah!
     The message unto you I‘ll give;
@@ -11675,7 +11675,7 @@
     Look to Jesus, who alone can save.\n\n
     W.A. Ogden
     </item>
-    <item>
+        <item>
     346 SS&amp;S 813 MB 108\n\n
     HARK the voice of Jesus crying—
     “who will go and work to-day?
@@ -11734,7 +11734,7 @@
     “Here am I; send me, send me!”\n\n
     Rev. D. March, D. D.
     </item>
-    <item>
+        <item>
     347 SS&amp;S 443 MB 102\n\n
     HAVE you any room for Jesus,
     He who bore your load of sin?
@@ -11763,7 +11763,7 @@
     cease.\n\n
     Et. Nathan
     </item>
-    <item>
+        <item>
     348 SS&amp;S 391 MB 108 8.7.\n\n
     “CALL them in” – the poor, the
     wretched,
@@ -11807,7 +11807,7 @@
     Christ is coming – “Call them in.”\n\n
     Anna Shipton
     </item>
-    <item>
+        <item>
     349 SS&amp;S 675 MB 351\n\n
     THERE’S a royal banner given for
     display
@@ -11843,7 +11843,7 @@
     And the Cross the world shall sway!\n\n
     El. Nathan
     </item>
-    <item>
+        <item>
     350\n\n
     RISE up, ye true soldiers of the
     cross,
@@ -11868,7 +11868,7 @@
     On to Victory.\n\n
     N’di-Powa Jimmy
     </item>
-    <item>
+        <item>
     351 CH 579 65. 65. 65. D.\n\n
     ‘FORWARD!’ be our watchword,
     Steps and voices joined;
@@ -11921,7 +11921,7 @@
     Forward into light!\n\n
     Henry Alford, 1810 – 71.
     </item>
-    <item>
+        <item>
     352 CH 529 87. 87. D.\n\n
     COURAGE, brother! Do not
     stumble,
@@ -11958,7 +11958,7 @@
     ‘Trust in God, and do the right’.\n\n
     Norman Macleod, 1812 – 72.
     </item>
-    <item>
+        <item>
     353 SS&amp;S 672 MB 189 C.M.\n\n
     AM I a soldier of the Cross –
     A follower of the Lamb?
@@ -11986,7 +11986,7 @@
     Supported by Thy word. \n\n
     Isaac Watts,
     </item>
-    <item>
+        <item>
     354 CH 523 77. 73.\n\n
     CHRISTIAN, seek not yet repose;
     Hear thy guardian angel say,
@@ -12015,7 +12015,7 @@
     Watch and pray.\n\n
     Charlotte Elliott, 1789-187.
     </item>
-    <item>
+        <item>
     355\n\n
     DROP not a tear O humble gentle
     pilgrim,
@@ -12048,7 +12048,7 @@
     you now in peace.\n\n
     Ndumbe Mosaso
     </item>
-    <item>
+        <item>
     356 SS&amp;S 908\n\n
     BEAUTIFUL valley of Eden!
     Sweet is thy noontide calm;
@@ -12072,7 +12072,7 @@
     Rolleth the great new song.\n\n
     Rev.W.D Cusing,
     </item>
-    <item>
+        <item>
     357 SS&amp;S 709\n\n
     O Troubled heart, be thou not
     afraid,
@@ -12105,7 +12105,7 @@
     To Him all glory be! \n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     358 WAY ABOVE THE BLUE SKIES\n\n
     The Lord has lifted me;
     Way up there, way above the
@@ -12152,7 +12152,7 @@
     Ebai Victor Arrey Tabi,
     1946-2007
     </item>
-    <item>
+        <item>
     359 SS 361\n\n
     THIS world is not my home,
     I’m just a passing through,
@@ -12199,7 +12199,7 @@
     In this world anymore.\n\n
     Arr. Albert E. Brumley
     </item>
-    <item>
+        <item>
     360\n\n
     THY will be done, My Saviour said
     When to His friends the pray’r
@@ -12225,7 +12225,7 @@
     done’.\n\n
     Peter Kwo
     </item>
-    <item>
+        <item>
     361 FHP 249\n\n
     PRECIOUS Lord, take my hand,
     Lead me on, help me stand;
@@ -12243,7 +12243,7 @@
     Lead me home.\n\n
     Thomas A. Dorsey
     </item>
-    <item>
+        <item>
     362 98.98\n\n
     HE owns my life and all within me,
     He knows e’rything around my
@@ -12276,7 +12276,7 @@
     I know that Jesus owns my all.\n\n
     Samuel M. Tabi
     </item>
-    <item>
+        <item>
     363 C.M. and refrain\n\n
     HE knows my thoughts, my ways,
     my deeds,
@@ -12304,7 +12304,7 @@
     Jesus has one for me.\n\n
     Samuel M. Tabi
     </item>
-    <item>
+        <item>
     364 SS&amp;S 823 MB 292 S.M.\n\n
     COME, ye that love the Lord,
     And let your joys be known,
@@ -12333,7 +12333,7 @@
     To fairer worlds on high.\n\n
     Isaac Watts,
     </item>
-    <item>
+        <item>
     365 SS&amp;S 601 8.7. 8.7.\n\n
     ALL to Jesus I surrender,
     All to Him I freely give;
@@ -12364,7 +12364,7 @@
     Glory, glory to His name!\n\n
     J.W Vam De Venter
     </item>
-    <item>
+        <item>
     366 SS&amp;S 961\n\n
     WITH friends on earth we meet
     in gladness,
@@ -12391,7 +12391,7 @@
     gladness, We’ll sing for ever there.\n\n
     E.W. Chapman
     </item>
-    <item>
+        <item>
     367 SS&amp;S 972 C.M. and refrain\n\n
     THERE is a land that lies afar,
     Where grief is all unknown;
@@ -12415,7 +12415,7 @@
     A home among the blest.\n\n
     Anon.
     </item>
-    <item>
+        <item>
     368 SS&amp;S 964 MB 360 9.9.9.9. and refrain\n\n
     THERE’S a land that is fairer than
     day,
@@ -12442,7 +12442,7 @@
     our days.\n\n
     S.F Bennett.
     </item>
-    <item>
+        <item>
     369 CH 587 MB 273 64.64.67.64\n\n
     THERE is a happy land,
     Far, far away,
@@ -12470,7 +12470,7 @@
     Reign, reign for aye.\n\n
     Andrew Young, 1807-89
     </item>
-    <item>
+        <item>
     370 SS&amp;S 1000 MB 288\n\n
     Shall we gather at the river
     Where bright angel-feet have trod;
@@ -12500,7 +12500,7 @@
     Soon our happy hearts will quiver
     With the melody of peace.
     </item>
-    <item>
+        <item>
     371 SS&amp;S 710 MB 253\n\n
     O WEARY heart, there is a Home,
     Beyond the reach of toil and
@@ -12537,7 +12537,7 @@
     not!\n\n
     W.H. Bellamy
     </item>
-    <item>
+        <item>
     372 SS&amp;S 942 MB 284 M 218\n\n
     OH, think of the home over there,
     By the side of the river of light,...
@@ -12573,7 +12573,7 @@
     Are watching and waiting for me. \n\n
     D.W.C. Huntington
     </item>
-    <item>
+        <item>
     373 SS&amp;S 572 10, 10,10,10 and refrain\n\n
     FOUNTAIN of purity opened for
     sin,
@@ -12613,7 +12613,7 @@
     than snow.\n\n
     Rev, Newman Hall.D.D
     </item>
-    <item>
+        <item>
     374 SS&amp;S 1045 MB 238 6.4.6.4.6.6.6.4.\n\n
     FADE, fade, each earthly joy; Jesus
     is mine!
@@ -12644,7 +12644,7 @@
     Jesus is mine!\n\n
     Mrs. J.C.Boner
     </item>
-    <item>
+        <item>
     375 SS&amp;S 873 MB 235 NM 173 8.8.8.8.\n\n
     BLESSÈD assurance – Jesus is mine!
     Oh, what a foretaste of glory
@@ -12674,7 +12674,7 @@
     in His love.\n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     376 SS&amp;S 1027\n\n
     THE tide is flowing out, is flowing
     out;
@@ -12718,7 +12718,7 @@
     you rest.”\n\n
     J. J. Sims
     </item>
-    <item>
+        <item>
     377 CH 593 86. 76. 76. 76.\n\n
     THERE’s a Friend for little children,
     Above the bright blue sky,
@@ -12754,7 +12754,7 @@
     That all may be your own!\n\n
     Albert Midlane, 1825 – 1909.
     </item>
-    <item>
+        <item>
     378 CH 329 77.77.\n\n
     WHEN our heads are bowed with
     woe,
@@ -12789,7 +12789,7 @@
     Jesus, Son of Mary, hear!\n\n
     Henry Hart Milman, 1791-1868
     </item>
-    <item>
+        <item>
     379 CH 590 S. M.\n\n
     THERE is no night in heaven;
     In that best world above,
@@ -12813,7 +12813,7 @@
     Are past, and heaven is won.\n\n
     Francis Midden Knollis, 1815 – 63.
     </item>
-    <item>
+        <item>
     380 SS&amp;S 944 MB 293 L.M.\n\n
     I’VE reached the land of corn and
     wine,
@@ -12846,7 +12846,7 @@
     song.\n\n
     E. Page
     </item>
-    <item>
+        <item>
     381 SS&amp;S 934 L.M.\n\n
     I HEAR a song, a song so sweet,
     I try all vainly to repeat
@@ -12876,7 +12876,7 @@
     day.” \n\n
     E.E Rexford
     </item>
-    <item>
+        <item>
     382 SS&amp;S 971 MB 295\n\n
     FAR, far beyond the storms that
     gather
@@ -12906,7 +12906,7 @@
     Jesus shall wipe away.
     F.J Crosby
     </item>
-    <item>
+        <item>
     383 SS&amp;S 1036 MB 263 L.M.\n\n
     ASLEEP in Jesus! Blessèd sleep!
     From which none ever wake to
@@ -12936,7 +12936,7 @@
     weep. \n\n
     Mrs. Margaret Mackay
     </item>
-    <item>
+        <item>
     384 CH 600 C. M. and refrain.\n\n
     AROUND the throne of God in
     heaven
@@ -12965,7 +12965,7 @@
     Singing, ‘Glory, glory, glory!’\n\n
     Anne Shepherd, 1809 – 57.
     </item>
-    <item>
+        <item>
     385 SS&amp;S 983\n\n
     WHEN the trumpet of the Lord
     shall sound, and time shall be
@@ -13004,7 +13004,7 @@
     I’ll be there.\n\n
     J. M. Black
     </item>
-    <item>
+        <item>
     386 SS&amp;S 1041 MB 357\n\n
     SLEEP on, belovèd, sleep, and take
     thy rest;
@@ -13053,7 +13053,7 @@
     Good-night!\n\n
     Sarah Doudney
     </item>
-    <item>
+        <item>
     387 CH 444 10.10.\n\n
     PEACE, perfect peace, in this dark
     world of sin?
@@ -13083,7 +13083,7 @@
     Edward Henry Bickerstth,
     1825-1906.
     </item>
-    <item>
+        <item>
     388 CH 331 88.84.\n\n
     O LORD of life, where’re they be,
     Safe in Thine own eternity,
@@ -13105,7 +13105,7 @@
     Hallelujah!\n\n
     Frederick Lucian Hosmer, 1840—1929
     </item>
-    <item>
+        <item>
     389 CH 330 77. 77. and refrain.\n\n
     NOW the labourer’s task is o’er,
     Now the battle-day is past;
@@ -13143,7 +13143,7 @@
         sleeping.
     </i>
     </item>
-    <item>
+        <item>
     390 SS&amp;S 89 MB52 NM 168 8.78.7 and refrain\n\n
     THE great Physician now is near,
     The sympathizing Jesus;
@@ -13185,7 +13185,7 @@
     His name, the name of Jesus.\n\n
     W.M Hunter
     </item>
-    <item>
+        <item>
     391 CH 353 C. M.\n\n
     <i>Medical Missions</i>
     FATHER, whose will is life and good
@@ -13215,7 +13215,7 @@
     Hardwicke Drummond Rawnsley,
     1851-1920.
     </item>
-    <item>
+        <item>
     392 CH 351 C.M\n\n
     <i>Medical Missions</i>
     FROM Thee all skill and science flow,
@@ -13236,7 +13236,7 @@
     The paradise of God.\n\n
     Charles Kingsley, 1819-75.
     </item>
-    <item>
+        <item>
     393 CH 277 L.M.\n\n
     AT even, when the sun was set,
     The sick, O Lord, around Thee lay;
@@ -13293,7 +13293,7 @@
     And in Thy mercy heal us all.\n\n
     Henry Twells, 1823-1900.
     </item>
-    <item>
+        <item>
     394\n\n
     TAKE bread and eat,
     Take wine and drink
@@ -13319,7 +13319,7 @@
     Always in mem’ry of me.\n\n
     Kenneth Awah
     </item>
-    <item>
+        <item>
     395 CH 311 L. M,\n\n
     MY God, and is Thy table spread?
     And does Thy cup with love
@@ -13346,7 +13346,7 @@
     That here its sacred pledges tastes.\n\n
     Philip Doddridge, 1702-51.
     </item>
-    <item>
+        <item>
     396 CH 314 777.\n\n
     JESUS, to Thy table led;
     Now let every heart be fed
@@ -13371,7 +13371,7 @@
     In the bright and better land.\n\n
     Robert Hall Baynes, 1831-95.
     </item>
-    <item>
+        <item>
     397 CH 316 C.M\n\n
     I AM not worthy, holy Lord,
     That Thou shouldst come to me;
@@ -13398,7 +13398,7 @@
     or evening.
     Henry Williams Baker, 1821-77-
     </item>
-    <item>
+        <item>
     398 CH 317 66.66.88.\n\n
     AUTHOR of life divine,
     Who hast a table spread,
@@ -13416,7 +13416,7 @@
     Behold without a veil Thy face.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     399 CH 320 10 10. 10 10. 10. 10.\n\n
     AND now, O Father, mindful of
     the love
@@ -13467,7 +13467,7 @@
     with Thee.\n\n
     William Bright, 1824-1901
     </item>
-    <item>
+        <item>
     400 CH 323 10 10 10 10\n\n
     HERE, O my Lord, I see Thee
     face to face;
@@ -13526,7 +13526,7 @@
     bliss and love.\n\n
     Horatius Bonar, 1808-89.
     </item>
-    <item>
+        <item>
     401 SS&amp;S 281 MB 326 NM 118 6.4.6.4.6.6.6.4.\n\n
     COME, for the feast is spread;
     Hark to the call!
@@ -13570,7 +13570,7 @@
     Thee will we sing. \n\n
     Rev. H . M.A
     </item>
-    <item>
+        <item>
     402 CH 318 98.98.D.\n\n
     BREAD of the world, in mercy
     broken,
@@ -13586,7 +13586,7 @@
     That by Thy grace our souls are fed,\n\n
     Reginald Heber, 1783-1826
     </item>
-    <item>
+        <item>
     403 CH 202 10 10. 10 10.\n\n
     BREAK Thou the bread of life,
     Dear Lord, to me,
@@ -13607,7 +13607,7 @@
     Mary Artemisia Latbury,
     1841-1913.
     </item>
-    <item>
+        <item>
     404 CH 313 C. M.\n\n
     ACCORDING to Thy gracious
     word,
@@ -13638,7 +13638,7 @@
     Jesus, remember me.\n\n
     James Montgomery, 1771-1854.
     </item>
-    <item>
+        <item>
     405\n\n
     <i>Child presentation</i>\n
     O SISTER, how are you?
@@ -13667,7 +13667,7 @@
     For His mercy and Love.\n\n
     Rev. Dr.. J. N. Dah
     </item>
-    <item>
+        <item>
     406 CH 306 C.M.\n\n
     OUR children, Lord, in faith and
     prayer,
@@ -13686,7 +13686,7 @@
     In every righteous way.\n\n
     Thomas Haweis, 1734-1820.
     </item>
-    <item>
+        <item>
     407 CH 309 106.106.884 C.M.\n\n
     BY cool Siloam’s shady rill
     How sweet the lily grows!
@@ -13711,7 +13711,7 @@
     To keep us still Thine own.\n\n
     Reginald Heber, 1783-1826
     </item>
-    <item>
+        <item>
     408 CH 307 78. 78. 88.\n\n
     BLESSÈD Jesus, here we stand,
     Met to do as Thou hast spoken;
@@ -13744,7 +13744,7 @@
     Tr. by Catherine Winkworth,
     1827-78.
     </item>
-    <item>
+        <item>
     409 AH 270 77.77\n\n
     God be with them while they stand
     Heart in heart, as hand in hand;
@@ -13772,7 +13772,7 @@
     In a better home above.\n\n
     Rev. L.Tuttiett, M.A.
     </item>
-    <item>
+        <item>
     410 CH 326 76. 76. D.\n\n
     O FATHER, all creating,
     Whose wisdom, love, and power
@@ -13808,7 +13808,7 @@
     Is endless love begun.\n\n
     John Ellerton, 1826-93.
     </item>
-    <item>
+        <item>
     411 CH 327 11 10. 11 10.\n\n
     O PERFECT Love, all human
     thought transcending,
@@ -13837,7 +13837,7 @@
     Dorothy Frances Gurney,
     1858-1932.
     </item>
-    <item>
+        <item>
     412 CH 325 88. 86.\n\n
     O GOD of Love, to Thee we bow,
     And pray for these before Thee
@@ -13866,7 +13866,7 @@
     Those whom Thou makest one.\n\n
     William Vaughan Jenkins, 1868-1920
     </item>
-    <item>
+        <item>
     413
     Planting
     WE Plant with joy
@@ -13891,7 +13891,7 @@
     Your kingdom wants.\n\n
     Rev. Dr. J. N. Dah.
     </item>
-    <item>
+        <item>
     414 CH 618 76. 76. D. and refrain.\n\n
     WE plough the fields, and scatter
     The good seed on the land,
@@ -13929,7 +13929,7 @@
     Tr. by Jane Montgomery Campbell,
     1817-78
     </item>
-    <item>
+        <item>
     415 SS&amp;S 757 MB 143\n\n
     SOWING in the morning, sowing
     seeds of kindness,
@@ -13964,7 +13964,7 @@
     ing in the sheaves!\n\n
     Anon.
     </item>
-    <item>
+        <item>
     416 SS&amp;S 1057\n\n
     SOWING the seed by the dawn-
     light fair,
@@ -14011,7 +14011,7 @@
     Oh, what shall the harvest be?\n\n
     E.S. Oakey
     </item>
-    <item>
+        <item>
     417 CH 620 77.77\n\n
     PRAISE, O praise our God and
     King;
@@ -14049,7 +14049,7 @@
     Henry Williams Baker,
     1821-77.
     </item>
-    <item>
+        <item>
     418 CH 614 98. 98 Dactylic.\n\n
     NOW sing we a song for the
     harvest:
@@ -14093,7 +14093,7 @@
     praise.\n\n
     John White Chadwick, 1840-1904.
     </item>
-    <item>
+        <item>
     419 CH 615 88. 88. 88.\n\n
     LORD of the harvest, once again
     We thank Thee for the ripened
@@ -14119,7 +14119,7 @@
     stay!\n\n
     Joseph Anstice, 1808-36
     </item>
-    <item>
+        <item>
     420\n\n
     GOD bids us till the soil
     To plant the things we need
@@ -14143,7 +14143,7 @@
     Receive your blessing too.\n\n
     Rev. Dr. J. N. Dah
     </item>
-    <item>
+        <item>
     421 CH 617 C. M.\n\n
     FOUNTAIN of mercy, God of love,
     How rich Thy bounties are!
@@ -14173,7 +14173,7 @@
     In sweet harmonious praise.\n\n
     Alice Flowerdew, 1759-1830.
     </item>
-    <item>
+        <item>
     422 CH 619 77. 77. D.\n\n
     COME, ye thankful people, come,
     Raise the song of harvest-home:
@@ -14210,7 +14210,7 @@
     Raise the glorious harvest-home.\n\n
     Henry Alford, 1810-71
     </item>
-    <item>
+        <item>
     423 HLC 286\n\n
     Years I spent in vanity and pride,
     Caring not my Lord was crucified,
@@ -14243,7 +14243,7 @@
     At Calvary!\n\n
     William R. Newell, 1895
     </item>
-    <item>
+        <item>
     424 L.M.\n\n
     To you, O Lord, I lift my soul,
     In you, my God, I trust always;
@@ -14264,7 +14264,7 @@
     For everlasting it shall be.\n\n
     Peter Kwo
     </item>
-    <item>
+        <item>
     425 CH 398 D. C. M.\n\n
     THE Lord is rich and merciful;
     The Lord is very kind;
@@ -14293,7 +14293,7 @@
     When evening hours arrive.\n\n
     Thomas Toke Lynch, 1818-71.
     </item>
-    <item>
+        <item>
     426\n\n
     SEARCH me Lord and make me
     pure (make me pure)
@@ -14318,7 +14318,7 @@
     Lord I bless your Name on high.\n\n
     Emmanuel Nyambod Timah
     </item>
-    <item>
+        <item>
     427 SS&amp;S 1111\n\n
     NOW just a word for Jesus,
     Your dearest Friend so true;
@@ -14349,7 +14349,7 @@
     And leave the rest to Him.\n\n
     F.J. Crosby
     </item>
-    <item>
+        <item>
     428\n\n
     MAKE Thy ways known to me:
     Lord, purify thou me.
@@ -14369,7 +14369,7 @@
     Tam Moses Kouekam,
     1952-2009
     </item>
-    <item>
+        <item>
     429 CH 415 664. 6664\n\n
     MY faith looks up to Thee,
     Thou Lamb of Calvary,
@@ -14401,7 +14401,7 @@
     A ransomed soul.\n\n
     Ray Palmer, 1808-87.
     </item>
-    <item>
+        <item>
     430 CH 551 S. M.\n\n
     MY times are in Thy hand:
     My God, I wish them there;
@@ -14426,7 +14426,7 @@
     I shall for ever be.\n\n
     William Freeman Lioyd, 1791-1853
     </item>
-    <item>
+        <item>
     431 CH 674 76. 76.\n\n
     LOOKING upward every day,
     Sunshine on our faces;
@@ -14450,7 +14450,7 @@
     To the; holy city.\n\n
     Mary Butter, 1841-1916.
     </item>
-    <item>
+        <item>
     432 CH 338 L. M.\n\n
     LORD, speak to me, that I may
     speak
@@ -14496,7 +14496,7 @@
     Frances Ridley Havergal,
     1836-79.
     </item>
-    <item>
+        <item>
     433 CH 404 87. 87.\n\n
     LORD, Thy mercy now entreating,
     Low before Thy throne we fall:
@@ -14529,7 +14529,7 @@
     Mary Ann Sidebotham,
     1833-1913.
     </item>
-    <item>
+        <item>
     434 CH 405 777.\n\n
     LORD, in this Thy mercy’s day,
     Ere it wholly pass away,
@@ -14551,7 +14551,7 @@
     Grant us ’neath Thy wings a place.\n\n
     Isaac Williams, 1802-65.
     </item>
-    <item>
+        <item>
     435 SS&amp;S 476 MB 161\n\n
     JESUS, my Lord, to Thee I cry;
     Unless Thou help me, I must die:
@@ -14583,7 +14583,7 @@
     But take me as I am! \n\n
     Eliza H. Hamiton
     </item>
-    <item>
+        <item>
     436 CH 469 77.76\n\n
     JESUS, from Thy throne on high,
     Far above the bright blue sky,
@@ -14607,7 +14607,7 @@
     Hear us, Holy Jesus.\n\n
     Thomas Benson Pollock, 1836-96.
     </item>
-    <item>
+        <item>
     437 SS&amp;S 134 MB 64 7.6. 7.6 and refrain\n\n
     JESUS, keep me near the Cross:
     There a precious fountain,
@@ -14634,7 +14634,7 @@
     Just beyond the river.\n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     438 CH 411 88.86.\n\n
     JUST as I am, without one plea
     But that Thy blood was shed for me,
@@ -14671,7 +14671,7 @@
     O Lamb of God, I come.\n\n
     Charlotte Elliott, 1789-1871.
     </item>
-    <item>
+        <item>
     439 CH 399 77. 76.\n\n
     JESUS, we are far away
     From the light of heavenly day;
@@ -14704,7 +14704,7 @@
     Thomas Benson Pollock,
     1836-96.
     </item>
-    <item>
+        <item>
     440 CH 414 77.77.D.\n\n
     JESUS, Lover of my soul,
     Let me to Thy bosom fly,
@@ -14740,7 +14740,7 @@
     Rise to all eternity.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     441\n\n
     I AM surrounded by many troubles,
     Too many to count that tongue
@@ -14773,7 +14773,7 @@
     Come, Lord Jesus, and be with me.\n\n
     Kobi Stephen
     </item>
-    <item>
+        <item>
     442\n\n
     I was saddened by sin,
     and weighed down by grief,
@@ -14802,7 +14802,7 @@
     the cross.\n\n
     Kenneth Awah
     </item>
-    <item>
+        <item>
     443\n\n
     IN your goodness and your greatness
     Harken, Lord to my pray’r
@@ -14822,7 +14822,7 @@
     All my trust is in you.\n\n
     Kenneth Awah
     </item>
-    <item>
+        <item>
     444\n\n
     In times of joy and times of pain,
     The master’s way I want to walk.
@@ -14846,7 +14846,7 @@
     Neba Michael Che,
     1966-2005
     </item>
-    <item>
+        <item>
     445 CH 410 D.C.M\n\n
     I HEARD the voice of Jesus say,
     ‘Come unto me and rest;
@@ -14875,7 +14875,7 @@
     Till travelling days are done.\n\n
     Horatius Bonar, 1808-89
     </item>
-    <item>
+        <item>
     446 7.7.7.7. and refrain\n\n
     I will plead with Thee, my Lord,
     If Thou make me still within;
@@ -14902,7 +14902,7 @@
     And give glory to Thy Name.\n\n
     Rev. Ngalle Simon
     </item>
-    <item>
+        <item>
     447 SS&amp;S 471\n\n
     I’VE wandered far away from God:
     Now I’m coming home;
@@ -14929,7 +14929,7 @@
     Lord, I’m coming home.\n\n
     Wm. J Kirk Patrick
     </item>
-    <item>
+        <item>
     448 SS&amp;S 477 MB 118 77.77 and refrain\n\n
     I AM coming to the cross;
     I am poor, and weak, and blind;
@@ -14964,7 +14964,7 @@
     \n\n
     W.Mcdonal
     </item>
-    <item>
+        <item>
     449 SS&amp;S 491\n\n
     HEAVENLY Father, bless me now,
     At the cross of Christ l bow;
@@ -14990,7 +14990,7 @@
     Gracious Father, show Thy grace.\n\n
     Alexander Clark, D. D.
     </item>
-    <item>
+        <item>
     450\n\n
     GIVE us a pure and humble heart
     That we may see and hear Thee
@@ -15018,7 +15018,7 @@
     are Thine.\n\n
     Emmanuel Nyambod Timah
     </item>
-    <item>
+        <item>
     451 CH 243 10.10.10.10.\n\n
     FATHER, again in Jesus’ Name we
     meet,
@@ -15053,7 +15053,7 @@
     Lucy Elizabeth Georgina
     Whitmore, 1792-1840.
     </item>
-    <item>
+        <item>
     452\n\n
     DO you hear when I cry?
     do you hear when I pray?
@@ -15082,7 +15082,7 @@
     While the tempter is nigh.\n\n
     Kenneth Awah
     </item>
-    <item>
+        <item>
     453 CH 400 C. M.\n\n
     COME, let us to the Lord our God
     With contrite hearts return;
@@ -15113,7 +15113,7 @@
     John Morison, 1750-98;
     As in Scottish Paraphrases, 1781
     </item>
-    <item>
+        <item>
     454 CH 451 C.M\n\n
     APPROACH, my soul, the mercy-
     seat,
@@ -15138,7 +15138,7 @@
     Might plead Thy gracious Name!\n\n
     John Newton, 1725-1807.
     </item>
-    <item>
+        <item>
     455 CH 413 77.77.77.\n\n
     ROCK of Ages, cleft for me,
     Let me hide myself in Thee;
@@ -15169,7 +15169,7 @@
     Augustus Montague Toplady,
     1740-78.
     </item>
-    <item>
+        <item>
     456 SS&amp;S 488 MB 221 8.5.8.5. and refrain\n\n
     PASS me not, O gentle Saviour,
     hear my humble cry;
@@ -15195,7 +15195,7 @@
     Whom in heaven but Thee? \n\n
     F.J Crosby
     </item>
-    <item>
+        <item>
     457 SS&amp;S 474\n\n
     ONCE more, my soul, thy Saviour,
     through the Word,
@@ -15235,7 +15235,7 @@
     We rest upon it now. \n\n
     El Nathan
     </item>
-    <item>
+        <item>
     458 CH 406 C.M.\n\n
     ONE who is all unfit to count
     As scholar in Thy school,
@@ -15271,7 +15271,7 @@
     Tilak, 1862-1919; Tr. by Nicol
     Macnicol, 1870-1952.
     </item>
-    <item>
+        <item>
     459 CH 403 S.M.\n\n
     LORD Jesus, think on me,
     And purge away my sin;
@@ -15301,7 +15301,7 @@
     Tr. by Allen William Chatfield,
     1808-96.
     </item>
-    <item>
+        <item>
     460 SS&amp;S 318 MB 226\n\n
     SWEET hour of prayer! sweet
     hour of prayer!
@@ -15341,7 +15341,7 @@
     prayer!”\n\n
     Rev.W.W. Walford,
     </item>
-    <item>
+        <item>
     461 FHP 487\n\n
     AMAZING grace! How sweet the
     sound,
@@ -15365,7 +15365,7 @@
     Than when we first begun.\n\n
     John Newton
     </item>
-    <item>
+        <item>
     462\n\n
     I AM happy the Lord loves me,
     For all my sins he has forgiven
@@ -15398,7 +15398,7 @@
     Based on a Tune by Prince Bao Bruno &amp;
     Wende Daniel
     </item>
-    <item>
+        <item>
     463 Ch 679 SS&amp;S 309 S.M.
     REVIVE Thy work, O Lord:
     Thy mighty arm make bare;
@@ -15431,7 +15431,7 @@
     The blessing, Lord, be ours.\n\n
     Albert Midlane, 1825-1909.
     </item>
-    <item>
+        <item>
     464 CH 213 88.84.\n\n
     FATHER of all, from land and sea
     The nations sing, ‘Thine, Lord,
@@ -15458,7 +15458,7 @@
     We all are one.’\n\n
     Christopher Wordsworth, 1807-85.
     </item>
-    <item>
+        <item>
     465 CH 207 87.87.87.\n\n
     CHRIST is made the sure foundation,
     Christ the head and corner-stone,
@@ -15488,7 +15488,7 @@
     Latin, 7th or 8th Century; Tr. by
     John Mason Neale, 1818-66.
     </item>
-    <item>
+        <item>
     466 CH 209 C.M.\n\n
     CITY of God, how broad and far
     Outspread thy walls sublime!
@@ -15517,7 +15517,7 @@
     The eternal City stands.\n\n
     Samuel Johnson, 1822-81.
     </item>
-    <item>
+        <item>
     467 CH 211 87.87.887.\n\n
     WE come unto our fathers’ God;
     Their Rock is our Salvation;
@@ -15555,7 +15555,7 @@
     Bless the same boundless Giver.\n\n
     Thomas Hornblower Gill, 1819-1906.
     </item>
-    <item>
+        <item>
     468 CH 215 76.76.D.\n\n
     THY hand, O God, has guided
     Thy flock, from age to age;
@@ -15593,7 +15593,7 @@
     Edward Hayes Plumptre,
     1821-91.
     </item>
-    <item>
+        <item>
     469 CH 205 76. 76. D.\n\n
     THE Church’s one foundation
     Is Jesus Christ her Lord :
@@ -15637,7 +15637,7 @@
     On high may dwell with Thee.\n\n
     Samuel John Stone, 1839-1900.
     </item>
-    <item>
+        <item>
     470 CH 227 C.M.\n\n
     LET saints on earth in concert sing
     With those whose work is done;
@@ -15662,7 +15662,7 @@
     And bring us safe to heaven.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     471 CH 208 77.76.\n\n
     JESUS, with Thy Church abide;
     Be her Saviour, Lord, and Guide,
@@ -15699,7 +15699,7 @@
     We beseech Thee, hear us.\n\n
     Thomas Benson Pollock, 1836-96.
     </item>
-    <item>
+        <item>
     472 CH 210 From Psalm 137 S.M.\n\n
     I LOVE Thy Kingdom, Lord,
     The house of Thine abode,
@@ -15728,7 +15728,7 @@
     And brighter bliss of heaven.\n\n
     Timothy Dwight, 1752-1817.
     </item>
-    <item>
+        <item>
     473 CH 206 87. 87. D\n\n
     GLORIOUS things of thee are
     spoken,
@@ -15766,7 +15766,7 @@
     None but Zion’s children know.\n\n
     John Newton, 1725-1807.
     </item>
-    <item>
+        <item>
     474 CH 364 664. 6664.\n\n
     THOU whose almighty word
     Chaos and darkness heard
@@ -15798,7 +15798,7 @@
     Let there be light.\n\n
     John Marriott, 1780-1825.
     </item>
-    <item>
+        <item>
     475 CH 680 73.73.77.73.\n\n
     WE have heard a joyful sound, –
     ‘Jesus saves!’
@@ -15836,7 +15836,7 @@
     Priscilla Jane Owens,
     1829-1907
     </item>
-    <item>
+        <item>
     476 SS&amp;S 1091\n\n
     WE come to-day from near and
     far,
@@ -15865,7 +15865,7 @@
     To speak glad words of cheer.\n\n
     Allen A. Judson
     </item>
-    <item>
+        <item>
     477 SS&amp;S 1082 MB 306\n\n
     THERE’s a call comes ringing o’er
     the restless wave,
@@ -15900,7 +15900,7 @@
     “Send the light,. . send the light!”. .\n\n
     Chass H. Gabriel
     </item>
-    <item>
+        <item>
     478 CH 681 11 10. 11 10. and refrain, Dactylic.\n\n
     RESCUE the perishing, care for
     the dying;
@@ -15938,7 +15938,7 @@
     has died.\n\n
     Frances Jane Van Alstyne, 1820-1915.
     </item>
-    <item>
+        <item>
     479 CH 699 C.M. and refrain.\n\n
     O CHRIST, in thee my soul hath
     found,
@@ -15969,7 +15969,7 @@
     Thy loveliness to see.\n\n
     B.E.
     </item>
-    <item>
+        <item>
     480 CH 386 L. M.\n\n
     O SPIRIT of the living God,
     In all Thy plenitude of grace,
@@ -15996,7 +15996,7 @@
     Till every kindred call Him Lord.\n\n
     James Montgomery, 1771-1854.
     </item>
-    <item>
+        <item>
     481 SS&amp;S 1079 MB 100 .\n\n
     WE have heard the joyful sound:
     Jesus saves! Jesus saves!
@@ -16033,7 +16033,7 @@
     Jesus saves! Jesus saves!\n\n
     Priscilla J. Owens
     </item>
-    <item>
+        <item>
     482 CH 697 L.M. and refrain\n\n
     MY hope is built on nothing less
     Than Jesus’ blood and right
@@ -16057,7 +16057,7 @@
     He then is all my hope and stay.\n\n
     Edward Mote, 1797-1874
     </item>
-    <item>
+        <item>
     483 CH 687 87.87.337.\n\n
     LORD, I hear of showers of blessing
     Thou art scattering, full and free,
@@ -16096,7 +16096,7 @@
     Even me.\n\n
     Elizabeth Codner, 1824-1919
     </item>
-    <item>
+        <item>
     484 CH 388 From Ps 122 L. M.\n\n
     JESUS shall reign where’re the sun
     Does his successive journeys run;
@@ -16128,7 +16128,7 @@
     And earth repeat the long Amen.\n\n
     Isaac Watts, 1674-1748.
     </item>
-    <item>
+        <item>
     485 CH 500 87. 87.\n\n
     JESUS calls us! O’er the tumult
     Of our life’s wild restless sea,
@@ -16155,7 +16155,7 @@
     Cecil Frances Alexander,
     1818-95.
     </item>
-    <item>
+        <item>
     486 CH 686 64.64.\n\n
     TO-DAY the Saviour calls:
     Ye wanderers, come;
@@ -16172,7 +16172,7 @@
     Samuel Francis Smith,
     1808-95
     </item>
-    <item>
+        <item>
     487 CH 698 88.87.\n\n
     I AM not skilled to understand
     What God hath willed, what God
@@ -16205,7 +16205,7 @@
     Once died to be my Saviour.\n\n
     Dora Greenwell, 1821-82.
     </item>
-    <item>
+        <item>
     488 CH 694 76. 76. D.\n\n
     I LAY my sins on Jesus,
     The spotless Lamb of God;
@@ -16241,7 +16241,7 @@
     To learn the angels’ song.\n\n
     Horatius Bonar, 1808-89
     </item>
-    <item>
+        <item>
     489 CH 689 S. M. and refrain.\n\n
     I HEAR Thy welcome voice
     That calls me, Lord, to Thee,
@@ -16268,7 +16268,7 @@
     Our Strength and Righteousness!\n\n
     Lewis Hartsough, 1828-72.
     </item>
-    <item>
+        <item>
     490 CH 389 77. 77. D.\n\n
     HARK! the song of jubilee,
     Loud as mighty thunders’ roar,
@@ -16297,7 +16297,7 @@
     God in Christ, is all in all.\n\n
     James Montgomery, 1771-1854.
     </item>
-    <item>
+        <item>
     491 SS&amp;S 1081\n\n
     HEAR the everlasting song,
     Breaking through the sky:
@@ -16326,7 +16326,7 @@
     “The Lord is King!”\n\n
     J.L. Sterling
     </item>
-    <item>
+        <item>
     492 CH 380 Irr.\n\n
     GOD is working His purpose out,
     as year succeeds to year:
@@ -16378,7 +16378,7 @@
     Arthur Campbell Ainger,
     1841-1919.
     </item>
-    <item>
+        <item>
     493 CH 370 87. 87. D.\n\n
     ‘FOR My sake and the Gospel’s, go
     And tell redemption’s story’;
@@ -16421,7 +16421,7 @@
     Is Thine, and Thine forever.\n\n
     Edward Henry Bickersteth, 1825-1906
     </item>
-    <item>
+        <item>
     494 CH 688 11 10.11 10. Dactylic.\n\n
     COME, ye disconsolate, where’er
     ye languish,
@@ -16450,7 +16450,7 @@
     Thomas Moore, 1779-1852, and
     Thomas Hastings, 1784-1872
     </item>
-    <item>
+        <item>
     495\n\n
     Arise, O Church! and face the task
     Our mission unfulfilled
@@ -16488,7 +16488,7 @@
     Pcc Golden Jubilee Anthem (1957-2007)
     Peter Kwo
     </item>
-    <item>
+        <item>
     496 CH 369 L. M.\n\n
     ARM of the Lord, awake, awake!
     Put on Thy strength, the na-
@@ -16514,7 +16514,7 @@
     all.\n\n
     William Shrubsole, 1759-1829.
     </item>
-    <item>
+        <item>
     497 CH 376 S.M.\n\n
     O LORD our God, arise!
     The cause of truth maintain,
@@ -16536,7 +16536,7 @@
     Let echoing anthems ring.\n\n
     ralph wardlaw, 1779-1853
     </item>
-    <item>
+        <item>
     498 CH 662 77.77.\n\n
     GENTLE Jesus, meek and mild,
     Look upon a little child,
@@ -16560,7 +16560,7 @@
     Christ, the Holy Child, in me.\n\n
     Charles Wesley, 1707-88
     </item>
-    <item>
+        <item>
     499 CH 663 65.65.\n\n
     DO no sinful action;
     Speak no angry word;
@@ -16585,7 +16585,7 @@
     Cecil Frances Alexander,
     1823-95
     </item>
-    <item>
+        <item>
     500 CH 664 65.75.\n\n
     GOD is always near me,
     Hearing what I say,
@@ -16601,7 +16601,7 @@
     But God knows it all.\n\n
     Philipp Bliss, 1838-76
     </item>
-    <item>
+        <item>
     501 CH 658 77.77. and refrain.\n\n
     CHILDREN of Jerusalem
     Sang the praise of Jesus’ name:
@@ -16620,7 +16620,7 @@
     Till hosannas reach the skies.\n\n
     John Henley, 1800-42
     </item>
-    <item>
+        <item>
     502 SS&amp;S 1165 MB 93\n\n
     COME to the Saviour, make no
     delay;
@@ -16652,7 +16652,7 @@
     “Will you, my children, come?”\n\n
     G.F Root,
     </item>
-    <item>
+        <item>
     503 SS&amp;S 1143\n\n
     God make my life a little light
     within the world to grow;
@@ -16676,7 +16676,7 @@
     Of faith—that never waxeth dim,
     In all His wondrous ways.
     </item>
-    <item>
+        <item>
     504 CH 362 56. 659.
     THE fields are all white,
     And the reapers are few;
@@ -16701,7 +16701,7 @@
     The Book Of Praise For Children,
     1881.
     </item>
-    <item>
+        <item>
     505 CH 363 76. 76. D.\n\n
     THE wise may bring their learning,
     The rich may bring their wealth,
@@ -16731,7 +16731,7 @@
     Congregational Church Hymnal
     1887
     </item>
-    <item>
+        <item>
     506 SS&amp;S 1164\n\n
     SAVIOUR, like a shepherd lead us,
     Much we need Thy tenderest
@@ -16762,7 +16762,7 @@
     Thou hast loved us, love us still.\n\n
     D. Thrupp.
     </item>
-    <item>
+        <item>
     507 CH 675 C.M.\n\n
     OJESUS, strong and pure and true,
     Before Thy feet we bow;
@@ -16792,7 +16792,7 @@
     William Walsham How,
     1823-97.
     </item>
-    <item>
+        <item>
     508 CH 670 76.887.\n\n
     O WHAT can little hands do
     To please the King of heaven?
@@ -16819,7 +16819,7 @@
     Such grace to mine be given.\n\n
     Anon
     </item>
-    <item>
+        <item>
     509 CH 668 77.77.\n\n
     LOVING Shepherd of thy sheep,
     Keep me, Lord, in safety keep;
@@ -16841,7 +16841,7 @@
     Jesus, claim me for Thine own.\n\n
     Jane Eliza Leeson, 1807-82
     </item>
-    <item>
+        <item>
     510 CH 299 87. 87. 87.\n\n
     LORD, dismiss us with Thy blessing;
     Fill our hearts with joy and peace;
@@ -16857,7 +16857,7 @@
     With us evermore be found.\n\n
     John Fawcett, 1740-1817
     </item>
-    <item>
+        <item>
     511 CH 660 77.77.and refrain\n\n
     JESUS loves me! this I know,
     For the Bible tells me so;
@@ -16879,7 +16879,7 @@
     Anna Bartlett Warner,
     1820-1915
     </item>
-    <item>
+        <item>
     512 CH 667 85.83.\n\n
     JESUS, Friend of little children,
     Be a friend to me;
@@ -16896,7 +16896,7 @@
     Walter John Mathams,
     1853-1931
     </item>
-    <item>
+        <item>
     513 CH 671 55.65.64.64.\n\n
     JESUS bids us shine
     With a pure, clear light,
@@ -16924,7 +16924,7 @@
     And I in mine.\n\n
     Susan Warner, 1819-85
     </item>
-    <item>
+        <item>
     514 CH 669 65.65.and refrain\n\n
     IF I come to Jesus,
     He will make me glad;
@@ -16952,7 +16952,7 @@
     Frances Jane Van Alstyne,
     1820-1915
     </item>
-    <item>
+        <item>
     515 CH 704 11 11. 11 12.and refrain.\n\n
     YIELD not to temptation, for
     yielding is sin;
@@ -16988,7 +16988,7 @@
     Haratio Richmond Palmer,
     1834-1907
     </item>
-    <item>
+        <item>
     516 CH 701 MB 41 87.87.D.\n\n
     WHAT a friend we have in Jesus,
     All our sins and griefs to bear!
@@ -17016,7 +17016,7 @@
     Thou wilt find a solace there.\n\n
     Joseph Scriven, 1820-86.
     </item>
-    <item>
+        <item>
     517 CH 702 MB 185 84. 84. 8884.\n\n
     THROUGH the love of God our
     Saviour
@@ -17046,7 +17046,7 @@
     All must be well.\n\n
     Mary Peters, 1813-56
     </item>
-    <item>
+        <item>
     518 CH 476 65. 65. D.\n\n
     SAVIOUR, blessèd Saviour,
     Listen while we sing,
@@ -17090,7 +17090,7 @@
     Praises to their King.\n\n
     Godfrey Thring, - 1823-1903.
     </item>
-    <item>
+        <item>
     519 CH 707 76. 76. D. and refrain.\n\n
     SAFE in the arms of Jesus,
     Safe on His gentle breast,
@@ -17126,7 +17126,7 @@
     Frances Jane Van Alstyne,
     1820-1915
     </item>
-    <item>
+        <item>
     520 CH 474 C.M.\n\n
     O FOR a faith that will not shrink,
     Though pressed by many a foe,\n
@@ -17152,7 +17152,7 @@
     William Hile Bathurst,
     1796-1877.
     </item>
-    <item>
+        <item>
     521 CH 457 C. M.\n\n
     O FOR a closer walk with God,
     A calm and heavenly frame,
@@ -17180,7 +17180,7 @@
     That leads me to the Lamb.\n\n
     William Cowper, 1731-1800.
     </item>
-    <item>
+        <item>
     522 CH 471 L.M.\n\n
     O Thou who camest from above,
     The pure celestial fire to impart,
@@ -17202,7 +17202,7 @@
     And make the sacrifice complete.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     523 CH 487 88.86.\n\n
     O GOD of mercy, God of might,
     In love and pity infinite,
@@ -17234,7 +17234,7 @@
     All those who give to Thee.\n\n
     Godfrey Thring, 1823-1903.
     </item>
-    <item>
+        <item>
     524 CH 453 10.10\n\n
     O KING of mercy, from Thy
     throne on high
@@ -17273,7 +17273,7 @@
     above.\n\n
     Thomas Rawson Birks, 1810-83.
     </item>
-    <item>
+        <item>
     525 CH 475 64.64.664\n\n
     NEARER, my God, to Thee,
     Nearer to Thee!
@@ -17313,7 +17313,7 @@
     Sarah Flower Adams,
     1805-48.
     </item>
-    <item>
+        <item>
     526 CH 464 D.S.M.\n\n
     MAKE me a captive, Lord,
     And then I shall be free;
@@ -17351,7 +17351,7 @@
     And found in Thee its life.\n\n
     George Matheson, 1842-1906.
     </item>
-    <item>
+        <item>
     527 CH 479 87.87.D.\n\n
     LOVE Divine, all loves excelling,
     Joy of heaven, to earth come
@@ -17381,7 +17381,7 @@
     Lost in wonder, love, and praise.\n\n
     Charles Wesley 1707-88.
     </item>
-    <item>
+        <item>
     528 CH 700 64.64. and refrain.\n\n
     I NEED Thee every hour,
     Most gracious Lord;
@@ -17408,7 +17408,7 @@
     In me fulfil.\n\n
     Anne Sherwood Hawks, 1835-1918. Refrain Added.
     </item>
-    <item>
+        <item>
     529 CH 450 77.77\n\n
     COME, my soul, thy suit prepare
     Jesus loves to answer prayer;
@@ -17433,7 +17433,7 @@
     Lead me to my journey’s end.\n\n
     John Newton, 1725-1807
     </item>
-    <item>
+        <item>
     530\n\n
     BLESSÈD be they whose hearts
     are pure
@@ -17454,7 +17454,7 @@
     Tam Moses Kouekam
     1952-2009
     </item>
-    <item>
+        <item>
     531\n\n
     BLESSÈD the hearts that here on
     earth are pure,
@@ -17492,7 +17492,7 @@
     So your dealing will be sound.\n\n
     Monica Asaah
     </item>
-    <item>
+        <item>
     532 CH 477 10 10. 10 10\n\n
     BE Thou my Vision, O Lord of
     my heart;
@@ -17537,7 +17537,7 @@
     Tr. by Mary Byrne, 1880-1931
     Versified by Eleanor Hull, 1860-1935.
     </item>
-    <item>
+        <item>
     533 CH 478 S.M.\n\n
     BLEST are the pure in heart,
     For they shall see their God;
@@ -17558,7 +17558,7 @@
     John Keble, 1792-1866,
     and others.
     </item>
-    <item>
+        <item>
     534 CH 490 S. M.\n\n
     BLEST be the tie that binds
     Our hearts in Jesus’ love;
@@ -17587,7 +17587,7 @@
     John Fawcett, 1740-1817,
     and others.
     </item>
-    <item>
+        <item>
     535 CH 656 L.M.\n\n
     BE present at our table, Lord,
     Be here and everywhere adored;
@@ -17596,7 +17596,7 @@
     May feast in Paradise with Thee.\n\n
     John Cennick, 1718-55
     </item>
-    <item>
+        <item>
     536 CH 651 L.M.\n\n
     FORTH in thy Name, O Lord, I
     go,
@@ -17627,7 +17627,7 @@
     heaven.\n\n
     Charles Wesley, 1707-88.
     </item>
-    <item>
+        <item>
     537 CH 627 87.84.\n\n
     STAR of peace to wanderers weary,
     Bright the beams that smile on
@@ -17653,7 +17653,7 @@
     Jane Cross Simpson,
     1811-86.
     </item>
-    <item>
+        <item>
     538 SS&amp;S 298\n\n
     GOD be with you till we meet
     again!–
@@ -17692,7 +17692,7 @@
     again!\n\n
     J.E. Rankin
     </item>
-    <item>
+        <item>
     539 CH 438 From Psalm 23 87.87.\n\n
     THE King of Love my Shepherd is,
     Whose goodness faileth never,
@@ -17723,7 +17723,7 @@
     Within Thy house for ever!\n\n
     Henry Williams Baker, 1821-77.
     </item>
-    <item>
+        <item>
     540 CH 443 65.65.D. and refrain.\n\n
     LIKE a river glorious
     Is God’s perfect peace,
@@ -17759,7 +17759,7 @@
     Frances Ridley Havergal,
     1836-79.
     </item>
-    <item>
+        <item>
     541 CH 448 87.87.337.\n\n
     ALL my hope on God is founded;
     He doth still my trust renew.
@@ -17802,7 +17802,7 @@
     Yattendom Hymnal, No. 69, 1899;\n
     Based on Joachim Neander, 1650-80.
     </item>
-    <item>
+        <item>
     542 CH 601 From Ps. 90 C. M.\n\n
     O GOD, our help in ages past,
     Our hope for years to come,
@@ -17831,7 +17831,7 @@
     And our eternal home.\n\n
     Isaac Watts, 1674-1748
     </item>
-    <item>
+        <item>
     543 CH 603 87. 87. D.\n\n
     HEAVENLY Father, Thou hast
     brought us
@@ -17871,7 +17871,7 @@
     Into everlasting light.\n\n
     Hester Periam Hawkins, 1846-1928
     </item>
-    <item>
+        <item>
     544 CH 607 L. M.\n\n
     GREAT God, we sing that mighty
     hand
@@ -17903,7 +17903,7 @@
     dust.\n\n
     Philip Doddridge, 1702-51
     </item>
-    <item>
+        <item>
     545 CH 606 75. 75. D.\n\n
     FATHER, let me dedicate
     All my times to Thee,
@@ -17939,7 +17939,7 @@
     Glorify Thy Name.\n\n
     Lawence Tuttiett, 1825-97.
     </item>
-    <item>
+        <item>
     546 CH 604 77. 77.\n\n
     FOR Thy mercy and Thy grace,
     Faithful through another year,
@@ -17965,7 +17965,7 @@
     Fit us for the promised crown.\n\n
     Henry Downton, 1818-85.
     </item>
-    <item>
+        <item>
     547 CH 605 87. 87. D\n\n
     AT Thy feet, our God and Father,
     Who hast blessed us all our days,
@@ -17998,7 +17998,7 @@
     James Drummond Burns,
     1823-64.
     </item>
-    <item>
+        <item>
     548\n\n
     <i>Morning Prayer</i>\n
     LORD, may this day be good,
@@ -18008,14 +18008,14 @@
     Give us your peace and love.\n\n
     Meh Evans
     </item>
-    <item>
+        <item>
     549 1Kg. 18:39b\n\n
     The Lord is God;
     The Lord is God;
     The Lord alone is God.\n\n
     Neba Michael Che, 1966-2005
     </item>
-    <item>
+        <item>
     550\n\n
     MIGHTY King of righteousness
     We come to Thee with all our
@@ -18028,7 +18028,7 @@
     For our salvation.\n\n
     Meshack A. Muluh
     </item>
-    <item>
+        <item>
     551\n\n
     LORD send Thy Spirit down
     as we gather in this place:
@@ -18038,7 +18038,7 @@
     And may Thy spirit reign within us.\n\n
     Muluh Edward
     </item>
-    <item>
+        <item>
     552\n\n
     Let me hear you speak again to me
     Let me hear your precious voice
@@ -18054,7 +18054,7 @@
     All that I am and have.\n\n
     Emmanuel Nyambod Timah
     </item>
-    <item>
+        <item>
     553 CH 712\n\n
     GLORY be to the Father, and to
     the Son, and to the Holy ghost:
@@ -18062,7 +18062,7 @@
     And ever shall be, world with-
     out end. Amen.
     </item>
-    <item>
+        <item>
     554\n\n
     O Lord how great you are
     O Lord so good you are
@@ -18070,7 +18070,7 @@
     In your praise for evermore.\n\n
     Emmanuel Ngou Thomas
     </item>
-    <item>
+        <item>
     555 Book of Divine Service (1981)\n\n
     O Come let us worship and bow
     down
@@ -18078,7 +18078,7 @@
     maker.\n\n
     Che William Fuh, May 2002.
     </item>
-    <item>
+        <item>
     556 PMH 914\n\n
     REJOICE to-day with one accord,
     Sing out with exultation;
@@ -18109,7 +18109,7 @@
     Let all His saints adore Him. \n\n
     H.W. Baker.
     </item>
-    <item>
+        <item>
     557 CH 647 L. M.\n\n
     <i>
     LAND of our Birth, we pledge to thee\n
@@ -18162,7 +18162,7 @@
     Rudyard Joseph Kipling,
     1865-1936.
     </item>
-    <item>
+        <item>
     558 CH 708 87. 87. 447.\n\n
     NOW to Him who loved us, gave us
     Every pledge that love could
@@ -18175,7 +18175,7 @@
     Samuel Miller Waring,
     1792-1827
     </item>
-    <item>
+        <item>
     559 CH 711 C. M.\n\n
     TO Him who sits upon the throne,
     The God whom we adore,
@@ -18183,7 +18183,7 @@
     Be glory evermore.\n\n
     Isaac Watts, 1674-1748
     </item>
-    <item>
+        <item>
     560 CH 709 L. M.\n\n
     PRAISE God, from whom all
     blessings flow;
@@ -18193,7 +18193,7 @@
     Praise Father, Son, and Holy Ghost.\n\n
     Thomas Ken, 1637-1711.
     </item>
-    <item>
+        <item>
     561 CH 710 66. 66. 88.\n\n
     NOW to the King of Heaven
     Your cheerful voices raise;
@@ -18206,7 +18206,7 @@
     Philip Doddridge, 1702-51,
     and Isaac Watts, 1674-1748.
     </item>
-    <item>
+        <item>
     562 i)\n\n
     <i>The Church Anthem</i>
     \n\n
@@ -18247,7 +18247,7 @@
     Ed. and Composed by Peter Kwo
     Bm-Pcc Centenary Anthem(1886-1986)
     </item>
-    <item>
+        <item>
     562 ii)\n\n
     <i>Centenary Anthem in Duala</i>\n\n
     1. # Ese njib’a betesedi ńol′ asu #\n
@@ -18277,7 +18277,7 @@
     Translated by S.N Ejedepang-Koge &amp;
     Etuge Emmanuel Sale
     </item>
-    <item>
+        <item>
     562 iii)\n\n
     <i>Centenary Anthem in Mungaka</i>\n\n
     I KA b ni ntāmti mb ṅ-k d mbi′ bo\n
@@ -18295,7 +18295,7 @@
     Nka ndz lum ṅkṳ b nda-a
     </b>\n
     </item>
-    <item>
+        <item>
     563 <b>A</b>men.\n
     2. Yu ntāmti ka Ba boṅ mbo bu' nka - nka
     Yu ntāmti ka Ba boṅ mbo bu' nka' nka...
@@ -18347,4 +18347,23 @@
     <string name="title_activity_church_history">church_history</string>
     <string name="HYMN_STATUS">Church Hymn Book</string>
     <string name="chb">CHB</string>
+    <string name="app_version">Version: 1.0</string>
+    <string name="pcc_about">
+        PCC Diary is a mobile application develops for Christians of the Presbyterian Church In Cameroon (PCC)
+and other believers of Christ Jesus.\n\n
+Your can have quick and easy access to the dairy’s daily readings, church Hymn Books, Church
+Information, church Magazine and Newsletters (The Messenger and Presbyterian Echo) and other
+information\n\n
+This app is free to download from Google play store, apple store but yearly fee is charge for some
+features please see the feature payment plan\n\n
+This app is produced by communication department of the PCC\n
+        Supervised by <i><b>Rev. Mokoko Thomas Mbua</b></i>
+    </string>
+    <string name="developers">Developers</string>
+    <string name="about_developers">
+        This application is inspired by God Almighty for the Praise and Glory of His Son Jesus Christ
+The app is:\n\n
+Developed by Asen A. Jevis ( jevis &amp; Associates Consulting)\n\n
+Designed &amp; Powered by Pefscom System\nCedric Tifuh\nMangi Elijah\nFrank Ekombe)\n\n
+    </string>
 </resources>

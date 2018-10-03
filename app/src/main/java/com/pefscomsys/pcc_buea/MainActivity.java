@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case  R.id.about:
-                Toast.makeText(getApplicationContext(), R.string.about, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, AboutActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
