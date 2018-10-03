@@ -48,6 +48,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         magBtn = view.findViewById(R.id.studyBookBtn);
         infoBtn = view.findViewById(R.id.infoBtn);
 
+
         bottomNavigationView = getActivity().findViewById(R.id.navigation);
         diaryBtn.setOnClickListener(this);
         hymnBtn.setOnClickListener(this);

@@ -32,9 +32,9 @@ public class ScriptureRetrieval {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Log.d("RetrievingScriptures", String.valueOf(dataSnapshot.getValue()));
-                diary = dataSnapshot.getValue();
+                //diary = dataSnapshot.getValue();
 
-                FScripture changes = (FScripture) diary;
+                FScripture changes = dataSnapshot.getValue(FScripture.class);
 
                 //do saving here. it will be best
                 //diary might return null
@@ -55,15 +55,16 @@ public class ScriptureRetrieval {
                 //pass the connection to the scripture class
                 myScripture = new Scripture();
                 myScripture.db = connection;
-
-                myScripture.setDay(changes.getDay());
-                myScripture.setMonth(changes.getMonth());
-                myScripture.setYear(changes.getYear());
-                myScripture.setDate(changes.getDate());
-                myScripture.setPsalms(changes.getPsalms());
-                myScripture.setReadingOne(changes.getReadingOne());
-                myScripture.setReadingTwo(changes.getReadingTwo());
-                myScripture.setReadingText(changes.getReadingText());
+                if (changes != null){
+                    myScripture.setDay(changes.getDay());
+                    myScripture.setMonth(changes.getMonth());
+                    myScripture.setYear(changes.getYear());
+                    myScripture.setDate(changes.getDate());
+                    myScripture.setPsalms(changes.getPsalms());
+                    myScripture.setReadingOne(changes.getReadingOne());
+                    myScripture.setReadingTwo(changes.getReadingTwo());
+                    myScripture.setReadingText(changes.getReadingText());
+                }
 
                 //now save the scripture
                 myScripture.saveScripture();

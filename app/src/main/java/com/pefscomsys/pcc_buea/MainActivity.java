@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         getOverflowMenu();
 
         //Initialise the application
-//        AppInitialiser init = new AppInitialiser(getApplicationContext());
-//        init.initialiseApp();
+        AppInitialiser init = new AppInitialiser(this);
+        init.initialiseApp();
 
         //pull scripture updates
 
