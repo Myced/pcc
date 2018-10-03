@@ -11,8 +11,6 @@ public class AppInitialiser
 {
     private Context context;
     private ProgressDialog dialog;
-    private SharedPreferences mStatusCheck = context.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE);
-    private SharedPreferences.Editor edit = mStatusCheck.edit();
 
     public AppInitialiser(Context context)
     {
@@ -37,7 +35,7 @@ public class AppInitialiser
     public void copyDatabase()
     {
         Log.d("PCCAPP", "copying database");
-        ScriptureDBHandler myDb = new ScriptureDBHandler(this.context);
+        ScriptureDBHandler myDb = new ScriptureDBHandler(context);
 
         //now create the database
         try {
@@ -64,6 +62,8 @@ public class AppInitialiser
     public boolean isFirstRun()
     {
         //check shared preferences for FIRST_RUN
+        SharedPreferences mStatusCheck = context.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE);
+        Log.d("STATUS", "First run status: "+ mStatusCheck.getAll().toString());
 
         if(!mStatusCheck.contains("FIRST_RUN"))
         {

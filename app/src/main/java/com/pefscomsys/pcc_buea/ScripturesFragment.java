@@ -125,7 +125,7 @@ public class ScripturesFragment extends Fragment {
         MyDate date = new MyDate(getContext());
 
         //now check avtivation for this date
-        Activation activation = new Activation(getContext());
+        final Activation activation = new Activation(getContext());
 
         //check the activation this year
         activationYear = date.getCurrentYear();
@@ -174,35 +174,47 @@ public class ScripturesFragment extends Fragment {
 
         //now with the date already prepared.
         int theCurrentYearInt = Integer.parseInt(currentYear);
-        int theFollowingYear = theCurrentYearInt + 1;
+        final int theFollowingYear = theCurrentYearInt + 1;
 
         //checking if the diary for the following year is available.
 
-        Boolean availableStatus = this.checkAvaialable(Integer.toString(theFollowingYear));
+
+        checkAvailable(new SimpleFirebaseCallBack<Boolean>() {
+            @Override
+            public void isAvailable(Boolean status) {
+                Log.d("STATS", status.toString());
+                if (status) {
+                    // true was returned
+                    //Perform the action you want to perform if its available inside year
+                    //then check if its available
+                    Log.d("Available", "Diary is available");
+                    boolean activationRes = activation.checkDiary(Integer.toString(theFollowingYear));
+
+                    if(activationRes)
+                    {
+                        getDiaryLayout.setVisibility(View.GONE);
+                    }
+                    else
+                    {
+                        String yYear = Integer.toString(theFollowingYear) + " Now Available. \n " +
+                                "Click on the button below to get it";
+                        getDiaryText.setText(yYear);
+
+                        getDiaryLayout.setVisibility(View.VISIBLE);
+                    }
+
+                } else {
+                    // false was returned
+                    //if its not available perform it inside here
+
+                    Log.d("Available", "Diary is not available");
+                    getDiaryLayout.setVisibility(View.GONE);
+                }
+
+            }
+        }, Integer.toString(theFollowingYear));
 
         //if this is true. then check if the year has been activated
-        if(availableStatus == true)
-        {
-            //then check if its available
-            boolean activationRes = activation.checkDiary(Integer.toString(theFollowingYear));
-
-            if(activationRes == true)
-            {
-                this.getDiaryLayout.setVisibility(View.GONE);
-            }
-            else
-            {
-                String yYear = Integer.toString(theFollowingYear) + " Now Available. \n " +
-                        "Click on the button below to get it";
-                this.getDiaryText.setText(yYear);
-
-                this.getDiaryLayout.setVisibility(View.VISIBLE);
-            }
-        }
-        else
-        {
-            this.getDiaryLayout.setVisibility(View.GONE);
-        }
 
         //now get it from the db with the Scripture DB Helper
          scriptureDb = new ScriptureDBHandler(getContext());
@@ -899,8 +911,6 @@ public class ScripturesFragment extends Fragment {
     {
         //see if the year value is ther.
 
-        FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
-        if (mUser != null){
             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
             mDatabase.child("Available").addValueEventListener(new ValueEventListener() {
                 @Override
@@ -918,11 +928,6 @@ public class ScripturesFragment extends Fragment {
 
                 }
             });
-        }
-        else {
-            Toast.makeText(getContext(), "You are not Logged in", Toast.LENGTH_SHORT).show();
-            statusCallback.isAvailable(false);
-        }
 
     }
 
