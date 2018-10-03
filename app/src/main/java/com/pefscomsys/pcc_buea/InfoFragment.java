@@ -88,8 +88,8 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
 //
 //        //then close the connection
 //        connection.close();
-        ScriptureRetrieval diary = new ScriptureRetrieval(2018);
-        Log.d("ScripturesInfoFragment", String.valueOf(diary.pullScriptures()));
+       // ScriptureRetrieval diary = new ScriptureRetrieval(2018);
+        //Log.d("ScripturesInfoFragment", String.valueOf(diary.pullScriptures()));
 
         Animation animSlideUp = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),R.anim.slide_up);
         churchInfo.startAnimation(animSlideUp);
