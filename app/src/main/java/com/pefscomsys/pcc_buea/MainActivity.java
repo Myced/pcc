@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         //this is not the best idea
         /// but we don't have time
-        
+
 
         MyDate today = new MyDate(getApplicationContext());
 
@@ -117,78 +117,16 @@ public class MainActivity extends AppCompatActivity {
         int nextYear = currentYearInt+1;
 
         ScriptureRetrieval updatesThisYear = new ScriptureRetrieval(currentYearInt);
-        FScripture changes = (FScripture) updatesThisYear.pullScriptures();
+        updatesThisYear.context = getApplicationContext();
+        Object changes = updatesThisYear.pullScriptures(); //check for upates
 
 
-        ScriptureDBHandler connection = new ScriptureDBHandler(getApplicationContext());
-        Scripture myScripture;
-
-        try {
-            connection.createDataBase();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //then op the connection
-        connection.openDataBase();
-
-        //then loop through the scriptures and save them
-        //pass the connection to the scripture class
-        myScripture = new Scripture();
-        myScripture.db = connection;
-
-        myScripture.setDay(changes.getDay());
-        myScripture.setMonth(changes.getMonth());
-        myScripture.setYear(changes.getYear());
-        myScripture.setDate(changes.getDate());
-        myScripture.setPsalms(changes.getPsalms());
-        myScripture.setReadingOne(changes.getReadingOne());
-        myScripture.setReadingTwo(changes.getReadingTwo());
-        myScripture.setReadingText(changes.getReadingText());
-
-        //now save the scripture
-        myScripture.saveScripture();
-
-
-        //then close the connection
-        connection.close();
 
 
         ScriptureRetrieval updatesNextYear = new ScriptureRetrieval(nextYear);
-        FScripture changes2 = (FScripture) updatesNextYear.pullScriptures();
-
-        ScriptureDBHandler connection2 = new ScriptureDBHandler(getApplicationContext());
-        Scripture myScripture2;
-
-        try {
-            connection.createDataBase();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //then op the connection
-        connection.openDataBase();
-
-        //then loop through the scriptures and save them
-        //pass the connection to the scripture class
-        myScripture2 = new Scripture();
-        myScripture2.db = connection;
-
-        myScripture2.setDay(changes2.getDay());
-        myScripture2.setMonth(changes2.getMonth());
-        myScripture2.setYear(changes2.getYear());
-        myScripture2.setDate(changes2.getDate());
-        myScripture2.setPsalms(changes2.getPsalms());
-        myScripture2.setReadingOne(changes2.getReadingOne());
-        myScripture2.setReadingTwo(changes2.getReadingTwo());
-        myScripture2.setReadingText(changes2.getReadingText());
-
-        //now save the scripture
-        myScripture2.saveScripture();
+        changes  = updatesNextYear.pullScriptures();
 
 
-        //then close the connection
-        connection2.close();
 
         mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
         Log.d("Preference", String.valueOf(mPaymentPref.getAll().values()));
