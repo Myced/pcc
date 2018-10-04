@@ -515,11 +515,10 @@
                             <Button
                                 android:id="@+id/get_diary"
                                 style="@style/Widget.AppCompat.Button.Colored"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="56dp"
                                 android:text="@string/get_it"
-                                android:textSize="22sp"
-                                tools:ignore="NestedWeights" />
+                                android:textSize="22sp" />
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
