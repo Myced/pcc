@@ -4,6 +4,8 @@ package com.pefscomsys.pcc_buea;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -12,6 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
 import static com.pefscomsys.pcc_buea.Prices.HYMN_PRICE;
@@ -28,6 +33,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     BooksFragment booksFragment;
     InfoFragment infoFragment;
     BottomNavigationView bottomNavigationView;
+    FirebaseUser currentUser;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -64,7 +70,20 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 scripturesFragment = new ScripturesFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navigation_scriptures);
 
-                setFragment(scripturesFragment);
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                if(isNetworkAvailable()){
+                    if (mAuth.getCurrentUser() == null){
+                        Intent loginIntent = new Intent(getContext(), LoginActivity.class);
+                        startActivity(loginIntent);
+                    }
+                    else{
+                        currentUser = mAuth.getCurrentUser();
+                        setFragment(scripturesFragment);
+                    }
+                }
+                else{
+                    setFragment(scripturesFragment);
+                }
                 break;
             case R.id.hymnBookBtn:
                 hymesFragment = new HymesFragment();
@@ -98,5 +117,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();
+    }
+
+    public boolean isNetworkAvailable(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean STATE = false;
+        if (connectivityManager != null) {
+            NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+            STATE = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+        }
+        return STATE;
     }
 }
