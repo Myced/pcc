@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -18,12 +19,15 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.ArrayList;
 
+import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
+import static com.pefscomsys.pcc_buea.Prices.ECHO_PRICE;
+
 public class MyMessengerBookAdapter extends RecyclerView.Adapter<MyMessengerBookAdapter.MyBookHolder>{
     private Context context;
     private RecyclerView recyclerView;
     private ArrayList<String> booksNames;
     private ArrayList<String> storageUrls;
-    Button Delete;
+    private SharedPreferences mPaymentPref;
 
 
 
@@ -70,9 +74,19 @@ public class MyMessengerBookAdapter extends RecyclerView.Adapter<MyMessengerBook
                 @Override
                 public void onClick(View view) {
                     int position = recyclerView.getChildLayoutPosition(view);
-                    Intent newIntent = new Intent(context, PdfViewerActivity.class);
-                    newIntent.putExtra("FILE_LOCATION", storageUrls.get(position));
-                    context.startActivity(newIntent);
+                    String nameOfBook =  booksNames.get(position);
+                    mPaymentPref = context.getSharedPreferences(PAYMENT_PREFS, Context.MODE_PRIVATE);
+                    if((mPaymentPref.getString(nameOfBook.toUpperCase(), "NOT_PAID").equals("PAID"))){
+                        Intent newIntent = new Intent(context, PdfViewerActivity.class);
+                        newIntent.putExtra("FILE_LOCATION", storageUrls.get(position));
+                        context.startActivity(newIntent);
+                    }
+                    else {
+                        Intent paymentIntent = new Intent(context, PaymentActivity.class);
+                        paymentIntent.putExtra("REASON", ""+nameOfBook.toUpperCase());
+                        paymentIntent.putExtra("AMOUNT", ECHO_PRICE);
+                        context.startActivity(paymentIntent);
+                    }
                     //viewPdf(Uri.fromFile(new File(storageUrls.get(position))));
 
                 }
@@ -80,31 +94,5 @@ public class MyMessengerBookAdapter extends RecyclerView.Adapter<MyMessengerBook
         }
     }
 
-    private void viewPdf(Uri file) {
-        Intent intent;
-        intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(file, "application/pdf");
-        try {
-            context.startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            // No application to view, ask to download one
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setTitle("No Application Found");
-            builder.setMessage("Download one from Android Market?");
-            builder.setPositiveButton("Yes, Please",
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent marketIntent = new Intent(Intent.ACTION_VIEW);
-                            marketIntent
-                                    .setData(Uri
-                                            .parse("market://details?id=com.adobe.reader"));
-                            context.startActivity(marketIntent);
-                        }
-                    });
-            builder.setNegativeButton("No, Thanks", null);
-            builder.create().show();
-        }
-    }
 
 }

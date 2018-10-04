@@ -3,6 +3,8 @@ package com.pefscomsys.pcc_buea;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -20,6 +22,9 @@ import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -39,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String PAYMENT_PREFS = "PaymentPref";
     SharedPreferences mPaymentPref;
     boolean doubleBackToExitPressedOnce = false;
+
+    FirebaseUser currentUser;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -73,7 +80,21 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             } else if (id == R.id.navigation_scriptures) {
                 //start scripture fragment
-                setFragment(scripturesFragment);
+
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                if(isNetworkAvailable()){
+                    if (mAuth.getCurrentUser() == null){
+                        Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(loginIntent);
+                    }
+                    else{
+                        currentUser = mAuth.getCurrentUser();
+                        setFragment(scripturesFragment);
+                    }
+                }
+                else{
+                    setFragment(scripturesFragment);
+                }
                 return true;
             } else if (id == R.id.navigation_info) {
                 //start scripture fragment
@@ -103,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
         //Initialise the application
         AppInitialiser init = new AppInitialiser(this);
         init.initialiseApp();
+
+
 
         //pull scripture updates
 
@@ -211,5 +234,15 @@ public class MainActivity extends AppCompatActivity {
                 doubleBackToExitPressedOnce=false;
             }
         }, 2000);
+    }
+
+    public boolean isNetworkAvailable(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        boolean STATE = false;
+        if (connectivityManager != null) {
+            NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+            STATE = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+        }
+        return STATE;
     }
 }
