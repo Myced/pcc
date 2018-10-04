@@ -62,7 +62,11 @@ public class ScriptureRetrieval {
                         myScripture.setMonth(changes.getMonth());
                         myScripture.setYear(changes.getYear());
                         myScripture.setDate(changes.getDate());
-                        myScripture.setPsalms(changes.getPsalms());
+                        if(changes.getPsalms().equals("null") || changes.getPsalms().equals("")){
+                            myScripture.setPsalms("");
+                        }else {
+                            myScripture.setPsalms(changes.getPsalms());
+                        }
                         myScripture.setReadingOne(changes.getReadingOne());
                         myScripture.setReadingTwo(changes.getReadingTwo());
                         myScripture.setReadingText(changes.getReadingText());
