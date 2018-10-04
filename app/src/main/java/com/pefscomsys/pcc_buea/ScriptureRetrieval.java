@@ -31,47 +31,50 @@ public class ScriptureRetrieval {
         mDatabaseRef.child(String.valueOf(year)).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("RetrievingScriptures", String.valueOf(dataSnapshot.getValue()));
-                //diary = dataSnapshot.getValue();
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
 
-                FScripture changes = dataSnapshot.getValue(FScripture.class);
+                    Log.d("RetrievingScriptures: ", String.valueOf(snapshot.getValue()));
+                    //diary = dataSnapshot.getValue();
 
-                //do saving here. it will be best
-                //diary might return null
-                ScriptureDBHandler connection = new ScriptureDBHandler(context);
+                    FScripture changes = snapshot.getValue(FScripture.class);
 
-                Scripture myScripture;
+                    //do saving here. it will be best
+                    //diary might return null
+                    ScriptureDBHandler connection = new ScriptureDBHandler(context);
 
-                try {
-                    connection.createDataBase();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    Scripture myScripture;
+
+                    try {
+                        connection.createDataBase();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    //then op the connection
+                    connection.openDataBase();
+
+                    //then loop through the scriptures and save them
+                    //pass the connection to the scripture class
+                    myScripture = new Scripture();
+                    myScripture.db = connection;
+                    if (changes != null){
+                        myScripture.setDay(changes.getDay());
+                        myScripture.setMonth(changes.getMonth());
+                        myScripture.setYear(changes.getYear());
+                        myScripture.setDate(changes.getDate());
+                        myScripture.setPsalms(changes.getPsalms());
+                        myScripture.setReadingOne(changes.getReadingOne());
+                        myScripture.setReadingTwo(changes.getReadingTwo());
+                        myScripture.setReadingText(changes.getReadingText());
+                    }
+
+                    //now save the scripture
+                    myScripture.saveScripture();
+
+
+                    //then close the connection
+                    connection.close();
                 }
-
-                //then op the connection
-                connection.openDataBase();
-
-                //then loop through the scriptures and save them
-                //pass the connection to the scripture class
-                myScripture = new Scripture();
-                myScripture.db = connection;
-                if (changes != null){
-                    myScripture.setDay(changes.getDay());
-                    myScripture.setMonth(changes.getMonth());
-                    myScripture.setYear(changes.getYear());
-                    myScripture.setDate(changes.getDate());
-                    myScripture.setPsalms(changes.getPsalms());
-                    myScripture.setReadingOne(changes.getReadingOne());
-                    myScripture.setReadingTwo(changes.getReadingTwo());
-                    myScripture.setReadingText(changes.getReadingText());
-                }
-
-                //now save the scripture
-                myScripture.saveScripture();
-
-
-                //then close the connection
-                connection.close();
             }
 
             @Override
