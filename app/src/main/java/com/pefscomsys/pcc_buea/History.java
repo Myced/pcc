@@ -39,40 +39,33 @@ public class History extends AppCompatActivity {
         mActionBar.getCustomView();
 
         //get the history lists
-        Context context = getApplicationContext();
-        this.getHistoryInfo(context);
+        //Context context = getApplicationContext();
+        getHistoryInfo(this);
 
         //work with the adapter
         RecyclerView historyView = (RecyclerView) findViewById(R.id.history_recycler);
-        historyView.setHasFixedSize(true);
-        LinearLayoutManager historyLayout = new LinearLayoutManager(context);
+        RecyclerView addressView = (RecyclerView) findViewById(R.id.address_recycler_v);
+        historyView.setNestedScrollingEnabled(false);
+        addressView.setNestedScrollingEnabled(false);
 
-        historyView.setLayoutManager(historyLayout);
+        historyView.setHasFixedSize(true);
+        addressView.setHasFixedSize(true);
+
+        historyView.setLayoutManager(new LinearLayoutManager(this));
+        addressView.setLayoutManager(new LinearLayoutManager(this));
 
         //create a new instance of the adapter
-        ChurchHistoryAdapter historyAdapter = new ChurchHistoryAdapter(this.histories);
+        ChurchHistoryAdapter historyAdapter = new ChurchHistoryAdapter(histories);
+        ChurchAddressAdapter addressAdapter = new ChurchAddressAdapter(getChurchAddresses(), this);
 
         historyView.setAdapter(historyAdapter);
+        addressView.setAdapter(addressAdapter);
 
         ///church address adapter
 
         //prepare the recycler view
-        RecyclerView addressView = findViewById(R.id.address_view);
-        addressView.setHasFixedSize(true);
-
-        //prepare a layout manager
-        LinearLayoutManager addressLayoutManager = new LinearLayoutManager(getApplicationContext());
-
-        //get the list of church addresses
-        SchoolProcessor processor = new SchoolProcessor(getApplicationContext());
-        List<ChurchAddress> addresses = processor.getChurchAddresses();
 
         //create an address view holder
-        ChurchAddressAdapter addressAdapter = new ChurchAddressAdapter(addresses);
-
-        //now set up the view
-        addressView.setLayoutManager(addressLayoutManager);
-        addressView.setAdapter(addressAdapter);
 
     }
 
@@ -123,5 +116,47 @@ public class History extends AppCompatActivity {
         //close the database
         db.close();
 
+    }
+    public List<ChurchAddress> getChurchAddresses()
+    {
+        List<ChurchAddress> addresses  = new ArrayList<>();
+
+        ChurchAddress currentAddress;
+
+        ScriptureDBHandler database = new ScriptureDBHandler(this);
+
+        try {
+            database.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String query = "SELECT  * FROM `church_address` ";
+
+        database.openDataBase();
+
+
+        Cursor result = database.myDataBase.rawQuery(query, null);
+
+        while(result.moveToNext())
+        {
+            currentAddress = new ChurchAddress();
+
+            currentAddress.setName(result.getString(1));
+            currentAddress.setChair(result.getString(2));
+            currentAddress.setCo(result.getString(3));
+            currentAddress.setPobox(result.getString(4));
+            currentAddress.setAddress(result.getString(5));
+            currentAddress.setTel(result.getString(6));
+            currentAddress.setEmail(result.getString(7));
+
+            addresses.add(currentAddress);
+        }
+
+        result.close();
+
+        database.close();
+
+        return addresses;
     }
 }
