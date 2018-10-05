@@ -62,11 +62,9 @@ public class Communication extends AppCompatActivity {
         String query = "SELECT * FROM `communication` ";
 
         Cursor result = db.myDataBase.rawQuery(query, null);
-
         while(result.moveToNext())
         {
             com = new CommunicationProg();
-
             com.setName(result.getString(1));
             com.setRow1(result.getString(2));
             com.setRow2(result.getString(3));

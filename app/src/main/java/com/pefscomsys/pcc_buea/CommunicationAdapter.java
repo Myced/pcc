@@ -30,11 +30,44 @@ public class CommunicationAdapter extends  RecyclerView.Adapter<CommunicationAda
     @Override
     public void onBindViewHolder(@NonNull CommunicationViewHolder holder, int position) {
         holder.name.setText(communicationProgList.get(position).getName());
-        holder.row1.setText(communicationProgList.get(position).getRow1());
-        holder.row2.setText(communicationProgList.get(position).getRow2());
-        holder.row3.setText(communicationProgList.get(position).getRow3());
-        holder.row4.setText(communicationProgList.get(position).getRow4());
-        holder.row5.setText(communicationProgList.get(position).getRow5());
+        if(communicationProgList.get(position).getRow1() != null){
+            holder.row1.setText(communicationProgList.get(position).getRow1().replaceAll("\\\\n", System.getProperty("line.separator")));
+        }
+        else{
+            holder.row1.setText(" ");
+        }
+
+        if(communicationProgList.get(position).getRow2() != null){
+            holder.row2.setText(communicationProgList.get(position).getRow2().replaceAll("\\\\n", System.getProperty("line.separator")));
+        }
+        else{
+            holder.row2.setText(" ");
+        }
+
+        if(communicationProgList.get(position).getRow3() != null){
+
+            holder.row3.setText(communicationProgList.get(position).getRow3().replaceAll("\\\\n", System.getProperty("line.separator")));
+        }
+        else{
+            holder.row3.setText(" ");
+        }
+
+        if(communicationProgList.get(position).getRow4() != null){
+
+            holder.row4.setText(communicationProgList.get(position).getRow4().replaceAll("\\\\n", System.getProperty("line.separator")));
+        }
+        else{
+            holder.row4.setText(" ");
+        }
+
+        if(communicationProgList.get(position).getRow5() != null){
+
+            holder.row5.setText(communicationProgList.get(position).getRow5().replaceAll("\\\\n", System.getProperty("line.separator")));
+        }
+        else{
+            holder.row5.setText(" ");
+        }
+
     }
 
     @Override
