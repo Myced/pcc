@@ -1,11 +1,22 @@
 package com.pefscomsys.pcc_buea;
 
+import android.content.Context;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Presbyteries extends AppCompatActivity {
 
-
+    List<Presbytery> presbyteryList;
+    private Context context;
+    private RecyclerView presView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +25,66 @@ public class Presbyteries extends AppCompatActivity {
 
         setTitle(R.string.congregation);
 
+        this.context = getApplicationContext();
+        this.getPresbyteryList();
+        this.presView = findViewById(R.id.pres_view);
 
+        LinearLayoutManager manager = new LinearLayoutManager(this.context);
+
+        PresbyteriesAdapter adapter = new PresbyteriesAdapter(this.presbyteryList);
+
+        presView.setLayoutManager(manager);
+        presView.setAdapter(adapter);
+
+    }
+
+    private void getPresbyteryList()
+    {
+        List<Presbytery> presbyteries = new ArrayList<>();
+
+        Presbytery presbytery;
+
+        //do a database call
+        ScriptureDBHandler db = new ScriptureDBHandler(context);
+
+        //tty creating a database
+        try {
+            db.createDataBase();
+        } catch (IOException e) {
+            Log.d("PCCAPP", "Database error");
+            e.printStackTrace();
+        }
+
+        //now open the databse
+        db.openDataBase();
+
+        String query = "SELECT * FROM presbyteries ";
+
+        Cursor result = db.myDataBase.rawQuery(query, null);
+
+        while(result.moveToNext())
+        {
+            presbytery = new Presbytery();
+
+            presbytery.setName(result.getString(1));
+            presbytery.setPresbytery(result.getString(2));
+            presbytery.setSecretery(result.getString(3));
+            presbytery.setSecTel(result.getString(4));
+            presbytery.setChair(result.getString(7));
+            presbytery.setChairTel(result.getString(8));
+            presbytery.setTreasurer(result.getString(5));
+            presbytery.setTreasurerTel(result.getString(6));
+            presbytery.setCong(result.getString(9));
+
+            presbyteries.add(presbytery);
+        }
+
+        //close the result
+        result.close();
+
+        //close the database
+        db.close();
+
+        this.presbyteryList = presbyteries;
     }
 }

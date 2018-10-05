@@ -29,7 +29,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
     ScrollView churchInfo;
 
     private Button historyBtn, congregationBtn, educationBtn, healthBtn, addressBtn, otherBtn;
-    private Button calendarBtn, communicationBtn, pastorBtn;
+    private Button calendarBtn, communicationBtn, pastorBtn, presBtn;
 
     public InfoFragment() {
         // Required empty public constructor
@@ -57,6 +57,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         calendarBtn = view.findViewById(R.id.more_calendar);
         communicationBtn = view.findViewById(R.id.more_communication);
         pastorBtn = view.findViewById(R.id.more_pastors);
+        presBtn = view.findViewById(R.id.more_cong);
 
         historyBtn.setOnClickListener(this);
         congregationBtn.setOnClickListener(this);
@@ -65,6 +66,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         calendarBtn.setOnClickListener(this);
         communicationBtn.setOnClickListener(this);
         pastorBtn.setOnClickListener(this);
+        presBtn.setOnClickListener(this);
 
         return view;
     }
@@ -75,9 +77,6 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
             case R.id.more_history:
                 Intent mHistoryIntent = new Intent(getContext(), History.class);
                 startActivity(mHistoryIntent);
-                break;
-            case  R.id.more_cong:
-                Toast.makeText(getActivity(), R.string.congregation, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.more_education:
                 Intent mEducationIntent = new Intent(getContext(), Education.class);
@@ -98,6 +97,10 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
             case  R.id.more_pastors:
                 Intent mPastIntent = new Intent(getContext(), RetiredPastors.class);
                 startActivity(mPastIntent);
+                break;
+            case  R.id.more_cong:
+                Intent mCongIntent = new Intent(getContext(), Presbyteries.class);
+                startActivity(mCongIntent);
                 break;
 //            case  R.id.more_address:
 //                Intent mChurchAddressesIntent = new Intent(getContext(), Address.class);
