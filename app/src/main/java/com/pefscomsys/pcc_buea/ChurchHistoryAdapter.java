@@ -3,6 +3,7 @@ package com.pefscomsys.pcc_buea;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +24,8 @@ public class ChurchHistoryAdapter extends RecyclerView.Adapter<ChurchHistoryAdap
     @Override
     public ChurchHistoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View cardView = LayoutInflater.from(parent.getContext()).inflate(R.layout.church_history_row, parent, false);
-        ChurchHistoryViewHolder holder = new ChurchHistoryViewHolder(cardView);
 
-        return  holder;
+        return new ChurchHistoryViewHolder(cardView);
     }
 
     @Override

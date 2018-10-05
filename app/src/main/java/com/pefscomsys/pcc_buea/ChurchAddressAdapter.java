@@ -1,8 +1,10 @@
 package com.pefscomsys.pcc_buea;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,20 +15,22 @@ import java.util.zip.Inflater;
 
 public class ChurchAddressAdapter extends RecyclerView.Adapter<ChurchAddressAdapter.ChurchAddressViewHolder>
 {
-    List<ChurchAddress> addresses;
+    private List<ChurchAddress> addresses;
+    private Context context;
 
-    public ChurchAddressAdapter(List<ChurchAddress> addresses)
+    public ChurchAddressAdapter(List<ChurchAddress> addressList, Context ctx)
     {
-        this.addresses = addresses;
+        addresses = addressList;
+        context = ctx;
     }
 
     @NonNull
     @Override
     public ChurchAddressViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View addressView = LayoutInflater.from(parent.getContext()).inflate(R.layout.church_address_row, parent,false);
-        ChurchAddressViewHolder addressViewHolder = new ChurchAddressViewHolder(addressView);
+        View view = LayoutInflater.from(context).inflate(R.layout.church_address_row, parent,false);
 
-        return addressViewHolder;
+        Log.d("churchAdressAdapter", addresses.toString());
+        return new ChurchAddressViewHolder(view);
     }
 
     @Override
@@ -42,7 +46,7 @@ public class ChurchAddressAdapter extends RecyclerView.Adapter<ChurchAddressAdap
 
     @Override
     public int getItemCount() {
-        return this.addresses.size();
+        return addresses.size();
     }
 
     public static class ChurchAddressViewHolder extends RecyclerView.ViewHolder
