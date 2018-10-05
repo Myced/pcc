@@ -79,7 +79,8 @@
             android:name=".AboutActivity"
             android:label="About" />
         <activity android:name=".RetiredPastors" />
-        <activity android:name=".Communication"></activity>
+        <activity android:name=".Communication" />
+        <activity android:name=".Presbyteries"></activity>
     </application>
 
 </manifest>
