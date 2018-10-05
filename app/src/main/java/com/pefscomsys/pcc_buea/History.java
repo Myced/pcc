@@ -44,6 +44,7 @@ public class History extends AppCompatActivity {
 
         //work with the adapter
         RecyclerView historyView = (RecyclerView) findViewById(R.id.history_recycler);
+        historyView.setHasFixedSize(true);
         LinearLayoutManager historyLayout = new LinearLayoutManager(context);
 
         historyView.setLayoutManager(historyLayout);
@@ -52,6 +53,26 @@ public class History extends AppCompatActivity {
         ChurchHistoryAdapter historyAdapter = new ChurchHistoryAdapter(this.histories);
 
         historyView.setAdapter(historyAdapter);
+
+        ///church address adapter
+
+        //prepare the recycler view
+        RecyclerView addressView = findViewById(R.id.address_view);
+        addressView.setHasFixedSize(true);
+
+        //prepare a layout manager
+        LinearLayoutManager addressLayoutManager = new LinearLayoutManager(getApplicationContext());
+
+        //get the list of church addresses
+        SchoolProcessor processor = new SchoolProcessor(getApplicationContext());
+        List<ChurchAddress> addresses = processor.getChurchAddresses();
+
+        //create an address view holder
+        ChurchAddressAdapter addressAdapter = new ChurchAddressAdapter(addresses);
+
+        //now set up the view
+        addressView.setLayoutManager(addressLayoutManager);
+        addressView.setAdapter(addressAdapter);
 
     }
 

@@ -29,7 +29,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
     ScrollView churchInfo;
 
     private Button historyBtn, congregationBtn, educationBtn, healthBtn, addressBtn, otherBtn;
-    private Button calendarBtn;
+    private Button calendarBtn, communicationBtn, pastorBtn;
 
     public InfoFragment() {
         // Required empty public constructor
@@ -47,50 +47,6 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         churchInfo = view.findViewById(R.id.church_info_layer);
 
 
-        //showing toast message for momo testing
-//        PaymentProcessor momoPay = new PaymentProcessor(100, "672723036", "DIARY", getContext());
-//        momoPay.diary = true;
-//        momoPay.diaryYear = "2019";
-//
-//        momoPay.processPayment();
-
-        //test the scripture saving.
-        //open the database;
-//        ScriptureDBHandler connection = new ScriptureDBHandler(getContext());
-//        Scripture myScripture;
-//
-//        try {
-//            connection.createDataBase();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        //then op the connection
-//        connection.openDataBase();
-//
-//        //then loop through the scriptures and save them
-//        //pass the connection to the scripture class
-//        myScripture = new Scripture();
-//        myScripture.db = connection;
-//
-//        myScripture.setDay("25");
-//        myScripture.setMonth("09");
-//        myScripture.setYear("2018");
-//        myScripture.setDate("25/09/2018");
-//        myScripture.setPsalms("Ps.23:1-16");
-//        myScripture.setReadingOne("Mt.4:6-12");
-//        myScripture.setReadingTwo("Job.3:4-12");
-//        myScripture.setReadingText("Acts.3:4-15");
-//
-//        //now save the scripture
-//        myScripture.saveScripture();
-//
-//
-//        //then close the connection
-//        connection.close();
-       // ScriptureRetrieval diary = new ScriptureRetrieval(2018);
-        //Log.d("ScripturesInfoFragment", String.valueOf(diary.pullScriptures()));
-
         Animation animSlideUp = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),R.anim.slide_up);
         churchInfo.startAnimation(animSlideUp);
 
@@ -99,12 +55,16 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         educationBtn = view.findViewById(R.id.more_education);
         healthBtn = view.findViewById(R.id.more_health);
         calendarBtn = view.findViewById(R.id.more_calendar);
+        communicationBtn = view.findViewById(R.id.more_communication);
+        pastorBtn = view.findViewById(R.id.more_pastors);
 
         historyBtn.setOnClickListener(this);
         congregationBtn.setOnClickListener(this);
         educationBtn.setOnClickListener(this);
         healthBtn.setOnClickListener(this);
         calendarBtn.setOnClickListener(this);
+        communicationBtn.setOnClickListener(this);
+        pastorBtn.setOnClickListener(this);
 
         return view;
     }
@@ -130,6 +90,14 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
             case  R.id.more_calendar:
                 Intent mCalendarIntent = new Intent(getContext(), ChurchCalendar.class);
                 startActivity(mCalendarIntent);
+                break;
+            case  R.id.more_communication:
+                Intent mComIntent = new Intent(getContext(), Communication.class);
+                startActivity(mComIntent);
+                break;
+            case  R.id.more_pastors:
+                Intent mPastIntent = new Intent(getContext(), RetiredPastors.class);
+                startActivity(mPastIntent);
                 break;
 //            case  R.id.more_address:
 //                Intent mChurchAddressesIntent = new Intent(getContext(), Address.class);

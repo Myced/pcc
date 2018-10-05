@@ -78,7 +78,8 @@
         <activity
             android:name=".AboutActivity"
             android:label="About" />
-        <activity android:name=".RetiredPastors"></activity>
+        <activity android:name=".RetiredPastors" />
+        <activity android:name=".Communication"></activity>
     </application>
 
 </manifest>

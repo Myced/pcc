@@ -54,7 +54,7 @@ public class AppInitialiser
         SharedPreferences mStatus = context.getSharedPreferences("FIRST_RUN", Context.MODE_PRIVATE);
         SharedPreferences.Editor mStatusEditor = mStatus.edit();
 
-        mStatusEditor.putString("FIRST_RUN", "TRUE");
+        mStatusEditor.putString("FIRST_RUN", "FALSE");
 
         mStatusEditor.apply();
     }
@@ -71,7 +71,6 @@ public class AppInitialiser
             //initialise it
             Log.d("PCCAPP", "Fist run true");
             return true;
-            //mStatusCheck.edit().putString("FIRST_RUN", "TRUE").apply();
         }
 
         if(mStatusCheck.getString("FIRST_RUN", "TRUE").equals("FALSE"))
