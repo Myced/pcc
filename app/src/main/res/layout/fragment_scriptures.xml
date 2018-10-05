@@ -485,10 +485,9 @@
                     android:id="@+id/get_diary_layer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="@dimen/margin10"
                     android:layout_marginBottom="@dimen/margin10"
-                    >
+                    android:layout_marginTop="@dimen/margin10"
+                    android:orientation="vertical">
 
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
@@ -497,20 +496,20 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="@dimen/margin5"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin5">
 
 
                             <TextView
                                 android:id="@+id/get_diary_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/error"
-                                android:textColor="@color/text_black"
                                 android:layout_marginTop="@dimen/margin5"
                                 android:fontFamily="serif"
-                                android:textStyle="bold|italic"
-                                android:textSize="@dimen/fontsize"/>
+                                android:text="@string/error"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/fontsize"
+                                android:textStyle="bold|italic" />
 
                             <Button
                                 android:id="@+id/get_diary"

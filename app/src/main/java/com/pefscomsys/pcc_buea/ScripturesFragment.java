@@ -178,24 +178,28 @@ public class ScripturesFragment extends Fragment {
 
         //checking if the diary for the following year is available.
 
+        //set the view to invisible
+        getDiaryLayout.setVisibility(View.GONE);
 
         checkAvailable(new SimpleFirebaseCallBack<Boolean>() {
             @Override
             public void isAvailable(Boolean status) {
                 Log.d("STATS", status.toString());
+                Log.d("PCCAPP", status.toString());
                 if (status) {
                     // true was returned
                     //Perform the action you want to perform if its available inside year
                     //then check if its available
-                    Log.d("Available", "Diary is available");
                     boolean activationRes = activation.checkDiary(Integer.toString(theFollowingYear));
 
                     if(activationRes)
                     {
+                        Log.d("PCCAPP", "activated and is available");
                         getDiaryLayout.setVisibility(View.GONE);
                     }
                     else
                     {
+                        Log.d("PCCAPP", "NOT activated and is available");
                         String yYear = Integer.toString(theFollowingYear) + " Now Available. \n " +
                                 "Click on the button below to get it";
                         getDiaryText.setText(yYear);
@@ -207,7 +211,7 @@ public class ScripturesFragment extends Fragment {
                     // false was returned
                     //if its not available perform it inside here
 
-                    Log.d("Available", "Diary is not available");
+                    Log.d("PCCAPP", "Diary is not available");
                     getDiaryLayout.setVisibility(View.GONE);
                 }
 
