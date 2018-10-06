@@ -450,15 +450,16 @@ public class ScripturesFragment extends Fragment {
 
         //year resources id
 
-        ArrayAdapter<CharSequence> yearsAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.years, R.layout.date_spinner_row);
+//        ArrayAdapter<CharSequence> yearsAdapterss = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
+//                R.array.years, R.layout.date_spinner_row);
+        ArrayAdapter<Integer> yearsAdapter = new ArrayAdapter<Integer>(getActivity().getApplicationContext(), R.layout.date_spinner_row, years);
 
         year.setAdapter(yearsAdapter);
 
         //set the default selected items
         day.setSelection(daysAdapter.getPosition(currentDay));
         month.setSelection(monthsAdapter.getPosition(currentMonthName));
-        year.setSelection(yearsAdapter.getPosition(currentYear));
+        year.setSelection(yearsAdapter.getPosition(Integer.valueOf(currentYear)));
 
         //set and onclick listener to the button
         findButton.setOnClickListener(new View.OnClickListener() {
