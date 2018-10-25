@@ -469,8 +469,8 @@ public class ScripturesFragment extends Fragment {
                 //now get the dates selected
                 selectedMonth = (String) month.getSelectedItem();
                 String selectedMonthId = getMonthId(selectedMonth);
-                selectedDay = (String) day.getSelectedItem();
-                selectedYear = (String) year.getSelectedItem();
+                selectedDay = String.valueOf(day.getSelectedItem());
+                selectedYear = String.valueOf(year.getSelectedItem());
 
                 //prepare a date instance
                 MyDate date = new MyDate(getContext(), selectedDay, selectedMonthId, selectedYear);
@@ -494,7 +494,7 @@ public class ScripturesFragment extends Fragment {
                 boolean activationResult2 = activation.checkDiary(activationYear);
 
                 //check the result and see if the product has been activated or not
-                if(activationResult2 == true)
+                if(activationResult2)
                 {
                     //hide the error layout
                     //now lets hide the error layer
