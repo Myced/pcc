@@ -2,6 +2,7 @@ package com.pefscomsys.pcc_buea;
 
 public class Presbytery
 {
+    private String id;
     private String name;
     private String presbytery;
     private String secretery;
@@ -16,6 +17,10 @@ public class Presbytery
     {
 
     }
+
+    public String getId() { return this.id; }
+
+    public void setId(String id) { this.id = id; }
 
     public String getName() {
         return name;

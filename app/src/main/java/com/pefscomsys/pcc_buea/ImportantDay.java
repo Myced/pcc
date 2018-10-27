@@ -62,4 +62,48 @@ public class ImportantDay
 
         return pastors;
     }
+
+    public List<PresbyteryCongregation> getCongregations(String PresbyteryId)
+    {
+        List<PresbyteryCongregation> congregations = new ArrayList<>();
+
+        PresbyteryCongregation station;
+
+
+        //do a database call
+        ScriptureDBHandler db = new ScriptureDBHandler(context);
+
+        //tty creating a database
+        try {
+            db.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //now open the databse
+        db.openDataBase();
+
+        String query = "SELECT * FROM presbytery_workers WHERE `presbytery` =  '" + PresbyteryId + "' ";
+
+        Cursor result = db.myDataBase.rawQuery(query, null);
+
+        while(result.moveToNext())
+        {
+            station = new PresbyteryCongregation();
+
+            station.setStation(result.getString(1));
+            station.setWorker(result.getString(2));
+            station.setTel(result.getString(3));
+
+            congregations.add(station);
+        }
+
+        //close the result
+        result.close();
+
+        //close the database
+        db.close();
+
+        return congregations;
+    }
 }

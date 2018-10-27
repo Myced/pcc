@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class Scripture
 {
+    private String label;
     private String psalms;
     private String readingOne;
     private String readingTwo;
@@ -36,6 +37,10 @@ public class Scripture
         this.readingText = readingText;
         this.date = date;
     }
+
+    public String getLabel() { return this.label; }
+
+    public void setLabel(String label) { this.label = label; }
 
     public String getPsalms() {
         return psalms;
@@ -152,6 +157,7 @@ public class Scripture
         values.put("reading_one", this.getReadingOne());
         values.put("reading_two", this.getReadingTwo());
         values.put("text", this.getReadingText());
+        values.put("name", this.getLabel());
 
         Log.d("PCCAPP", values.toString());
 
@@ -193,6 +199,7 @@ public class Scripture
         values.put("reading_one", this.getReadingOne());
         values.put("reading_two", this.getReadingTwo());
         values.put("text", this.getReadingText());
+        values.put("name", this.getLabel());
 
         String where = " `date` = '" + this.getDate() + "' ";
         String[] whereArgs = {};

@@ -31,6 +31,7 @@ public class ScriptureDBHandler extends SQLiteOpenHelper {
     private final int READING_ONE_INDEX = 6;
     private final int READING_TWO_INDEX = 7;
     private final int READING_TEXT_INDEX = 8;
+    private final int LABEL_INDEX = 9;
 
     /**
      * Constructor
@@ -193,10 +194,8 @@ public class ScriptureDBHandler extends SQLiteOpenHelper {
             currentReading.setReadingOne(result.getString(READING_ONE_INDEX));
             currentReading.setReadingTwo(result.getString(READING_TWO_INDEX));
             currentReading.setReadingText(result.getString(READING_TEXT_INDEX));
+            currentReading.setLabel(result.getString(LABEL_INDEX));
 
-            String prep = "reading one and two " + result.getString(READING_ONE_INDEX) + result.getString(READING_TWO_INDEX);
-
-            Log.d("Database", prep);
 
             //now add the result to the array list
             reading.add(currentReading);

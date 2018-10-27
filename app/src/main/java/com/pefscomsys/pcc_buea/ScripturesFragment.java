@@ -70,6 +70,10 @@ public class ScripturesFragment extends Fragment {
     TextView readingPsalms, readingOne, readingTwo, readingText, errorMessage;
     LinearLayout errorLayout, scriptureLayer;
 
+    //daily labels like Palm Sunday
+    RelativeLayout labelLayout;
+    TextView label;
+
     //scripture variable
 
     Scripture reading;
@@ -119,6 +123,10 @@ public class ScripturesFragment extends Fragment {
 
         dayDate = view.findViewById(R.id.day_date);
         monthYear = view.findViewById(R.id.month_year);
+
+        //work with the labels
+        labelLayout = (RelativeLayout) view.findViewById(R.id.labelLayout);
+        label = (TextView) view.findViewById(R.id.label);
 
         //get the current date
         //create an instance of MyDate
@@ -248,8 +256,23 @@ public class ScripturesFragment extends Fragment {
             reading.setReadingText(currentReading.getReadingText());
             reading.setReadingTwo(currentReading.getReadingTwo());
             reading.setReadingOne(currentReading.getReadingOne());
+            reading.setLabel(currentReading.getLabel());
         }
 
+        //check if the label should be blank or not
+        if(reading.getLabel() != null)
+        {
+            //check that it is not empty
+            if(reading.getLabel().equals(""))
+            {
+                //then make it invisible
+                labelLayout.setVisibility(View.GONE);
+            }
+        }
+        else
+        {
+            labelLayout.setVisibility(View.GONE);
+        }
 
 
         //before setting the reading. make them clickable
@@ -541,6 +564,23 @@ public class ScripturesFragment extends Fragment {
                     reading.setReadingText(currentReading.getReadingText());
                     reading.setReadingTwo(currentReading.getReadingTwo());
                     reading.setReadingOne(currentReading.getReadingOne());
+                    reading.setLabel(currentReading.getLabel());
+                }
+
+                //diable the layut view if necessary for label
+                //check if the label should be blank or not
+                if(reading.getLabel() != null)
+                {
+                    //check that it is not empty
+                    if(reading.getLabel().equals(""))
+                    {
+                        //then make it invisible
+                        labelLayout.setVisibility(View.GONE);
+                    }
+                }
+                else
+                {
+                    labelLayout.setVisibility(View.GONE);
                 }
 
 //                now set the text for the reading

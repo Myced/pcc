@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.TableLayout;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class Presbyteries extends AppCompatActivity {
     List<Presbytery> presbyteryList;
     private Context context;
     private RecyclerView presView ;
+    private TableLayout tableLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +30,11 @@ public class Presbyteries extends AppCompatActivity {
         this.context = getApplicationContext();
         this.getPresbyteryList();
         this.presView = findViewById(R.id.pres_view);
+        this.tableLayout =  (TableLayout) findViewById(R.id.cong_table);
 
         LinearLayoutManager manager = new LinearLayoutManager(this.context);
 
-        PresbyteriesAdapter adapter = new PresbyteriesAdapter(this.presbyteryList);
+        PresbyteriesAdapter adapter = new PresbyteriesAdapter(this.presbyteryList, this.context, this.tableLayout);
 
         presView.setLayoutManager(manager);
         presView.setAdapter(adapter);
@@ -66,6 +69,7 @@ public class Presbyteries extends AppCompatActivity {
         {
             presbytery = new Presbytery();
 
+            presbytery.setId(result.getString(0));
             presbytery.setName(result.getString(1));
             presbytery.setPresbytery(result.getString(2));
             presbytery.setSecretery(result.getString(3));
@@ -86,5 +90,49 @@ public class Presbyteries extends AppCompatActivity {
         db.close();
 
         this.presbyteryList = presbyteries;
+    }
+
+    private List<PresbyteryCongregation> getCongregations(String PresbyteryId)
+    {
+        List<PresbyteryCongregation> congregations = new ArrayList<>();
+
+        PresbyteryCongregation station;
+
+
+        //do a database call
+        ScriptureDBHandler db = new ScriptureDBHandler(context);
+
+        //tty creating a database
+        try {
+            db.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //now open the databse
+        db.openDataBase();
+
+        String query = "SELECT * FROM presbytery_workers WHERE `presbytery` =  '" + PresbyteryId + "' ";
+
+        Cursor result = db.myDataBase.rawQuery(query, null);
+
+        while(result.moveToNext())
+        {
+            station = new PresbyteryCongregation();
+
+            station.setStation(result.getString(1));
+            station.setWorker(result.getString(2));
+            station.setTel(result.getString(3));
+
+            congregations.add(station);
+        }
+
+        //close the result
+        result.close();
+
+        //close the database
+        db.close();
+
+        return congregations;
     }
 }
