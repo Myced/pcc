@@ -9,5 +9,6 @@ public class VisaPayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visa_payment);
+        setTitle("Visa Payment");
     }
 }

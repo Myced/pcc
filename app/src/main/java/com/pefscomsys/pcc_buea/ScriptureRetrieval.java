@@ -70,6 +70,7 @@ public class ScriptureRetrieval {
                         myScripture.setReadingOne(changes.getReadingOne());
                         myScripture.setReadingTwo(changes.getReadingTwo());
                         myScripture.setReadingText(changes.getReadingText());
+                        myScripture.setLabel(changes.getName());
                     }
 
                     //now save the scripture

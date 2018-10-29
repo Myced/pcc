@@ -268,6 +268,12 @@ public class ScripturesFragment extends Fragment {
                 //then make it invisible
                 labelLayout.setVisibility(View.GONE);
             }
+            else
+            {
+                //set the label for that day
+                label.setText(reading.getLabel());
+                labelLayout.setVisibility(View.VISIBLE);
+            }
         }
         else
         {
@@ -576,6 +582,12 @@ public class ScripturesFragment extends Fragment {
                     {
                         //then make it invisible
                         labelLayout.setVisibility(View.GONE);
+                    }
+                    else
+                    {
+                        //set the label for that day
+                        label.setText(reading.getLabel());
+                        labelLayout.setVisibility(View.VISIBLE);
                     }
                 }
                 else
