@@ -2,7 +2,7 @@ package com.pefscomsys.pcc_buea;
 
 public class FScripture
 {
-    private  String date;
+    private String date;
     private String day;
     private String month;
     private String psalms;
@@ -10,13 +10,14 @@ public class FScripture
     private String readingText;
     private String readingTwo;
     private String year;
+    private String name;
 
     public FScripture()
     {
 
     }
 
-    public FScripture(String date, String day, String month, String psalms, String readingOne, String readingText, String readingTwo, String year) {
+    public FScripture( String day, String month, String year, String date, String psalms, String readingOne, String readingText, String readingTwo, String name) {
         this.date = date;
         this.day = day;
         this.month = month;
@@ -25,6 +26,15 @@ public class FScripture
         this.readingText = readingText;
         this.readingTwo = readingTwo;
         this.year = year;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDate() {
