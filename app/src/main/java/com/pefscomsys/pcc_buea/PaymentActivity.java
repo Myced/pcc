@@ -72,6 +72,22 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     public void VisaPay(View view) {
-        Toast.makeText(this, "Coming soon...", Toast.LENGTH_SHORT).show();
+        Intent newIntent = new Intent(this, VisaPayment.class);
+        newIntent.putExtra("REASON", Reason);
+        newIntent.putExtra("AMOUNT", Amount);
+
+        if(this.type != null)
+        {
+            if(this.type.equals("DIARY"))
+            {
+                newIntent.putExtra("YEAR", this.year);
+                newIntent.putExtra("TYPE", "DIARY");
+            }
+            else
+            {
+
+            }
+        }
+        startActivity(newIntent);
     }
 }
