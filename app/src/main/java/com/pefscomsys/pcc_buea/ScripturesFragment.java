@@ -271,7 +271,7 @@ public class ScripturesFragment extends Fragment {
             else
             {
                 //set the label for that day
-                label.setText(reading.getLabel());
+                label.setText(reading.getLabel().replaceAll("\\\\n", System.getProperty("line.separator")));
                 labelLayout.setVisibility(View.VISIBLE);
             }
         }
@@ -575,6 +575,7 @@ public class ScripturesFragment extends Fragment {
 
                 //diable the layut view if necessary for label
                 //check if the label should be blank or not
+
                 if(reading.getLabel() != null)
                 {
                     //check that it is not empty
@@ -586,7 +587,7 @@ public class ScripturesFragment extends Fragment {
                     else
                     {
                         //set the label for that day
-                        label.setText(reading.getLabel());
+                        label.setText(reading.getLabel().replaceAll("\\\\n", System.getProperty("line.separator")));
                         labelLayout.setVisibility(View.VISIBLE);
                     }
                 }

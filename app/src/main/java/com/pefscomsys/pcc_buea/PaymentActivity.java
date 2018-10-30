@@ -72,6 +72,31 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     public void VisaPay(View view) {
+
+        //process the type and make the appropriate choice of amoutn
+        if(this.Reason.contains("Diary"))
+        {
+            //set the amount
+            this.Amount = Prices.SCRIPTURE_US;
+        }
+        else if(this.Reason.contains("HYMN"))
+        {
+            this.Amount = Prices.HYMN_PRICE_US;
+        }
+        else if(this.Reason.contains("Echo"))
+        {
+            this.Amount = Prices.ECHO_PRICE_US;
+        }
+        else if(this.Reason.contains("MESSENGER"))
+        {
+            this.Amount = Prices.THE_MESSENGER_US;
+        }
+        else
+        {
+            //unknow. so the amount should be zero
+            this.Amount = 0;
+        }
+
         Intent newIntent = new Intent(this, VisaPayment.class);
         newIntent.putExtra("REASON", Reason);
         newIntent.putExtra("AMOUNT", Amount);

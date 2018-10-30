@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stripe="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VisaPayment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/visa_payment"
+        android:textStyle="bold"
+        android:textSize="@dimen/h1"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="true"
+        android:contextClickable="true"
+        android:layout_margin="@dimen/margin5"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment for HYMN BOOK"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        android:layout_marginTop="@dimen/margin10"
+        android:textSize="18sp"
+        android:layout_below="@id/momo_image"
+        android:padding="4dp"
+        android:id="@+id/visa_caption"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount: 200FCFA"
+        android:textSize="18sp"
+        android:textColor="@color/text_black"
+        android:padding="4dp"
+        android:id="@+id/visa_amount"
+        android:gravity="center"
+        android:textStyle="italic"/>
+
+    <com.stripe.android.view.CardInputWidget
+        android:id="@+id/card_input_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        stripe:cardTint="@android:color/holo_purple"
+        stripe:cardTextErrorColor="@android:color/holo_orange_dark"
+        />
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:text="PAY NOW"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/visa_button"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/margin20" />
+
+
+
+</LinearLayout>
