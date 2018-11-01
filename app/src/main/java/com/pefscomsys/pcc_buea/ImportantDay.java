@@ -2,6 +2,7 @@ package com.pefscomsys.pcc_buea;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -91,9 +92,9 @@ public class ImportantDay
         {
             station = new PresbyteryCongregation();
 
-            station.setStation(result.getString(1));
-            station.setWorker(result.getString(2));
-            station.setTel(result.getString(3));
+            station.setStation(result.getString(2));
+            station.setWorker(result.getString(3));
+            station.setTel(result.getString(4));
 
             congregations.add(station);
         }

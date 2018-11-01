@@ -1,5 +1,6 @@
 package com.pefscomsys.pcc_buea;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +29,13 @@ public class VisaPayment extends AppCompatActivity {
     private String type;
     private Button payButton;
 
+    private final String STRIPE_SUCCESS_TOKEN = "tok_bypassPending";
+    private final String SERVER_URL = "http://192.168.43.86:3000/charge";
+
     private Context context;
+
+    //dialog box for progress bar
+    ProgressDialog progressDialog;
 
     //my stripe keys
     private final String STRIPE_PUBLIC_KEY = "pk_test_4o4XUuHJFzxi2D5fSbKUIexq";
@@ -50,7 +57,7 @@ public class VisaPayment extends AppCompatActivity {
         Reason = paymentIntent.getStringExtra("REASON");
         Amount = paymentIntent.getIntExtra("AMOUNT", 0);
 
-            //extra for diary
+        //extra for diary
         try
         {
             this.type = paymentIntent.getStringExtra("TYPE");
@@ -92,14 +99,25 @@ public class VisaPayment extends AppCompatActivity {
                 }
                 else
                 {
+                    Log.d("PCCAPP", "Else card ok");
                     //charge the client directly
+
+
                     //create a token
                     Stripe stripe = new Stripe(context, STRIPE_PUBLIC_KEY);
+
+                    //start a progress dialog
+                    //start the dialog box
+                    progressDialog = new ProgressDialog(context);
+                    progressDialog.setMessage("Processing your Payment");
+                    progressDialog.setCanceledOnTouchOutside(false);
+                    progressDialog.setCancelable(false);
+//                    progressDialog.show();
 
                     stripe.createToken(card, new TokenCallback() {
                         @Override
                         public void onError(Exception error) {
-                            Toast.makeText(context, "Error Prcessing Card", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Error Processing Card. Check internet connection", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
@@ -107,9 +125,50 @@ public class VisaPayment extends AppCompatActivity {
                             //save the token and charge directly
                             Log.d("PCCAPP", token.toString());
 
+//                            String tokenID = token.getId();
+
+                            //FOR TESTING, USE DEFAULT TEST TOKE
+                            String tokenID = STRIPE_SUCCESS_TOKEN;
+
+
                             //MAKE AN AJAX REQUEST TO THE SERVER TO MAKE THE CHAREG
                             //and then parese the response
+                            VisaPaymentProcessor processor = new VisaPaymentProcessor(context);
 
+
+                            int theAmount = Amount * 100; //convert to cents. to append two zeros at the end
+
+                            processor.setAmount(theAmount);
+                            processor.setToken(tokenID);
+
+                            //now check if the payment is for diary
+                            if(type != null )
+                            {
+                                if(type.equals("DIARY"))
+                                {
+                                    //then get the year
+                                    String diaryYear = year;
+                                    String description = Reason;
+                                    processor.isDiary = true;
+                                    processor.diaryYear = diaryYear;
+                                }
+
+                            }
+
+                            processor.setDescription(Reason);
+
+                            //process now
+                            processor.processPayment();
+
+                            progressDialog.dismiss();
+
+                            //make toast messages to indicates successful or failed transaction.
+                            //if successful then redirect to home page
+                            if(processor.success == true)
+                            {
+                                Intent newIntent = new Intent(context, MainActivity.class);
+                                context.startActivity(newIntent);
+                            }
 
                         }
                     });

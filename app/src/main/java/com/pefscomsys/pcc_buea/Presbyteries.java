@@ -30,7 +30,7 @@ public class Presbyteries extends AppCompatActivity {
         this.context = getApplicationContext();
         this.getPresbyteryList();
         this.presView = findViewById(R.id.pres_view);
-        this.tableLayout =  (TableLayout) findViewById(R.id.cong_table);
+        this.tableLayout =   findViewById(R.id.cong_table);
 
         LinearLayoutManager manager = new LinearLayoutManager(this.context);
 
