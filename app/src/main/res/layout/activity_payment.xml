@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:id="@+id/visa_pay"
-        android:layout_marginBottom="@dimen/margin5"
+        android:layout_marginBottom="35dp"
         android:text="VISA PAYMENT"
         android:textSize="18sp"
         android:layout_alignParentBottom="true"
