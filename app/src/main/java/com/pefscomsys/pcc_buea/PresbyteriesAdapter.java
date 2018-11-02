@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +18,8 @@ import android.view.animation.Animation;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -69,9 +72,55 @@ public class PresbyteriesAdapter extends RecyclerView.Adapter<PresbyteriesAdapte
         //initilaise the holder table to null before adding anything to it
 
         holder.presTable.removeAllViews();
-        holder.presTable.setShrinkAllColumns(true);
 
-//        table.setStretchAllColumns(true);
+        int headerTextColor = Color.WHITE;
+        int bodyTextColoor = Color.BLACK;
+        float bodyTextSize = 16;
+        int paddingValue  =  16;
+
+        //create a row for the header
+        TableRow header = new TableRow(this.context);
+        header.setBackgroundResource(R.color.colorPrimary);
+
+        TextView countHeading = new TextView(context);
+        countHeading.setText("No");
+        countHeading.setTextColor(headerTextColor);
+        countHeading.setTextSize(20);
+        countHeading.setTypeface(null, Typeface.BOLD);
+        countHeading.setPadding(paddingValue, paddingValue, paddingValue, paddingValue);
+        countHeading.setBackgroundResource(R.drawable.border_square);
+
+        TextView stationHeading = new TextView(context);
+        stationHeading.setText("Station");
+        stationHeading.setTextColor(headerTextColor);
+        stationHeading.setTextSize(20);
+        stationHeading.setTypeface(null, Typeface.BOLD);
+        stationHeading.setPadding(paddingValue, paddingValue, paddingValue, paddingValue);
+        stationHeading.setBackgroundResource(R.drawable.border_square);
+
+        TextView workerHeading = new TextView(context);
+        workerHeading.setText("Worker");
+        workerHeading.setTextColor(headerTextColor);
+        workerHeading.setTextSize(20);
+        workerHeading.setTypeface(null, Typeface.BOLD);
+        workerHeading.setPadding(paddingValue, paddingValue, paddingValue, paddingValue);
+        workerHeading.setBackgroundResource(R.drawable.border_square);
+
+        TextView telHeading = new TextView(context);
+        telHeading.setText("Telephone");
+        telHeading.setTextColor(headerTextColor);
+        telHeading.setTextSize(20);
+        telHeading.setTypeface(null, Typeface.BOLD);
+        telHeading.setPadding(paddingValue, paddingValue, paddingValue, paddingValue);
+        telHeading.setBackgroundResource(R.drawable.border_square);
+
+        header.addView(countHeading);
+        header.addView(stationHeading);
+        header.addView(workerHeading);
+        header.addView(telHeading);
+
+        holder.presTable.addView(header);
+
 
         for(int i = 0; i < stations.size(); i++)
         {
@@ -81,19 +130,31 @@ public class PresbyteriesAdapter extends RecyclerView.Adapter<PresbyteriesAdapte
 
             TextView count = new TextView(this.context);
             count.setText(Integer.toString(myCount));
-            count.setPadding(2, 2, 2, 2);
+            count.setTextSize(bodyTextSize);
+            count.setTextColor(bodyTextColoor);
+            count.setBackgroundResource(R.drawable.border_square);
+            count.setPadding(10, 10, 10, 10);
 
             TextView station = new TextView(context);
             station.setText(stations.get(i).getStation());
-            station.setPadding(2, 2, 2, 2);
+            station.setTextSize(bodyTextSize);
+            station.setTextColor(bodyTextColoor);
+            station.setBackgroundResource(R.drawable.border_square);
+            station.setPadding(10, 10, 10, 10);
 
             TextView worker = new TextView(context);
             worker.setText(stations.get(i).getWorker());
-            worker.setPadding(2, 2, 2, 2);
+            worker.setTextSize(bodyTextSize);
+            worker.setTextColor(bodyTextColoor);
+            worker.setBackgroundResource(R.drawable.border_square);
+            worker.setPadding(10, 10, 10, 10);
 
             TextView tel = new TextView(context);
             tel.setText(stations.get(i).getTel());
-            tel.setPadding(2, 2, 2, 2);
+            tel.setTextSize(bodyTextSize);
+            tel.setTextColor(bodyTextColoor);
+            tel.setBackgroundResource(R.drawable.border_square);
+            tel.setPadding(10, 10, 10, 10);
 
             //add the views
             row.addView(count);

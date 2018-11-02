@@ -169,7 +169,7 @@ public class ScriptureTextHandler
 
         //just do a normal query and see
         String query = "SELECT * FROM `verses` WHERE `verse` >= '" + this.start +
-                "'  AND `verse` <= '" + this.end + "' AND `book` = '" + this.book + "' ";
+                "'  AND `verse` <= '" + this.end + "' AND `book` = '" + this.book.replace(" ", "") + "' ";
 
         //do the query
         Cursor scriptureResult = db.myDataBase.rawQuery(query, null);
