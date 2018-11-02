@@ -18353,20 +18353,22 @@
     <string name="chb">CHB</string>
     <string name="app_version">Version: 1.0</string>
     <string name="pcc_about">
-        PCC Diary is a mobile application develops for Christians of the Presbyterian Church In Cameroon (PCC)
-and other believers of Christ Jesus.\n\nYou can have quick and easy access to the dairy’s daily readings, church Hymn Books, Church
-Information, church Magazine and Newsletters (The Messenger and Presbyterian Echo) and other
-information\n\nThis app is free to download from Google play store but yearly fee is charge for some
-features please see the feature payment plan\n\n
-This app is produced by communication department of the PCC\n
-        Supervised by <i><b>Rev. Mokoko Thomas Mbua</b></i>
+        PCC Diary is a mobile application develops for Christians of the
+        Presbyterian Church In Cameroon (PCC)
+        and other believers of Christ Jesus. \n\nYou can have quick and easy access
+        to the dairy’s daily readings, church Hymn Books, Church
+        Information, church Magazine and Newsletters (The Messenger and Presbyterian Echo) and other
+        information \n\nThis app is free to download from Google play store but yearly fee is charge for some
+        features please see the feature
+        payment plan\n\nThis app is produced by communication department of
+        the PCC\nSupervised by <i><b>Rev. Mokoko Thomas Mbua</b></i>
     </string>
     <string name="developers">Developers</string>
     <string name="about_developers">
         This application is inspired by God Almighty for the Praise and Glory of His Son Jesus Christ
-The app is:\n\n
-Powered by pefscom system company Buea\n<b>contact: <i>233323988</i></b>\n
-        Distributed &amp; Marketed by\n<i>jevis &amp; Associates Consulting</i>\n\n
-        <b>Developers</b>\n<i>Frank Ekombe\nAsen A. Jevis\nCedric Tifuh\nMangi Elijah</i>
+        The app is:\n\nPowered by pefscom system
+        company Buea\n<b>contact: <i>233323988</i></b>
+        \nDistributed &amp; Marketed by\n<i>Jevis &amp; Associates Consulting</i>
+        \n\n<b>Developers</b>\n<i>Frank Ekombe\nCedric Tifuh\nMangi Elijah \nAsen Jevis</i>
     </string>
 </resources>
