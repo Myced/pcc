@@ -36,6 +36,7 @@ public class VisaPayment extends AppCompatActivity {
 
     //dialog box for progress bar
     ProgressDialog progressDialog;
+    public String progressTitle;
 
     //my stripe keys
     private final String STRIPE_PUBLIC_KEY = "pk_test_4o4XUuHJFzxi2D5fSbKUIexq";
@@ -84,51 +85,68 @@ public class VisaPayment extends AppCompatActivity {
         String amountText = "Amount : $" + String.valueOf(Amount);
         amountView.setText(amountText);
 
+        //prepare the progress dialog
+        //start a progress dialog
+        //start the dialog box
+        progressDialog = new ProgressDialog(this);
+        progressTitle = "Validating Card";
+        progressDialog.setMessage(this.progressTitle);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(false);
+
         //when the button is clicked. perform payment here
         payButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                //start the progress
+                startProgress();
+
                 //process the card
                 //process here
-                CardInputWidget mCardInputWidget = (CardInputWidget) findViewById(R.id.card_input_widget);
+                CardInputWidget mCardInputWidget =  findViewById(R.id.card_input_widget);
 
                 Card card = mCardInputWidget.getCard();
+
+
                 if (card == null) {
-                    Toast.makeText(getApplicationContext(), "Failed to process visa", Toast.LENGTH_SHORT);
+                    Log.d("PCCAPP", "card is null");
+                    stopProgress();
+                    Toast.makeText(getApplicationContext(), "Please fill out the Card Information", Toast.LENGTH_SHORT).show();
+                }
+                else if(!card.validateCard())
+                {
+                    Log.d("PCCAPP", "Card is not valid");
+                    stopProgress();
+                    Toast.makeText(getApplicationContext(), "Please Fill out the card information correctly", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
-                    Log.d("PCCAPP", "Else card ok");
-                    //charge the client directly
-
+                    changeProgressTitle("Getting Transaction Token");
 
                     //create a token
                     Stripe stripe = new Stripe(context, STRIPE_PUBLIC_KEY);
 
-                    //start a progress dialog
-                    //start the dialog box
-                    progressDialog = new ProgressDialog(context);
-                    progressDialog.setMessage("Processing your Payment");
-                    progressDialog.setCanceledOnTouchOutside(false);
-                    progressDialog.setCancelable(false);
-//                    progressDialog.show();
 
                     stripe.createToken(card, new TokenCallback() {
                         @Override
                         public void onError(Exception error) {
+                            Log.d("PCCAPP", "cannot get stripe token");
+                            stopProgress();
                             Toast.makeText(context, "Error Processing Card. Check internet connection", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
                         public void onSuccess(Token token) {
                             //save the token and charge directly
-                            Log.d("PCCAPP", token.toString());
+                            Log.d("PCCAPP", "totken gotten" + token.toString());
 
 //                            String tokenID = token.getId();
 
                             //FOR TESTING, USE DEFAULT TEST TOKE
                             String tokenID = STRIPE_SUCCESS_TOKEN;
+
+                            changeProgressTitle("Performing Transaction");
 
 
                             //MAKE AN AJAX REQUEST TO THE SERVER TO MAKE THE CHAREG
@@ -160,7 +178,10 @@ public class VisaPayment extends AppCompatActivity {
                             //process now
                             processor.processPayment();
 
-                            progressDialog.dismiss();
+                            changeProgressTitle("All Done");
+
+                            //end progress
+                            stopProgress();
 
                             //make toast messages to indicates successful or failed transaction.
                             //if successful then redirect to home page
@@ -177,5 +198,22 @@ public class VisaPayment extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void startProgress ()
+    {
+        progressDialog.show();
+    }
+
+    public void stopProgress()
+    {
+        progressDialog.dismiss();
+    }
+
+    public void changeProgressTitle(String title)
+    {
+        progressTitle = title;
+        progressDialog.dismiss();
+        progressDialog.show();
     }
 }

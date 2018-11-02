@@ -95,10 +95,6 @@ public class VisaPaymentProcessor
             public void onStart()
             {
                 //start the dialog box
-                progressDialog = new ProgressDialog(context);
-                progressDialog.setMessage("Processing your Payment");
-                progressDialog.setCanceledOnTouchOutside(false);
-                progressDialog.setCancelable(false);
 
             }
 
@@ -110,13 +106,11 @@ public class VisaPaymentProcessor
                 reason = "Could not make Payment. Check internet Connection";
                 Toast.makeText(context, reason, Toast.LENGTH_SHORT).show();
                 Log.d("PCCAPP", reason);
-//                progressDialog.dismiss();
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response)
             {
-//                progressDialog.dismiss();
 
                 //check the json response
                 try {
