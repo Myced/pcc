@@ -29,7 +29,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
     ScrollView churchInfo;
 
     private Button historyBtn, congregationBtn, educationBtn, healthBtn, addressBtn, otherBtn;
-    private Button calendarBtn, communicationBtn, pastorBtn, presBtn;
+    private Button calendarBtn, communicationBtn, pastorBtn, presBtn, sundaySchoolBtn;
 
     public InfoFragment() {
         // Required empty public constructor
@@ -58,6 +58,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         communicationBtn = view.findViewById(R.id.more_communication);
         pastorBtn = view.findViewById(R.id.more_pastors);
         presBtn = view.findViewById(R.id.more_cong);
+        sundaySchoolBtn = view.findViewById(R.id.more_sunday_school);
 
         historyBtn.setOnClickListener(this);
         congregationBtn.setOnClickListener(this);
@@ -67,6 +68,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
         communicationBtn.setOnClickListener(this);
         pastorBtn.setOnClickListener(this);
         presBtn.setOnClickListener(this);
+        sundaySchoolBtn.setOnClickListener(this);
 
         return view;
     }
@@ -101,6 +103,10 @@ public class InfoFragment extends Fragment implements View.OnClickListener {
             case  R.id.more_cong:
                 Intent mCongIntent = new Intent(getContext(), Presbyteries.class);
                 startActivity(mCongIntent);
+                break;
+            case  R.id.more_sunday_school:
+                Intent mSundaySchoolIntent = new Intent(getContext(), SundaySchoolActivity.class);
+                startActivity(mSundaySchoolIntent);
                 break;
 //            case  R.id.more_address:
 //                Intent mChurchAddressesIntent = new Intent(getContext(), Address.class);

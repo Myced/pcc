@@ -80,7 +80,8 @@
         <activity android:name=".RetiredPastors" />
         <activity android:name=".Communication" />
         <activity android:name=".Presbyteries" />
-        <activity android:name=".VisaPayment"></activity>
+        <activity android:name=".VisaPayment" />
+        <activity android:name=".SundaySchoolActivity"></activity>
     </application>
 
 </manifest>
