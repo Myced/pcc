@@ -79,11 +79,11 @@ public class PaymentActivity extends AppCompatActivity {
             //set the amount
             this.Amount = Prices.SCRIPTURE_US;
         }
-        else if(this.Reason.contains("HYMN"))
+        else if(this.Reason.contains("Hymn"))
         {
             this.Amount = Prices.HYMN_PRICE_US;
         }
-        else if(this.Reason.contains("Echo"))
+        else if(this.Reason.contains("ECHO"))
         {
             this.Amount = Prices.ECHO_PRICE_US;
         }
