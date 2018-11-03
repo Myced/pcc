@@ -21,14 +21,10 @@ public class AppInitialiser
     {
         if(this.isFirstRun())
         {
-            //then initilise the app
-            this.startProgressBar();
 
             this.copyDatabase();
 
             this.updateFirstRunStatus();
-
-            this.endProgressBar();
         }
     }
 
@@ -45,6 +41,9 @@ public class AppInitialiser
         }
 
         //database has been created
+        //try to open then close it back
+        myDb.openDataBase();
+        myDb.close();
     }
 
     public void updateFirstRunStatus()

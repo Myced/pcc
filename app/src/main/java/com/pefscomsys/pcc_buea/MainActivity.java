@@ -1,5 +1,6 @@
 package com.pefscomsys.pcc_buea;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String PAYMENT_PREFS = "PaymentPref";
     SharedPreferences mPaymentPref;
     boolean doubleBackToExitPressedOnce = false;
+
+    public ProgressDialog dialog;
 
     FirebaseUser currentUser;
 
@@ -120,18 +123,6 @@ public class MainActivity extends AppCompatActivity {
         setFragment(homeFragment);
 
         getOverflowMenu();
-
-        //Initialise the application
-        AppInitialiser init = new AppInitialiser(this);
-        init.initialiseApp();
-
-
-
-        //pull scripture updates
-
-        //this is not the best idea
-        /// but we don't have time
-
 
         MyDate today = new MyDate(getApplicationContext());
 

@@ -1,6 +1,7 @@
 package com.pefscomsys.pcc_buea;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -35,6 +36,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     BottomNavigationView bottomNavigationView;
     FirebaseUser currentUser;
 
+    public ProgressDialog dialog;
+
     public HomeFragment() {
         // Required empty public constructor
 
@@ -54,6 +57,24 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         magBtn = view.findViewById(R.id.studyBookBtn);
         infoBtn = view.findViewById(R.id.infoBtn);
 
+
+        //Initialise the application
+        AppInitialiser init = new AppInitialiser(getContext());
+        boolean firstRun = init.isFirstRun();
+
+        if(firstRun)
+        {
+            dialog = new ProgressDialog(getContext());
+            dialog.setMessage("Initialising The Application");
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.show();
+
+            //then initialise app
+            init.initialiseApp();
+
+            dialog.dismiss();
+        }
 
         bottomNavigationView = getActivity().findViewById(R.id.navigation);
         diaryBtn.setOnClickListener(this);
