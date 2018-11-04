@@ -173,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
             case  R.id.about:
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;
+            case  R.id.book_and_abbre:
+                startActivity(new Intent(this, BookAbbreviationActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 

@@ -34,6 +34,8 @@
     <string name="search">Enter hymn number…</string>
     <string name="splash_subtitle">Church Hymnary &amp; Diary\nmobile application</string>
     <string name="favorite">Favorite</string>
+    <string name="book_and_abbreviation">Books and Abbreviations</string>
+    <string name="book_and_abbr">Books n. Abbrev.</string>
     <string name="day">Day</string>
     <string name="month">Month</string>
     <string name="year">Year</string>

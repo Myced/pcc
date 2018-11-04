@@ -11,7 +11,10 @@ import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -989,23 +992,9 @@ public class ScripturesFragment extends Fragment {
 
     }
 
-        /*
-        Copy this an paste it where you want to check if the diary is available
-
-        checkAvailable(new SimpleFirebaseCallBack<Boolean>() {
-            @Override
-            public void isAvailable(Boolean status) {
-                if (status) {
-                    // true was returned
-                    //Perform the action you want to perform if its available inside year
-
-                } else {
-                    // false was returned
-                    //if its not available perform it inside here
-                }
-
-            }
-        }, String.valueOf(2018));
-        */
-
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.scripture_toolbar, menu);
+    }
 }

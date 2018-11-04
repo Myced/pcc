@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/book_and_abbre"
+        android:orderInCategory="2"
+        android:title="@string/book_and_abbr"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/about"
         android:orderInCategory="2"
         android:title="@string/about"
