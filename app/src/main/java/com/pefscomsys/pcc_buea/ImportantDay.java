@@ -70,7 +70,6 @@ public class ImportantDay
 
         PresbyteryCongregation station;
 
-
         //do a database call
         ScriptureDBHandler db = new ScriptureDBHandler(context);
 
