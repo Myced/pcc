@@ -2,6 +2,7 @@ package com.pefscomsys.pcc_buea;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -38,6 +39,8 @@ public class MomoPaymentActivity extends AppCompatActivity {
     private String type;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+    Activity myapp;
+
     PaymentProcessor paymentProcessor;
 
     @Override
@@ -61,6 +64,8 @@ public class MomoPaymentActivity extends AppCompatActivity {
         Intent paymentIntent = getIntent();
         Reason = paymentIntent.getStringExtra("REASON");
         Amount = paymentIntent.getIntExtra("AMOUNT", 0);
+
+        myapp = this;
 
         try
         {
@@ -91,7 +96,7 @@ public class MomoPaymentActivity extends AppCompatActivity {
         priceText = findViewById(R.id.amount_view);
         phonenumber = findViewById(R.id.momo_number);
         captionText.setText("Payment for "+ Reason);
-        priceText.setText("Amount: "+ Amount);
+        priceText.setText("Amount: "+ Amount + "FCFA");
         mPaymentButton = findViewById(R.id.momo_button);
 
         mPaymentButton.setOnClickListener(new View.OnClickListener() {
@@ -100,8 +105,20 @@ public class MomoPaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Request for sms permission if it not giving
 
-                if(!checkPermission(android.Manifest.permission.RECEIVE_SMS)) {
-                    ActivityCompat.requestPermissions(getParent(), new String[]{Manifest.permission.RECEIVE_SMS}, 222);
+                if (Build.VERSION.SDK_INT >= 23) {
+                    if (checkSelfPermission(Manifest.permission.RECEIVE_SMS)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        Log.v("Permission: ","Permission is granted");
+
+                    } else {
+
+                        Log.v("Permission","Permission is revoked");
+                        ActivityCompat.requestPermissions(myapp, new String[]{Manifest.permission.RECEIVE_SMS}, 1);
+
+                    }
+                }
+                else { //permission is automatically granted on sdk<23 upon installation
+                    Log.v("Permission","Permission is granted");
                 }
 
                 String number = phonenumber.getText().toString();

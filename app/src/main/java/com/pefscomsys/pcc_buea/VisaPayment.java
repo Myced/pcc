@@ -89,7 +89,7 @@ public class VisaPayment extends AppCompatActivity {
         //start a progress dialog
         //start the dialog box
         progressDialog = new ProgressDialog(this);
-        progressTitle = "Validating Card";
+        progressTitle = "Processing Visa Payment";
         progressDialog.setMessage(this.progressTitle);
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setCancelable(false);
@@ -122,7 +122,6 @@ public class VisaPayment extends AppCompatActivity {
                 }
                 else
                 {
-                    changeProgressTitle("Getting Transaction Token");
 
                     //create a token
                     Stripe stripe = new Stripe(context, STRIPE_PUBLIC_KEY);
@@ -145,9 +144,6 @@ public class VisaPayment extends AppCompatActivity {
 
                             //FOR TESTING, USE DEFAULT TEST TOKE
                             String tokenID = STRIPE_SUCCESS_TOKEN;
-
-                            changeProgressTitle("Performing Transaction");
-
 
                             //MAKE AN AJAX REQUEST TO THE SERVER TO MAKE THE CHAREG
                             //and then parese the response
@@ -177,8 +173,6 @@ public class VisaPayment extends AppCompatActivity {
 
                             //process now
                             processor.processPayment();
-
-                            changeProgressTitle("All Done");
 
                             //end progress
                             stopProgress();
@@ -212,8 +206,8 @@ public class VisaPayment extends AppCompatActivity {
 
     public void changeProgressTitle(String title)
     {
-        progressTitle = title;
         progressDialog.dismiss();
+        progressTitle = title;
         progressDialog.show();
     }
 }

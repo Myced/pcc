@@ -200,7 +200,7 @@ public class VisaResult
             uid = mUser.getUid();
             mDatabase = FirebaseDatabase.getInstance().getReference();
             try {
-                mDatabase.child("Transactions").child(""+response.getString("TransactionID")).setValue(getObject(response, context));
+                mDatabase.child("VisaPayments").child(""+response.getString("TransactionID")).setValue(getObject(response, context));
             } catch (JSONException e) {
                 e.printStackTrace();
             }

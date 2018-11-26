@@ -149,7 +149,7 @@ public class VisaPaymentProcessor
                         success = false;
 
                         JSONObject errorObject = (JSONObject) response.get("error");
-                        reason = errorObject.getString("message");
+                        reason = response.getString("message");
 
                         Toast.makeText(context, "Processing Failed", Toast.LENGTH_SHORT).show();
                         Toast.makeText(context, reason, Toast.LENGTH_SHORT).show();

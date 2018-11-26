@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin16"
+    android:layout_marginTop="@dimen/margin16"
+    android:layout_marginRight="@dimen/margin16"
+    android:layout_marginBottom="@dimen/margin16"
+    android:layout_gravity="center_horizontal">
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:id="@+id/pcclogo"/>-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orange_image"
+        android:src="@drawable/orange_money"
+        android:layout_marginBottom="@dimen/margin20"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment for HYMN BOOK"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        android:textSize="18sp"
+        android:layout_below="@id/orange_image"
+        android:padding="4dp"
+        android:id="@+id/orange_caption"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount: 200FCFA"
+        android:textSize="18sp"
+        android:textColor="@color/text_black"
+        android:padding="4dp"
+        android:id="@+id/orange_amount_view"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:layout_below="@id/orange_caption"/>
+    <EditText
+        android:layout_width="202dp"
+        android:layout_height="58dp"
+        android:layout_below="@id/orange_amount_view"
+        android:id="@+id/orange_number"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin16"
+        android:hint="@string/enter_your_number"
+        android:imeActionLabel="Number"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="PAY NOW"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
+        android:id="@+id/orange_button"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_orange_button"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

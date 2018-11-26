@@ -16,7 +16,7 @@
         android:id="@+id/momo_image"
         android:src="@drawable/visa_image"
         android:layout_marginBottom="@dimen/margin20"/>
-    <TextViewcd pccc
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Payment for HYMN BOOK"
@@ -25,7 +25,7 @@
         android:textSize="18sp"
         android:layout_below="@id/momo_image"
         android:padding="4dp"
-        android:id="@+id/caption"
+        android:id="@+id/visa_caption"
         />
     <TextView
         android:layout_width="match_parent"
@@ -34,16 +34,16 @@
         android:textSize="18sp"
         android:textColor="@color/text_black"
         android:padding="4dp"
-        android:id="@+id/amount_view"
+        android:id="@+id/visa_amount"
         android:gravity="center"
         android:textStyle="italic"
-        android:layout_below="@id/caption"/>
+        android:layout_below="@id/visa_caption"/>
 
     <com.stripe.android.view.CardInputWidget
         android:id="@+id/card_input_widget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/amount_view"
+        android:layout_below="@id/visa_amount"
         android:gravity="center"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/margin16"
