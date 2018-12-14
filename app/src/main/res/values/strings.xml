@@ -36,6 +36,12 @@
     <string name="favorite">Favorite</string>
     <string name="book_and_abbreviation">Books and Abbreviations</string>
     <string name="book_and_abbr">Books n. Abbrev.</string>
+    <string name="fee_plan">Fee Plan</string>
+    <string name="feedback">FeedBack</string>
+    <string name="feedback_content">
+        To help improve this application, please send your feedbacks with corrections and suggestion to:
+        \n\n asenjavis@gmail.com
+    </string>
     <string name="day">Day</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
@@ -18354,7 +18360,7 @@
     <string name="chb">CHB</string>
     <string name="app_version">Version: 1.0</string>
     <string name="pcc_about">
-        PCC Diary is a mobile application develops for Christians of the
+        PCC Diary is a mobile application developed for Christians of the
         Presbyterian Church In Cameroon (PCC)
         and other believers of Christ Jesus. \n\nYou can have quick and easy access
         to the dairy’s daily readings, church Hymn Books, Church
@@ -18364,12 +18370,15 @@
         payment plan\n\nThis app is produced by communication department of
         the PCC\nSupervised by <i><b>Rev. Mokoko Thomas Mbua</b></i>
     </string>
-    <string name="developers">Developers</string>
     <string name="about_developers">
-        This application is inspired by God Almighty for the Praise and Glory of His Son Jesus Christ
-        The app is:\n\nPowered by pefscom system
-        company Buea\n<b>contact: <i>233323988</i></b>
-        \nDistributed &amp; Marketed by\n<i>Jevis &amp; Associates Consulting</i>
-        \n\n<b>Developers</b>\n<i>Frank Ekombe\nCedric Tifuh\nMangi Elijah \nAsen Jevis</i>
+        \nCreated and Developed by Asen Jevis Agu (Jevis &amp; Associates Consulting) \n
+
+
+        \n<b>Developed By Pefscom Systems in the persons of: </b>
+
+        <i>\nFrank Ekombe
+        \nCedric Tifuh
+        \nMangi Elijah
+        </i>
     </string>
 </resources>

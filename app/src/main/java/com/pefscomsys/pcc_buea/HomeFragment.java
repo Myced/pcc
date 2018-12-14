@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 else{
                     Intent paymentIntent = new Intent(getContext(), PaymentActivity.class);
                     paymentIntent.putExtra("REASON", getString(R.string.HYMN_STATUS));
-                    paymentIntent.putExtra("AMOUNT", HYMN_PRICE);
+                    paymentIntent.putExtra("AMOUNT", Prices.HYMN_PRICE);
                     startActivity(paymentIntent);
                 }
                 break;

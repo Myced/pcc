@@ -176,6 +176,12 @@ public class MainActivity extends AppCompatActivity {
             case  R.id.book_and_abbre:
                 startActivity(new Intent(this, BookAbbreviationActivity.class));
                 return true;
+            case  R.id.feedback_menu:
+                startActivity(new Intent(this, FeedBack.class));
+                return true;
+            case  R.id.feeplan_menu:
+                startActivity(new Intent(this, FeePlan.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 

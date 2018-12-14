@@ -83,7 +83,9 @@
         <activity android:name=".VisaPayment" />
         <activity android:name=".SundaySchoolActivity" />
         <activity android:name=".BookAbbreviationActivity" />
-        <activity android:name=".OrangeMoneyPayment"></activity>
+        <activity android:name=".OrangeMoneyPayment" />
+        <activity android:name=".FeedBack" />
+        <activity android:name=".FeePlan"></activity>
     </application>
 
 </manifest>
