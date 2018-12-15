@@ -3,9 +3,11 @@ package com.pefscomsys.pcc_buea;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +40,7 @@ public class OrangeMoneyPayment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orange_money_payment);
+
 
         orangeNumber = findViewById(R.id.orange_number);
         orangeButton = findViewById(R.id.orange_button);
@@ -147,5 +150,31 @@ public class OrangeMoneyPayment extends AppCompatActivity {
     public void dismissDialog()
     {
         dialog.dismiss();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+            case  R.id.about:
+                startActivity(new Intent(this, AboutActivity.class));
+                return true;
+            case  R.id.book_and_abbre:
+                startActivity(new Intent(this, BookAbbreviationActivity.class));
+                return true;
+            case  R.id.feedback_menu:
+                startActivity(new Intent(this, FeedBack.class));
+                return true;
+            case  R.id.feeplan_menu:
+                startActivity(new Intent(this, FeePlan.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

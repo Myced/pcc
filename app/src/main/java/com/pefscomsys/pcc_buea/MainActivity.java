@@ -13,6 +13,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -170,6 +171,9 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
 
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
             case  R.id.about:
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;

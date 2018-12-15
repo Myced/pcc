@@ -411,6 +411,27 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         >
+
+                        <RelativeLayout
+                            android:id="@+id/labelLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/light_grey"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/label2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:text=""
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/fontsize"
+                            android:textStyle="bold" />
+                        </RelativeLayout>
+
                         <RelativeLayout
                             android:id="@+id/psalms_layout"
                             android:layout_width="match_parent"

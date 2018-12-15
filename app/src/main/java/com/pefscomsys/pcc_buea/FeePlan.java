@@ -38,7 +38,7 @@ public class FeePlan extends AppCompatActivity {
         headingRow2.addView(prepareHead(new TextView(context), " "));
         headingRow2.addView(prepareHead(new TextView(context), "FCFA"));
         headingRow2.addView(prepareHead(new TextView(context), "Dollar ($)"));
-        headingRow2.addView(prepareHead(new TextView(context), "Euro "));
+        headingRow2.addView(prepareHead(new TextView(context), "Pound (£) "));
         headingRow2.addView(prepareHead(new TextView(context), " "));
 
 

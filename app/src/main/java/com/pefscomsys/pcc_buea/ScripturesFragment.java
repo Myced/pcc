@@ -74,8 +74,8 @@ public class ScripturesFragment extends Fragment {
     LinearLayout errorLayout, scriptureLayer;
 
     //daily labels like Palm Sunday
-    RelativeLayout labelLayout;
-    TextView label;
+    RelativeLayout labelLayout, labelLayout2;
+    TextView label, label2;
 
     //scripture variable
 
@@ -129,7 +129,10 @@ public class ScripturesFragment extends Fragment {
 
         //work with the labels
         labelLayout = (RelativeLayout) view.findViewById(R.id.labelLayout);
+        labelLayout2 = view.findViewById(R.id.labelLayout2);
+
         label = (TextView) view.findViewById(R.id.label);
+        label2 = (TextView) view.findViewById(R.id.label2);
 
         //get the current date
         //create an instance of MyDate
@@ -270,17 +273,22 @@ public class ScripturesFragment extends Fragment {
             {
                 //then make it invisible
                 labelLayout.setVisibility(View.GONE);
+                labelLayout2.setVisibility(View.GONE);
             }
             else
             {
                 //set the label for that day
                 label.setText(reading.getLabel().replaceAll("\\\\n", System.getProperty("line.separator")));
                 labelLayout.setVisibility(View.VISIBLE);
+
+                label2.setText(reading.getLabel().replaceAll("\\\\n", System.getProperty("line.separator")));
+                labelLayout2.setVisibility(View.VISIBLE);
             }
         }
         else
         {
             labelLayout.setVisibility(View.GONE);
+            labelLayout2.setVisibility(View.GONE);
         }
 
 
@@ -586,17 +594,22 @@ public class ScripturesFragment extends Fragment {
                     {
                         //then make it invisible
                         labelLayout.setVisibility(View.GONE);
+                        labelLayout2.setVisibility(View.GONE);
                     }
                     else
                     {
                         //set the label for that day
                         label.setText(reading.getLabel().replaceAll("\\\\n", System.getProperty("line.separator")));
                         labelLayout.setVisibility(View.VISIBLE);
+
+                        label2.setText(reading.getLabel().replaceAll("\\\\n", System.getProperty("line.separator")));
+                        labelLayout2.setVisibility(View.VISIBLE);
                     }
                 }
                 else
                 {
                     labelLayout.setVisibility(View.GONE);
+                    labelLayout2.setVisibility(View.GONE);
                 }
 
 //                now set the text for the reading
