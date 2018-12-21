@@ -26,7 +26,7 @@
     <string name="press_echo">PRESBYTERIAN ECHO</string>
     <string name="messenger">THE MESSENGER</string>
     <string name="more">More</string>
-    <string name="congregation">Presbytary &amp; Congregation</string>
+    <string name="congregation">Presbyteries &amp; Congregation</string>
     <string name="education">Education</string>
     <string name="health">Health</string>
     <string name="church_address">Church Address &amp; Committee</string>
@@ -40,7 +40,7 @@
     <string name="feedback">FeedBack</string>
     <string name="feedback_content">
         To help improve this application, please send your feedbacks with corrections and suggestion to:
-        \n\n asenjavis@gmail.com
+        \n\n webmaster@pcc.cm
     </string>
     <string name="day">Day</string>
     <string name="month">Month</string>
@@ -18337,6 +18337,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
+    <string name="prompt_telephone">Telephone Number </string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -18368,7 +18369,9 @@
         information \n\nThis app is free to download from Google play store but yearly fee is charge for some
         features please see the feature
         payment plan\n\nThis app is produced by communication department of
-        the PCC\nSupervised by <i><b>Rev. Mokoko Thomas Mbua</b></i>
+        the PCC\n\nSupervised by \n
+
+        <i><b>Rev. Mokoko Thomas Mbua (Communication Secretary) </b></i> \n <i><b>Rev. Munroe Godwin (pcc Webmaster)</b></i>
     </string>
     <string name="about_developers">
         Created and Designed by Asen Jevis Agu (Jevis &amp; Associates Consulting) \n

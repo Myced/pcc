@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
         mPassword = yourPassword.getText().toString().trim();
         progressDialog.setMessage("Registering user...");
         progressDialog.show();
-        mAuth.createUserWithEmailAndPassword(mEmail, mPassword)
+        mAuth.createUserWithEmailAndPassword(mNumber, mPassword) //pass in phone number instead of email
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -58,7 +58,7 @@ public class SignUpActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             if (user != null) {
                                 mUserId = user.getUid();
-                               newUser = new Users(mName, mUserId, mNumber, mEmail, mPassword);
+                               newUser = new Users(mName, mUserId, mEmail, mNumber, mPassword);
                             }
                             Map<String, Object> userData = newUser.toMap();
 

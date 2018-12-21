@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return true;
     }
 
     private boolean isPasswordValid(String password) {
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     progressDialog.dismiss();
-                                    Toast.makeText(getApplicationContext(), "Poor Internet Connection",
+                                    Toast.makeText(getApplicationContext(), "Login Failed",
                                             Toast.LENGTH_LONG).show();
                                     progressDialog.dismiss();
                                 }
@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         else{
 
-            Toast.makeText(this, "Email is incorrect", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Phone number is incorrect", Toast.LENGTH_SHORT).show();
         }
     }
 

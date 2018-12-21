@@ -27,7 +27,7 @@ import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
 public class PaymentProcessor
 {
     //our mobile money confirguration herer
-    private final String momoEmail = "tncedric@yahoo.com";
+    private final String momoEmail = "pcc.cameroonapp2018@gmail.com";
     private int amount; // the amount to be paid
     public String number; // the number for the person who wants to pay
 
@@ -57,7 +57,7 @@ public class PaymentProcessor
     public void processPayment()
     {
         String url  = "https://developer.mtn.cm/OnlineMomoWeb/faces/transaction/transactionRequest.xhtml" +
-                "?idbouton=2&typebouton=PAIE&_amount=" + this.amount + "&_tel=" + this.number + "&_clP=Cpadmin@bhco123" +
+                "?idbouton=2&typebouton=PAIE&_amount=" + this.amount + "&_tel=" + this.number + "&_clP=tncedric" +
                 "&_email=" + this.momoEmail + "&submit.x=104&submit.y=70";
 
         //perform a get request to this url and get the json result
