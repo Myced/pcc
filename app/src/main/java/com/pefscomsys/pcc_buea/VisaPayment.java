@@ -30,7 +30,7 @@ public class VisaPayment extends AppCompatActivity {
     private Button payButton;
 
     private final String STRIPE_SUCCESS_TOKEN = "tok_bypassPending";
-    private final String SERVER_URL = "http://192.168.43.86:3000/charge";
+    private final String SERVER_URL = "http://www.pcc.cm/charge";
 
     private Context context;
 

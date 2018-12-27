@@ -28,6 +28,9 @@ public class SignUpActivity extends AppCompatActivity {
     Users newUser;
     ProgressDialog progressDialog;
 
+    private static String domain = "@pccapp.cm"; //constant domain to add at the end of phone numbers
+        //useed to authenticate users.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,37 +51,64 @@ public class SignUpActivity extends AppCompatActivity {
         mPassword = yourPassword.getText().toString().trim();
         progressDialog.setMessage("Registering user...");
         progressDialog.show();
-        mAuth.createUserWithEmailAndPassword(mNumber, mPassword) //pass in phone number instead of email
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("Sign Up activity", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            if (user != null) {
-                                mUserId = user.getUid();
-                               newUser = new Users(mName, mUserId, mEmail, mNumber, mPassword);
+
+        //validate
+        if(mPassword.length() < 6)
+        {
+            Toast.makeText(this, "Your password must be at least 6 characters", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
+        }
+        else if(mNumber.length() == 0)
+        {
+            Toast.makeText(this, "You must Provide a phone number", Toast.LENGTH_SHORT).show();
+            progressDialog.dismiss();
+        }
+        else
+        {
+            mAuth.createUserWithEmailAndPassword(this.phoneEmail(mNumber), mPassword) //pass in phone number instead of email
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("Sign Up activity", "createUserWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                if (user != null) {
+                                    mUserId = user.getUid();
+                                    newUser = new Users(mName, mUserId, mNumber, mEmail, mPassword);
+                                }
+                                Map<String, Object> userData = newUser.toMap();
+
+                                Log.d("Sign up activity", userData.toString());
+
+                                mDatabase.child("Users").child(mUserId).setValue(userData);
+                                finish();
+                                Toast.makeText(SignUpActivity.this, "Sign up successful", Toast.LENGTH_SHORT).show();
+                                Intent newIntent = new Intent(SignUpActivity.this, MainActivity.class);
+                                startActivity(newIntent);
+
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w("Sign up activity", "createUserWithEmail:failure", task.getException());
+                                Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+
+                                Toast.makeText(SignUpActivity.this, "Reason: " + task.getException().getMessage(),
+                                        Toast.LENGTH_SHORT).show();
+
+                                progressDialog.dismiss();
                             }
-                            Map<String, Object> userData = newUser.toMap();
 
-                            Log.d("Sign up activity", userData.toString());
-
-                            mDatabase.child("Users").child(mUserId).setValue(userData);
-                            finish();
-                            Toast.makeText(SignUpActivity.this, "Sign up successful", Toast.LENGTH_SHORT).show();
-                            Intent newIntent = new Intent(SignUpActivity.this, MainActivity.class);
-                            startActivity(newIntent);
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("Sign up activity", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            // ...
                         }
+                    });
+        } //end of else
 
-                        // ...
-                    }
-                });
+
+    }
+
+    private String phoneEmail(String number)
+    {
+        return number + this.domain;
     }
 }

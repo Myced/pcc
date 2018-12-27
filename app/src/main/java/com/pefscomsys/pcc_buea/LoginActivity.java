@@ -24,8 +24,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
 
-
-
     // UI references.
     protected EditText mEmailView;
     protected EditText mPasswordView;
@@ -33,6 +31,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected String mEmail, mPassword;
     ProgressDialog progressDialog;
     Button signIn;
+
+    private static String domain = "@pccapp.cm"; //constant domain to add at the end of phone numbers
+    //useed to authenticate users.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(isEmailValid(mEmail)){
             if(isPasswordValid(mPassword)){
-                mAuth.signInWithEmailAndPassword(mEmail, mPassword)
+                mAuth.signInWithEmailAndPassword(this.phoneEmail(mEmail), mPassword)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -93,7 +94,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     progressDialog.dismiss();
                                     Toast.makeText(getApplicationContext(), "Login Failed",
                                             Toast.LENGTH_LONG).show();
-                                    progressDialog.dismiss();
                                 }
 
                             }
@@ -102,11 +102,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
             else {
                 Toast.makeText(this, "Password is too short", Toast.LENGTH_SHORT).show();
+
+                progressDialog.dismiss();
             }
         }
         else{
 
             Toast.makeText(this, "Phone number is incorrect", Toast.LENGTH_SHORT).show();
+
+            progressDialog.dismiss();
         }
     }
 
@@ -123,6 +127,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
         }
+    }
+
+    private String phoneEmail(String number)
+    {
+        return number + this.domain;
     }
 }
 
