@@ -22,7 +22,7 @@ public class PaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
         reason = findViewById(R.id.paymentCaption);
 
-        
+
         Intent paymentIntent = getIntent();
         Reason = paymentIntent.getStringExtra("REASON");
         Amount = paymentIntent.getIntExtra("AMOUNT", 0);
@@ -54,7 +54,7 @@ public class PaymentActivity extends AppCompatActivity {
     public void MomoPay(View view) {
         Intent newIntent = new Intent(this, MomoPaymentActivity.class);
         newIntent.putExtra("REASON", Reason);
-        newIntent.putExtra("AMOUNT", Amount);
+        newIntent.putExtra("AMOUNT", this.getPrice(Reason, "FCFA"));
 
         if(this.type != null)
         {
@@ -75,7 +75,7 @@ public class PaymentActivity extends AppCompatActivity {
     public void OrangePay(View view) {
         Intent newIntent = new Intent(this, OrangeMoneyPayment.class);
         newIntent.putExtra("REASON", Reason);
-        newIntent.putExtra("AMOUNT", Amount);
+        newIntent.putExtra("AMOUNT", this.getPrice(Reason, "FCFA"));
 
         if(this.type != null)
         {
@@ -91,33 +91,10 @@ public class PaymentActivity extends AppCompatActivity {
 
     public void VisaPay(View view) {
 
-        //process the type and make the appropriate choice of amoutn
-        if(this.Reason.contains("Diary"))
-        {
-            //set the amount
-            this.Amount = Prices.SCRIPTURE_US;
-        }
-        else if(this.Reason.contains("Hymn"))
-        {
-            this.Amount = Prices.HYMN_PRICE_US;
-        }
-        else if(this.Reason.contains("ECHO"))
-        {
-            this.Amount = Prices.ECHO_PRICE_US;
-        }
-        else if(this.Reason.contains("MESSENGER"))
-        {
-            this.Amount = Prices.THE_MESSENGER_US;
-        }
-        else
-        {
-            //unknow. so the amount should be zero
-            this.Amount = 0;
-        }
 
         Intent newIntent = new Intent(this, VisaPayment.class);
         newIntent.putExtra("REASON", Reason);
-        newIntent.putExtra("AMOUNT", Amount);
+        newIntent.putExtra("AMOUNT", this.getPrice(Reason, "US"));
 
         if(this.type != null)
         {
@@ -160,5 +137,71 @@ public class PaymentActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    private int getPrice(String module, String currency)
+    {
+        int amount = 0;
+
+        if(currency.equals("FCFA"))
+        {
+            //get the normal currency
+            if(module.contains("Diary"))
+            {
+                //set the amount
+                amount = Prices.SCRIPTURE;
+            }
+            else if(module.contains("Hymn"))
+            {
+                amount = Prices.HYMN_PRICE;
+            }
+            else if(module.contains("ECHO"))
+            {
+                amount = Prices.ECHO_PRICE;
+            }
+            else if(module.contains("MESSENGER"))
+            {
+                amount = Prices.THE_MESSENGER;
+            }
+            else
+            {
+                //unknow. so the amount should be zero
+                amount = 10000;
+            }
+
+        }
+        else if(currency.equals("US"))
+        {
+            //get the currency for Dollar
+            if(module.contains("Diary"))
+            {
+                //set the amount
+                amount = Prices.SCRIPTURE_US;
+            }
+            else if(module.contains("Hymn"))
+            {
+                amount = Prices.HYMN_PRICE_US;
+            }
+            else if(module.contains("ECHO"))
+            {
+                amount = Prices.ECHO_PRICE_US;
+            }
+            else if(module.contains("MESSENGER"))
+            {
+                amount = Prices.THE_MESSENGER_US;
+            }
+            else
+            {
+                //unknow. so the amount should be zero
+                amount = 10000;
+            }
+        }
+        else
+        {
+            amount = 10000;
+        }
+
+        //return the amount
+        return amount;
     }
 }
