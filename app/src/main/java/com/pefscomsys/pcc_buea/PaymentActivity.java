@@ -21,6 +21,8 @@ public class PaymentActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_payment);
         reason = findViewById(R.id.paymentCaption);
+
+        
         Intent paymentIntent = getIntent();
         Reason = paymentIntent.getStringExtra("REASON");
         Amount = paymentIntent.getIntExtra("AMOUNT", 0);
