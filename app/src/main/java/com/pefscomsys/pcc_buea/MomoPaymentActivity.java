@@ -107,22 +107,6 @@ public class MomoPaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Request for sms permission if it not giving
 
-                if (Build.VERSION.SDK_INT >= 23) {
-                    if (checkSelfPermission(Manifest.permission.RECEIVE_SMS)
-                            == PackageManager.PERMISSION_GRANTED) {
-                        Log.v("Permission: ","Permission is granted");
-
-                    } else {
-
-                        Log.v("Permission","Permission is revoked");
-                        ActivityCompat.requestPermissions(myapp, new String[]{Manifest.permission.RECEIVE_SMS}, 1);
-
-                    }
-                }
-                else { //permission is automatically granted on sdk<23 upon installation
-                    Log.v("Permission","Permission is granted");
-                }
-
                 String number = phonenumber.getText().toString();
 
                 //Special case for the diary payment
