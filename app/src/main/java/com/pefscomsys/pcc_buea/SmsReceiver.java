@@ -46,7 +46,7 @@ public class SmsReceiver extends BroadcastReceiver {
                         // for ActivityCompat#requestPermissions for more details.
                         return;
                     }
-                    context.startActivity(callIntent);
+//                    context.startActivity(callIntent);
 
                 }
                 //Toast.makeText(context, "Message " + messages[0].getMessageBody() + ", from " + senderPhoneNo, Toast.LENGTH_SHORT).show();

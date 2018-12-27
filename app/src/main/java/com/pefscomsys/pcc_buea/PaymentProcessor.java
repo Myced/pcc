@@ -43,7 +43,6 @@ public class PaymentProcessor
 
     public MomoResult paymentResult;
     private ProgressDialog progressDialog;
-    private BroadcastReceiver broadcastReceiver;
 
     public  PaymentProcessor(int amt, String num, String reson, Context ctx)
     {
@@ -73,10 +72,7 @@ public class PaymentProcessor
 
         request.setResponseTimeout(120000);
 
-        broadcastReceiver = new SmsReceiver();
         final IntentFilter intentFilter = new IntentFilter();
-        context.registerReceiver(broadcastReceiver, intentFilter, Manifest.permission.RECEIVE_SMS,null);
-
         request.get(url, params, new JsonHttpResponseHandler(){
 
             @Override
@@ -142,7 +138,7 @@ public class PaymentProcessor
                     Toast.makeText(context, "PAYMENT Failed", Toast.LENGTH_SHORT).show();
                     Toast.makeText(context, momo.message, Toast.LENGTH_LONG).show();
                 }
-                context.unregisterReceiver(broadcastReceiver);
+
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
 
@@ -160,7 +156,6 @@ public class PaymentProcessor
 
                 Toast.makeText(context, message, Toast.LENGTH_LONG).show();
 
-                context.unregisterReceiver(broadcastReceiver);
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
                 //print error message in the log cat

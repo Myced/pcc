@@ -63,10 +63,6 @@
             android:theme="@style/NoActionBar">
         </activity>
 
-        <receiver
-            android:name=".SmsReceiver"
-            android:enabled="true"
-            android:exported="true" />
 
         <activity
             android:name=".PaymentActivity"
