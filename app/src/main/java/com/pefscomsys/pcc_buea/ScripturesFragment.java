@@ -163,7 +163,7 @@ public class ScripturesFragment extends Fragment {
             errorMessage.setText(error);
 
             scriptureLayer.setVisibility(View.GONE);
-            this.scriptureLayer.setVisibility(View.VISIBLE);
+            errorLayout.setVisibility(View.VISIBLE);
         }
 
         //now get the current day, month and year
