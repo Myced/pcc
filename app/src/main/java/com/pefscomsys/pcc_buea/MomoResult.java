@@ -63,7 +63,12 @@ public class MomoResult
         resultString = object.toString();
 
         //now process the result
-        if(statusCode.equals("529"))
+		if(statusCode.equals("515")
+		{
+			this.success = false;
+			this.message = "This number does not have a mobile money account";
+		}
+        else if(statusCode.equals("529"))
         {
             this.success = false;
             this.message = "You don't have enough money. Please recharge";
