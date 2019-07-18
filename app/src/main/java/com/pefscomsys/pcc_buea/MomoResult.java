@@ -63,7 +63,7 @@ public class MomoResult
         resultString = object.toString();
 
         //now process the result
-		if(statusCode.equals("515")
+		if(statusCode.equals("515"))
 		{
 			this.success = false;
 			this.message = "This number does not have a mobile money account";
@@ -74,6 +74,11 @@ public class MomoResult
             this.message = "You don't have enough money. Please recharge";
         }
         else if(statusCode.equals("100"))
+        {
+            this.success = false;
+            this.message = "Transaction Failed";
+        }
+        else if(statusCode.equals("103"))
         {
             this.success = false;
             this.message = "Transaction Failed";
@@ -173,7 +178,6 @@ public class MomoResult
 
         //check to see if the record exists
         String query = "SELECT * FROM `diary_payments` WHERE `year` = '" + year + "'";
-        Log.d("PCCAPP", query);
 
         //peform the query
         Cursor result = this.db.myDataBase.rawQuery(query, null);

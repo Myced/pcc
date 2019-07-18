@@ -60,36 +60,25 @@
             android:theme="@style/NoActionBar" />
         <activity
             android:name=".MomoPaymentActivity"
-            android:theme="@style/NoActionBar">
-        </activity>
-
-
+            android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".PaymentActivity"
             android:label="Payment"
-            android:theme="@style/HymnTheme">
-
-        </activity>
-
+            android:theme="@style/HymnTheme"></activity>
         <activity android:name=".ChurchCalendar" />
         <activity
             android:name=".AboutActivity"
             android:label="About" />
-
-        <activity android:name=".RetiredPastors">
-
-        </activity>
+        <activity android:name=".RetiredPastors"></activity>
         <activity android:name=".Communication" />
         <activity android:name=".Presbyteries" />
         <activity android:name=".VisaPayment" />
         <activity android:name=".SundaySchoolActivity" />
         <activity android:name=".BookAbbreviationActivity" />
-        <activity
-            android:name=".OrangeMoneyPayment" >
-        </activity>
-
+        <activity android:name=".OrangeMoneyPayment"></activity>
         <activity android:name=".FeedBack" />
-        <activity android:name=".FeePlan"></activity>
+        <activity android:name=".FeePlan" />
+        <activity android:name=".MyPurchases" />
     </application>
 
 </manifest>

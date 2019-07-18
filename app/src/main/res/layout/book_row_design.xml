@@ -17,19 +17,24 @@
         android:padding="8dp">
 
         <ImageView
+            android:id="@+id/book_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/book"
             android:padding="@dimen/margin10" />
 
         <TextView
+            android:id="@+id/name_of_file"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/text_black"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@id/book_image"
+            android:layout_toRightOf="@id/book_image"
+            android:layout_centerVertical="true"
+            android:gravity="left"
             android:text="The messenger 2018"
-            android:textSize="20sp"
-            android:id="@+id/name_of_file"
-            android:gravity="center" />
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
 
         <!--<ImageButton
             android:layout_width="wrap_content"

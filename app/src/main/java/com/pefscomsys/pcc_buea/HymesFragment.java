@@ -113,10 +113,25 @@ public class HymesFragment extends Fragment implements SearchView.OnQueryTextLis
     public boolean onQueryTextChange(String newText) {
         newText = newText.toLowerCase();
         ArrayList<Hymn> newHymnList = new ArrayList<>();
+
         for(Hymn hymn : hymnArrayList){
-            String number = Integer.toString(hymn.getHymnNumber());
-            if(number.contains(newText)){
-                newHymnList.add(new Hymn(hymn.getHymn(), hymn.getHymnNumber()));
+            //check to see if the user entered only numbers
+            if(newText.matches("[0-9]+"))
+            {
+                String number = Integer.toString(hymn.getHymnNumber());
+                if(number.contains(newText)){
+                    newHymnList.add(new Hymn(hymn.getHymn(), hymn.getHymnNumber()));
+                }
+            }
+            else
+            {
+                //search through the hymn content to see if it contains the characteres entered
+                if(hymn.getHymn().toString().toLowerCase().contains(newText.toLowerCase()))
+                {
+                    //this hymn contains the searched string.
+                    //add it to the list
+                    newHymnList.add(new Hymn(hymn.getHymn(), hymn.getHymnNumber()));
+                }
             }
 
         }

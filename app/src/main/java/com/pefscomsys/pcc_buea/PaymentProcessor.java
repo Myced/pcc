@@ -3,11 +3,13 @@ package com.pefscomsys.pcc_buea;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.Toast;
@@ -23,6 +25,7 @@ import java.util.Arrays;
 import cz.msebera.android.httpclient.Header;
 
 import static com.pefscomsys.pcc_buea.MainActivity.PAYMENT_PREFS;
+import static com.pefscomsys.pcc_buea.Purchase.TABLE_NAME;
 
 public class PaymentProcessor
 {
@@ -44,12 +47,16 @@ public class PaymentProcessor
     public MomoResult paymentResult;
     private ProgressDialog progressDialog;
 
+    ScriptureDBHandler db;
+
     public  PaymentProcessor(int amt, String num, String reson, Context ctx)
     {
         amount = amt;
         number = num;
         context = ctx;
         reason = reson;
+
+        db = new ScriptureDBHandler(ctx);
     }
 
 
@@ -64,13 +71,18 @@ public class PaymentProcessor
 
         //now we will use the loopj ascyn library
 
+        //create a configuration to ignore (or accept all certificates)
+//        AsyncHttpClientConfig config = new AsyncHttpClientConfig.Builder()
+//                .setSSLContext(createSslContext())
+//                .build();
+
         //start with the request parameters
         RequestParams params = new RequestParams();
 
 
-        AsyncHttpClient request = new AsyncHttpClient();
+        AsyncHttpClient request = new AsyncHttpClient(true, 80, 443);
 
-        request.setResponseTimeout(120000);
+        request.setResponseTimeout(130000);
 
         final IntentFilter intentFilter = new IntentFilter();
         request.get(url, params, new JsonHttpResponseHandler(){
@@ -113,6 +125,8 @@ public class PaymentProcessor
                 {
                     //save the scripture in the database
                     Log.d("PCCAPP", "updating the diary part");
+                    //save the diary to the purchases table too
+                    logDiary(diaryYear);
                     momo.updateDiary(diaryYear);
                 }
 
@@ -122,6 +136,16 @@ public class PaymentProcessor
 
                 if(momo.success){
                     editor.putString(reason, "PAID");
+
+                    //if its the hymn then log hymn else log as book
+                    if(reason.equals(context.getString(R.string.HYMN_STATUS)))
+                    {
+                        logHymns();
+                    }
+                    else
+                    {
+                        logBook(reason);
+                    }
                 }
                 else {
                     editor.putString(reason, "NOT_PAID");
@@ -150,9 +174,8 @@ public class PaymentProcessor
             public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response)
             {
                 progressDialog.dismiss();
-                Log.d("Payment", "Payment failure");
                 status = false;
-                message = "Could not make Payment. Please check your internet connection";
+                message = "Could not make Payment. Please check your internet connection. Or There may be a problem with MTN";
 
                 Toast.makeText(context, message, Toast.LENGTH_LONG).show();
 
@@ -165,6 +188,119 @@ public class PaymentProcessor
 
     }
 
+    //loggin the payments to the database;
 
+    private void logHymns()
+    {
+        if(!this.hymnIsLogged())
+        {
+            this.insertHymn();
+        }
+    }
+
+    private boolean hymnIsLogged() {
+        String sql = "SELECT * FROM `" + TABLE_NAME + "` WHERE `code` = '" + Purchase.HYMN + "' ";
+
+        Cursor result = db.myDataBase.rawQuery(sql, null);
+
+        if(result.getCount() > 0)
+        {
+            result.close();
+            return true;
+        }
+
+        result.close();
+        return false;
+    }
+
+    private void insertHymn()
+    {
+        //creat a values object
+        ContentValues values = new ContentValues();
+        values.put("name", "Church Hymn Book");
+        values.put("code", Purchase.HYMN);
+        values.put("year", "0000");
+        values.put("date", " -- ");
+
+        String table = TABLE_NAME;
+
+        this.db.myDataBase.insert(table, null, values);
+    }
+
+    //logging for books
+    private void logBook(String bookName)
+    {
+        if(!this.bookIsLogged(bookName))
+        {
+            this.insertBook(bookName);
+        }
+    }
+
+    private boolean bookIsLogged(String bookName) {
+        String sql = "SELECT * FROM `" + TABLE_NAME + "` WHERE `name` = '" + bookName + "' ";
+
+        Cursor result = db.myDataBase.rawQuery(sql, null);
+
+        if(result.getCount() > 0)
+        {
+            result.close();
+            return true;
+        }
+
+        result.close();
+        return false;
+    }
+
+    private void insertBook(String bookName)
+    {
+        //creat a values object
+        ContentValues values = new ContentValues();
+        values.put("name", bookName);
+        values.put("code", Purchase.BOOK);
+        values.put("year", "0000");
+        values.put("date", " -- ");
+
+        String table = TABLE_NAME;
+
+        this.db.myDataBase.insert(table, null, values);
+    }
+
+    //logging for the diaries.
+    private void logDiary(String year)
+    {
+        if(!this.diaryIsLogged(year))
+        {
+            this.insertDiary(year);
+        }
+    }
+
+    private boolean diaryIsLogged(String year) {
+        String sql = "SELECT * FROM `" + TABLE_NAME + "` WHERE `code` = '" + Purchase.DIARY + "' AND `year` = '" + year + "'";
+
+        Cursor result = db.myDataBase.rawQuery(sql, null);
+
+        if(result.getCount() > 0)
+        {
+            result.close();
+            return true;
+        }
+
+        result.close();
+        return false;
+    }
+
+    private void insertDiary(String year)
+    {
+        //creat a values object
+        ContentValues values = new ContentValues();
+        values.put("name", "Diary " + year);
+        values.put("code", Purchase.DIARY);
+        values.put("year", year);
+        values.put("date", " -- ");
+
+        String table = TABLE_NAME;
+
+        this.db.myDataBase.insert(table, null, values);
+    }
 
 }

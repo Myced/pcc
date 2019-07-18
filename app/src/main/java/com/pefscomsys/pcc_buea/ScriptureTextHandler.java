@@ -15,8 +15,11 @@ public class ScriptureTextHandler
     private String reading;
     private String book;
     private String chapter;
+    private String verse;
     private double start;
     private double end;
+
+    private boolean hasNoVerses = false;
 
     private int verseStart;
     private int verseEnd;
@@ -35,7 +38,6 @@ public class ScriptureTextHandler
     public String getReading()
     {
         String text = this.text;
-        Log.d("PCCAPP", this.text);
 
         //now split it up and start working
         String[] parts = text.split("\\.");
@@ -49,52 +51,83 @@ public class ScriptureTextHandler
         //now get the ret
         String content  = parts[1];
 
-        String verses = setChapter(content);
+        this.setChapter(content);
+        String verses = this.verse;
 
-        String chapterStart = "";
-        String chapterEnd = "";
+        String verseStart = "";
+        String verseEnd = "";
 
         //now check if the reading has a starting and ending verse.
-        if(verses.contains("-"))
+        if(this.hasNoVerses)
         {
-            //split and get them
-            String[] verseContent  =  verses.split("\\-");
-
-            chapterStart = verseContent[0];
-            chapterEnd = verseContent[1];
-
+            verseStart = "0";
+            verseEnd = "0";
         }
         else
         {
-            //starting and ending chapters are the same
-            chapterStart = verses;
-            chapterEnd = chapterStart;
+            if(verses.contains("-"))
+            {
+                //split and get them
+                String[] verseContent  =  verses.split("\\-");
+
+                verseStart = verseContent[0];
+                verseEnd = verseContent[1];
+
+            }
+            else
+            {
+                //starting and ending verses are the same
+                verseStart = verses;
+                verseEnd = verseStart;
+            }
         }
 
         //now set them globally
-        this.verseStart = Integer.valueOf(chapterStart.replace(" ", ""));
-        this.verseEnd = Integer.valueOf(chapterEnd.replace(" ", ""));
+        String verseStartString = verseStart.replace(" ", "");
+        String verseEndString = verseEnd.replace(" ", "");
+
+        //replace all other characters
+//        Example  12a becomes 12
+        String start = verseStartString.replaceFirst("[a-z]+", "");
+        String end = verseEndString.replaceFirst("[a-z]+", "");
+
+
+        this.verseStart = Integer.valueOf(start);
+        this.verseEnd = Integer.valueOf(end);
 
         //now that we have chapter start and end. lets prepare them as real for
         // database query
-        this.prepareStartEnd(chapterStart, chapterEnd);
+        this.prepareStartEnd(Integer.toString(this.verseStart), Integer.toString(this.verseEnd));
         this.query();
 
         //return the result
         return this.result;
     }
 
-    private String  setChapter(String content)
+    private void setChapter(String content)
     {
-        String[] parts = content.split("\\:");
+        if(content.contains(":"))
+        {
+            String[] parts = content.split("\\:");
 
-        String chapter = parts[0];
+            String chapter = parts[0];
 
-        this.chapter = chapter;
+            this.chapter = chapter;
 
-        String verses = parts[1];
+            String verses = parts[1];
 
-        return verses;
+            this.verse = verses;
+        }
+        else
+        {
+            //there are no verses. Its the whole chapter
+            this.hasNoVerses = true;
+
+            this.chapter = content.replace(" ", "");
+            this.verse = "";
+
+        }
+
     }
 
     private String formatVerse(String verse)
@@ -122,12 +155,22 @@ public class ScriptureTextHandler
         return result;
     }
 
-    private void prepareStartEnd(String start, String end)
-    {
+    private void prepareStartEnd(String start, String end) {
         //preparet start and end to contain the chapter
         String theStart = this.chapter + "." + formatVerse(start.replace(" ", ""));
+        String theEnd = "";
 
-        String theEnd  = this.chapter + "." + formatVerse(end.replace(" ", ""));
+        if (this.hasNoVerses) {
+            int chapter = Integer.valueOf(this.chapter);
+
+            int chapterEnd = ++chapter;
+
+            theEnd  = chapterEnd + "." + formatVerse(end.replace(" ", ""));
+        }
+        else
+        {
+            theEnd  = this.chapter + "." + formatVerse(end.replace(" ", ""));
+        }
 
         //we have to format the numbers to 3 decimall places
         DecimalFormat df = new DecimalFormat("#.000"); //not needed for now
@@ -148,8 +191,12 @@ public class ScriptureTextHandler
 
         int startOfVerse = this.verseStart;
 
+        if(startOfVerse == 0)
+            ++startOfVerse;
+
         //create a connection to the database
         ScriptureDBHandler db = new ScriptureDBHandler(this.context);
+
         try {
             db.createDataBase();
         } catch (IOException e) {
@@ -174,11 +221,9 @@ public class ScriptureTextHandler
         //do the query
         Cursor scriptureResult = db.myDataBase.rawQuery(query, null);
 
-        //now loop throughtt the results and log them
+        //now loop throught the results and log them
         while(scriptureResult.moveToNext())
         {
-//            Log.d("Database", Integer.toString(startOfVerse));
-//            Log.d("Database", scriptureResult.getString(VERSE_INDEX));
 
             result = result + Integer.toString(startOfVerse) + " " + scriptureResult.getString(VERSE_INDEX);
             result = result + "\n\n";

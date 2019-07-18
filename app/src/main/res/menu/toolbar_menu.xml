@@ -4,25 +4,29 @@
 
     <item
         android:id="@+id/book_and_abbre"
-        android:orderInCategory="2"
+        android:orderInCategory="3"
         android:title="@string/book_and_abbr"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/feedback_menu"
-        android:orderInCategory="2"
+        android:orderInCategory="3"
         android:title="@string/feedback"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/feeplan_menu"
-        android:orderInCategory="2"
+        android:orderInCategory="3"
         android:title="@string/fee_plan"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/action_purchases"
         android:orderInCategory="2"
+        android:title="My Purchases" />
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="3"
         android:title="@string/about"
         app:showAsAction="never" />
 </menu>

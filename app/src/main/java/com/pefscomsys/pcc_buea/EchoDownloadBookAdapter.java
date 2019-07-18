@@ -1,6 +1,5 @@
 package com.pefscomsys.pcc_buea;
 
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;

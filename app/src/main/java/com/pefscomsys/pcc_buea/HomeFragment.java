@@ -102,8 +102,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                         setFragment(scripturesFragment);
                     }
                 }
-                else{
-                    setFragment(scripturesFragment);
+                else
+                {
+                    Intent loginIntent = new Intent(getContext(), LoginActivity.class);
+                    startActivity(loginIntent);
                 }
                 break;
             case R.id.hymnBookBtn:

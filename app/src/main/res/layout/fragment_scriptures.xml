@@ -84,8 +84,8 @@
                             android:paddingLeft="@dimen/margin10"
                             android:text="@string/month"
                             android:textAlignment="center"
-                            android:textColor="@color/text_black"
-                            android:textSize="18sp" />
+                            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                            android:textColor="@color/text_black" />
 
                         <Spinner
                             android:id="@+id/month_spinner"

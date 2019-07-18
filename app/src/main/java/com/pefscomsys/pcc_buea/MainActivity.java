@@ -96,9 +96,7 @@ public class MainActivity extends AppCompatActivity {
                         setFragment(scripturesFragment);
                     }
                 }
-                else{
-                    setFragment(scripturesFragment);
-                }
+
                 return true;
             } else if (id == R.id.navigation_info) {
                 //start scripture fragment
@@ -135,12 +133,12 @@ public class MainActivity extends AppCompatActivity {
         updatesThisYear.context = getApplicationContext();
         Object changes = updatesThisYear.pullScriptures(); //check for upates
 
-
-
+//        Activation activation = new Activation(this);
+//        activation.activateHymns();
+//        activation.activateDiary("2019");
 
         ScriptureRetrieval updatesNextYear = new ScriptureRetrieval(nextYear);
         changes  = updatesNextYear.pullScriptures();
-
 
 
         mPaymentPref = getSharedPreferences(PAYMENT_PREFS, MODE_PRIVATE);
@@ -185,6 +183,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case  R.id.feeplan_menu:
                 startActivity(new Intent(this, FeePlan.class));
+                return true;
+            case  R.id.action_purchases:
+                startActivity(new Intent(this, MyPurchases.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
