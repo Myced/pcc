@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         homeFragment = new HomeFragment();
@@ -136,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
 //        Activation activation = new Activation(this);
 //        activation.activateHymns();
 //        activation.activateDiary("2019");
+//        activation.activateBook("Presbyterian Echo March 2019");
 
         ScriptureRetrieval updatesNextYear = new ScriptureRetrieval(nextYear);
         changes  = updatesNextYear.pullScriptures();

@@ -59,6 +59,7 @@ public class ScriptureDBHandler extends SQLiteOpenHelper {
             //By calling this method an empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
             this.getReadableDatabase();
+            this.close();
 
             try {
 
@@ -109,6 +110,8 @@ public class ScriptureDBHandler extends SQLiteOpenHelper {
 
         //Open your local db as the input stream
         InputStream myInput = myContext.getAssets().open(DB_NAME);
+
+        Log.d("PCC", "copyDataBase: " + myInput.toString());
 
         // Path to the just created empty db
         String outFileName = DB_PATH + DB_NAME;
