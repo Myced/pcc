@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -89,6 +90,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.diaryBtn:
+
+//                Toast.makeText(this.getContext(), "Changing to diary", Toast.LENGTH_SHORT).show();
                 scripturesFragment = new ScripturesFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navigation_scriptures);
 
@@ -105,10 +108,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 }
                 else
                 {
-                    Intent loginIntent = new Intent(getContext(), LoginActivity.class);
-                    startActivity(loginIntent);
+                    setFragment(scripturesFragment);
                 }
+
                 break;
+
             case R.id.hymnBookBtn:
                 hymesFragment = new HymesFragment();
                 bottomNavigationView.setSelectedItemId(R.id.navigation_hymns);

@@ -97,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
+                //if there is no network then set the fragment to that of the scripture
+                setFragment(scripturesFragment);
+
                 return true;
             } else if (id == R.id.navigation_info) {
                 //start scripture fragment

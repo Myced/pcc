@@ -238,14 +238,6 @@ public class ScripturesFragment extends Fragment {
         scriptureDb = new ScriptureDBHandler(getContext());
 
 
-        //create the database
-        try {
-            scriptureDb.createDataBase();
-        } catch (IOException e) {
-            Log.d("Database", "Cannot get database");
-            e.printStackTrace();
-        }
-
         scriptureDb.openDataBase();
 
 

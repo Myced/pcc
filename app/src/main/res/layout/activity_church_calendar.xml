@@ -46,7 +46,8 @@ tools:context=".ChurchCalendar">
             android:id="@+id/important_days_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="vertical" />
+            android:scrollbars="vertical"
+            tools:listitem="@layout/activity_church_calendar" />
 
         <TextView
             android:layout_width="match_parent"
