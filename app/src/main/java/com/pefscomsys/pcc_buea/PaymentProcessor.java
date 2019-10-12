@@ -31,6 +31,7 @@ public class PaymentProcessor
 {
     //our mobile money confirguration herer
     private final String momoEmail = "pcc.cameroonapp2018@gmail.com";
+//    private final String momoEmail = "tncedric@yahoo.com";
     private int amount; // the amount to be paid
     public String number; // the number for the person who wants to pay
 
@@ -66,6 +67,9 @@ public class PaymentProcessor
                 "?idbouton=2&typebouton=PAIE&_amount=" + this.amount + "&_tel=" + this.number + "&_clP=tncedric" +
                 "&_email=" + this.momoEmail + "&submit.x=104&submit.y=70";
 
+        //make a request tot he fake address for testing
+//        url = "http://192.168.43.55/momoserver/success.php";
+
         //perform a get request to this url and get the json result
         Log.d("PCC", url);
 
@@ -90,7 +94,7 @@ public class PaymentProcessor
             @Override
             public void onStart() {
                 super.onStart();
-                Log.d("Payment", "Payment started");
+                Log.d("PCC", "Payment started");
 
                 progressDialog = new ProgressDialog(context);
                 progressDialog.setMessage("Making payment\n Dial *126# and confirm");
@@ -104,7 +108,7 @@ public class PaymentProcessor
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response)
             {
-                Log.d("Payment", "Payment successful");
+                Log.d("PCC", "Payment successful");
                 super.onSuccess(statusCode,headers, response);
                 progressDialog.dismiss();
                 //request made. now check if the payment was successful
@@ -112,10 +116,10 @@ public class PaymentProcessor
                 momo.context = context; //set the context before saving
                 momo.saveLog();
 
-                Log.d("PCCAPP", response.toString());
+                Log.d("PCC", response.toString());
 
 
-                Log.d("PAYMENT PROCESSOR ", "STATUSCODE: " + momo.success + " HEADER: "+ Arrays.toString(headers) +" RESPONSE: " + response.toString());
+                Log.d("PCC ", "STATUSCODE: " + momo.success + " HEADER: "+ Arrays.toString(headers) +" RESPONSE: " + response.toString());
                 paymentResult = momo;
                 status = momo.success;
                 message = momo.message;
@@ -124,7 +128,7 @@ public class PaymentProcessor
                 if(diary)
                 {
                     //save the scripture in the database
-                    Log.d("PCCAPP", "updating the diary part");
+                    Log.d("PCC", "updating the diary part");
                     //save the diary to the purchases table too
                     logDiary(diaryYear);
                     momo.updateDiary(diaryYear);
@@ -166,7 +170,7 @@ public class PaymentProcessor
                 Intent newIntent = new Intent(context, MainActivity.class);
                 context.startActivity(newIntent);
 
-                Log.d("PCCAPP", paymentResult.toString());
+                Log.d("PCC", paymentResult.toString());
 
             }
 
@@ -192,10 +196,15 @@ public class PaymentProcessor
 
     private void logHymns()
     {
+        //Open the database connection
+        this.db.openDataBase();
+
         if(!this.hymnIsLogged())
         {
             this.insertHymn();
         }
+
+        this.db.close();
     }
 
     private boolean hymnIsLogged() {
@@ -215,12 +224,17 @@ public class PaymentProcessor
 
     private void insertHymn()
     {
+        //get the date of the purchase
+        MyDate date = new MyDate(this.context);
+
+        String currentDate = date.getCurrentDay() + "/" + date.getCurrentMonth() + "/" + date.getCurrentYear();
+
         //creat a values object
         ContentValues values = new ContentValues();
         values.put("name", "Church Hymn Book");
         values.put("code", Purchase.HYMN);
         values.put("year", "0000");
-        values.put("date", " -- ");
+        values.put("date", currentDate);
 
         String table = TABLE_NAME;
 
@@ -230,10 +244,14 @@ public class PaymentProcessor
     //logging for books
     private void logBook(String bookName)
     {
+        this.db.openDataBase();
+
         if(!this.bookIsLogged(bookName))
         {
             this.insertBook(bookName);
         }
+
+        this.db.close();
     }
 
     private boolean bookIsLogged(String bookName) {
@@ -253,12 +271,17 @@ public class PaymentProcessor
 
     private void insertBook(String bookName)
     {
+        //get the date of the purchase
+        MyDate date = new MyDate(this.context);
+
+        String currentDate = date.getCurrentDay() + "/" + date.getCurrentMonth() + "/" + date.getCurrentYear();
+
         //creat a values object
         ContentValues values = new ContentValues();
         values.put("name", bookName);
         values.put("code", Purchase.BOOK);
         values.put("year", "0000");
-        values.put("date", " -- ");
+        values.put("date", currentDate);
 
         String table = TABLE_NAME;
 
@@ -268,10 +291,14 @@ public class PaymentProcessor
     //logging for the diaries.
     private void logDiary(String year)
     {
+        this.db.openDataBase();
+
         if(!this.diaryIsLogged(year))
         {
             this.insertDiary(year);
         }
+
+        this.db.close();
     }
 
     private boolean diaryIsLogged(String year) {
@@ -291,12 +318,17 @@ public class PaymentProcessor
 
     private void insertDiary(String year)
     {
+        //get the date of the purchase
+        MyDate date = new MyDate(this.context);
+
+        String currentDate = date.getCurrentDay() + "/" + date.getCurrentMonth() + "/" + date.getCurrentYear();
+
         //creat a values object
         ContentValues values = new ContentValues();
         values.put("name", "Diary " + year);
         values.put("code", Purchase.DIARY);
         values.put("year", year);
-        values.put("date", " -- ");
+        values.put("date", currentDate);
 
         String table = TABLE_NAME;
 
