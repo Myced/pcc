@@ -30,8 +30,8 @@ import static com.pefscomsys.pcc_buea.Purchase.TABLE_NAME;
 public class PaymentProcessor
 {
     //our mobile money confirguration herer
-    private final String momoEmail = "pcc.cameroonapp2018@gmail.com";
-//    private final String momoEmail = "tncedric@yahoo.com";
+//    private final String momoEmail = "pcc.cameroonapp2018@gmail.com";
+    private final String momoEmail = "tncedric@yahoo.com";
     private int amount; // the amount to be paid
     public String number; // the number for the person who wants to pay
 

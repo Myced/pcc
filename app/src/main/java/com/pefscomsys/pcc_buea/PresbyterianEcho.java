@@ -92,9 +92,14 @@ public class PresbyterianEcho extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
-            Log.v("Permission ","Permission: "+permissions[0]+ "was "+grantResults[0]);
-            //resume tasks needing this permission
+
+        //if permission array is not empty
+        if(grantResults.length > 0)
+        {
+            if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
+                Log.v("Permission ","Permission: "+permissions[0]+ "was "+grantResults[0]);
+                //resume tasks needing this permission
+            }
         }
     }
 }
