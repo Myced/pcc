@@ -44,7 +44,14 @@ public class PresbyterianEcho extends AppCompatActivity {
             }
             else{
                 currentUser = mAuth.getCurrentUser();
-                isStoragePermissionGranted();
+                
+                try {
+                    isStoragePermissionGranted();
+                }
+                catch (Exception e)
+                {
+                    Toast.makeText(getApplicationContext(), "Failed to request permission", Toast.LENGTH_SHORT).show();
+                }
             }
             presEchoTabAdapter.addFragment(new EchoFragment(), "ECHO'S");
             presEchoTabAdapter.addFragment(new EchoDownloadFragment(), "DOWNLOAD'S");
