@@ -285,6 +285,7 @@ public class ScripturesFragment extends Fragment {
 
 
         //before setting the reading. make them clickable
+
         if(reading.getReadingOne() != null)
         {
             final String oneString = reading.getReadingOne();
@@ -294,7 +295,20 @@ public class ScripturesFragment extends Fragment {
                 public void onClick(View widget) {
                     Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
                     readingOneIntent.putExtra("READING_ONE", oneString);
-                    startActivity(readingOneIntent);
+
+                    Log.d("MYPCC", oneString);
+
+                    //start the activity only if the reading is not empty
+                    if(!oneString.equals("") && ! oneString.equals(" ") && ! oneString.equals(null))
+                    {
+                        Log.d("MYPCC", oneString);
+                        startActivity(readingOneIntent);
+                    }
+                    else
+                    {
+                        Log.d("MYPCC", oneString);
+                    }
+
                 }
 
                 @Override
@@ -329,7 +343,8 @@ public class ScripturesFragment extends Fragment {
 
                     Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
                     readingTwoIntent.putExtra("READING_TWO", twoString);
-                    startActivity(readingTwoIntent);
+                    if( ! twoString.equals(""))
+                        startActivity(readingTwoIntent);
                 }
 
                 @Override
@@ -650,9 +665,14 @@ public class ScripturesFragment extends Fragment {
                     ClickableSpan clickOne = new ClickableSpan() {
                         @Override
                         public void onClick(View widget) {
+                            Log.d("MYPCC", oneStringFiltered);
                             Intent readingOneIntent = new Intent(getContext(), ReadingOneActivity.class);
                             readingOneIntent.putExtra("READING_ONE", oneStringFiltered);
-                            startActivity(readingOneIntent);
+
+                            if( ! oneStringFiltered.equals("") && ! oneStringFiltered.equals(" ") && ! oneStringFiltered.equals(null))
+                            {
+                                startActivity(readingOneIntent);
+                            }
                         }
 
                         @Override
@@ -680,14 +700,18 @@ public class ScripturesFragment extends Fragment {
                 {
                     //do the same for reading two
                     final String twoString = reading.getReadingTwo();
-                    SpannableString twoSpan = new SpannableString(twoString);
+                    final SpannableString twoSpan = new SpannableString(twoString);
                     ClickableSpan clickTwo = new ClickableSpan() {
                         @Override
                         public void onClick(View widget) {
 
                             Intent readingTwoIntent = new Intent(getContext(), ReadingTwoActivity.class);
                             readingTwoIntent.putExtra("READING_TWO", twoString);
-                            startActivity(readingTwoIntent);
+
+                            if( ! twoString.equals("") && ! twoString.equals(" ") && ! twoString.equals(null))
+                            {
+                                startActivity(readingTwoIntent);
+                            }
                         }
 
                         @Override
@@ -721,7 +745,11 @@ public class ScripturesFragment extends Fragment {
                         public void onClick(View widget) {
                             Intent readingTextIntent = new Intent(getContext(), ReadingTextActivity.class);
                             readingTextIntent.putExtra("READING_TEXT", textString);
-                            startActivity(readingTextIntent);
+                            if(!textString.equals("") && ! textString.equals(" ") && ! textString.equals(null))
+                            {
+                                startActivity(readingTextIntent);
+                            }
+
                         }
 
                         @Override
